@@ -1,0 +1,97 @@
+@use "../../styles/variables" as *;
+
+.section {
+  position: relative;
+  width: 100%;
+  min-height: clamp(680px, 82vh, 880px);
+  margin-top: -96px;
+  overflow: hidden;
+}
+
+.photo {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  filter: grayscale(1) contrast(1.05);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  min-height: clamp(680px, 82vh, 880px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+  max-width: $container-width;
+  margin-inline: auto;
+  padding: calc(96px + clamp(24px, 5vw, 48px)) clamp(20px, 5vw, 32px) clamp(32px, 6vw, 64px);
+}
+
+.eyebrow {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: $color-lime;
+  margin-bottom: 12px;
+}
+
+.name {
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: $color-lime;
+
+  span {
+    display: block;
+  }
+}
+
+.divider {
+  height: 1px;
+  background: rgba($color-lime, 0.35);
+}
+
+.bio {
+  max-width: 480px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: $color-lime;
+}
+
+.ctaRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.primaryCta {
+  @include button-pill;
+  background: $color-lime;
+  color: $color-black;
+
+  &:hover {
+    background: $color-lime-dark;
+  }
+}
+
+.secondaryCta {
+  @include button-pill;
+  background: transparent;
+  color: $color-lime;
+  border: 1px solid rgba($color-lime, 0.4);
+
+  &:hover {
+    background: rgba($color-lime, 0.12);
+  }
+}

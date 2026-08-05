@@ -1,0 +1,73 @@
+@use "../../styles/variables" as *;
+@use "sass:color";
+
+.wrap {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding-top: 20px;
+}
+
+.inner {
+  @include container;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px 10px 20px;
+  background: rgba(246, 246, 241, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid $color-border;
+  border-radius: $radius-pill;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.logoMark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: $color-black;
+  color: $color-lime;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+
+  @media (max-width: 760px) {
+    display: none;
+  }
+}
+
+.link {
+  font-size: 14px;
+  font-weight: 500;
+  color: $color-gray;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: $color-black;
+  }
+}
+
+.cta {
+  @include button-pill;
+  background: $color-black;
+  color: $color-white;
+
+  &:hover {
+    background: color.adjust($color-black, $lightness: 12%);
+  }
+}

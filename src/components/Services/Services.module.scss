@@ -1,0 +1,112 @@
+@use "../../styles/variables" as *;
+
+.section {
+  @include container;
+  padding-bottom: $space-section;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.badge {
+  @include pill-badge;
+  margin-bottom: 20px;
+}
+
+.heading {
+  font-size: clamp(28px, 3.6vw, 40px);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  max-width: 640px;
+  margin-bottom: 12px;
+}
+
+.subheading {
+  font-size: 15px;
+  color: $color-gray;
+  max-width: 480px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 560px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: $color-card;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  min-height: 220px;
+
+  &.highlight {
+    background: $color-lime;
+    border-color: transparent;
+  }
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: $color-bg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .highlight & {
+    background: rgba(19, 19, 16, 0.1);
+  }
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.description {
+  font-size: 13px;
+  line-height: 1.5;
+  color: $color-gray;
+
+  .highlight & {
+    color: rgba(19, 19, 16, 0.7);
+  }
+}
+
+.link {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: $radius-pill;
+  background: $color-black;
+  color: $color-white;
+  width: fit-content;
+
+  .highlight & {
+    background: $color-black;
+    color: $color-lime;
+  }
+}

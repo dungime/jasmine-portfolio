@@ -1,0 +1,70 @@
+@use "../../../styles/variables" as *;
+
+.main {
+  padding-top: 140px;
+  padding-bottom: $space-section;
+}
+
+.container {
+  @include container;
+  max-width: 760px;
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: $color-gray;
+  margin-bottom: 32px;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: $color-black;
+  }
+}
+
+.thumb {
+  height: 280px;
+  border-radius: $radius-lg;
+  background: linear-gradient(135deg, $color-bg-sage 0%, $color-lime 100%);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 32px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.35), transparent 60%);
+  }
+}
+
+.title {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 16px;
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.tag {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: $radius-pill;
+  background: $color-bg;
+  color: $color-gray;
+}
+
+.description {
+  font-size: 16px;
+  color: $color-gray;
+  line-height: 1.7;
+}

@@ -1,0 +1,86 @@
+@use "../../styles/variables" as *;
+
+.section {
+  @include container;
+  padding-bottom: $space-section;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.badge {
+  @include pill-badge;
+  margin-bottom: 20px;
+}
+
+.heading {
+  display: inline-block;
+  font-size: clamp(28px, 3.6vw, 40px);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  background-image: linear-gradient(transparent 62%, $color-lime 62%);
+  background-repeat: no-repeat;
+}
+
+.list {
+  max-width: 720px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 18px 0;
+  border-top: 1px solid $color-border;
+
+  &:last-child {
+    border-bottom: 1px solid $color-border;
+  }
+
+  @media (max-width: 640px) {
+    flex-wrap: wrap;
+  }
+}
+
+.icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: $color-lime;
+  color: $color-black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category {
+  flex: 0 0 160px;
+  padding-top: 9px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.technologies {
+  flex: 1;
+  padding-top: 9px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: $color-gray;
+  text-align: right;
+
+  @media (max-width: 640px) {
+    flex-basis: 100%;
+    text-align: left;
+    padding-top: 0;
+    padding-left: 56px;
+  }
+}

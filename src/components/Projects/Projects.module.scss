@@ -1,0 +1,124 @@
+@use "../../styles/variables" as *;
+
+.section {
+  @include container;
+  padding-bottom: $space-section;
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  @include pill-badge;
+  margin-bottom: 16px;
+}
+
+.heading {
+  display: inline-block;
+  font-size: clamp(28px, 3.6vw, 40px);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  background-image: linear-gradient(transparent 62%, $color-lime 62%);
+  background-repeat: no-repeat;
+}
+
+.subheading {
+  font-size: 15px;
+  color: $color-gray;
+  max-width: 500px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  @media (max-width: 760px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  display: block;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  overflow: hidden;
+  background: $color-card;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: $shadow-card;
+  }
+}
+
+.thumb {
+  height: 200px;
+  background: linear-gradient(135deg, $color-bg-sage 0%, $color-lime 100%);
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.35), transparent 60%);
+    pointer-events: none;
+  }
+}
+
+.body {
+  padding: 22px 24px 24px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.arrow {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid $color-border;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.description {
+  font-size: 14px;
+  color: $color-gray;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: $radius-pill;
+  background: $color-bg;
+  color: $color-gray;
+}
