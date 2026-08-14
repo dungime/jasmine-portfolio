@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/Navbar/Navbar";
 import { Hero } from "@/components/Hero/Hero";
+import { Stats } from "@/components/Stats/Stats";
 // import { IntroBanner } from "@/components/IntroBanner/IntroBanner";
 import { Mission } from "@/components/Mission/Mission";
 // import { Services } from "@/components/Services/Services";
@@ -18,6 +19,9 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <Reveal>
+          <Stats />
+        </Reveal>
         {/* <IntroBanner /> */}
         <Reveal>
           <Mission />

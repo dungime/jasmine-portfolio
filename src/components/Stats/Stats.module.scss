@@ -1,0 +1,42 @@
+@use "../../styles/variables" as *;
+
+.section {
+  @include container;
+  padding-bottom: $space-section;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+
+  @media (max-width: 760px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  background: $color-card;
+  box-shadow: $shadow-card;
+  padding: 24px;
+}
+
+.value {
+  font-size: clamp(30px, 3.2vw, 40px);
+  font-weight: 700;
+  color: $color-black;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.label {
+  font-size: 14px;
+  color: $color-gray;
+  line-height: 1.6;
+}
