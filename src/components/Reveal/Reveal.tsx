@@ -11,11 +11,15 @@ const variants: Variants = {
 interface RevealProps {
   children: ReactNode;
   delay?: number;
+  className?: string;
+  id?: string;
 }
 
-export function Reveal({ children, delay = 0 }: RevealProps) {
+export function Reveal({ children, delay = 0, className, id }: RevealProps) {
   return (
     <motion.div
+      id={id}
+      className={className}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
