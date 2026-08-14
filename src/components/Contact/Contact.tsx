@@ -2,7 +2,7 @@ import Link from "next/link";
 import styles from "./Contact.module.scss";
 import { contact } from "@/content/site";
 import { CopyEmailButton } from "./CopyEmailButton";
-import { ArrowUpRightIcon } from "@/components/icons";
+import { ArrowUpRightIcon, PhoneIcon } from "@/components/icons";
 
 export function Contact() {
   return (
@@ -23,7 +23,7 @@ export function Contact() {
             <Link key={link.label} href={link.href} className={styles.card}>
               {link.label}
               <span className={styles.arrow}>
-                <ArrowUpRightIcon />
+                {link.href.startsWith("tel:") ? <PhoneIcon /> : <ArrowUpRightIcon />}
               </span>
             </Link>
           )
