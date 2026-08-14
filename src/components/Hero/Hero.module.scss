@@ -107,7 +107,7 @@
   display: flex;
   align-items: center;
   gap: 14px;
-  margin-bottom: 48px;
+  margin-top: 48px;
   flex-wrap: wrap;
 }
 
@@ -139,12 +139,12 @@
 }
 
 .statValue {
-  font-size: 24px;
+  font-size: 34px;
   font-weight: 700;
 }
 
 .statLabel {
-  font-size: 13px;
+  font-size: 14px;
   color: $color-gray;
   margin-top: 2px;
 }
@@ -153,60 +153,23 @@
 
 .visual {
   position: relative;
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 4 / 5;
   border-radius: $radius-lg;
   background: $color-lime;
-  min-height: 460px;
   overflow: hidden;
+  justify-self: end;
 
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   z-index: 2;
-  //   width: 260px;
-  //   height: 260px;
-  //   border-radius: 50%;
-  //   background: $color-lime;
-  //   top: -80px;
-  //   right: -80px;
-  // }
-}
-
-// Lime color wash painted above the photo, below the text/floating content.
-.visualOverlay {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: rgba($color-black, 0.55);
-}
-
-.visualContent {
-  position: relative;
-  z-index: 3;
-  height: 100%;
-  min-height: 460px;
-  padding: 28px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.visualTop {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @media (max-width: 900px) {
+    justify-self: center;
+  }
 }
 
 .visualEyebrow {
   font-size: 13px;
   font-weight: 600;
   color: color.adjust($color-black, $lightness: 15%);
-}
-
-.visualDot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: $color-black;
 }
 
 .photo {

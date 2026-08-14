@@ -16,6 +16,15 @@ export function Hero() {
         <h2 className={styles.subtitle}>{hero.subtitle}</h2>
         <p className={styles.subheading}>{hero.subheading}</p>
 
+        {/* <div className={styles.stats}>
+          {hero.stats.map((stat) => (
+            <div key={stat.label}>
+              <div className={styles.statValue}>{stat.value}</div>
+              <div className={styles.statLabel}>{stat.label}</div>
+            </div>
+          ))}
+        </div> */}
+
         <div className={styles.ctaRow}>
           <Link href={hero.primaryCta.href} className={styles.primaryCta}>
             {hero.primaryCta.label}
@@ -23,15 +32,6 @@ export function Hero() {
           <Link href={hero.secondaryCta.href} className={styles.secondaryCta}>
             {hero.secondaryCta.label}
           </Link>
-        </div>
-
-        <div className={styles.stats}>
-          {hero.stats.map((stat) => (
-            <div key={stat.label}>
-              <div className={styles.statValue}>{stat.value}</div>
-              <div className={styles.statLabel}>{stat.label}</div>
-            </div>
-          ))}
         </div>
       </div>
 
@@ -41,22 +41,10 @@ export function Hero() {
             src='/assets/images/profile-banner.jpg'
             alt={'profile'}
             fill
-            sizes='(max-width: 900px) 100vw, 50vw'
+            sizes='(max-width: 900px) 100vw, 380px'
             style={{ objectFit: 'cover' }}
             priority
           />
-        </div>
-
-        <div className={styles.visualOverlay} />
-
-        <div className={styles.visualContent}>
-          <div className={styles.visualTop}>
-            <span className={styles.visualDot} />
-          </div>
-
-          {/* <div className={styles.visualTop}>
-            <span className={styles.visualDot} />
-          </div> */}
         </div>
       </div>
 
