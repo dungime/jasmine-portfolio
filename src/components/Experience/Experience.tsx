@@ -13,7 +13,7 @@ export function Experience() {
 
       <div className={styles.list}>
         {experience.items.map((item) => (
-          <div key={item.title} className={styles.item}>
+          <div key={item.title} id={`experience-${item.id}`} className={styles.item}>
             <div className={styles.periodCol}>
               <span className={styles.period}>{item.period}</span>
               {item.note && <span className={styles.note}>{item.note}</span>}

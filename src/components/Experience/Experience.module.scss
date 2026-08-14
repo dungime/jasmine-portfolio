@@ -28,7 +28,7 @@
 }
 
 .list {
-  max-width: 720px;
+  max-width: 920px;
   margin-inline: auto;
   display: flex;
   flex-direction: column;
@@ -36,7 +36,7 @@
 
 .item {
   display: grid;
-  grid-template-columns: 160px 1fr;
+  grid-template-columns: 200px 1fr;
   gap: 24px;
   padding: 28px 0;
   border-top: 1px solid $color-border;
