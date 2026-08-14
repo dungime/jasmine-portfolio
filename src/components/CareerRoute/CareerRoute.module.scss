@@ -1,0 +1,313 @@
+@use "../../styles/variables" as *;
+
+.section {
+  @include container;
+  padding-bottom: $space-section;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.badge {
+  @include pill-badge;
+  margin-bottom: 20px;
+}
+
+.heading {
+  display: inline-block;
+  font-size: clamp(28px, 3.6vw, 40px);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 12px;
+  background-image: linear-gradient(transparent 62%, $color-lime 62%);
+  background-repeat: no-repeat;
+}
+
+.subheading {
+  font-size: 15px;
+  color: $color-gray;
+  max-width: 460px;
+}
+
+// Horizontal stepper
+
+.stepper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  max-width: 900px;
+  margin: 0 auto 72px;
+  padding: 0 8px;
+  overflow-x: auto;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 28px;
+    right: 28px;
+    height: 1px;
+    background: $color-border;
+    z-index: 0;
+  }
+}
+
+.step {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  min-width: 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+  transition: transform 0.15s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+
+    .stepNumber {
+      background: $color-lime;
+      color: $color-black;
+    }
+  }
+}
+
+.stepNumber {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: $color-black;
+  color: $color-lime;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+  border: 3px solid $color-bg;
+}
+
+.stepStage {
+  font-size: 12px;
+  font-weight: 600;
+  color: $color-black;
+}
+
+.stepPeriod {
+  font-size: 11px;
+  color: $color-gray;
+}
+
+// Vertical timeline
+
+.timeline {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    width: 1px;
+    background: $color-border;
+  }
+}
+
+.row {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  padding: 16px 0 16px 52px;
+}
+
+.card {
+  width: 100%;
+  // min-height: 560px;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  background: $color-card;
+  box-shadow: $shadow-card;
+  padding: 24px 28px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.company {
+  font-size: 17px;
+  font-weight: 700;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.category {
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: $radius-pill;
+  background: $color-bg;
+  color: $color-gray;
+}
+
+.meta {
+  font-size: 13px;
+  font-weight: 600;
+  color: $color-gray;
+  margin-bottom: 14px;
+}
+
+.note {
+  font-weight: 500;
+  font-style: italic;
+  color: $color-gray-light;
+}
+
+.description {
+  font-size: 14px;
+  line-height: 1.65;
+  color: $color-gray;
+  margin-bottom: 18px;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  padding-top: 16px;
+  border-top: 1px solid $color-border;
+}
+
+.columnLabel {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: $color-black;
+  margin-bottom: 8px;
+}
+
+.bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  li {
+    position: relative;
+    padding-left: 14px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: $color-gray;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 7px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: $color-lime-dark;
+    }
+  }
+}
+
+.highlightNumber {
+  font-weight: 700;
+  color: $color-black;
+}
+
+.tech {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid $color-border;
+  font-size: 13px;
+  line-height: 1.5;
+  color: $color-gray;
+}
+
+.techLabel {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: $color-black;
+}
+
+.node {
+  position: absolute;
+  z-index: 2;
+  left: 20px;
+  top: 16px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.nodeIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: $color-black;
+  color: $color-lime;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid $color-bg;
+}
+
+.nodeNumber {
+  font-size: 11px;
+  font-weight: 700;
+  color: $color-gray;
+}
+
+// Closing quote
+
+// .quote {
+//   max-width: 640px;
+//   margin: 56px auto 0;
+//   padding: 28px 32px;
+//   border: 1px solid $color-border;
+//   border-radius: $radius-lg;
+//   background: $color-card;
+//   text-align: center;
+//   font-size: 16px;
+//   font-style: italic;
+//   line-height: 1.6;
+//   color: $color-gray;
+// }
+
+.quote {
+  max-width: 640px;
+  margin: 56px auto 0;
+  text-align: center;
+  font-size: 13px;
+  color: $color-gray-light;
+}
+
+// .footnote {
+//   margin-top: 20px;
+//   text-align: center;
+//   font-size: 12px;
+//   color: $color-gray-light;
+// }

@@ -5,6 +5,7 @@ import { Stats } from "@/components/Stats/Stats";
 import { Mission } from "@/components/Mission/Mission";
 // import { Services } from "@/components/Services/Services";
 import { Projects } from "@/components/Projects/Projects";
+import { CareerRoute } from "@/components/CareerRoute/CareerRoute";
 import { Experience } from "@/components/Experience/Experience";
 import { Skills } from "@/components/Skills/Skills";
 // import { Languages } from "@/components/Languages/Languages";
@@ -34,8 +35,11 @@ export default function Home() {
           <Projects />
         </Reveal>
         <Reveal>
-          <Experience />
+          <CareerRoute />
         </Reveal>
+        {/* <Reveal>
+          <Experience />
+        </Reveal> */}
         <Reveal>
           <Background />
         </Reveal>
