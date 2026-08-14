@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { projects } from "@/content/site";
 import styles from "./page.module.scss";
+import { withBasePath } from "@/lib/base-path";
 
 export function generateStaticParams() {
   return projects.items.map((project) => ({ id: project.id }));
@@ -48,7 +49,7 @@ export default async function ProjectDetailPage({
         <div className={styles.thumb}>
           {project.thumbnail && (
             <Image
-              src={project.thumbnail}
+              src={withBasePath(project.thumbnail)}
               alt={project.title}
               fill
               sizes="(max-width: 760px) 100vw, 760px"

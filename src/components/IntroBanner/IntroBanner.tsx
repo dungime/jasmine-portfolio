@@ -2,13 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./IntroBanner.module.scss";
 import { hero } from "@/content/site";
+import { withBasePath } from "@/lib/base-path";
 
 export function IntroBanner() {
   return (
     <section className={styles.section}>
       <div className={styles.photo}>
         <Image
-          src="/assets/images/profile-banner.jpg"
+          src={withBasePath("/assets/images/profile-banner.jpg")}
             alt={hero.heading}
             fill
             sizes="100vw"

@@ -3,6 +3,7 @@ import Link from "next/link";
 import styles from "./Projects.module.scss";
 import { projects } from "@/content/site";
 import { ArrowUpRightIcon } from "@/components/icons";
+import { withBasePath } from "@/lib/base-path";
 
 export function Projects() {
   return (
@@ -23,7 +24,7 @@ export function Projects() {
             <div className={styles.thumb}>
               {project.thumbnail && (
                 <Image
-                  src={project.thumbnail}
+                  src={withBasePath(project.thumbnail)}
                   alt={project.title}
                   fill
                   sizes="(max-width: 760px) 100vw, 50vw"

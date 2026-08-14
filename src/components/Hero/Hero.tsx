@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Hero.module.scss';
 import { hero } from '@/content/site';
+import { withBasePath } from '@/lib/base-path';
 
 export function Hero() {
   return (
@@ -38,7 +39,7 @@ export function Hero() {
       <div className={styles.visual}>
         <div className={styles.photo}>
           <Image
-            src='/assets/images/profile-banner.jpg'
+            src={withBasePath('/assets/images/profile-banner.jpg')}
             alt={'profile'}
             fill
             sizes='(max-width: 900px) 100vw, 380px'
