@@ -15,7 +15,9 @@ export function Skills() {
           <div key={item.category} className={styles.row}>
             <span className={styles.icon}>{icons[item.icon as IconName]}</span>
             <span className={styles.category}>{item.category}</span>
-            <span className={styles.technologies}>{item.technologies.join(", ")}</span>
+            <span className={`${styles.technologies} ${item.highlight ? styles.highlight : ""}`}>
+              {item.technologies.join(", ")}
+            </span>
           </div>
         ))}
       </div>

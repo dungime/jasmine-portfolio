@@ -28,7 +28,7 @@
 }
 
 .list {
-  max-width: 720px;
+  max-width: 860px;
   margin-inline: auto;
   display: flex;
   flex-direction: column;
@@ -36,7 +36,7 @@
 
 .row {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 16px;
   padding: 18px 0;
   border-top: 1px solid $color-border;
@@ -63,16 +63,16 @@
 }
 
 .category {
-  flex: 0 0 160px;
+  flex: 0 0 260px;
   padding-top: 9px;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 600;
+  line-height: 1.6;
 }
 
 .technologies {
   flex: 1;
-  padding-top: 9px;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.6;
   color: $color-gray;
   text-align: right;
@@ -83,4 +83,9 @@
     padding-top: 0;
     padding-left: 56px;
   }
+}
+
+.highlight {
+  font-weight: 700;
+  color: $color-black;
 }
