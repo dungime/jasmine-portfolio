@@ -47,6 +47,7 @@ export function Hero() {
             priority
           />
         </div>
+        <div className={styles.overlay} />
       </div>
 
       {/* <Link href="#about" className={styles.scrollBadge} aria-label="Scroll to learn more">
