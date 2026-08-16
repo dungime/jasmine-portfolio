@@ -20,29 +20,9 @@ function highlightNumbers(text: string) {
     );
 }
 
-export function CareerRoute() {
+export function CareerRouteTimeline() {
   return (
-    <section id="career-route" className={styles.section}>
-      <div className={styles.header}>
-        <span className={styles.badge}>{careerRoute.badge}</span>
-        <h2 className={styles.heading}>{careerRoute.heading}</h2>
-        <p className={styles.subheading}>{careerRoute.subheading}</p>
-      </div>
-
-      <div className={styles.stepper}>
-        {careerRoute.stations.map((station) => (
-          <Link
-            key={station.number}
-            href={`#career-row-${station.id}`}
-            className={styles.step}
-          >
-            <span className={styles.stepNumber}>{station.number}</span>
-            <span className={styles.stepStage}>{station.stage}</span>
-            <span className={styles.stepPeriod}>{station.period}</span>
-          </Link>
-        ))}
-      </div>
-
+    <section id="career-timeline" className={styles.timelineSection}>
       <div className={styles.timeline}>
         {careerRoute.stations.map((station, index) => (
           <Reveal
@@ -117,7 +97,6 @@ export function CareerRoute() {
         <br />
         {careerRoute.quote[1]}”
       </p>
-      {/* <p className={styles.footnote}>{careerRoute.footnote}</p> */}
     </section>
   );
 }

@@ -5,8 +5,9 @@ import { Stats } from "@/components/Stats/Stats";
 import { Mission } from "@/components/Mission/Mission";
 // import { Services } from "@/components/Services/Services";
 import { Projects } from "@/components/Projects/Projects";
-import { CareerRoute } from "@/components/CareerRoute/CareerRoute";
-import { Experience } from "@/components/Experience/Experience";
+import { CareerRouteSteps } from "@/components/CareerRoute/CareerRouteSteps";
+import { CareerRouteTimeline } from "@/components/CareerRoute/CareerRouteTimeline";
+// import { Experience } from "@/components/Experience/Experience";
 import { Skills } from "@/components/Skills/Skills";
 // import { Languages } from "@/components/Languages/Languages";
 import { Background } from "@/components/Background/Background";
@@ -35,7 +36,10 @@ export default function Home() {
           <Projects />
         </Reveal>
         <Reveal>
-          <CareerRoute />
+          <CareerRouteSteps />
+        </Reveal>
+        <Reveal>
+          <CareerRouteTimeline />
         </Reveal>
         {/* <Reveal>
           <Experience />

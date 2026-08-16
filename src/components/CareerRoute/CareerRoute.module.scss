@@ -1,6 +1,10 @@
 @use "../../styles/variables" as *;
 
-.section {
+.stepsSection {
+  @include container;
+}
+
+.timelineSection {
   @include container;
   padding-bottom: $space-section;
 }
