@@ -9,9 +9,9 @@ export function Background() {
       <span className={styles.badge}>{background.badge}</span>
       
       <div className={styles.box}>
-        <div className={styles.column}>
+        {/* <div className={styles.column}>
           <Languages />
-        </div>
+        </div> */}
 
         <div className={styles.column}>
          <Education />
