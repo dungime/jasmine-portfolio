@@ -8,8 +8,11 @@ interface StatValueProps {
   className?: string;
 }
 
-const TICKS = 14;
-const TICK_INTERVAL_MS = 60;
+const DURATION_MS = 1200;
+
+function easeOutQuad(t: number) {
+  return t * (2 - t);
+}
 
 export function StatValue({ value, className }: StatValueProps) {
   const ref = useRef<HTMLDivElement>(null);
@@ -24,20 +27,21 @@ export function StatValue({ value, className }: StatValueProps) {
 
     const target = parseInt(match[1], 10);
     const suffix = match[2];
-    const digits = match[1].length;
+    const startTime = performance.now();
+    let frameId: number;
 
-    let tick = 0;
-    const interval = setInterval(() => {
-      tick += 1;
-      if (tick >= TICKS) {
-        setDisplay(`${target}${suffix}`);
-        clearInterval(interval);
-        return;
+    const tick = (now: number) => {
+      const progress = Math.min((now - startTime) / DURATION_MS, 1);
+      const current = Math.round(easeOutQuad(progress) * target);
+      setDisplay(`${current}${suffix}`);
+
+      if (progress < 1) {
+        frameId = requestAnimationFrame(tick);
       }
-      setDisplay(`${Math.floor(Math.random() * 10 ** digits)}${suffix}`);
-    }, TICK_INTERVAL_MS);
+    };
 
-    return () => clearInterval(interval);
+    frameId = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(frameId);
   }, [isInView, value]);
 
   return (

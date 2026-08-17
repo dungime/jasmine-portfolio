@@ -10,6 +10,11 @@
   max-width: 760px;
 }
 
+.containerWide {
+  @include container;
+  max-width: 1140px;
+}
+
 .back {
   display: inline-flex;
   align-items: center;
@@ -21,6 +26,17 @@
 
   &:hover {
     color: $color-black;
+  }
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -44,27 +60,219 @@
   font-size: clamp(28px, 4vw, 40px);
   font-weight: 700;
   letter-spacing: -0.01em;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
-.tags {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-bottom: 24px;
+.subtitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: $color-gray;
+  margin-bottom: 6px;
 }
 
-.tag {
+.category {
   font-size: 13px;
   font-weight: 500;
-  padding: 6px 14px;
-  border-radius: $radius-pill;
-  background: $color-bg;
-  color: $color-gray;
+  color: $color-gray-light;
 }
 
 .description {
   font-size: 16px;
   color: $color-gray;
   line-height: 1.7;
+  margin-top: 20px;
+}
+
+.section {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid $color-border;
+}
+
+.sectionHeading {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: $color-black;
+  margin-bottom: 16px;
+}
+
+.paragraph {
+  font-size: 15px;
+  line-height: 1.7;
+  color: $color-gray;
+}
+
+.bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: $color-gray;
+  }
+
+  strong {
+    color: $color-black;
+    font-weight: 700;
+  }
+}
+
+.checkIcon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  border-radius: 50%;
+  background: $color-lime;
+  color: $color-black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: 12px;
+    height: 12px;
+    stroke-width: 3;
+  }
+}
+
+.highlight {
+  & + & {
+    margin-top: 20px;
+  }
+}
+
+.highlightTitle {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.techStack {
+  font-size: 15px;
+  line-height: 1.7;
+  color: $color-gray;
+}
+
+.techGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.techChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px 6px 6px;
+  border: 1px solid $color-border;
+  border-radius: $radius-pill;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.techLogo {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.techAvatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: $color-black;
+  color: $color-lime;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.roleGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.roleCard {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  background: $color-card;
+}
+
+.roleIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: $color-lime;
+  color: $color-black;
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.roleName {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.roleDescription {
+  font-size: 12px;
+  line-height: 1.5;
+  color: $color-gray;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.screenshotsRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+
+  @media (max-width: 560px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.screenshotCard {
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  overflow: hidden;
+  box-shadow: $shadow-card;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 }

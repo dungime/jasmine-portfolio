@@ -216,24 +216,90 @@ export const projects = {
     {
       id: 'e-learning-platform',
       title: 'E-Learning Platform',
+      subtitle: 'Learning Management Platform',
+      category: 'Education / SaaS',
       description:
-        'Set up the entire monorepo architecture from scratch for an e-learning platform and built the instructor and student dashboards.',
+        'A learning platform providing separate experiences for instructors and students, including course management, video learning, learning history, and payment workflows.',
+      role: 'I was responsible for the frontend architecture and implementation of the platform, including setting up the project structure and developing key instructor and student workflows.',
+      built: [
+        'Set up the **monorepo architecture from scratch**',
+        'Built student dashboards and learning interfaces',
+        'Developed instructor interfaces for course creation and content management',
+        'Implemented video-based learning experiences',
+        'Built learning history and progress-related workflows',
+        'Integrated frontend features with REST APIs',
+        'Implemented payment-related workflows',
+      ],
+      highlights: [
+        {
+          title: 'Monorepo Architecture',
+          description:
+            'Established a reusable project structure using **Vite and Turborepo**, allowing shared configuration and components across applications.',
+        },
+        {
+          title: 'Component Architecture',
+          description:
+            'Created reusable UI components and shared patterns between instructor and student experiences.',
+        },
+        {
+          title: 'Data Management',
+          description: 'Used React Query and Jotai to manage server data and client-side application state.',
+        },
+        {
+          title: 'Complex Forms',
+          description:
+            'Built course creation and content management workflows involving multiple forms, validation, and API states.',
+        },
+      ],
       tags: [
         'React',
         'TypeScript',
-        'Turborepo',
         'Vite',
+        'Turborepo',
         'React Query',
         'Jotai',
+        'REST APIs',
       ],
       thumbnail: '/assets/images/thumb-elearning.png',
     },
     {
       id: 'cleaning-services-dashboard',
       title: 'Cleaning Services Dashboard',
+      subtitle: 'Role-Based Operations Platform',
       description:
-        'Admin dashboard with role-based authentication across 4 roles, with end-to-end CRUD modules for cleaning requests, maintenance, reports, and inventory.',
-      tags: ['Turborepo', 'Vite', 'React', 'TypeScript', 'Ant Design', 'SWR'],
+        'An admin platform for managing cleaning service operations, including requests, maintenance, reports, and inventory.',
+      screenshots: [
+        '/assets/images/projects/cleaning/dashboard-workflow.png',
+        '/assets/images/projects/cleaning/stock-details.png',
+        '/assets/images/projects/cleaning/cleaning-calendar.png',
+      ],
+      contributions: [
+        'Implemented authentication and authorization for **4 user roles**',
+        'Built end-to-end CRUD workflows',
+        'Developed cleaning request and maintenance management',
+        'Built reporting and inventory modules',
+        'Integrated frontend features with REST APIs',
+        'Created responsive interfaces for different operational workflows',
+      ],
+      highlights: [
+        {
+          title: undefined,
+          description:
+            'The main challenge was managing different permissions and workflows within the same application.',
+        },
+        {
+          title: undefined,
+          description:
+            'I implemented role-based interfaces so each user type could access the appropriate functionality while sharing common components and application infrastructure.',
+        },
+      ],
+      tags: ['React', 'TypeScript', 'Vite', 'Turborepo', 'Ant Design', 'SWR', 'Jotai'],
+      userRoles: [
+        { icon: 'shield', name: 'Admin', description: 'Full system access & configuration' },
+        { icon: 'chart', name: 'Manager', description: 'Oversee operations & reports' },
+        { icon: 'people', name: 'Supervisor', description: 'Manage teams & cleaning tasks' },
+        { icon: 'clipboard', name: 'Worker', description: 'View & complete assigned tasks' },
+      ],
       thumbnail: '/assets/images/thumb-cleaning.png',
     },
     {

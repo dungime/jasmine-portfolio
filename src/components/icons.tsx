@@ -47,6 +47,99 @@ export function PhoneIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
+export function ReactLogo(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="-11.5 -10.23174 23 20.46348" width="1em" height="1em" {...props}>
+      <circle r="2.05" fill="#61dafb" />
+      <g stroke="#61dafb" strokeWidth={1} fill="none">
+        <ellipse rx="11" ry="4.2" />
+        <ellipse rx="11" ry="4.2" transform="rotate(60)" />
+        <ellipse rx="11" ry="4.2" transform="rotate(120)" />
+      </g>
+    </svg>
+  );
+}
+
+export function TypeScriptLogo(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" width="1em" height="1em" {...props}>
+      <rect width="24" height="24" rx="5" fill="#3178c6" />
+      <text x="12" y="16.5" textAnchor="middle" fontSize="11" fontWeight={700} fill="#fff">
+        TS
+      </text>
+    </svg>
+  );
+}
+
+export function ViteLogo(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" width="1em" height="1em" {...props}>
+      <defs>
+        <linearGradient id="vite-gradient" x1="6" y1="2" x2="18" y2="22" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#41d1ff" />
+          <stop offset="1" stopColor="#bd34fe" />
+        </linearGradient>
+      </defs>
+      <path fill="url(#vite-gradient)" d="M13 2 3 14h7l-1 8 10-12h-7l1-8z" />
+    </svg>
+  );
+}
+
+export function TurborepoLogo(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" width="1em" height="1em" {...props}>
+      <rect width="24" height="24" rx="6" fill="#ef1e2b" />
+      <circle cx="12" cy="12" r="7" fill="none" stroke="#fff" strokeWidth={2} />
+      <circle cx="12" cy="8.5" r="2.5" fill="#fff" />
+      <path d="M12 11v7" stroke="#fff" strokeWidth={2} strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function AntDesignLogo(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" width="1em" height="1em" {...props}>
+      <rect width="24" height="24" rx="6" fill="#1677ff" />
+      <rect x="8" y="8" width="8" height="8" rx="1.5" fill="#fff" transform="rotate(45 12 12)" />
+    </svg>
+  );
+}
+
+export function SwrLogo(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" width="1em" height="1em" {...props}>
+      <rect width="24" height="24" rx="6" fill="#000" />
+      <path d="M7 15c0-3 2-5 5-5s5 2 5 5" fill="none" stroke="#fff" strokeWidth={1.6} strokeLinecap="round" />
+      <path
+        d="M8.5 8.5 7 10l-1.5-1.5M15.5 15.5 17 14l1.5 1.5"
+        stroke="#fff"
+        strokeWidth={1.6}
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function JotaiLogo(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" width="1em" height="1em" {...props}>
+      <path fill="#000" d="M12 3c3.5 4.2 6 7.6 6 10.5A6 6 0 0 1 6 13.5C6 10.6 8.5 7.2 12 3z" />
+    </svg>
+  );
+}
+
+export const techLogos: Record<string, (props: SVGProps<SVGSVGElement>) => React.JSX.Element> = {
+  react: ReactLogo,
+  typescript: TypeScriptLogo,
+  vite: ViteLogo,
+  turborepo: TurborepoLogo,
+  "ant design": AntDesignLogo,
+  swr: SwrLogo,
+  jotai: JotaiLogo,
+};
+
 export const icons = {
   layout: (
     <svg {...common}>
@@ -113,6 +206,29 @@ export const icons = {
     <svg {...common}>
       <circle cx="12" cy="12" r="9" />
       <path d="M12 7v5l3.5 2" />
+    </svg>
+  ),
+  check: (
+    <svg {...common}>
+      <path d="M5 13l4 4L19 7" />
+    </svg>
+  ),
+  shield: (
+    <svg {...common}>
+      <path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5l-8-3Z" />
+      <path d="m9 12 2 2 4-4" />
+    </svg>
+  ),
+  chart: (
+    <svg {...common}>
+      <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" />
+    </svg>
+  ),
+  clipboard: (
+    <svg {...common}>
+      <rect x="6" y="4" width="12" height="17" rx="2" />
+      <path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1" />
+      <path d="M9 11h6M9 15h6" />
     </svg>
   ),
 } as const;
