@@ -55,10 +55,18 @@
   font-size: 14px;
   font-weight: 500;
   color: $color-gray;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
   transition: color 0.15s ease;
 
   &:hover {
     color: $color-black;
+  }
+
+  &.active {
+    color: $color-black;
+    text-decoration: underline;
+    text-decoration-color: $color-lime;
   }
 }
 

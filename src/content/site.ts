@@ -6,10 +6,11 @@ export const site = {
   logo: 'J.',
   nav: [
     { label: 'About', href: '#about' },
-    // { label: "Services", href: "#services" },
+    { label: 'What I Do', href: '#services' },
     { label: 'Skills', href: '#skills' },
-    { label: 'Experience', href: '#experience' },
+    { label: 'Career', href: '#career-route' },
     { label: 'Projects', href: '#projects' },
+    { label: 'Education', href: '#education' },
     { label: 'Contact', href: '#contact' },
   ],
   contactCta: { label: 'Download CV', href: '/assets/resume.pdf' },
