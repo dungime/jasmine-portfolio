@@ -540,22 +540,14 @@ export const experience = {
   ],
 };
 
-export const background = {
-  badge: 'Background',
-};
-
 export const education = {
-  badge: 'Education',
+  badge: 'Background',
   heading: 'Education',
   items: [
     {
-      title: '2010 – 2013',
-      content: 'HCMc University of Science',
-    },
-
-    {
-      title: 'Major',
-      content: 'Information Technology',
+      period: '2010 – 2013',
+      school: 'Ho Chi Minh City University of Science',
+      degree: 'Information Technology',
     },
   ],
 };

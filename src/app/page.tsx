@@ -1,19 +1,19 @@
-import { Navbar } from "@/components/Navbar/Navbar";
-import { Hero } from "@/components/Hero/Hero";
-import { Stats } from "@/components/Stats/Stats";
+import { Navbar } from '@/components/Navbar/Navbar';
+import { Hero } from '@/components/Hero/Hero';
+import { Stats } from '@/components/Stats/Stats';
 // import { IntroBanner } from "@/components/IntroBanner/IntroBanner";
-import { Mission } from "@/components/Mission/Mission";
-// import { Services } from "@/components/Services/Services";
-import { Projects } from "@/components/Projects/Projects";
-import { CareerRouteSteps } from "@/components/CareerRoute/CareerRouteSteps";
-import { CareerRouteTimeline } from "@/components/CareerRoute/CareerRouteTimeline";
+import { Mission } from '@/components/Mission/Mission';
+import { Services } from '@/components/Services/Services';
+import { Projects } from '@/components/Projects/Projects';
+import { CareerRouteSteps } from '@/components/CareerRoute/CareerRouteSteps';
+import { CareerRouteTimeline } from '@/components/CareerRoute/CareerRouteTimeline';
 // import { Experience } from "@/components/Experience/Experience";
-import { Skills } from "@/components/Skills/Skills";
+import { Education } from '@/components/Education/Education';
+import { Skills } from '@/components/Skills/Skills';
 // import { Languages } from "@/components/Languages/Languages";
-import { Background } from "@/components/Background/Background";
-import { Contact } from "@/components/Contact/Contact";
-import { Footer } from "@/components/Footer/Footer";
-import { Reveal } from "@/components/Reveal/Reveal";
+import { Contact } from '@/components/Contact/Contact';
+import { Footer } from '@/components/Footer/Footer';
+import { Reveal } from '@/components/Reveal/Reveal';
 
 export default function Home() {
   return (
@@ -28,12 +28,11 @@ export default function Home() {
         <Reveal>
           <Mission />
         </Reveal>
-        {/* <Services /> */}
         <Reveal>
-          <Skills />
+          <Services />
         </Reveal>
         <Reveal>
-          <Projects />
+          <Skills />
         </Reveal>
         <Reveal>
           <CareerRouteSteps />
@@ -41,15 +40,15 @@ export default function Home() {
         <Reveal>
           <CareerRouteTimeline />
         </Reveal>
+        <Reveal>
+          <Projects />
+        </Reveal>
         {/* <Reveal>
           <Experience />
         </Reveal> */}
         <Reveal>
-          <Background />
-        </Reveal>
-        {/* <Reveal>
           <Education />
-        </Reveal> */}
+        </Reveal>
         <Reveal>
           <Contact />
         </Reveal>
