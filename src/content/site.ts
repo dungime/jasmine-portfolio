@@ -546,15 +546,16 @@ export const languages = {
 };
 
 export const contact = {
-  badge: 'Information',
-  heading: 'Contact',
+  badge: 'Contact',
+  heading: 'Let’s Build Something Great',
   subheading:
-    'Contact me for freelance work, full-time opportunities, or just to say hi.',
+    'I’m always open to discussing interesting products, challenging frontend problems, and opportunities to build better experiences together.',
   resumeCta: { label: 'Download Résumé', href: '/assets/resume.pdf' },
   links: [
     { label: 'GitHub', href: 'https://github.com/dungime' },
     { label: 'E-mail', href: 'mailto:dungntp.contact@gmail.com' },
     { label: '0398 060 569', href: 'tel:+84398060569' },
+    { label: 'Ho Chi Minh', href: '' },
     // { label: "LinkedIn", href: "https://linkedin.com" },
     // { label: "Instagram", href: "https://instagram.com" },
     // { label: "E-mail", href: "mailto:dungntp.contact@gmail.com" },
