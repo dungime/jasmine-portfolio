@@ -36,9 +36,9 @@ export const hero = {
 export const stats = {
   items: [
     { value: '10+', label: 'Years of Experience' },
+    { value: '15', label: 'Largest Team Worked With' },
     { value: '30+', label: 'Projects Shipped' },
-    { value: '15', label: 'Biggest Team Size Worked With' },
-    { value: '∞', label: 'Passion for Building Value' },
+    { value: '∞', label: 'Passion for Coding' },
   ],
 };
 
