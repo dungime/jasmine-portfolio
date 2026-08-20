@@ -20,8 +20,10 @@ export const hero = {
   badge: 'Portfolio',
   heading: 'Jasmine.',
   subtitle: 'React · TypeScript · Next.js · Frontend Architecture',
-  subheading:
-    'I build reliable product interfaces, scalable frontend architecture, and complex data-driven applications for fintech, SaaS, and e-commerce products.',
+  subheading: [
+    'I’m a **Senior Frontend Developer** with **10+ years of experience** building and delivering production web applications across fintech, Web3, e-commerce, SaaS, ERP, and e-learning.',
+    'I specialize in **React, TypeScript, and Next.js**, with hands-on experience owning frontend architecture, building complex data-driven interfaces, integrating APIs, and delivering features from development through production.',
+  ],
   primaryCta: { label: 'View Projects', href: '#projects' },
   secondaryCta: { label: 'Get in Touch', href: '#contact' },
   stats: [

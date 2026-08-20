@@ -4,6 +4,14 @@ import styles from './Hero.module.scss';
 import { hero } from '@/content/site';
 import { withBasePath } from '@/lib/base-path';
 
+const BOLD_PATTERN = /\*\*(.+?)\*\*/g;
+
+function renderBold(text: string) {
+  return text
+    .split(BOLD_PATTERN)
+    .map((part, index) => (index % 2 === 1 ? <strong key={index}>{part}</strong> : part));
+}
+
 export function Hero() {
   return (
     <section id='top' className={styles.section}>
@@ -15,7 +23,11 @@ export function Hero() {
         </div>
 
         <h2 className={styles.subtitle}>{hero.subtitle}</h2>
-        <p className={styles.subheading}>{hero.subheading}</p>
+        {hero.subheading.map((paragraph) => (
+          <p key={paragraph} className={styles.subheading}>
+            {renderBold(paragraph)}
+          </p>
+        ))}
 
         {/* <div className={styles.stats}>
           {hero.stats.map((stat) => (
