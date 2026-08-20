@@ -284,9 +284,9 @@ export const projects = {
       description:
         'An admin platform for managing cleaning service operations, including requests, maintenance, reports, and inventory.',
       screenshots: [
-        '/assets/images/projects/cleaning/dashboard-workflow.png',
-        '/assets/images/projects/cleaning/stock-details.png',
-        '/assets/images/projects/cleaning/cleaning-calendar.png',
+        '/assets/images/projects/cleaning/dashboard-workflow.jpg',
+        '/assets/images/projects/cleaning/stock-details.jpg',
+        '/assets/images/projects/cleaning/cleaning-calendar.jpg',
       ],
       contributions: [
         'Implemented authentication and authorization for **4 user roles**',

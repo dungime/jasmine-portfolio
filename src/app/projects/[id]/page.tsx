@@ -135,11 +135,12 @@ export default async function ProjectDetailPage({
               <h2 className={styles.sectionHeading}>Tech Stack</h2>
               <div className={styles.techGrid}>
                 {project.tags.map((tag) => {
-                  const Logo = techLogos[tag.toLowerCase()];
+                  const logoSrc = techLogos[tag.toLowerCase()];
                   return (
                     <span key={tag} className={styles.techChip}>
-                      {Logo ? (
-                        <Logo className={styles.techLogo} />
+                      {logoSrc ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img src={logoSrc} alt={tag} className={styles.techLogo} />
                       ) : (
                         <span className={styles.techAvatar}>{tag.slice(0, 2)}</span>
                       )}
