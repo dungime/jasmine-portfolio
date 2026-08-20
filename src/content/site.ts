@@ -48,37 +48,49 @@ export const mission = {
 };
 
 export const services = {
-  badge: 'Services',
-  heading: 'What I can help you build',
-  subheading:
-    'From interface design to production deployment, I cover the full stack of building a digital product.',
+  badge: 'Focus',
+  heading: 'What I Do',
+  subheading: 'Where I focus my time as a frontend engineer.',
   items: [
     {
       icon: 'layout',
-      title: 'Product Design',
+      title: 'Frontend Architecture',
       description:
-        'Wireframes to polished UI, backed by a consistent design system.',
-      href: '#',
+        'Design and evolve scalable frontend structures, reusable component systems, and project foundations for production applications.',
+      href: undefined,
+      highlight: undefined,
     },
     {
-      icon: 'code',
-      title: 'Frontend Engineering',
+      icon: 'database',
+      title: 'Complex Product Interfaces',
       description:
-        'React, Next.js, and TypeScript — accessible, fast, and maintainable.',
-      href: '#',
-      highlight: true,
-    },
-    {
-      icon: 'server',
-      title: 'Backend & APIs',
-      description: 'Node.js services, databases, and integrations that scale.',
-      href: '#',
+        'Build data-heavy and workflow-driven interfaces including trading, staking, KYC, administration, dashboards, and learning platforms.',
+      href: undefined,
+      highlight: undefined,
     },
     {
       icon: 'rocket',
-      title: 'Shipping & Deploy',
-      description: 'CI/CD, performance tuning, and monitoring after launch.',
-      href: '#',
+      title: 'End-to-End Ownership',
+      description:
+        'Take frontend features from requirements and implementation through API integration, testing, QA, and production release.',
+      href: undefined,
+      highlight: undefined,
+    },
+    {
+      icon: 'people',
+      title: 'Product Collaboration',
+      description:
+        'Work closely with Product, Design, Backend, and QA teams to turn product requirements into reliable and maintainable frontend experiences.',
+      href: undefined,
+      highlight: undefined,
+    },
+    {
+      icon: 'code',
+      title: 'Developer Enablement',
+      description:
+        'Improve development workflows through reusable systems, internal tooling, coding standards, code reviews, and mentoring.',
+      href: undefined,
+      highlight: undefined,
     },
   ],
 };

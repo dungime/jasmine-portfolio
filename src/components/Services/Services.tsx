@@ -23,9 +23,11 @@ export function Services() {
               <h3 className={styles.title}>{item.title}</h3>
               <p className={styles.description}>{item.description}</p>
             </div>
-            <Link href={item.href} className={styles.link}>
-              Learn more →
-            </Link>
+            {item.href && (
+              <Link href={item.href} className={styles.link}>
+                Learn more →
+              </Link>
+            )}
           </div>
         ))}
       </div>
