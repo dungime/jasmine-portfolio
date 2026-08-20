@@ -43,38 +43,8 @@ export const stats = {
 export const mission = {
   badge: 'Mission',
   heading: 'I build products that are simple, fast, and built to last',
-  body: 'Working across outsourcing projects gave me broad experience across industries, teams, and technical environments. I’m now looking to apply that breadth within a product team where I can take deeper ownership and contribute to long-term product growth.',
+  body: 'I’m now looking to bring this breadth of experience into a **product-focused team** where I can take **deeper ownership** of frontend architecture and **contribute to long-term** product growth.',
   imageAlt: 'Working on a project',
-  whatIDo: {
-    heading: 'What I Do',
-    items: [
-      {
-        title: 'Frontend Architecture',
-        description:
-          'Design and evolve scalable frontend structures, reusable component systems, and project foundations for production applications.',
-      },
-      {
-        title: 'Complex Product Interfaces',
-        description:
-          'Build data-heavy and workflow-driven interfaces including trading, staking, KYC, administration, dashboards, and learning platforms.',
-      },
-      {
-        title: 'End-to-End Ownership',
-        description:
-          'Take frontend features from requirements and implementation through API integration, testing, QA, and production release.',
-      },
-      {
-        title: 'Product Collaboration',
-        description:
-          'Work closely with Product, Design, Backend, and QA teams to turn product requirements into reliable and maintainable frontend experiences.',
-      },
-      {
-        title: 'Developer Enablement',
-        description:
-          'Improve development workflows through reusable systems, internal tooling, coding standards, code reviews, and mentoring.',
-      },
-    ],
-  },
 };
 
 export const services = {
