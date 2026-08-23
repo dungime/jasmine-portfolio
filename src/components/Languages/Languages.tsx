@@ -6,7 +6,9 @@ export function Languages() {
     <section id="languages" className={styles.section}>
       <div className={styles.header}>
         {/* <span className={styles.badge}>{languages.badge}</span> */}
-        <h2 className={styles.heading}>{languages.heading}</h2>
+        <h2 className={styles.heading}>
+          <span className={styles.highlight}>{languages.heading}</span>
+        </h2>
       </div>
 
       <div className={styles.row}>

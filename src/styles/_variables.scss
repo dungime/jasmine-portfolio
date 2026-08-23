@@ -45,6 +45,16 @@ $shadow-card: 0 1px 2px rgba(25, 19, 20, 0.04), 0 12px 24px -12px rgba(25, 19, 2
   background: $color-white;
 }
 
+// Apply to an inline element nested inside the heading (not the heading itself —
+// a heading that is a direct flex/grid item gets blockified, which breaks
+// box-decoration-break and makes the highlight cover the whole multi-line box).
+@mixin heading-highlight {
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  background-image: linear-gradient(transparent 62%, $color-lime 62%);
+  background-repeat: no-repeat;
+}
+
 @mixin button-pill {
   display: inline-flex;
   align-items: center;

@@ -8,7 +8,9 @@ export function Services() {
     <section id="services" className={styles.section}>
       <div className={styles.header}>
         <span className={styles.badge}>{services.badge}</span>
-        <h2 className={styles.heading}>{services.heading}</h2>
+        <h2 className={styles.heading}>
+          <span className={styles.highlight}>{services.heading}</span>
+        </h2>
         <p className={styles.subheading}>{services.subheading}</p>
       </div>
 

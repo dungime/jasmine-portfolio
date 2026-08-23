@@ -12,7 +12,9 @@ export function Projects() {
         <div>
           <span className={styles.badge}>{projects.badge}</span>
           <div>
-            <h2 className={styles.heading}>{projects.heading}</h2>
+            <h2 className={styles.heading}>
+              <span className={styles.highlight}>{projects.heading}</span>
+            </h2>
           </div>
         </div>
         <p className={styles.subheading}>{projects.subheading}</p>

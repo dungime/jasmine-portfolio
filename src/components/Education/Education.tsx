@@ -6,7 +6,9 @@ export function Education() {
     <section id="education" className={styles.section}>
       <div className={styles.header}>
         <span className={styles.badge}>{education.badge}</span>
-        <h2 className={styles.heading}>{education.heading}</h2>
+        <h2 className={styles.heading}>
+          <span className={styles.highlight}>{education.heading}</span>
+        </h2>
       </div>
 
       <div className={styles.list}>

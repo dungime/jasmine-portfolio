@@ -20,12 +20,13 @@
 }
 
 .heading {
-  display: inline-block;
   font-size: clamp(28px, 3.6vw, 40px);
   font-weight: 700;
   letter-spacing: -0.01em;
-  background-image: linear-gradient(transparent 62%, $color-lime 62%);
-  background-repeat: no-repeat;
+}
+
+.highlight {
+  @include heading-highlight;
 }
 
 .row {

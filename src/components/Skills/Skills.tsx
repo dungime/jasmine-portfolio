@@ -7,7 +7,9 @@ export function Skills() {
     <section id="skills" className={styles.section}>
       <div className={styles.header}>
         <span className={styles.badge}>{skills.badge}</span>
-        <h2 className={styles.heading}>{skills.heading}</h2>
+        <h2 className={styles.heading}>
+          <span className={styles.highlight}>{skills.heading}</span>
+        </h2>
       </div>
 
       <div className={styles.list}>
