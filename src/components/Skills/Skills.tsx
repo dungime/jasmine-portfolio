@@ -8,7 +8,7 @@ export function Skills() {
       <div className={styles.header}>
         <span className={styles.badge}>{skills.badge}</span>
         <h2 className={styles.heading}>
-          <span className={styles.highlight}>{skills.heading}</span>
+          <span className={styles.headingHighlight}>{skills.heading}</span>
         </h2>
       </div>
 

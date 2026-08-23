@@ -15,7 +15,7 @@ export function CareerRouteSteps() {
       <div className={styles.header}>
         <span className={styles.badge}>{careerRoute.badge}</span>
         <h2 className={styles.heading}>
-          <span className={styles.highlight}>{careerRoute.heading}</span>
+          <span className={styles.headingHighlight}>{careerRoute.heading}</span>
         </h2>
         <p className={styles.subheading}>{careerRoute.subheading}</p>
       </div>

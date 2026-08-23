@@ -9,7 +9,7 @@ export function Contact() {
     <section id="contact" className={styles.section}>
       <span className={styles.badge}>{contact.badge}</span>
       <h2 className={styles.heading}>
-        <span className={styles.highlight}>{contact.heading}</span>
+        <span className={styles.headingHighlight}>{contact.heading}</span>
       </h2>
       <p className={styles.subheading}>{contact.subheading}</p>
 

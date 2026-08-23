@@ -9,7 +9,7 @@ export function Experience() {
       <div className={styles.header}>
         <span className={styles.badge}>{experience.badge}</span>
         <h2 className={styles.heading}>
-          <span className={styles.highlight}>{experience.heading}</span>
+          <span className={styles.headingHighlight}>{experience.heading}</span>
         </h2>
       </div>
 

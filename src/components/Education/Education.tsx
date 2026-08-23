@@ -7,7 +7,7 @@ export function Education() {
       <div className={styles.header}>
         <span className={styles.badge}>{education.badge}</span>
         <h2 className={styles.heading}>
-          <span className={styles.highlight}>{education.heading}</span>
+          <span className={styles.headingHighlight}>{education.heading}</span>
         </h2>
       </div>
 

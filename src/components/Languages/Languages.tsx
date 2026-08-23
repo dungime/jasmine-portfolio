@@ -7,7 +7,7 @@ export function Languages() {
       <div className={styles.header}>
         {/* <span className={styles.badge}>{languages.badge}</span> */}
         <h2 className={styles.heading}>
-          <span className={styles.highlight}>{languages.heading}</span>
+          <span className={styles.headingHighlight}>{languages.heading}</span>
         </h2>
       </div>
 
