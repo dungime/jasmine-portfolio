@@ -2,6 +2,10 @@
 
 .stepsSection {
   @include container;
+
+  @media (max-width: 760px) {
+    display: none;
+  }
 }
 
 .timelineSection {
