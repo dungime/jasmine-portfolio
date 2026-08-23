@@ -46,8 +46,8 @@ export function CareerRouteTimeline() {
 
               <div className={styles.meta}>
                 {station.period}
-                {station.role && <span> · Role: {station.role}</span>}
-                {station.team && <span> · Team: {station.team}</span>}
+                {/* {station.role && <span> · Role: {station.role}</span>}
+                {station.team && <span> · Team: {station.team}</span>} */}
               </div>
 
               <p className={styles.description}>{station.description}</p>
