@@ -1,15 +1,14 @@
-import Link from "next/link";
-import styles from "./Services.module.scss";
-import { services } from "@/content/site";
-import { icons, type IconName } from "@/components/icons";
+import styles from './Services.module.scss';
+import { services } from '@/content/site';
+import { icons, type IconName } from '@/components/icons';
 
 export function Services() {
   return (
-    <section id="services" className={styles.section}>
+    <section id='services' className={styles.section}>
       <div className={styles.header}>
         <span className={styles.badge}>{services.badge}</span>
         <h2 className={styles.heading}>
-          <span className={styles.highlight}>{services.heading}</span>
+          <span className={styles.headingHighlight}>{services.heading}</span>
         </h2>
         <p className={styles.subheading}>{services.subheading}</p>
       </div>
@@ -18,18 +17,17 @@ export function Services() {
         {services.items.map((item) => (
           <div
             key={item.title}
-            className={item.highlight ? `${styles.card} ${styles.highlight}` : styles.card}
+            className={
+              item.highlight
+                ? `${styles.card} ${styles.highlight}`
+                : styles.card
+            }
           >
             <span className={styles.icon}>{icons[item.icon as IconName]}</span>
             <div>
               <h3 className={styles.title}>{item.title}</h3>
               <p className={styles.description}>{item.description}</p>
             </div>
-            {item.href && (
-              <Link href={item.href} className={styles.link}>
-                Learn more →
-              </Link>
-            )}
           </div>
         ))}
       </div>
