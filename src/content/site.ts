@@ -317,14 +317,6 @@ export const projects = {
       ],
       thumbnail: '/assets/images/thumb-cleaning.png',
     },
-    {
-      id: 'admin-boilerplate-generator',
-      title: 'Admin Boilerplate Generator',
-      description:
-        'Internal CLI tool to scaffold admin web applications, standardizing coding conventions and reducing project setup time across client teams.',
-      tags: ['React', 'Rematch', 'Ant Design', 'Styled-components', 'Plop'],
-      thumbnail: '/assets/images/thumb-admingen.png',
-    },
   ],
 };
 
@@ -346,7 +338,7 @@ export const careerRoute = {
       category: 'Outsourcing',
       company: 'Aris Vietnam',
       website: 'https://aris-vn.com',
-      period: '2014 – 2015',
+      period: 'Aug 2014 – May 2016',
       role: 'Junior Frontend Developer',
       team: '3 FE',
       description:
