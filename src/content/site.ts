@@ -5,8 +5,8 @@ export const site = {
   role: 'Frontend Developer',
   logo: 'J.',
   nav: [
-    // { label: 'About', href: '#about' },
-    { label: 'What I Do', href: '#services' },
+    { label: 'About', href: '#' },
+    // { label: 'What I Do', href: '#services' },
     // { label: 'Skills', href: '#skills' },
     { label: 'Career', href: '#career-route' },
     { label: 'Projects', href: '#projects' },
@@ -19,10 +19,10 @@ export const site = {
 export const hero = {
   badge: 'Portfolio',
   heading: 'Jasmine.',
-  subtitle: 'React · TypeScript · Next.js · Frontend Architecture',
+  subtitle: 'React · TypeScript · Next.js · Owning Products',
   subheading: [
-    'I’m a **Senior Frontend Developer** with **10+ years of experience** building and delivering production web applications across fintech, Web3, e-commerce, SaaS, ERP, and e-learning.',
-    'I specialize in **React, TypeScript, and Next.js**, with hands-on experience owning frontend architecture, building complex data-driven interfaces, integrating APIs, and delivering features from development through production.',
+    'Senior Frontend Developer with **10+ years** of experience building production web applications across fintech, e-commerce, admin dashboards, e-learning, and event ticketing',
+    'Specialized in **React, TypeScript, and Next.js** — turning complex problems into simple, reliable, and maintainable experiences."'
   ],
   primaryCta: { label: 'View Projects', href: '#projects' },
   secondaryCta: { label: 'Get in Touch', href: '#contact' },
@@ -36,8 +36,8 @@ export const hero = {
 export const stats = {
   items: [
     { value: '10+', label: 'Years of Experience' },
-    { value: '15', label: 'Largest Team Worked With' },
     { value: '30+', label: 'Projects Shipped' },
+    { value: '5', label: 'Members Mentored' },
     { value: '∞', label: 'Passion for Coding' },
   ],
 };
@@ -51,46 +51,31 @@ export const mission = {
 
 export const services = {
   badge: 'Focus',
-  heading: 'What I Do',
-  subheading: 'Where I focus my time as a frontend engineer.',
+  heading: 'What I enjoy working on',
+  subheading:
+    'The kind of problems, products, and work I enjoy spending my time on.',
   items: [
     {
-      icon: 'layout',
-      title: 'Frontend Architecture',
+      icon: 'code',
+      title: 'Complex frontend problems',
       description:
-        'Design and evolve scalable frontend structures, reusable component systems, and project foundations for production applications.',
-      href: undefined,
-      highlight: undefined,
-    },
-    {
-      icon: 'database',
-      title: 'Complex Product Interfaces',
-      description:
-        'Build data-heavy and workflow-driven interfaces including trading, staking, KYC, administration, dashboards, and learning platforms.',
+        'I enjoy turning complicated requirements into interfaces that are easier to understand and use.',
       href: undefined,
       highlight: undefined,
     },
     {
       icon: 'rocket',
-      title: 'End-to-End Ownership',
+      title: 'Product ownership',
       description:
-        'Take frontend features from requirements and implementation through API integration, testing, QA, and production release.',
+        'I like being involved beyond implementation — understanding the problem, figuring out the solution, and seeing the feature through to production.',
       href: undefined,
       highlight: undefined,
     },
     {
       icon: 'people',
-      title: 'Product Collaboration',
+      title: 'Learning & sharing',
       description:
-        'Work closely with Product, Design, Backend, and QA teams to turn product requirements into reliable and maintainable frontend experiences.',
-      href: undefined,
-      highlight: undefined,
-    },
-    {
-      icon: 'code',
-      title: 'Developer Enablement',
-      description:
-        'Improve development workflows through reusable systems, internal tooling, coding standards, code reviews, and mentoring.',
+        'I enjoy learning new things and sharing what I know with other developers.',
       href: undefined,
       highlight: undefined,
     },
@@ -105,107 +90,31 @@ export const skills = {
       icon: 'code',
       category: 'Core expertise',
       highlight: true,
-      technologies: [
-        'React',
-        'TypeScript',
-        'Next.js',
-        'frontend architecture',
-        'reusable component systems',
-        'REST APIs integration',
-        'complex form workflows',
-      ],
+      technologies: ['React', 'TypeScript', 'Next.js'],
     },
     {
       icon: 'rocket',
-      category: 'Production experience',
-      technologies: [
-        'React Query',
-        'SWR',
-        'Redux',
-        'Jotai',
-        'Material UI',
-        'Ant Design',
-        'Turborepo',
-        'Vite',
-        'Git',
-      ],
+      category: 'State management',
+      technologies: ['React Query', 'SWR', 'Redux', 'Jotai', 'REST APIs'],
+    },
+    {
+      icon: 'palette',
+      category: 'UI & Styling',
+      technologies: ['Ant Design', 'Material UI', 'Tailwind CSS', 'CSS Modules'],
     },
     {
       icon: 'clock',
-      category: 'Previous experience',
+      category: 'Additional',
       technologies: [
-        'Tailwind CSS',
-        'Storybook',
-        'Angular',
+        'ViteJS',
+        'Turborepo',
+        'React Native',
         'jQuery',
-        'Bootstrap',
-        'Redux-Saga',
-        'Rematch',
-        'Styled-components',
-        'Plop',
-        'Jitsi Meet',
-        'WebRTC',
-        'Socket.IO',
-        'Shopify',
-        'Odoo',
+        'Shopify Liquid',
+        'Odoo ERP',
+        'Bootstrap'
       ],
     },
-    // {
-    //   icon: 'code',
-    //   category: 'Languages',
-    //   technologies: [
-    //     'JavaScript (ES6+)',
-    //     'TypeScript',
-    //     'HTML5',
-    //     'CSS3',
-    //     'SCSS',
-    //   ],
-    // },
-    // {
-    //   icon: 'layout',
-    //   category: 'Frameworks',
-    //   technologies: [
-    //     'ReactJS',
-    //     'Next.js',
-    //     'React Native',
-    //     'Angular 2',
-    //     'jQuery',
-    //   ],
-    // },
-    // {
-    //   icon: 'palette',
-    //   category: 'UI & Styling',
-    //   technologies: [
-    //     'Ant Design',
-    //     'Tailwind CSS',
-    //     'shadcn/ui',
-    //     'Bootstrap',
-    //     'Styled-components',
-    //     'Storybook',
-    //   ],
-    // },
-    // {
-    //   icon: 'database',
-    //   category: 'State & Data',
-    //   technologies: [
-    //     'React Query',
-    //     'SWR',
-    //     'Redux',
-    //     'Redux-Saga',
-    //     'Jotai',
-    //     'Rematch',
-    //   ],
-    // },
-    // {
-    //   icon: 'rocket',
-    //   category: 'Build Tools',
-    //   technologies: ['ViteJS', 'Turborepo', 'Git'],
-    // },
-    // {
-    //   icon: 'server',
-    //   category: 'APIs',
-    //   technologies: ['REST APIs', 'GraphQL'],
-    // },
   ],
 };
 
@@ -218,7 +127,7 @@ export const projects = {
       id: 'nexstox-nxmarket',
       title: 'NexStox & NXMarket Trading Platforms',
       description:
-        'Sole frontend developer for two fintech/Web3 trading platforms, delivering the trading interface, staking modules, and admin functions end-to-end with minimal oversight.',
+        'Sole frontend developer for two fintech trading platforms, delivering the trading interface, staking modules, and admin functions end-to-end with minimal oversight.',
       tags: [
         'React',
         'TypeScript',
@@ -258,7 +167,8 @@ export const projects = {
         },
         {
           title: 'Data Management',
-          description: 'Used React Query and Jotai to manage server data and client-side application state.',
+          description:
+            'Used React Query and Jotai to manage server data and client-side application state.',
         },
         {
           title: 'Complex Forms',
@@ -308,12 +218,36 @@ export const projects = {
             'I implemented role-based interfaces so each user type could access the appropriate functionality while sharing common components and application infrastructure.',
         },
       ],
-      tags: ['React', 'TypeScript', 'Vite', 'Turborepo', 'Ant Design', 'SWR', 'Jotai'],
+      tags: [
+        'React',
+        'TypeScript',
+        'Vite',
+        'Turborepo',
+        'Ant Design',
+        'SWR',
+        'Jotai',
+      ],
       userRoles: [
-        { icon: 'shield', name: 'Admin', description: 'Full system access & configuration' },
-        { icon: 'chart', name: 'Manager', description: 'Oversee operations & reports' },
-        { icon: 'people', name: 'Supervisor', description: 'Manage teams & cleaning tasks' },
-        { icon: 'clipboard', name: 'Worker', description: 'View & complete assigned tasks' },
+        {
+          icon: 'shield',
+          name: 'Admin',
+          description: 'Full system access & configuration',
+        },
+        {
+          icon: 'chart',
+          name: 'Manager',
+          description: 'Oversee operations & reports',
+        },
+        {
+          icon: 'people',
+          name: 'Supervisor',
+          description: 'Manage teams & cleaning tasks',
+        },
+        {
+          icon: 'clipboard',
+          name: 'Worker',
+          description: 'View & complete assigned tasks',
+        },
       ],
       thumbnail: '/assets/images/thumb-cleaning.png',
     },
@@ -366,7 +300,7 @@ export const careerRoute = {
       category: 'Ticketing Platform',
       company: 'TicketBox',
       website: 'https://ticketbox.vn/',
-      period: '2015 – 2017',
+      period: 'May 2016 – Dec 2017',
       role: 'Junior Frontend Developer',
       team: '3 FE · 8–14 members',
       description:
@@ -392,7 +326,7 @@ export const careerRoute = {
       category: 'Construction Management Platform',
       company: 'Pure Projects',
       website: 'https://www.puregrp.au/',
-      period: '2017 – 2019',
+      period: 'Jan 2018 – Oct 2018',
       role: 'Junior/Mid-level Frontend Developer',
       team: '3 FE',
       description:
@@ -418,7 +352,7 @@ export const careerRoute = {
       category: 'Outsourcing',
       company: 'Lecle Vietnam',
       website: 'https://www.lecle.vn/',
-      period: 'Mar 2019 – May 2025',
+      period: 'March 2019 – May 2025',
       role: 'Frontend Developer',
       team: '5–15 FE',
       description:
@@ -435,7 +369,16 @@ export const careerRoute = {
         'Took ownership of projects from initial setup through production delivery',
         'Continued supporting the team through a challenging period of company transition',
       ],
-      tech: ['React', 'TypeScript', 'Next.js', 'Angular', 'Shopify', 'REST APIs', 'Git', 'Turborepo'],
+      tech: [
+        'React',
+        'TypeScript',
+        'Next.js',
+        'Angular',
+        'Shopify',
+        'REST APIs',
+        'Git',
+        'Turborepo',
+      ],
     },
     {
       id: 'nexstox',
@@ -463,7 +406,14 @@ export const careerRoute = {
         'Worked with real-time data and complex API integrations',
         'Took ownership of frontend features from development through production',
       ],
-      tech: ['React', 'TypeScript', 'Next.js', 'React Query', 'Real-time Data', 'REST APIs'],
+      tech: [
+        'React',
+        'TypeScript',
+        'Next.js',
+        'React Query',
+        'Real-time Data',
+        'REST APIs',
+      ],
     },
   ],
 };
