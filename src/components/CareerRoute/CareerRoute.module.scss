@@ -49,6 +49,14 @@
   margin: 0 auto 72px;
   padding: 0 8px;
   overflow-x: auto;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   &::before {
     content: "";
@@ -72,6 +80,7 @@
   align-items: center;
   gap: 6px;
   text-align: center;
+  scroll-snap-align: center;
   transition: transform 0.15s ease;
 
   &:hover {
