@@ -22,7 +22,7 @@ export function Hero() {
           <h1 className={styles.heading}>{hero.heading}</h1>
         </div>
 
-        <h2 className={styles.subtitle}>{hero.subtitle}</h2>
+        {/* <h2 className={styles.subtitle}>{hero.subtitle}</h2> */}
         {hero.subheading.map((paragraph) => (
           <p key={paragraph} className={styles.subheading}>
             {renderBold(paragraph)}
