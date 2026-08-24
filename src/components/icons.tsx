@@ -49,11 +49,22 @@ export function PhoneIcon(props: SVGProps<SVGSVGElement>) {
 
 export const techLogos: Record<string, string> = {
   react: "https://cdn.simpleicons.org/react/61DAFB",
+  javascript: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+  html: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/960px-HTML5_logo_and_wordmark.svg.png",
+  css: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/500px-CSS3_logo_and_wordmark.svg.png",
+  css3: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/500px-CSS3_logo_and_wordmark.svg.png",
   typescript: "https://cdn.simpleicons.org/typescript/3178C6",
+  "next.js": "https://nextjs.org/favicon.ico",
+  angular: "https://angularjs.org/favicon.ico",
+  jquery: "https://jquery.com/wp-content/themes/jquery.com/i/favicon.ico",
+  git: "https://github.githubassets.com/favicons/favicon.svg",
+  shopify: "https://images.seeklogo.com/logo-png/27/1/shopify-logo-png_seeklogo-273895.png",
   vite: "https://vite.dev/logo-without-border.svg",
-  turborepo: "https://cdn.simpleicons.org/turborepo/EF1E2B",
-  "ant design": "https://cdn.simpleicons.org/antdesign/1677FF",
-  swr: "https://swr.vercel.app/favicon/favicon-32x32.png",
+  turborepo: "https://turborepo.dev/favicon.ico",
+  "ant design": "https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg",
+  "material ui": "https://mui.com/static/favicon.svg",
+  swr: "https://images.seeklogo.com/logo-png/42/1/swr-logo-png_seeklogo-426744.png",
+  "react query": "https://images.seeklogo.com/logo-png/43/1/react-query-logo-png_seeklogo-435661.png",
   jotai: "https://jotai.org/favicon.svg",
 };
 
