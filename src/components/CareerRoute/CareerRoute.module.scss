@@ -264,10 +264,38 @@
 }
 
 .techLabel {
+  display: block;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.03em;
   color: $color-black;
+  margin-bottom: 10px;
+}
+
+.techList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.techChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: $radius-pill;
+  background: $color-bg;
+  color: $color-gray;
+}
+
+.techLogo {
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  overflow: hidden;
 }
 
 .node {

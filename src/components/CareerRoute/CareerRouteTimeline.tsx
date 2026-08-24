@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "./CareerRoute.module.scss";
 import { careerRoute } from "@/content/site";
-import { icons, type IconName } from "@/components/icons";
+import { icons, techLogos, type IconName } from "@/components/icons";
 import { Reveal } from "@/components/Reveal/Reveal";
 
 const NUMBER_PATTERN = /(?<![A-Za-z])(\d+(?:[–-]\d+)?\+?)(?![A-Za-z])/g;
@@ -54,7 +54,7 @@ export function CareerRouteTimeline() {
 
               {(station.learned.length > 0 || station.contributions.length > 0) && (
                 <div className={styles.columns}>
-                  {station.learned.length > 0 && (
+                  {/* {station.learned.length > 0 && (
                     <div>
                       <span className={styles.columnLabel}>What I learned</span>
                       <ul className={styles.bullets}>
@@ -63,7 +63,7 @@ export function CareerRouteTimeline() {
                         ))}
                       </ul>
                     </div>
-                  )}
+                  )} */}
                   {station.contributions.length > 0 && (
                     <div>
                       <span className={styles.columnLabel}>My contributions</span>
@@ -78,9 +78,23 @@ export function CareerRouteTimeline() {
               )}
 
               {station.tech.length > 0 && (
-                <p className={styles.tech}>
-                  <span className={styles.techLabel}>Tech:</span> {station.tech.join(" · ")}
-                </p>
+                <div className={styles.tech}>
+                  <span className={styles.techLabel}>Tech:</span>
+                  <div className={styles.techList}>
+                    {station.tech.map((tech) => {
+                      const logoSrc = techLogos[tech.toLowerCase()];
+                      return (
+                        <span key={tech} className={styles.techChip}>
+                          {logoSrc && (
+                            // eslint-disable-next-line @next/next/no-img-element
+                            <img src={logoSrc} alt="" className={styles.techLogo} />
+                          )}
+                          {tech}
+                        </span>
+                      );
+                    })}
+                  </div>
+                </div>
               )}
             </div>
 
