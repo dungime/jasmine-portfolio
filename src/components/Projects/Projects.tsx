@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./Projects.module.scss";
 import { projects } from "@/content/site";
-import { ArrowUpRightIcon } from "@/components/icons";
+import { ArrowUpRightIcon, techLogos } from "@/components/icons";
 import { withBasePath } from "@/lib/base-path";
 
 export function Projects() {
@@ -43,11 +43,18 @@ export function Projects() {
               </div>
               <p className={styles.description}>{project.description}</p>
               <div className={styles.tags}>
-                {project.tags.map((tag) => (
-                  <span key={tag} className={styles.tag}>
-                    {tag}
-                  </span>
-                ))}
+                {project.tags.map((tag) => {
+                  const logoSrc = techLogos[tag.toLowerCase()];
+                  return (
+                    <span key={tag} className={styles.tag}>
+                      {logoSrc && (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img src={logoSrc} alt="" className={styles.tagLogo} />
+                      )}
+                      {tag}
+                    </span>
+                  );
+                })}
               </div>
             </div>
           </Link>
