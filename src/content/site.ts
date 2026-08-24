@@ -257,13 +257,11 @@ export const careerRoute = {
         'Adapted from academic projects to real-world production work',
       ],
       contributions: [
-        'Maintained and updated customer websites',
-        'Built new sections such as galleries and content pages',
-        'Fixed UI and functional bugs',
-        'Updated content based on client requirements',
+        'Maintained and updated features, content on customer websites',
+        'Built new pages such as galleries and content pages',
         'Supported responsive design across different screen sizes',
       ],
-      tech: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'Git', 'Photoshop'],
+      tech: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'Git'],
     },
     {
       id: 'ticketbox',
@@ -277,7 +275,7 @@ export const careerRoute = {
       role: 'Junior Frontend Developer',
       team: '3 FE · 8–14 members',
       description:
-        'My first experience working in a professional product team. I learned how frontend development connects with Design, Backend, Mobile, and Business teams while working in an Agile environment.',
+        'My first experience working in a cross-functional product team, coordinating with Design on UI details, Backend on API contracts, and Business on feature priorities within an Agile workflow.',
       learned: [
         'Built event pages using CSS3, Vanilla JavaScript, and jQuery',
         'Worked on event landing pages, event details, and ticket booking flows',
@@ -285,9 +283,9 @@ export const careerRoute = {
         'Collaborated closely with Design, Backend, Mobile, and Business teams',
       ],
       contributions: [
-        'Shipped 6+ event landing pages under tight 2–3 day deadlines',
+        'Collaborate with design and business teams to ship 6+ event landing pages',
         'Built an event detail page with modern UI and scrolling animations',
-        'Contributed to customer-facing ticket booking experiences',
+        'Maintaince and updates for the ticket booking flow, including seat selection and payment integration',
       ],
       tech: ['HTML', 'CSS3', 'JavaScript', 'jQuery', 'Git', 'Agile'],
     },
@@ -348,9 +346,9 @@ export const careerRoute = {
         'Next.js',
         'Angular',
         'Shopify',
-        'REST APIs',
         'Git',
         'Turborepo',
+        'REST APIs',
       ],
     },
     {
