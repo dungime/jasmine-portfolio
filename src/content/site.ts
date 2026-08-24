@@ -93,17 +93,22 @@ export const skills = {
       technologies: ['React', 'TypeScript', 'Next.js'],
     },
     {
-      icon: 'rocket',
+      icon: 'database',
       category: 'State management',
       technologies: ['React Query', 'SWR', 'Redux', 'Jotai', 'REST APIs'],
     },
     {
       icon: 'palette',
       category: 'UI & Styling',
-      technologies: ['Ant Design', 'Material UI', 'Tailwind CSS', 'CSS Modules'],
+      technologies: [
+        'Ant Design',
+        'Material UI',
+        'Tailwind CSS',
+        'CSS Modules',
+      ],
     },
     {
-      icon: 'clock',
+      icon: 'server',
       category: 'Additional',
       technologies: [
         'ViteJS',
@@ -112,7 +117,7 @@ export const skills = {
         'jQuery',
         'Shopify Liquid',
         'Odoo ERP',
-        'Bootstrap'
+        'Bootstrap',
       ],
     },
   ],
