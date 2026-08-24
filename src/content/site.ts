@@ -131,14 +131,25 @@ export const projects = {
     {
       id: 'nexstox-nxmarket',
       title: 'NexStox & NXMarket Trading Platforms',
+      subtitle: 'Fintech Trading & Staking Platforms',
+      category: 'Fintech',
       description:
-        'Sole frontend developer for two fintech trading platforms, delivering the trading interface, staking modules, and admin functions end-to-end with minimal oversight.',
+        'Sole frontend developer for two fintech platforms for the first 3 months, delivering staking, Launchpad, and a new platform build while stabilizing key trading workflows.',
+      role: 'I was the sole frontend developer for both platforms during the first three months, independently reviewing product documentation, UI designs, and API documentation to scope and implement features, and clarifying requirements with the team when needed.',
+      built: [
+        'Developed and delivered **staking features** covering staking rules, single and compound staking rewards, staking, unstaking, stake-more, and penalty flows',
+        'Built **Launchpad features** for displaying project information and handling Launchpad purchases',
+        'Developed a **new platform based on the existing product**, adapting core functionality for it',
+        'Implemented the new UI, **sign-up flow, and KYC flows**',
+        'Implemented **multilingual interfaces** to support multiple languages across the platform',
+        'Resolved critical issues in the new exchange interface and improved the stability of key trading workflows',
+      ],
       tags: [
         'React',
         'TypeScript',
-        'REST APIs',
-        'Real-time data',
         'Material UI',
+        'REST APIs',
+        'Real-time Data',
       ],
       thumbnail: '/assets/images/thumb-trading.png',
     },
@@ -146,56 +157,49 @@ export const projects = {
       id: 'e-learning-platform',
       title: 'E-Learning Platform',
       subtitle: 'Learning Management Platform',
-      category: 'Education / SaaS',
+      category: 'Education',
       description:
-        'A learning platform providing separate experiences for instructors and students, including course management, video learning, learning history, and payment workflows.',
-      role: 'I was responsible for the frontend architecture and implementation of the platform, including setting up the project structure and developing key instructor and student workflows.',
+        'A learning platform where I set up the monorepo from scratch and built the student learning experience, including video playback, real-time notifications, and a live commenting system.',
+      role: 'I was responsible for the platform’s frontend architecture from the ground up, including the monorepo setup, and for building the core student learning and real-time social features.',
       built: [
-        'Set up the **monorepo architecture from scratch**',
-        'Built student dashboards and learning interfaces',
-        'Developed instructor interfaces for course creation and content management',
-        'Implemented video-based learning experiences',
-        'Built learning history and progress-related workflows',
-        'Integrated frontend features with REST APIs',
-        'Implemented payment-related workflows',
+        'Set up the **entire monorepo architecture from scratch** for the platform',
+        'Built the student learning experience with a **video player, book mode, subtitles, chapters, pages, and bookmarking**',
+        'Developed **real-time notification features**, including notification interactions and comments',
+        'Built a **real-time commenting system** supporting comments, likes, and one-level teacher replies',
+        'Integrated **REST APIs and real-time data flows** to keep learning and social interactions synchronized',
       ],
       highlights: [
         {
           title: 'Monorepo Architecture',
           description:
-            'Established a reusable project structure using **Vite and Turborepo**, allowing shared configuration and components across applications.',
+            'Set up a **reusable monorepo structure from scratch**, sharing configuration and components across the platform.',
         },
         {
-          title: 'Component Architecture',
+          title: 'Learning Experience',
           description:
-            'Created reusable UI components and shared patterns between instructor and student experiences.',
+            'Built the student learning experience around a **video player, book mode, subtitles, chapters, and bookmarking** so learners could pick up right where they left off.',
         },
         {
-          title: 'Data Management',
+          title: 'Real-time Interactions',
           description:
-            'Used React Query and Jotai to manage server data and client-side application state.',
-        },
-        {
-          title: 'Complex Forms',
-          description:
-            'Built course creation and content management workflows involving multiple forms, validation, and API states.',
+            'Built **real-time notifications and a commenting system** with likes and one-level teacher replies, kept in sync via REST APIs and real-time data.',
         },
       ],
       tags: [
         'React',
         'TypeScript',
-        'Vite',
-        'Turborepo',
-        'React Query',
+        'Next.js',
+        'Ant Design',
         'Jotai',
         'REST APIs',
+        'Real-time Data',
       ],
       thumbnail: '/assets/images/thumb-elearning.png',
     },
     {
       id: 'cleaning-services-dashboard',
       title: 'Cleaning Services Dashboard',
-      subtitle: 'Role-Based Operations Platform',
+      subtitle: 'Operations Management Platform',
       description:
         'An admin platform for managing cleaning service operations, including requests, maintenance, reports, and inventory.',
       screenshots: [
