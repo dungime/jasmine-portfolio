@@ -201,53 +201,6 @@
   text-transform: uppercase;
 }
 
-.roleGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-
-  @media (max-width: 480px) {
-    grid-template-columns: 1fr;
-  }
-}
-
-.roleCard {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 16px;
-  border: 1px solid $color-border;
-  border-radius: $radius-md;
-  background: $color-card;
-}
-
-.roleIcon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 10px;
-  background: $color-lime;
-  color: $color-black;
-
-  svg {
-    width: 16px;
-    height: 16px;
-  }
-}
-
-.roleName {
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.roleDescription {
-  font-size: 12px;
-  line-height: 1.5;
-  color: $color-gray;
-}
-
 .gallery {
   display: flex;
   flex-direction: column;

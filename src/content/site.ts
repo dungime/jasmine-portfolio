@@ -208,55 +208,19 @@ export const projects = {
         '/assets/images/projects/cleaning/cleaning-calendar.jpg',
       ],
       contributions: [
-        'Implemented authentication and authorization for **4 user roles**',
-        'Built end-to-end CRUD workflows',
-        'Developed cleaning request and maintenance management',
-        'Built reporting and inventory modules',
-        'Integrated frontend features with REST APIs',
-        'Created responsive interfaces for different operational workflows',
-      ],
-      highlights: [
-        {
-          title: undefined,
-          description:
-            'The main challenge was managing different permissions and workflows within the same application.',
-        },
-        {
-          title: undefined,
-          description:
-            'I implemented role-based interfaces so each user type could access the appropriate functionality while sharing common components and application infrastructure.',
-        },
+        'Set up the **entire architecture from scratch**',
+        'Developed **end-to-end CRUD workflows** for cleaning requests, maintenance, reports, and inventory',
+        'Built complex data-driven interfaces combining **interactive calendars, tables, charts, drawers, and tree views**',
+        'Developed **complex creation forms** for managing operational workflows and business data',
       ],
       tags: [
         'React',
         'TypeScript',
+        'Ant Design',
+        'Jotai',
         'Vite',
         'Turborepo',
-        'Ant Design',
-        'SWR',
-        'Jotai',
-      ],
-      userRoles: [
-        {
-          icon: 'shield',
-          name: 'Admin',
-          description: 'Full system access & configuration',
-        },
-        {
-          icon: 'chart',
-          name: 'Manager',
-          description: 'Oversee operations & reports',
-        },
-        {
-          icon: 'people',
-          name: 'Supervisor',
-          description: 'Manage teams & cleaning tasks',
-        },
-        {
-          icon: 'clipboard',
-          name: 'Worker',
-          description: 'View & complete assigned tasks',
-        },
+        'REST APIs',
       ],
       thumbnail: '/assets/images/thumb-cleaning.png',
     },

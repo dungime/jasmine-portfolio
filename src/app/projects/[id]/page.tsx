@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { projects } from "@/content/site";
 import styles from "./page.module.scss";
 import { withBasePath } from "@/lib/base-path";
-import { icons, techLogos, type IconName } from "@/components/icons";
+import { icons, techLogos } from "@/components/icons";
 
 export function generateStaticParams() {
   return projects.items.map((project) => ({ id: project.id }));
@@ -92,7 +92,6 @@ export default async function ProjectDetailPage({
             <h1 className={styles.title}>{project.title}</h1>
 
             {project.subtitle && <p className={styles.subtitle}>{project.subtitle}</p>}
-            {project.category && <p className={styles.category}>{project.category}</p>}
 
             <p className={styles.description}>{project.description}</p>
 
@@ -151,22 +150,6 @@ export default async function ProjectDetailPage({
               </div>
             </section>
 
-            {project.userRoles && project.userRoles.length > 0 && (
-              <section className={styles.section}>
-                <h2 className={styles.sectionHeading}>User Roles</h2>
-                <div className={styles.roleGrid}>
-                  {project.userRoles.map((role) => (
-                    <div key={role.name} className={styles.roleCard}>
-                      <span className={styles.roleIcon}>
-                        {icons[role.icon as IconName]}
-                      </span>
-                      <span className={styles.roleName}>{role.name}</span>
-                      <span className={styles.roleDescription}>{role.description}</span>
-                    </div>
-                  ))}
-                </div>
-              </section>
-            )}
           </div>
 
           {hasGallery && (
