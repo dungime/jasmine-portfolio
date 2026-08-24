@@ -28,6 +28,10 @@ export default function Home() {
         <Reveal>
           <Mission />
         </Reveal>
+
+        <Reveal>
+          <Services />
+        </Reveal>
         <Reveal>
           <Skills />
         </Reveal>
@@ -43,9 +47,6 @@ export default function Home() {
         {/* <Reveal>
           <Experience />
         </Reveal> */}
-        <Reveal>
-          <Services />
-        </Reveal>
         <Reveal>
           <Education />
         </Reveal>

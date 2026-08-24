@@ -22,7 +22,7 @@ export const hero = {
   subtitle: 'React · TypeScript · Next.js · Owning Products',
   subheading: [
     'Senior Frontend Developer with **10+ years** of experience building production web applications across fintech, e-commerce, admin dashboards, e-learning, and event ticketing',
-    'Specialized in **React, TypeScript, and Next.js** — turning complex problems into simple, reliable, and maintainable experiences."'
+    'Specialized in **React, TypeScript, and Next.js** — turning complex problems into simple, reliable, and maintainable experiences."',
   ],
   primaryCta: { label: 'View Projects', href: '#projects' },
   secondaryCta: { label: 'Get in Touch', href: '#contact' },
