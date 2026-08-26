@@ -168,3 +168,10 @@ export const icons = {
 } as const;
 
 export type IconName = keyof typeof icons;
+
+// Fallback SVG icons for tech-stack tags that don't have a real brand logo
+// (generic concepts like "REST APIs" rather than a specific product).
+export const techIcons: Record<string, IconName> = {
+  "rest apis": "server",
+  "real-time data": "chart",
+};

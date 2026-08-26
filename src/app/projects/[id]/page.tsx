@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { projects } from "@/content/site";
 import styles from "./page.module.scss";
 import { withBasePath } from "@/lib/base-path";
-import { icons, techLogos } from "@/components/icons";
+import { icons, techLogos, techIcons } from "@/components/icons";
 
 export function generateStaticParams() {
   return projects.items.map((project) => ({ id: project.id }));
@@ -135,11 +135,14 @@ export default async function ProjectDetailPage({
               <div className={styles.techGrid}>
                 {project.tags.map((tag) => {
                   const logoSrc = techLogos[tag.toLowerCase()];
+                  const iconName = techIcons[tag.toLowerCase()];
                   return (
                     <span key={tag} className={styles.techChip}>
                       {logoSrc ? (
                         // eslint-disable-next-line @next/next/no-img-element
                         <img src={logoSrc} alt={tag} className={styles.techLogo} />
+                      ) : iconName ? (
+                        <span className={styles.techLogo}>{icons[iconName]}</span>
                       ) : (
                         <span className={styles.techAvatar}>{tag.slice(0, 2)}</span>
                       )}

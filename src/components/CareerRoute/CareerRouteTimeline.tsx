@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "./CareerRoute.module.scss";
 import { careerRoute } from "@/content/site";
-import { icons, techLogos, type IconName } from "@/components/icons";
+import { icons, techLogos, techIcons, type IconName } from "@/components/icons";
 import { Reveal } from "@/components/Reveal/Reveal";
 
 const NUMBER_PATTERN = /(?<![A-Za-z])(\d+(?:[–-]\d+)?\+?)(?![A-Za-z])/g;
@@ -83,11 +83,16 @@ export function CareerRouteTimeline() {
                   <div className={styles.techList}>
                     {station.tech.map((tech) => {
                       const logoSrc = techLogos[tech.toLowerCase()];
+                      const iconName = techIcons[tech.toLowerCase()];
                       return (
                         <span key={tech} className={styles.techChip}>
-                          {logoSrc && (
+                          {logoSrc ? (
                             // eslint-disable-next-line @next/next/no-img-element
                             <img src={logoSrc} alt="" className={styles.techLogo} />
+                          ) : (
+                            iconName && (
+                              <span className={styles.techLogo}>{icons[iconName]}</span>
+                            )
                           )}
                           {tech}
                         </span>
