@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { careerRoute, experience } from "@/content/site";
-import { ArrowUpRightIcon } from "@/components/icons";
+import { ArrowUpRightIcon, icons, techLogos, techIcons } from "@/components/icons";
 import styles from "./page.module.scss";
 
 export function generateStaticParams() {
@@ -84,6 +84,31 @@ export default async function ExperienceDetailPage({
                 </ul>
               </div>
             )}
+          </div>
+        )}
+
+        {station && station.tech.length > 0 && (
+          <div className={styles.techSection}>
+            <h2 className={styles.sectionHeading}>Tech Stack</h2>
+            <div className={styles.techGrid}>
+              {station.tech.map((tech) => {
+                const logoSrc = techLogos[tech.toLowerCase()];
+                const iconName = techIcons[tech.toLowerCase()];
+                return (
+                  <span key={tech} className={styles.techChip}>
+                    {logoSrc ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img src={logoSrc} alt={tech} className={styles.techLogo} />
+                    ) : iconName ? (
+                      <span className={styles.techLogo}>{icons[iconName]}</span>
+                    ) : (
+                      <span className={styles.techAvatar}>{tech.slice(0, 2)}</span>
+                    )}
+                    {tech}
+                  </span>
+                );
+              })}
+            </div>
           </div>
         )}
 

@@ -107,6 +107,67 @@
   }
 }
 
+.techSection {
+  margin-bottom: 32px;
+}
+
+.sectionHeading {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: $color-black;
+  margin-bottom: 12px;
+}
+
+.techGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.techChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px 6px 6px;
+  border: 1px solid $color-border;
+  border-radius: $radius-pill;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.techLogo {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.techAvatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: $color-black;
+  color: $color-lime;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 .companyLink {
   @include button-pill;
   display: inline-flex;
