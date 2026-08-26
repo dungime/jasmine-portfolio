@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { careerRoute, experience } from "@/content/site";
 import { ArrowUpRightIcon, icons, techLogos, techIcons } from "@/components/icons";
+import { BackLink } from "@/components/BackLink/BackLink";
 import styles from "./page.module.scss";
 
 export function generateStaticParams() {
@@ -47,9 +48,9 @@ export default async function ExperienceDetailPage({
   return (
     <main className={styles.main}>
       <div className={styles.container}>
-        <Link href="/#experience" className={styles.back}>
+        <BackLink href="/#experience" className={styles.back}>
           ← Back to experience
-        </Link>
+        </BackLink>
 
         {station && <span className={styles.category}>{station.category}</span>}
 

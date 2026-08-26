@@ -1,11 +1,11 @@
 import Image from "next/image";
-import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { projects } from "@/content/site";
 import styles from "./page.module.scss";
 import { withBasePath } from "@/lib/base-path";
 import { icons, techLogos, techIcons } from "@/components/icons";
+import { BackLink } from "@/components/BackLink/BackLink";
 
 export function generateStaticParams() {
   return projects.items.map((project) => ({ id: project.id }));
@@ -68,9 +68,9 @@ export default async function ProjectDetailPage({
   return (
     <main className={styles.main}>
       <div className={hasGallery ? styles.containerWide : styles.container}>
-        <Link href="/#projects" className={styles.back}>
+        <BackLink href="/#projects" className={styles.back}>
           ← Back to projects
-        </Link>
+        </BackLink>
 
         <div className={hasGallery ? styles.layout : undefined}>
           <div className={styles.content}>
