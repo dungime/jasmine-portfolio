@@ -3,6 +3,7 @@
 import { useEffect, useState, type MouseEvent } from "react";
 import styles from "./Navbar.module.scss";
 import { site } from "@/content/site";
+import { withBasePath } from "@/lib/base-path";
 
 const NAV_OFFSET = 110;
 
@@ -69,7 +70,7 @@ export function Navbar() {
           ))}
         </nav>
 
-        <a href={site.contactCta.href} download className={styles.cta}>
+        <a href={withBasePath(site.contactCta.href)} download className={styles.cta}>
           {site.contactCta.label}
         </a>
       </div>
