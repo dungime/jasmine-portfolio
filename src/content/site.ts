@@ -154,7 +154,7 @@ export const projects = {
         'REST APIs',
         'Real-time Data',
       ],
-      thumbnail: '/assets/images/thumb-trading.png',
+      thumbnail: '/assets/images/thumb-trading.webp',
     },
     {
       id: 'e-learning-platform',
