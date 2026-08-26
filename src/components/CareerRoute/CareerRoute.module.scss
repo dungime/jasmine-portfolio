@@ -115,6 +115,10 @@
 .stepStage {
   font-size: 12px;
   font-weight: 600;
+  line-height: 1.3;
+  min-height: 2.6em;
+  display: flex;
+  align-items: center;
   color: $color-black;
 }
 
