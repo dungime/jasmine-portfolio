@@ -93,21 +93,6 @@ export default async function ProjectDetailPage({
 
             {project.subtitle && <p className={styles.subtitle}>{project.subtitle}</p>}
 
-            {project.company && (
-              <a
-                href={project.companyHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.companyBadge}
-              >
-                {project.companyLogo && (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img src={project.companyLogo} alt="" className={styles.companyLogo} />
-                )}
-                {project.company}
-              </a>
-            )}
-
             <p className={styles.description}>{project.description}</p>
 
             {project.role && (

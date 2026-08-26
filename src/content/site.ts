@@ -133,9 +133,6 @@ export const projects = {
       title: 'NexStox & NXMarket Trading Platforms',
       subtitle: 'Fintech Trading & Staking Platforms',
       category: 'Fintech',
-      company: 'Nexstox',
-      companyHref: 'https://nxmarket.com/',
-      companyLogo: 'https://nxmarket.com/favicon.ico',
       description:
         'Sole frontend developer for two fintech platforms for the first 3 months, delivering staking, Launchpad, and a new platform build while stabilizing key trading workflows.',
       role: 'I was the sole frontend developer for both platforms during the first three months, independently reviewing product documentation, UI designs, and API documentation to scope and implement features, and clarifying requirements with the team when needed.',
@@ -161,9 +158,6 @@ export const projects = {
       title: 'E-Learning Platform',
       subtitle: 'Learning Management Platform',
       category: 'Education',
-      company: 'Lecle Vietnam',
-      companyHref: 'https://www.lecle.vn/',
-      companyLogo: 'https://www.lecle.vn/favicon.ico',
       description:
         'A learning platform where I set up the monorepo from scratch and built the student learning experience, including video playback, real-time notifications, and a live commenting system.',
       role: 'I was responsible for the platform’s frontend architecture from the ground up, including the monorepo setup, and for building the core student learning and real-time social features.',
@@ -206,9 +200,6 @@ export const projects = {
       id: 'cleaning-services-dashboard',
       title: 'Cleaning Services Dashboard',
       subtitle: 'Operations Management Platform',
-      company: 'Lecle Vietnam',
-      companyHref: 'https://www.lecle.vn/',
-      companyLogo: 'https://www.lecle.vn/favicon.ico',
       description:
         'An admin platform for managing cleaning service operations, including requests, maintenance, reports, and inventory.',
       screenshots: [
