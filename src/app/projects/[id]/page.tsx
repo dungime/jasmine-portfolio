@@ -116,20 +116,6 @@ export default async function ProjectDetailPage({
               </section>
             )}
 
-            {project.highlights && project.highlights.length > 0 && (
-              <section className={styles.section}>
-                <h2 className={styles.sectionHeading}>Technical Highlights</h2>
-                {project.highlights.map((highlight) => (
-                  <div key={highlight.description} className={styles.highlight}>
-                    {highlight.title && (
-                      <h3 className={styles.highlightTitle}>{highlight.title}</h3>
-                    )}
-                    <p className={styles.paragraph}>{renderBold(highlight.description)}</p>
-                  </div>
-                ))}
-              </section>
-            )}
-
             <section className={styles.section}>
               <h2 className={styles.sectionHeading}>Tech Stack</h2>
               <div className={styles.techGrid}>

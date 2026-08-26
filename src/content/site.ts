@@ -168,23 +168,6 @@ export const projects = {
         'Built a **real-time commenting system** supporting comments, likes, and one-level teacher replies',
         'Integrated **REST APIs and real-time data flows** to keep learning and social interactions synchronized',
       ],
-      highlights: [
-        {
-          title: 'Monorepo Architecture',
-          description:
-            'Set up a **reusable monorepo structure from scratch**, sharing configuration and components across the platform.',
-        },
-        {
-          title: 'Learning Experience',
-          description:
-            'Built the student learning experience around a **video player, book mode, subtitles, chapters, and bookmarking** so learners could pick up right where they left off.',
-        },
-        {
-          title: 'Real-time Interactions',
-          description:
-            'Built **real-time notifications and a commenting system** with likes and one-level teacher replies, kept in sync via REST APIs and real-time data.',
-        },
-      ],
       tags: [
         'React',
         'TypeScript',
