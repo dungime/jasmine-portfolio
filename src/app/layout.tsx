@@ -3,6 +3,7 @@ import Script from "next/script";
 import { Martian_Mono } from "next/font/google";
 import "./globals.scss";
 import { ScrollToHash } from "@/components/ScrollToHash/ScrollToHash";
+import { BackToTop } from "@/components/BackToTop/BackToTop";
 
 const GA_MEASUREMENT_ID = "G-4JXJ2F4X8R";
 
@@ -38,6 +39,7 @@ export default function RootLayout({
         </Script>
         <ScrollToHash />
         {children}
+        <BackToTop />
       </body>
     </html>
   );
