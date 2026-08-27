@@ -10,10 +10,6 @@ html {
   scrollbar-width: thin;
 }
 
-[id] {
-  scroll-margin-top: $nav-offset;
-}
-
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;

@@ -3,11 +3,10 @@
 import type { MouseEvent } from "react";
 import styles from "./CareerRoute.module.scss";
 import { careerRoute } from "@/content/site";
-import { scrollToSection } from "@/lib/scroll-to-section";
 
 function handleStepClick(event: MouseEvent<HTMLAnchorElement>, targetId: string) {
   event.preventDefault();
-  scrollToSection(targetId, "smooth");
+  document.getElementById(targetId)?.scrollIntoView({ behavior: "smooth" });
 }
 
 export function CareerRouteSteps() {

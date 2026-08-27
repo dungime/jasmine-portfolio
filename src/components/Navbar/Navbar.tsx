@@ -1,26 +1,51 @@
 "use client";
 
-import { useEffect, useState, type MouseEvent } from "react";
+import { useEffect, useRef, useState, type MouseEvent } from "react";
 import styles from "./Navbar.module.scss";
 import { site } from "@/content/site";
 import { withBasePath } from "@/lib/base-path";
-import { NAV_OFFSET } from "@/lib/nav-offset";
-import { scrollToSection } from "@/lib/scroll-to-section";
 
 function handleSectionLinkClick(event: MouseEvent<HTMLAnchorElement>, href: string) {
   if (!href.startsWith("#")) return;
 
-  const id = href.slice(1);
-  if (!document.getElementById(id)) return;
+  const target = document.getElementById(href.slice(1));
+  if (!target) return;
 
   event.preventDefault();
-  scrollToSection(id, "smooth");
+  target.scrollIntoView({ behavior: "smooth" });
 }
 
-function useActiveSection() {
-  const [activeHref, setActiveHref] = useState<string>("");
+// Measure the navbar's real rendered height and feed it into the scroll
+// container as scroll-padding-top, so scrollIntoView() (native browser
+// smooth-scroll, which keeps tracking the live target position even if the
+// layout shifts mid-scroll) clears the sticky navbar on its own.
+function useNavHeight(ref: React.RefObject<HTMLElement | null>) {
+  const [height, setHeight] = useState(0);
 
   useEffect(() => {
+    const nav = ref.current;
+    if (!nav) return;
+
+    const updateHeight = () => {
+      const navHeight = nav.offsetHeight;
+      document.documentElement.style.scrollPaddingTop = `${navHeight}px`;
+      setHeight(navHeight);
+    };
+
+    updateHeight();
+    window.addEventListener("resize", updateHeight);
+    return () => window.removeEventListener("resize", updateHeight);
+  }, [ref]);
+
+  return height;
+}
+
+function useActiveSection(navHeight: number) {
+  const [activeHref, setActiveHref] = useState<string>("#");
+
+  useEffect(() => {
+    if (navHeight === 0) return;
+
     const elements = site.nav
       .map((item) => document.getElementById(item.href.slice(1)))
       .filter((el): el is HTMLElement => el !== null);
@@ -35,22 +60,24 @@ function useActiveSection() {
           }
         });
       },
-      { rootMargin: `-${NAV_OFFSET}px 0px -70% 0px`, threshold: 0 }
+      { rootMargin: `-${navHeight}px 0px -50% 0px`, threshold: 0 }
     );
 
     elements.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
-  }, []);
+  }, [navHeight]);
 
   return activeHref;
 }
 
 export function Navbar() {
-  const activeHref = useActiveSection();
+  const wrapRef = useRef<HTMLElement | null>(null);
+  const navHeight = useNavHeight(wrapRef);
+  const activeHref = useActiveSection(navHeight);
 
   return (
-    <header className={styles.wrap}>
+    <header ref={wrapRef} className={styles.wrap}>
       <div className={styles.inner}>
         <a href="#top" className={styles.logo} onClick={(e) => handleSectionLinkClick(e, "#top")}>
           <span className={styles.logoMark}>{site.logo}</span>
