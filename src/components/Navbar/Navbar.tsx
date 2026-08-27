@@ -4,8 +4,7 @@ import { useEffect, useState, type MouseEvent } from "react";
 import styles from "./Navbar.module.scss";
 import { site } from "@/content/site";
 import { withBasePath } from "@/lib/base-path";
-
-const NAV_OFFSET = 110;
+import { NAV_OFFSET } from "@/lib/nav-offset";
 
 function handleSectionLinkClick(event: MouseEvent<HTMLAnchorElement>, href: string) {
   if (!href.startsWith("#")) return;

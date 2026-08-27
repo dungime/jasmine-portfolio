@@ -3,8 +3,7 @@
 import type { MouseEvent } from "react";
 import styles from "./CareerRoute.module.scss";
 import { careerRoute } from "@/content/site";
-
-const NAV_OFFSET = 110;
+import { NAV_OFFSET } from "@/lib/nav-offset";
 
 function handleStepClick(event: MouseEvent<HTMLAnchorElement>, targetId: string) {
   event.preventDefault();
