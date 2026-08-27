@@ -15,6 +15,9 @@ function handleSectionLinkClick(event: MouseEvent<HTMLAnchorElement>, href: stri
   target.scrollIntoView({ behavior: "smooth" });
 }
 
+// Extra breathing room below the navbar, on top of its own measured height.
+const SCROLL_GAP = 20;
+
 // Measure the navbar's real rendered height and feed it into the scroll
 // container as scroll-padding-top, so scrollIntoView() (native browser
 // smooth-scroll, which keeps tracking the live target position even if the
@@ -27,7 +30,7 @@ function useNavHeight(ref: React.RefObject<HTMLElement | null>) {
     if (!nav) return;
 
     const updateHeight = () => {
-      const navHeight = nav.offsetHeight;
+      const navHeight = nav.offsetHeight + SCROLL_GAP;
       document.documentElement.style.scrollPaddingTop = `${navHeight}px`;
       setHeight(navHeight);
     };
