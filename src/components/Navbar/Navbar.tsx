@@ -49,24 +49,36 @@ function useActiveSection(navHeight: number) {
   useEffect(() => {
     if (navHeight === 0) return;
 
-    const elements = site.nav
-      .map((item) => document.getElementById(item.href.slice(1)))
-      .filter((el): el is HTMLElement => el !== null);
+    // "About" points at "#" (no real id) — its actual section is the Hero
+    // at the top of the page, so track "top" for it explicitly. Without
+    // this, scrolling back up past the first real section never re-activates
+    // "About" since nothing was ever observed for it.
+    const trackedSections = site.nav.map((item) => ({
+      href: item.href,
+      id: item.href === "#" ? "top" : item.href.slice(1),
+    }));
 
-    if (elements.length === 0) return;
+    const hrefByElement = new Map<Element, string>();
+    trackedSections.forEach(({ href, id }) => {
+      const el = document.getElementById(id);
+      if (el) hrefByElement.set(el, href);
+    });
+
+    if (hrefByElement.size === 0) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setActiveHref(`#${entry.target.id}`);
+            const href = hrefByElement.get(entry.target);
+            if (href) setActiveHref(href);
           }
         });
       },
       { rootMargin: `-${navHeight}px 0px -50% 0px`, threshold: 0 }
     );
 
-    elements.forEach((el) => observer.observe(el));
+    hrefByElement.forEach((_href, el) => observer.observe(el));
 
     return () => observer.disconnect();
   }, [navHeight]);
