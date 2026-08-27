@@ -13,7 +13,7 @@ export const site = {
     // { label: 'Education', href: '#education' },
     { label: 'Contact', href: '#contact' },
   ],
-  contactCta: { label: 'Download CV', href: '/assets/resume.pdf' },
+  contactCta: { label: 'Download CV', href: '/assets/Dung Nguyen - Senior Frontend Developer Resume.pdf' },
 };
 
 export const hero = {
@@ -470,7 +470,7 @@ export const contact = {
   heading: 'Let’s Build Something Great',
   subheading:
     'I’m always open to discussing interesting products, challenging frontend problems, and opportunities to build better experiences together.',
-  resumeCta: { label: 'Download Résumé', href: '/assets/resume.pdf' },
+  resumeCta: { label: 'Download Résumé', href: '/assets/Dung Nguyen - Senior Frontend Developer Resume.pdf' },
   links: [
     { label: 'GitHub', href: 'https://github.com/dungime' },
     { label: 'E-mail', href: 'mailto:dungntp.contact@gmail.com' },
