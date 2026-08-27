@@ -3,9 +3,13 @@
 import { motion, type Variants } from "motion/react";
 import type { ReactNode } from "react";
 
+// Opacity-only: a `y` transform here would still be mid-animation when a nav
+// link scrolls straight to this section (it's off-screen at click time, so
+// whileInView hasn't fired yet), and the transform resolving afterward shifts
+// the section's real position out from under the scroll that just landed.
 const variants: Variants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0 },
+  hidden: { opacity: 0 },
+  visible: { opacity: 1 },
 };
 
 interface RevealProps {
