@@ -5,16 +5,16 @@ import styles from "./Navbar.module.scss";
 import { site } from "@/content/site";
 import { withBasePath } from "@/lib/base-path";
 import { NAV_OFFSET } from "@/lib/nav-offset";
+import { scrollToSection } from "@/lib/scroll-to-section";
 
 function handleSectionLinkClick(event: MouseEvent<HTMLAnchorElement>, href: string) {
   if (!href.startsWith("#")) return;
 
-  const target = document.getElementById(href.slice(1));
-  if (!target) return;
+  const id = href.slice(1);
+  if (!document.getElementById(id)) return;
 
   event.preventDefault();
-  const top = target.getBoundingClientRect().top + window.scrollY - NAV_OFFSET;
-  window.scrollTo({ top, behavior: "smooth" });
+  scrollToSection(id, "smooth");
 }
 
 function useActiveSection() {

@@ -3,15 +3,11 @@
 import type { MouseEvent } from "react";
 import styles from "./CareerRoute.module.scss";
 import { careerRoute } from "@/content/site";
-import { NAV_OFFSET } from "@/lib/nav-offset";
+import { scrollToSection } from "@/lib/scroll-to-section";
 
 function handleStepClick(event: MouseEvent<HTMLAnchorElement>, targetId: string) {
   event.preventDefault();
-  const target = document.getElementById(targetId);
-  if (!target) return;
-
-  const top = target.getBoundingClientRect().top + window.scrollY - NAV_OFFSET;
-  window.scrollTo({ top, behavior: "smooth" });
+  scrollToSection(targetId, "smooth");
 }
 
 export function CareerRouteSteps() {
