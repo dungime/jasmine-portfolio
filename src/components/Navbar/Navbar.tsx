@@ -14,7 +14,8 @@ function handleSectionLinkClick(event: MouseEvent<HTMLAnchorElement>, href: stri
   if (!target) return;
 
   event.preventDefault();
-  target.scrollIntoView({ behavior: "smooth" });
+  const top = target.getBoundingClientRect().top + window.scrollY - NAV_OFFSET;
+  window.scrollTo({ top, behavior: "smooth" });
 }
 
 function useActiveSection() {
