@@ -45,7 +45,7 @@ export const stats = {
 export const mission = {
   badge: 'Mission',
   heading: 'I build products that are simple, fast, and built to last',
-  body: 'I’m now looking to bring this breadth of experience into a **product-focused team** where I can take **deeper ownership** of frontend architecture and **contribute to long-term** product growth.',
+  body: 'I’m now looking to bring this breadth of experience into a team where I can take **deeper ownership** of frontend architecture and contribute to **long-term product growth** — ideally within a **product-focused company**, though I’m equally open to strong opportunities in other environments.',
   imageAlt: 'Working on a project',
 };
 
