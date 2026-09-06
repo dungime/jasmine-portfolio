@@ -9,7 +9,7 @@ export function IntroBanner() {
     <section className={styles.section}>
       <div className={styles.photo}>
         <Image
-          src={withBasePath("/assets/images/profile-banner.jpg")}
+          src={withBasePath("/assets/images/profile-2.jpg")}
             alt={hero.heading}
             fill
             sizes="100vw"

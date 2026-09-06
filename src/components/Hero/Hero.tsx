@@ -51,7 +51,7 @@ export function Hero() {
       <div className={styles.visual}>
         <div className={styles.photo}>
           <Image
-            src={withBasePath('/assets/images/profile-banner.jpg')}
+            src={withBasePath('/assets/images/profile-2.jpg')}
             alt={'profile'}
             fill
             sizes='(max-width: 900px) 100vw, 380px'
