@@ -32,6 +32,9 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+# .env holds non-secret build-time values (e.g. GA id) and is committed
+# so the GitHub Actions build has them; .env.local etc. stay ignored.
+!.env
 
 # vercel
 .vercel
