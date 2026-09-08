@@ -58,8 +58,12 @@ export default function RootLayout({
             </Script>
           </>
         )}
-        <ScrollToHash />
         {children}
+        {/* After {children} so Navbar's effect (measures the navbar height
+            and sets scroll-padding-top) runs before this one — React fires
+            mount effects in tree order, and ScrollToHash needs that offset
+            in place before it scrolls to a URL hash on load. */}
+        <ScrollToHash />
         <BackToTop />
       </body>
     </html>
