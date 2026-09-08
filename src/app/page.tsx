@@ -42,9 +42,11 @@ export default function Home() {
           <Reveal>
             <CareerRouteSteps />
           </Reveal>
-          <Reveal>
-            <CareerRouteTimeline />
-          </Reveal>
+          {/* No outer Reveal here — CareerRouteTimeline already fades in
+              each row individually. Wrapping the whole (very tall) section
+              in one Reveal made Framer Motion's amount:0.2 threshold nearly
+              impossible to satisfy, leaving it stuck at opacity:0. */}
+          <CareerRouteTimeline />
         </div>
         <Reveal>
           <Projects />
