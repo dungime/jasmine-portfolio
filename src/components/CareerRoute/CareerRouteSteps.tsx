@@ -11,7 +11,7 @@ function handleStepClick(event: MouseEvent<HTMLAnchorElement>, targetId: string)
 
 export function CareerRouteSteps() {
   return (
-    <section id="career-route" className={styles.stepsSection}>
+    <section className={styles.stepsSection}>
       <div className={styles.header}>
         <span className={styles.badge}>{careerRoute.badge}</span>
         <h2 className={styles.heading}>

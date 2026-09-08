@@ -35,12 +35,17 @@ export default function Home() {
         <Reveal>
           <Skills />
         </Reveal>
-        <Reveal>
-          <CareerRouteSteps />
-        </Reveal>
-        <Reveal>
-          <CareerRouteTimeline />
-        </Reveal>
+        {/* Wrapping id (not on the stepper's own section) so "Career" still
+            scrolls to something visible on mobile, where the stepper is
+            hidden — the wrapper's top then collapses to the timeline. */}
+        <div id="career-route">
+          <Reveal>
+            <CareerRouteSteps />
+          </Reveal>
+          <Reveal>
+            <CareerRouteTimeline />
+          </Reveal>
+        </div>
         <Reveal>
           <Projects />
         </Reveal>
