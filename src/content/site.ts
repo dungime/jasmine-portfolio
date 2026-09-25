@@ -35,10 +35,10 @@ export const hero = {
 
 export const stats = {
   items: [
-    { value: '10+', label: 'Years of Experience' },
-    { value: '30+', label: 'Projects Shipped' },
-    { value: '5', label: 'Members Mentored' },
-    { value: '∞', label: 'Passion for Coding' },
+    { value: '10+', label: 'Years of Experience', detail: 'Since 2014' },
+    { value: '15', label: 'Team Size Worked With', detail: 'Worked in teams of up to 15 people.' },
+    { value: '30+', label: 'Projects Shipped', detail: 'E-commerce · E-learning · ERP · Fintech · Shopify' },
+    { value: '∞', label: 'Passion in Coding', detail: 'Still curious. Still building.' },
   ],
 };
 
