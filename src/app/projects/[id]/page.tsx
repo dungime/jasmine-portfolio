@@ -1,3 +1,4 @@
+import { Fragment, type ReactNode } from "react";
 import Image from "next/image";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -61,106 +62,123 @@ export default async function ProjectDetailPage({
     notFound();
   }
 
-  const screenshots = project.screenshots ?? [];
-  const hasGallery = screenshots.length > 0;
-  const [firstScreenshot, ...restScreenshots] = screenshots;
+  const [heroScreenshot, ...inlineScreenshots] = project.screenshots ?? [];
+
+  const renderScreenshot = (src: string) => (
+    <figure key={src} className={styles.screenshotCard}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={withBasePath(src)} alt={project.title} />
+    </figure>
+  );
+
+  // Content blocks in reading order; screenshots after the first are
+  // interleaved one per block, and any left over land before Tech Stack.
+  const blocks: { key: string; node: ReactNode }[] = [
+    {
+      key: "intro",
+      node: (
+        <>
+          <h1 className={styles.title}>{project.title}</h1>
+          {project.subtitle && <p className={styles.subtitle}>{project.subtitle}</p>}
+          <p className={styles.description}>{project.description}</p>
+        </>
+      ),
+    },
+  ];
+
+  if (project.role) {
+    blocks.push({
+      key: "role",
+      node: (
+        <section className={styles.section}>
+          <h2 className={styles.sectionHeading}>My Role</h2>
+          <p className={styles.paragraph}>{project.role}</p>
+        </section>
+      ),
+    });
+  }
+
+  if (project.built && project.built.length > 0) {
+    blocks.push({
+      key: "built",
+      node: (
+        <section className={styles.section}>
+          <h2 className={styles.sectionHeading}>What I Built</h2>
+          {renderBulletList(project.built)}
+        </section>
+      ),
+    });
+  }
+
+  if (project.contributions && project.contributions.length > 0) {
+    blocks.push({
+      key: "contributions",
+      node: (
+        <section className={styles.section}>
+          <h2 className={styles.sectionHeading}>My Contribution</h2>
+          {renderBulletList(project.contributions)}
+        </section>
+      ),
+    });
+  }
+
+  const leftoverScreenshots = inlineScreenshots.slice(blocks.length);
 
   return (
     <main className={styles.main}>
-      <div className={hasGallery ? styles.containerWide : styles.container}>
+      <div className={styles.container}>
         <BackLink href="/#projects" className={styles.back}>
           ← Back to projects
         </BackLink>
 
-        <div className={hasGallery ? styles.layout : undefined}>
-          <div className={styles.content}>
-            {!hasGallery && (
-              <div className={styles.thumb}>
-                {project.thumbnail && (
-                  <Image
-                    src={withBasePath(project.thumbnail)}
-                    alt={project.title}
-                    fill
-                    sizes="(max-width: 760px) 100vw, 760px"
-                    style={{ objectFit: "cover" }}
-                    priority
-                  />
-                )}
-              </div>
+        {heroScreenshot ? (
+          <div className={styles.heroScreenshot}>{renderScreenshot(heroScreenshot)}</div>
+        ) : (
+          <div className={styles.thumb}>
+            {project.thumbnail && (
+              <Image
+                src={withBasePath(project.thumbnail)}
+                alt={project.title}
+                fill
+                sizes="(max-width: 760px) 100vw, 760px"
+                style={{ objectFit: "cover" }}
+                priority
+              />
             )}
-
-            <h1 className={styles.title}>{project.title}</h1>
-
-            {project.subtitle && <p className={styles.subtitle}>{project.subtitle}</p>}
-
-            <p className={styles.description}>{project.description}</p>
-
-            {project.role && (
-              <section className={styles.section}>
-                <h2 className={styles.sectionHeading}>My Role</h2>
-                <p className={styles.paragraph}>{project.role}</p>
-              </section>
-            )}
-
-            {project.built && project.built.length > 0 && (
-              <section className={styles.section}>
-                <h2 className={styles.sectionHeading}>What I Built</h2>
-                {renderBulletList(project.built)}
-              </section>
-            )}
-
-            {project.contributions && project.contributions.length > 0 && (
-              <section className={styles.section}>
-                <h2 className={styles.sectionHeading}>My Contribution</h2>
-                {renderBulletList(project.contributions)}
-              </section>
-            )}
-
-            <section className={styles.section}>
-              <h2 className={styles.sectionHeading}>Tech Stack</h2>
-              <div className={styles.techGrid}>
-                {project.tags.map((tag) => {
-                  const logoSrc = techLogos[tag.toLowerCase()];
-                  const iconName = techIcons[tag.toLowerCase()];
-                  return (
-                    <span key={tag} className={styles.techChip}>
-                      {logoSrc ? (
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img src={logoSrc} alt={tag} className={styles.techLogo} />
-                      ) : iconName ? (
-                        <span className={styles.techLogo}>{icons[iconName]}</span>
-                      ) : (
-                        <span className={styles.techAvatar}>{tag.slice(0, 2)}</span>
-                      )}
-                      {tag}
-                    </span>
-                  );
-                })}
-              </div>
-            </section>
-
           </div>
+        )}
 
-          {hasGallery && (
-            <div className={styles.gallery}>
-              <div className={styles.screenshotCard}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={withBasePath(firstScreenshot)} alt={project.title} />
-              </div>
+        {blocks.map((block, index) => (
+          <Fragment key={block.key}>
+            {block.node}
+            {inlineScreenshots[index] && renderScreenshot(inlineScreenshots[index])}
+          </Fragment>
+        ))}
 
-              {restScreenshots.length > 0 && (
-                <div className={styles.screenshotsRow}>
-                  {restScreenshots.map((src) => (
-                    <div key={src} className={styles.screenshotCard}>
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={withBasePath(src)} alt={project.title} />
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          )}
-        </div>
+        {leftoverScreenshots.map(renderScreenshot)}
+
+        <section className={styles.section}>
+          <h2 className={styles.sectionHeading}>Tech Stack</h2>
+          <div className={styles.techGrid}>
+            {project.tags.map((tag) => {
+              const logoSrc = techLogos[tag.toLowerCase()];
+              const iconName = techIcons[tag.toLowerCase()];
+              return (
+                <span key={tag} className={styles.techChip}>
+                  {logoSrc ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={logoSrc} alt={tag} className={styles.techLogo} />
+                  ) : iconName ? (
+                    <span className={styles.techLogo}>{icons[iconName]}</span>
+                  ) : (
+                    <span className={styles.techAvatar}>{tag.slice(0, 2)}</span>
+                  )}
+                  {tag}
+                </span>
+              );
+            })}
+          </div>
+        </section>
       </div>
     </main>
   );

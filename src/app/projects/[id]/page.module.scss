@@ -10,11 +10,6 @@
   max-width: 760px;
 }
 
-.containerWide {
-  @include container;
-  max-width: 1140px;
-}
-
 .back {
   display: inline-flex;
   align-items: center;
@@ -26,17 +21,6 @@
 
   &:hover {
     color: $color-black;
-  }
-}
-
-.layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: start;
-
-  @media (max-width: 900px) {
-    grid-template-columns: 1fr;
   }
 }
 
@@ -197,23 +181,17 @@
   text-transform: uppercase;
 }
 
-.gallery {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
+// First screenshot takes the thumbnail's slot at the top of the page.
+.heroScreenshot {
+  margin-bottom: 32px;
 
-.screenshotsRow {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-
-  @media (max-width: 560px) {
-    grid-template-columns: 1fr;
+  .screenshotCard {
+    margin-top: 0;
   }
 }
 
 .screenshotCard {
+  margin: 40px 0 0;
   border: 1px solid $color-border;
   border-radius: $radius-md;
   overflow: hidden;
