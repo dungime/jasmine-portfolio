@@ -1,4 +1,6 @@
-// Edit this file to customize the site's copy without touching component code.
+// English copy. Edit this file to customize the site's copy without touching
+// component code; every other locale (vi.ts, ...) must match its shape.
+// Short interface strings (buttons, labels) live in messages/<locale>.json.
 
 export const site = {
   name: 'Jasmine',

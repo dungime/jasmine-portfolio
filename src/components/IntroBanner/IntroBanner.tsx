@@ -1,10 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./IntroBanner.module.scss";
-import { hero } from "@/content/site";
+import { useContent } from "@/content";
 import { withBasePath } from "@/lib/base-path";
 
 export function IntroBanner() {
+  const { hero } = useContent();
+
   return (
     <section className={styles.section}>
       <div className={styles.photo}>

@@ -1,9 +1,13 @@
+"use client";
+
 import Link from "next/link";
 import styles from "./Experience.module.scss";
-import { experience } from "@/content/site";
+import { useContent } from "@/content";
 import { ArrowUpRightIcon } from "@/components/icons";
 
 export function Experience() {
+  const { experience } = useContent();
+
   return (
     <section id="experience" className={styles.section}>
       <div className={styles.header}>

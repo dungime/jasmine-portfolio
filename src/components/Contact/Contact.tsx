@@ -1,10 +1,14 @@
+"use client";
+
 import Link from "next/link";
 import styles from "./Contact.module.scss";
-import { contact } from "@/content/site";
+import { useContent } from "@/content";
 import { CopyEmailButton } from "./CopyEmailButton";
 import { ArrowUpRightIcon, PhoneIcon } from "@/components/icons";
 
 export function Contact() {
+  const { contact } = useContent();
+
   return (
     <section id="contact" className={styles.section}>
       <span className={styles.badge}>{contact.badge}</span>

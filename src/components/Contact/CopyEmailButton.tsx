@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import styles from "./Contact.module.scss";
 
 export function CopyEmailButton({ label, email }: { label: string; email: string }) {
+  const t = useTranslations("ui");
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
@@ -15,7 +17,7 @@ export function CopyEmailButton({ label, email }: { label: string; email: string
   return (
     <button type="button" onClick={handleCopy} className={styles.card}>
       {label}
-      <span className={styles.arrow}>{copied ? "Copied!" : "Copy"}</span>
+      <span className={styles.arrow}>{copied ? t("copied") : t("copy")}</span>
     </button>
   );
 }

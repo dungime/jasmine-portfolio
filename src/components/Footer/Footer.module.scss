@@ -8,9 +8,16 @@
 .bottom {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
   padding: 24px 8px 0;
   border-top: 1px solid $color-border;
+
+  @media (max-width: 560px) {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
 }
 
 .copyright {

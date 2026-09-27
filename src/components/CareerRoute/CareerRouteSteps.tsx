@@ -2,7 +2,7 @@
 
 import type { MouseEvent } from "react";
 import styles from "./CareerRoute.module.scss";
-import { careerRoute } from "@/content/site";
+import { useContent } from "@/content";
 
 function handleStepClick(event: MouseEvent<HTMLAnchorElement>, targetId: string) {
   event.preventDefault();
@@ -10,6 +10,8 @@ function handleStepClick(event: MouseEvent<HTMLAnchorElement>, targetId: string)
 }
 
 export function CareerRouteSteps() {
+  const { careerRoute } = useContent();
+
   return (
     <section className={styles.stepsSection}>
       <div className={styles.header}>

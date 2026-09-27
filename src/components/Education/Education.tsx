@@ -1,7 +1,11 @@
+"use client";
+
 import styles from "./Education.module.scss";
-import { education } from "@/content/site";
+import { useContent } from "@/content";
 
 export function Education() {
+  const { education } = useContent();
+
   return (
     <section id="education" className={styles.section}>
       <div className={styles.header}>

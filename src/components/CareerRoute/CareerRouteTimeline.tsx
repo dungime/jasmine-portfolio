@@ -1,6 +1,9 @@
+"use client";
+
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import styles from "./CareerRoute.module.scss";
-import { careerRoute } from "@/content/site";
+import { useContent } from "@/content";
 import { icons, techLogos, techIcons, type IconName } from "@/components/icons";
 import { Reveal } from "@/components/Reveal/Reveal";
 
@@ -21,6 +24,9 @@ function highlightNumbers(text: string) {
 }
 
 export function CareerRouteTimeline() {
+  const { careerRoute } = useContent();
+  const t = useTranslations("ui");
+
   return (
     <section id="career-timeline" className={styles.timelineSection}>
       <div className={styles.timeline}>
@@ -56,7 +62,7 @@ export function CareerRouteTimeline() {
                 <div className={styles.columns}>
                   {/* {station.learned.length > 0 && (
                     <div>
-                      <span className={styles.columnLabel}>What I learned</span>
+                      <span className={styles.columnLabel}>{t("whatILearned")}</span>
                       <ul className={styles.bullets}>
                         {station.learned.map((line) => (
                           <li key={line}>{highlightNumbers(line)}</li>
@@ -66,7 +72,7 @@ export function CareerRouteTimeline() {
                   )} */}
                   {station.contributions.length > 0 && (
                     <div>
-                      <span className={styles.columnLabel}>My contributions</span>
+                      <span className={styles.columnLabel}>{t("myContributions")}</span>
                       <ul className={styles.bullets}>
                         {station.contributions.map((line) => (
                           <li key={line}>{highlightNumbers(line)}</li>
@@ -79,7 +85,7 @@ export function CareerRouteTimeline() {
 
               {station.tech.length > 0 && (
                 <div className={styles.tech}>
-                  <span className={styles.techLabel}>Tech:</span>
+                  <span className={styles.techLabel}>{t("techLabel")}</span>
                   <div className={styles.techList}>
                     {station.tech.map((tech) => {
                       const logoSrc = techLogos[tech.toLowerCase()];

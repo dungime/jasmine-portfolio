@@ -1,5 +1,7 @@
+"use client";
+
 import styles from "./Mission.module.scss";
-import { mission } from "@/content/site";
+import { useContent } from "@/content";
 
 const BOLD_PATTERN = /\*\*(.+?)\*\*/g;
 
@@ -10,6 +12,8 @@ function renderBold(text: string) {
 }
 
 export function Mission() {
+  const { mission } = useContent();
+
   return (
     <section id="about" className={styles.section}>
       {/* <span className={styles.badge}>{mission.badge}</span> */}

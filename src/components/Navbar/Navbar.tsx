@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState, type MouseEvent } from "react";
 import styles from "./Navbar.module.scss";
-import { site } from "@/content/site";
+import { useContent, type SiteContent } from "@/content";
 import { withBasePath } from "@/lib/base-path";
 
 function handleSectionLinkClick(event: MouseEvent<HTMLAnchorElement>, href: string) {
@@ -43,7 +43,7 @@ function useNavHeight(ref: React.RefObject<HTMLElement | null>) {
   return height;
 }
 
-function useActiveSection(navHeight: number) {
+function useActiveSection(nav: SiteContent["site"]["nav"], navHeight: number) {
   const [activeHref, setActiveHref] = useState<string>("#");
 
   useEffect(() => {
@@ -53,7 +53,7 @@ function useActiveSection(navHeight: number) {
     // at the top of the page, so track "top" for it explicitly. Without
     // this, scrolling back up past the first real section never re-activates
     // "About" since nothing was ever observed for it.
-    const trackedSections = site.nav.map((item) => ({
+    const trackedSections = nav.map((item) => ({
       href: item.href,
       id: item.href === "#" ? "top" : item.href.slice(1),
     }));
@@ -81,15 +81,16 @@ function useActiveSection(navHeight: number) {
     hrefByElement.forEach((_href, el) => observer.observe(el));
 
     return () => observer.disconnect();
-  }, [navHeight]);
+  }, [nav, navHeight]);
 
   return activeHref;
 }
 
 export function Navbar() {
+  const { site } = useContent();
   const wrapRef = useRef<HTMLElement | null>(null);
   const navHeight = useNavHeight(wrapRef);
-  const activeHref = useActiveSection(navHeight);
+  const activeHref = useActiveSection(site.nav, navHeight);
 
   return (
     <header ref={wrapRef} className={styles.wrap}>

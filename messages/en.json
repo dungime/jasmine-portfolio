@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "title": "Jasmine — Frontend Developer",
+    "description": "Portfolio of Jasmine, a frontend developer."
+  },
+  "ui": {
+    "languageSwitcherLabel": "Language",
+    "backToProjects": "← Back to projects",
+    "backToExperience": "← Back to experience",
+    "myRole": "My Role",
+    "whatIBuilt": "What I Built",
+    "myContribution": "My Contribution",
+    "whatILearned": "What I learned",
+    "myContributions": "My contributions",
+    "techStack": "Tech Stack",
+    "techLabel": "Tech:",
+    "visitCompanySite": "Visit company site",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "allRightsReserved": "All rights reserved."
+  }
+}

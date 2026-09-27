@@ -1,11 +1,15 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Projects.module.scss";
-import { projects } from "@/content/site";
+import { useContent } from "@/content";
 import { ArrowUpRightIcon, icons, techLogos, techIcons } from "@/components/icons";
 import { withBasePath } from "@/lib/base-path";
 
 export function Projects() {
+  const { projects } = useContent();
+
   return (
     <section id="projects" className={styles.section}>
       <div className={styles.header}>

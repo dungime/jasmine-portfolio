@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "title": "Jasmine — Frontend Developer",
+    "description": "Portfolio của Jasmine, lập trình viên frontend."
+  },
+  "ui": {
+    "languageSwitcherLabel": "Ngôn ngữ",
+    "backToProjects": "← Quay lại dự án",
+    "backToExperience": "← Quay lại kinh nghiệm",
+    "myRole": "Vai trò",
+    "whatIBuilt": "Những gì tôi xây dựng",
+    "myContribution": "Đóng góp của tôi",
+    "whatILearned": "Những gì tôi học được",
+    "myContributions": "Đóng góp của tôi",
+    "techStack": "Công nghệ",
+    "techLabel": "Công nghệ:",
+    "visitCompanySite": "Xem website công ty",
+    "copy": "Sao chép",
+    "copied": "Đã sao chép!",
+    "allRightsReserved": "Bảo lưu mọi quyền."
+  }
+}

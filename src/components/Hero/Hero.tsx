@@ -1,7 +1,9 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Hero.module.scss';
-import { hero } from '@/content/site';
+import { useContent } from '@/content';
 import { withBasePath } from '@/lib/base-path';
 
 const BOLD_PATTERN = /\*\*(.+?)\*\*/g;
@@ -13,6 +15,8 @@ function renderBold(text: string) {
 }
 
 export function Hero() {
+  const { hero } = useContent();
+
   return (
     <section id='top' className={styles.section}>
       <div>

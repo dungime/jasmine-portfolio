@@ -1,8 +1,12 @@
+"use client";
+
 import styles from "./Skills.module.scss";
-import { skills } from "@/content/site";
+import { useContent } from "@/content";
 import { icons, type IconName } from "@/components/icons";
 
 export function Skills() {
+  const { skills } = useContent();
+
   return (
     <section id="skills" className={styles.section}>
       <div className={styles.header}>

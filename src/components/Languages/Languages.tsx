@@ -1,7 +1,11 @@
+"use client";
+
 import styles from "./Languages.module.scss";
-import { languages } from "@/content/site";
+import { useContent } from "@/content";
 
 export function Languages() {
+  const { languages } = useContent();
+
   return (
     <section id="languages" className={styles.section}>
       <div className={styles.header}>

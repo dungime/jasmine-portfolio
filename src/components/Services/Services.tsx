@@ -1,8 +1,12 @@
+'use client';
+
 import styles from './Services.module.scss';
-import { services } from '@/content/site';
+import { useContent } from '@/content';
 import { icons, type IconName } from '@/components/icons';
 
 export function Services() {
+  const { services } = useContent();
+
   return (
     <section id='services' className={styles.section}>
       <div className={styles.header}>

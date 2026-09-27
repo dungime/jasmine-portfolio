@@ -1,9 +1,13 @@
+"use client";
+
 import { Fragment } from "react";
 import styles from "./Stats.module.scss";
-import { stats } from "@/content/site";
+import { useContent } from "@/content";
 import { StatValue } from "./StatValue";
 
 export function Stats() {
+  const { stats } = useContent();
+
   return (
     <section className={styles.section}>
       <div className={styles.grid}>

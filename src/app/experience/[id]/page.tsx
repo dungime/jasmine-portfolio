@@ -1,123 +1,34 @@
-import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { careerRoute, experience } from "@/content/site";
-import { ArrowUpRightIcon, icons, techLogos, techIcons } from "@/components/icons";
-import { BackLink } from "@/components/BackLink/BackLink";
-import styles from "./page.module.scss";
+import { getContent } from "@/content";
+import { defaultLocale } from "@/i18n/config";
+import { ExperienceDetail } from "./ExperienceDetail";
+
+// Ids are shared across locales, so the default locale's content is enough
+// for the static routes and metadata.
+const { experience } = getContent(defaultLocale);
+
+type Props = { params: Promise<{ id: string }> };
 
 export function generateStaticParams() {
   return experience.items.map((item) => ({ id: item.id }));
 }
 
-function getExperience(id: string) {
-  return experience.items.find((item) => item.id === id);
-}
-
-function getStation(id: string) {
-  return careerRoute.stations.find((station) => station.id === id);
-}
-
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ id: string }>;
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
-  const item = getExperience(id);
+  const item = experience.items.find((entry) => entry.id === id);
 
   return {
     title: item ? `${item.title} — Jasmine` : "Experience not found",
   };
 }
 
-export default async function ExperienceDetailPage({
-  params,
-}: {
-  params: Promise<{ id: string }>;
-}) {
+export default async function ExperienceDetailPage({ params }: Props) {
   const { id } = await params;
-  const item = getExperience(id);
 
-  if (!item) {
+  if (!experience.items.some((entry) => entry.id === id)) {
     notFound();
   }
 
-  const station = getStation(id);
-
-  return (
-    <main className={styles.main}>
-      <div className={styles.container}>
-        <BackLink href="/#experience" className={styles.back}>
-          ← Back to experience
-        </BackLink>
-
-        {station && <span className={styles.category}>{station.category}</span>}
-
-        <h1 className={styles.title}>{item.title}</h1>
-
-        <div className={styles.meta}>
-          {item.period}
-          {item.note && <span className={styles.note}> · {item.note}</span>}
-        </div>
-
-        <p className={styles.description}>{item.description}</p>
-
-        {station && (station.learned.length > 0 || station.contributions.length > 0) && (
-          <div className={styles.columns}>
-            {station.learned.length > 0 && (
-              <div>
-                <span className={styles.columnLabel}>What I learned</span>
-                <ul className={styles.bullets}>
-                  {station.learned.map((line) => (
-                    <li key={line}>{line}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-            {station.contributions.length > 0 && (
-              <div>
-                <span className={styles.columnLabel}>My contributions</span>
-                <ul className={styles.bullets}>
-                  {station.contributions.map((line) => (
-                    <li key={line}>{line}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
-        )}
-
-        {station && station.tech.length > 0 && (
-          <div className={styles.techSection}>
-            <h2 className={styles.sectionHeading}>Tech Stack</h2>
-            <div className={styles.techGrid}>
-              {station.tech.map((tech) => {
-                const logoSrc = techLogos[tech.toLowerCase()];
-                const iconName = techIcons[tech.toLowerCase()];
-                return (
-                  <span key={tech} className={styles.techChip}>
-                    {logoSrc ? (
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img src={logoSrc} alt={tech} className={styles.techLogo} />
-                    ) : iconName ? (
-                      <span className={styles.techLogo}>{icons[iconName]}</span>
-                    ) : (
-                      <span className={styles.techAvatar}>{tech.slice(0, 2)}</span>
-                    )}
-                    {tech}
-                  </span>
-                );
-              })}
-            </div>
-          </div>
-        )}
-
-        <Link href={item.href} className={styles.companyLink}>
-          Visit company site
-          <ArrowUpRightIcon />
-        </Link>
-      </div>
-    </main>
-  );
+  return <ExperienceDetail id={id} />;
 }

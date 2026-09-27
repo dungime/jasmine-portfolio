@@ -1,0 +1,37 @@
+@use "../../styles/variables" as *;
+
+.switcher {
+  // Each option is written in its own language, and the page font (Martian
+  // Mono on English pages) has no Vietnamese glyphs — so the switcher always
+  // uses the Vietnamese-capable face loaded in LocaleRootLayout.
+  font-family: var(--font-jetbrains-mono), $font-sans;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid $color-border;
+  border-radius: $radius-pill;
+}
+
+.option {
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  padding: 6px 10px;
+  border-radius: $radius-pill;
+  font-size: 12px;
+  font-weight: 600;
+  color: $color-gray;
+  transition: color 0.15s ease, background 0.15s ease;
+
+  &:hover {
+    color: $color-black;
+  }
+
+  &.active {
+    background: $color-black;
+    color: $color-white;
+  }
+}
