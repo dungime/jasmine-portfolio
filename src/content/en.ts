@@ -474,10 +474,11 @@ export const contact = {
     'I’m always open to discussing interesting products, challenging frontend problems, and opportunities to build better experiences together.',
   resumeCta: { label: 'Download Résumé', href: '/assets/Dung Nguyen - Senior Frontend Developer Resume.pdf' },
   links: [
-    { label: 'GitHub', href: 'https://github.com/dungime' },
-    { label: 'E-mail', href: 'mailto:dungntp.contact@gmail.com' },
-    { label: '0398 060 569', href: 'tel:+84398060569' },
-    { label: 'Ho Chi Minh', href: '' },
+    // Rendered in a 2-column grid: phone · email, then GitHub · address.
+    { icon: 'phone', label: '0398 060 569', href: 'tel:+84398060569' },
+    { icon: 'mail', label: 'dungntp.contact@gmail.com', href: 'mailto:dungntp.contact@gmail.com' },
+    { icon: 'github', label: 'GitHub', href: 'https://github.com/dungime' },
+    { icon: 'mapPin', label: 'Ho Chi Minh', href: '' },
     // { label: "LinkedIn", href: "https://linkedin.com" },
     // { label: "Instagram", href: "https://instagram.com" },
     // { label: "E-mail", href: "mailto:dungntp.contact@gmail.com" },

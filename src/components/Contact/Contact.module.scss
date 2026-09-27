@@ -3,33 +3,44 @@
 .section {
   @include container;
   padding-bottom: $space-section;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+}
+
+// Dark panel that sets the closing call to action apart from the light
+// sections above it.
+.panel {
+  padding: clamp(28px, 5vw, 56px);
+  border-radius: $radius-lg;
+  background: $color-black;
+  color: $color-white;
 }
 
 .badge {
   @include pill-badge;
   margin-bottom: 20px;
+  border-color: rgba(255, 255, 255, 0.16);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .heading {
+  max-width: 720px;
   font-size: clamp(28px, 3.6vw, 40px);
   font-weight: 700;
   letter-spacing: -0.01em;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 
+// The shared lime band under the text reads poorly behind white on dark,
+// so here the heading itself takes the accent colour.
 .headingHighlight {
-  @include heading-highlight;
+  color: $color-lime;
 }
 
 .subheading {
   font-size: 15px;
-  color: $color-gray;
-  line-height: 1.5;
-  margin-bottom: 40px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin-bottom: 36px;
   max-width: 640px;
 }
 
@@ -46,14 +57,18 @@
 }
 
 .grid {
-  width: 100%;
-  max-width: 620px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
+  // Columns are capped instead of the grid, so the divider (border-top)
+  // still spans the whole panel while the boxes stay compact. 340px fits the
+  // e-mail address on one line in Martian Mono (the widest of the page fonts).
+  grid-template-columns: repeat(2, minmax(0, 340px));
+  gap: 10px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
 
-  @media (max-width: 560px) {
-    grid-template-columns: 1fr;
+  // Below this, two columns get too narrow for the e-mail address.
+  @media (max-width: 860px) {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
@@ -62,29 +77,86 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 22px;
-  border: 1px solid $color-border;
-  border-radius: $radius-md;
-  background: $color-card;
+  gap: 10px;
+  padding: 12px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: $radius-sm;
+  background: rgba(255, 255, 255, 0.06);
   color: inherit;
   font-family: inherit;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
   text-align: left;
   cursor: pointer;
-  transition: transform 0.15s ease, background 0.15s ease;
+  transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease;
 
   &:hover {
     background: $color-lime;
+    color: $color-black;
     transform: translateY(-2px);
   }
 }
 
+// Non-link card (no href): no hover lift or pointer.
+.static {
+  cursor: default;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.06);
+    color: inherit;
+    transform: none;
+  }
+}
+
+.cardLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+// Long values (the e-mail address) wrap instead of overflowing on phones.
+.cardText {
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+.cardIcon {
+  display: inline-flex;
+  flex-shrink: 0;
+  color: $color-lime;
+  transition: color 0.15s ease;
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .card:not(.static):hover & {
+    color: $color-black;
+  }
+}
+
 .arrow {
+  display: inline-flex;
   font-size: 14px;
-  color: $color-gray;
+  color: rgba(255, 255, 255, 0.6);
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
 
   .card:hover & {
     color: $color-black;
   }
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }

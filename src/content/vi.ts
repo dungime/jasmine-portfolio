@@ -442,9 +442,10 @@ export const contact: typeof en.contact = {
     'Tôi luôn sẵn sàng trao đổi về những sản phẩm thú vị, những bài toán frontend thử thách và cơ hội cùng nhau tạo ra trải nghiệm tốt hơn.',
   resumeCta: { label: 'Tải CV', href: '/assets/Dung Nguyen - Senior Frontend Developer Resume.pdf' },
   links: [
-    { label: 'GitHub', href: 'https://github.com/dungime' },
-    { label: 'E-mail', href: 'mailto:dungntp.contact@gmail.com' },
-    { label: '0398 060 569', href: 'tel:+84398060569' },
-    { label: 'Hồ Chí Minh', href: '' },
+    // Rendered in a 2-column grid: phone · email, then GitHub · address.
+    { icon: 'phone', label: '0398 060 569', href: 'tel:+84398060569' },
+    { icon: 'mail', label: 'dungntp.contact@gmail.com', href: 'mailto:dungntp.contact@gmail.com' },
+    { icon: 'github', label: 'GitHub', href: 'https://github.com/dungime' },
+    { icon: 'mapPin', label: 'Hồ Chí Minh', href: '' },
   ],
 };
