@@ -13,7 +13,6 @@ export const site = {
     { label: 'Career', href: '#career-route' },
     { label: 'Projects', href: '#projects' },
     // { label: 'Education', href: '#education' },
-    { label: 'Contact', href: '#contact' },
   ],
   contactCta: { label: 'Download CV', href: '/assets/Dung Nguyen - Senior Frontend Developer Resume.pdf' },
 };
@@ -209,6 +208,32 @@ export const projects = {
       ],
       thumbnail: '/assets/images/thumb-cleaning.png',
     },
+    {
+      id: 'aimee-by-j',
+      title: 'Aimee by J — Headless Ecommerce Storefront',
+      subtitle: 'Vietnamese Fashion Ecommerce · In Progress',
+      category: 'Ecommerce',
+      description:
+        'An independent, ground-up rebuild of a headless commerce storefront for a Vietnamese fashion brand, pairing a Medusa v2 backend with a Next.js 16 storefront — currently in active development.',
+      role: 'Sole developer and architect on this independent project, owning every layer end-to-end: backend/storefront architecture, the typed API data layer, rendering strategy, and the delivery roadmap, including research into Vietnam-specific payment integrations.',
+      built: [
+        'Architected a fully decoupled headless commerce stack — a Next.js 16 storefront consuming a Medusa v2 backend purely through its REST API, so either side can evolve independently',
+        'Designed a typed, generic HTTP data layer built around a **discriminated-union Result type** instead of exceptions, so a failed or empty API response can never silently corrupt a page render',
+        'Diagnosed and fixed a production build failure by correctly identifying Next.js\'s **static-vs-dynamic rendering boundary**, converting a backend-dependent route from implicit build-time prerendering to request-time rendering',
+        'Planned Vietnam market-specific checkout, including **Cash on Delivery and a custom PayOS/VNPay payment provider** on top of Medusa\'s extensible payment architecture',
+        'Mapped a full delivery roadmap — data layer, design system, catalog, cart, checkout, accounts, and local payments — with **phase-by-phase milestones and realistic time estimates**',
+        'Set a testing strategy spanning the stack: **Vitest** for the data layer, **React Testing Library** for interactive components, **Playwright** reserved for critical end-to-end flows',
+      ],
+      tags: [
+        'Next.js',
+        'TypeScript',
+        'Medusa',
+        'PostgreSQL',
+        'Tailwind CSS',
+        'Turborepo',
+        'REST APIs',
+      ],
+    },
   ],
 };
 
@@ -223,34 +248,8 @@ export const careerRoute = {
   footnote: 'Click each station to explore more details and selected projects.',
   stations: [
     {
-      id: 'aris',
-      number: '01',
-      icon: 'graduationCap',
-      stage: 'Foundation',
-      category: 'Outsourcing',
-      company: 'Aris Vietnam',
-      website: 'https://aris-vn.com',
-      period: 'Aug 2014 – May 2016',
-      role: 'Junior Frontend Developer',
-      team: '3 FE',
-      description:
-        'My first step into professional frontend development after graduation. I built a strong foundation in frontend development while learning how to work with real clients, production websites, and professional development workflows.',
-      learned: [
-        'Built a foundation in HTML, CSS, JavaScript, and jQuery',
-        'Practiced converting designs into responsive web interfaces',
-        'Learned Git, Photoshop, task management, and team communication tools',
-        'Adapted from academic projects to real-world production work',
-        'Learned professional workflows, including Git, Photoshop, task management, and team communication.',
-      ],
-      contributions: [
-        'Maintained and updated features and content on customer websites.',
-        'Fixed UI and functional bugs and supported responsive layouts.',
-      ],
-      tech: ['HTML5', 'CSS3', 'JavaScript (ES5)', 'jQuery', 'Bootstrap'],
-    },
-    {
       id: 'ticketbox',
-      number: '02',
+      number: '01',
       icon: 'ticket',
       stage: 'Product Collaboration',
       category: 'Ticketing Platform',
@@ -285,7 +284,7 @@ export const careerRoute = {
     },
     {
       id: 'pure-projects',
-      number: '03',
+      number: '02',
       icon: 'code',
       stage: 'Independent Delivery',
       category: 'Construction Management Platform',
@@ -316,7 +315,7 @@ export const careerRoute = {
     },
     {
       id: 'lecle',
-      number: '04',
+      number: '03',
       icon: 'people',
       stage: 'Scale & Leadership',
       category: 'Outsourcing',
@@ -362,7 +361,7 @@ export const careerRoute = {
     },
     {
       id: 'nexstox',
-      number: '05',
+      number: '04',
       icon: 'rocket',
       stage: 'Product Ownership',
       category: 'Trading Platform',
@@ -393,6 +392,39 @@ export const careerRoute = {
         'Material UI',
         'REST APIs',
         'Real-time Data',
+      ],
+    },
+    {
+      id: 'own-product',
+      number: '05',
+      icon: 'lightbulb',
+      stage: 'Building My Own',
+      category: 'Gap Year',
+      company: 'Building My Own Product',
+      period: 'May 2026 – Present',
+      role: 'Founder & Developer',
+      team: 'Solo',
+      description:
+        'A deliberate gap year to step back from client and company work and build a product of my own — owning every layer, from backend and storefront architecture to the delivery roadmap, rather than the frontend alone.',
+      learned: [
+        'Owning a product end-to-end, beyond the frontend',
+        'Designing backend and storefront architecture together',
+        'Planning scope and roadmap as the sole decision-maker',
+      ],
+      contributions: [
+        'Building Aimee by J, a headless e-commerce storefront for a Vietnamese fashion brand, with a Next.js 16 storefront on a Medusa v2 backend.',
+        'Designed a typed API data layer and the rendering strategy for the storefront.',
+        'Planning Vietnam-specific checkout, including Cash on Delivery and local payment providers.',
+        'Using the time to deepen backend, architecture, and testing skills alongside frontend work.',
+      ],
+      tech: [
+        'Next.js',
+        'TypeScript',
+        'Medusa',
+        'PostgreSQL',
+        'Tailwind CSS',
+        'Turborepo',
+        'REST APIs',
       ],
     },
   ],
@@ -434,14 +466,6 @@ export const experience = {
       description:
         "Developed event landing pages and the Event Detail page for ticketbox.com, one of Vietnam's leading event ticketing platforms, building reusable UI components and resolving production bugs with JavaScript, Bootstrap, jQuery, and Angular 2.",
       href: 'https://ticketbox.vn/',
-    },
-    {
-      id: 'aris',
-      period: 'Aug 2014 – May 2016',
-      title: 'Frontend Developer | Aris Viet Nam Co. Ltd.',
-      description:
-        'Built responsive, pixel-perfect websites from Photoshop design mockups with consistent rendering across browsers and devices, implementing interactive UI elements and animations in JavaScript and managing collaborative workflows with Git.',
-      href: 'https://aris-vn.com',
     },
   ],
 };

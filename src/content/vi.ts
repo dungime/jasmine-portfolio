@@ -15,7 +15,6 @@ export const site: typeof en.site = {
     { label: 'Sự nghiệp', href: '#career-route' },
     { label: 'Dự án', href: '#projects' },
     // { label: 'Học vấn', href: '#education' },
-    { label: 'Liên hệ', href: '#contact' },
   ],
   contactCta: { label: 'Tải CV', href: '/assets/Dung Nguyen - Senior Frontend Developer Resume.pdf' },
 };
@@ -183,6 +182,24 @@ export const projects: typeof en.projects = {
       tags: ['React', 'TypeScript', 'Ant Design', 'Jotai', 'Vite', 'Turborepo', 'REST APIs'],
       thumbnail: '/assets/images/thumb-cleaning.png',
     },
+    {
+      id: 'aimee-by-j',
+      title: 'Aimee by J — Nền tảng Ecommerce Headless',
+      subtitle: 'Thời trang Việt Nam · Đang phát triển',
+      category: 'Ecommerce',
+      description:
+        'Dự án độc lập xây lại từ đầu một storefront ecommerce headless cho thương hiệu thời trang Việt Nam, kết hợp backend Medusa v2 với storefront Next.js 16 — đang trong quá trình phát triển.',
+      role: 'Tôi là developer và người kiến trúc duy nhất của dự án độc lập này, chịu trách nhiệm toàn bộ các tầng: kiến trúc backend/storefront, tầng data API có type, chiến lược render, và lộ trình triển khai, bao gồm nghiên cứu tích hợp thanh toán đặc thù thị trường Việt Nam.',
+      built: [
+        'Thiết kế kiến trúc headless commerce tách biệt hoàn toàn — storefront Next.js 16 gọi backend Medusa v2 thuần qua REST API, cho phép hai phía phát triển độc lập',
+        'Xây dựng tầng data HTTP có type, generic, dựa trên **kiểu Result dạng discriminated union** thay cho exception — đảm bảo response lỗi hoặc rỗng không bao giờ làm hỏng render trang một cách âm thầm',
+        'Chẩn đoán và sửa lỗi build production bằng cách xác định đúng **ranh giới static-vs-dynamic rendering** của Next.js, chuyển một route phụ thuộc backend từ prerender tĩnh lúc build sang render theo request',
+        'Lên kế hoạch thanh toán đặc thù thị trường Việt Nam, gồm **thanh toán khi nhận hàng (COD) và payment provider tuỳ chỉnh PayOS/VNPay** trên kiến trúc payment mở rộng của Medusa',
+        'Vạch lộ trình triển khai đầy đủ — tầng data, design system, catalog, giỏ hàng, checkout, tài khoản, thanh toán nội địa — với **mốc rõ ràng theo từng giai đoạn và ước lượng thời gian thực tế**',
+        'Xác định chiến lược test xuyên suốt dự án: **Vitest** cho tầng data, **React Testing Library** cho component tương tác, **Playwright** dành cho luồng end-to-end quan trọng',
+      ],
+      tags: ['Next.js', 'TypeScript', 'Medusa', 'PostgreSQL', 'Tailwind CSS', 'Turborepo', 'REST APIs'],
+    },
   ],
 };
 
@@ -197,34 +214,8 @@ export const careerRoute: typeof en.careerRoute = {
   footnote: 'Nhấn vào từng chặng để xem thêm chi tiết và các dự án tiêu biểu.',
   stations: [
     {
-      id: 'aris',
-      number: '01',
-      icon: 'graduationCap',
-      stage: 'Nền tảng',
-      category: 'Outsourcing',
-      company: 'Aris Vietnam',
-      website: 'https://aris-vn.com',
-      period: '08/2014 – 05/2016',
-      role: 'Junior Frontend Developer',
-      team: '3 FE',
-      description:
-        'Bước chân đầu tiên vào nghề frontend sau khi tốt nghiệp. Tôi xây dựng nền tảng vững chắc về frontend đồng thời học cách làm việc với khách hàng thực tế, website production và quy trình phát triển chuyên nghiệp.',
-      learned: [
-        'Xây dựng nền tảng về HTML, CSS, JavaScript và jQuery',
-        'Luyện chuyển thiết kế thành giao diện web responsive',
-        'Học Git, Photoshop, quản lý task và các công cụ giao tiếp trong team',
-        'Chuyển từ dự án học thuật sang công việc production thực tế',
-        'Học quy trình làm việc chuyên nghiệp, bao gồm Git, Photoshop, quản lý task và giao tiếp trong team.',
-      ],
-      contributions: [
-        'Bảo trì và cập nhật tính năng, nội dung trên website của khách hàng.',
-        'Sửa lỗi giao diện, lỗi chức năng và hỗ trợ layout responsive.',
-      ],
-      tech: ['HTML5', 'CSS3', 'JavaScript (ES5)', 'jQuery', 'Bootstrap'],
-    },
-    {
       id: 'ticketbox',
-      number: '02',
+      number: '01',
       icon: 'ticket',
       stage: 'Làm việc trong team sản phẩm',
       category: 'Nền tảng bán vé',
@@ -259,7 +250,7 @@ export const careerRoute: typeof en.careerRoute = {
     },
     {
       id: 'pure-projects',
-      number: '03',
+      number: '02',
       icon: 'code',
       stage: 'Tự chủ triển khai',
       category: 'Nền tảng quản lý xây dựng',
@@ -284,7 +275,7 @@ export const careerRoute: typeof en.careerRoute = {
     },
     {
       id: 'lecle',
-      number: '04',
+      number: '03',
       icon: 'people',
       stage: 'Mở rộng & dẫn dắt',
       category: 'Outsourcing',
@@ -330,7 +321,7 @@ export const careerRoute: typeof en.careerRoute = {
     },
     {
       id: 'nexstox',
-      number: '05',
+      number: '04',
       icon: 'rocket',
       stage: 'Làm chủ sản phẩm',
       category: 'Nền tảng giao dịch',
@@ -361,6 +352,39 @@ export const careerRoute: typeof en.careerRoute = {
         'Material UI',
         'REST APIs',
         'Real-time Data',
+      ],
+    },
+    {
+      id: 'own-product',
+      number: '05',
+      icon: 'lightbulb',
+      stage: 'Xây sản phẩm riêng',
+      category: 'Gap Year',
+      company: 'Xây dựng sản phẩm của riêng tôi',
+      period: '05/2026 – nay',
+      role: 'Founder & Developer',
+      team: 'Solo',
+      description:
+        'Một năm gap year có chủ đích để tạm rời công việc cho khách hàng và công ty, tập trung xây dựng sản phẩm của riêng mình — làm chủ mọi tầng, từ kiến trúc backend và storefront đến lộ trình triển khai, chứ không chỉ riêng frontend.',
+      learned: [
+        'Làm chủ sản phẩm end-to-end, vượt ra ngoài phạm vi frontend',
+        'Thiết kế đồng thời kiến trúc backend và storefront',
+        'Tự lên phạm vi và lộ trình với vai trò người ra quyết định duy nhất',
+      ],
+      contributions: [
+        'Xây dựng Aimee by J, storefront ecommerce headless cho một thương hiệu thời trang Việt Nam, với storefront Next.js 16 chạy trên backend Medusa v2.',
+        'Thiết kế tầng data API có type và chiến lược render cho storefront.',
+        'Lên kế hoạch checkout đặc thù thị trường Việt Nam, gồm thanh toán khi nhận hàng (COD) và các cổng thanh toán nội địa.',
+        'Tận dụng thời gian để đào sâu kỹ năng backend, kiến trúc và testing song song với frontend.',
+      ],
+      tech: [
+        'Next.js',
+        'TypeScript',
+        'Medusa',
+        'PostgreSQL',
+        'Tailwind CSS',
+        'Turborepo',
+        'REST APIs',
       ],
     },
   ],
@@ -402,14 +426,6 @@ export const experience: typeof en.experience = {
       description:
         'Phát triển landing page sự kiện và trang Chi tiết sự kiện cho ticketbox.com, một trong những nền tảng bán vé sự kiện hàng đầu Việt Nam, xây dựng component UI tái sử dụng và xử lý lỗi production bằng JavaScript, Bootstrap, jQuery và Angular 2.',
       href: 'https://ticketbox.vn/',
-    },
-    {
-      id: 'aris',
-      period: '08/2014 – 05/2016',
-      title: 'Frontend Developer | Aris Viet Nam Co. Ltd.',
-      description:
-        'Xây dựng website responsive, chuẩn pixel từ mockup Photoshop, hiển thị nhất quán trên nhiều trình duyệt và thiết bị, triển khai các thành phần UI tương tác và hiệu ứng bằng JavaScript, quản lý quy trình làm việc nhóm với Git.',
-      href: 'https://aris-vn.com',
     },
   ],
 };

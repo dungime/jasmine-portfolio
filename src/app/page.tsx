@@ -29,9 +29,16 @@ export default function Home() {
           <Mission />
         </Reveal>
 
-        <Reveal>
+        {/* <Reveal>
           <Services />
+        </Reveal> */}
+        <Reveal>
+          <Projects />
         </Reveal>
+        {/* <Reveal>
+          <Experience />
+        </Reveal> */}
+
         <Reveal>
           <Skills />
         </Reveal>
@@ -48,12 +55,6 @@ export default function Home() {
               impossible to satisfy, leaving it stuck at opacity:0. */}
           <CareerRouteTimeline />
         </div>
-        <Reveal>
-          <Projects />
-        </Reveal>
-        {/* <Reveal>
-          <Experience />
-        </Reveal> */}
         <Reveal>
           <Education />
         </Reveal>

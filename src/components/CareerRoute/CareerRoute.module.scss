@@ -133,15 +133,25 @@
   position: relative;
   max-width: 760px;
   margin: 0 auto;
+}
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 20px;
-    width: 1px;
-    background: $color-border;
+// Node centers sit 38px below each row's top (16px row padding + half of the
+// 44px node), so a connector spanning from there to the same point in the
+// next row joins the two nodes.
+.connector {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 38px;
+  width: 40px;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+
+  path {
+    fill: none;
+    stroke: $color-border;
+    stroke-width: 1.5;
   }
 }
 
@@ -172,12 +182,27 @@
 }
 
 .company {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-size: 17px;
   font-weight: 700;
 
-  &:hover {
+  &[href]:hover {
     text-decoration: underline;
+
+    .companyIcon {
+      transform: translate(2px, -2px);
+    }
   }
+}
+
+// External-link hint so the company name reads as clickable.
+.companyIcon {
+  flex-shrink: 0;
+  font-size: 15px;
+  stroke: $color-lime-dark;
+  transition: transform 0.15s ease;
 }
 
 .category {
@@ -226,6 +251,76 @@
   letter-spacing: 0.03em;
   color: $color-black;
   margin-bottom: 8px;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+
+  .columnLabel {
+    margin-bottom: 0;
+  }
+
+  &:hover .toggleIcon {
+    background: $color-lime;
+    color: $color-black;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-lime-dark;
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
+}
+
+.toggleIcon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: $color-bg;
+  color: $color-gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: transform 0.25s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+.toggleIconOpen {
+  transform: rotate(180deg);
+}
+
+.collapsible {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
+
+.collapsibleOpen {
+  grid-template-rows: 1fr;
+}
+
+.collapsibleInner {
+  min-height: 0;
+  overflow: hidden;
+
+  .bullets {
+    padding-top: 10px;
+  }
 }
 
 .bullets {
