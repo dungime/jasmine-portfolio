@@ -398,12 +398,14 @@ export const careerRoute: typeof en.careerRoute = {
 };
 
 export const recommendation: typeof en.recommendation = {
-  heading: 'Thư giới thiệu từ NexStox',
+  heading: 'Từ quãng thời gian tại NexStox',
   // The quote stays in the letter's original English.
   quote:
     'For one person to run an entire department entirely on her own is beyond impressive … when she is given the responsibility she rises to the occasion.',
+  authorPrefix: 'Từ',
   author: 'Cathal Donnellan',
   authorTitle: 'President, NexStox Inc.',
+  note: 'Lời nhận xét về quãng thời gian chúng tôi làm việc cùng nhau, 2025–2026.',
   letter: {
     label: 'Toàn văn thư giới thiệu',
     description: 'Xem thư giới thiệu đầy đủ có chữ ký (PDF).',

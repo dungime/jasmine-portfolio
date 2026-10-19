@@ -19,8 +19,9 @@ export function Recommendation() {
         <blockquote className={styles.quote}>
           <p>“{recommendation.quote}”</p>
         </blockquote>
+        <p className={styles.note}>{recommendation.note}</p>
         <figcaption className={styles.author}>
-          {recommendation.author} · {recommendation.authorTitle}
+          {recommendation.authorPrefix} {recommendation.author} · {recommendation.authorTitle}
         </figcaption>
 
         {/* Plain <a> (not next/link) so the PDF opens as a file with the base path applied. */}

@@ -454,11 +454,13 @@ export const careerRoute = {
 };
 
 export const recommendation = {
-  heading: 'A Recommendation from NexStox',
+  heading: 'From My Time at NexStox',
   quote:
     'For one person to run an entire department entirely on her own is beyond impressive … when she is given the responsibility she rises to the occasion.',
+  authorPrefix: 'From',
   author: 'Cathal Donnellan',
   authorTitle: 'President, NexStox Inc.',
+  note: 'A reflection on our time working together, 2025–2026.',
   letter: {
     label: 'Full Letter of Recommendation',
     description: 'Read the full signed letter (PDF).',
