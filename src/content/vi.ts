@@ -390,6 +390,20 @@ export const careerRoute: typeof en.careerRoute = {
   ],
 };
 
+export const recommendation: typeof en.recommendation = {
+  heading: 'Thư giới thiệu từ NexStox',
+  // The quote stays in the letter's original English.
+  quote:
+    'For one person to run an entire department entirely on her own is beyond impressive … when she is given the responsibility she rises to the occasion.',
+  author: 'Cathal Donnellan',
+  authorTitle: 'President, NexStox Inc.',
+  letter: {
+    label: 'Toàn văn thư giới thiệu',
+    description: 'Xem thư giới thiệu đầy đủ có chữ ký (PDF).',
+    href: '/assets/Jasmine Nguyen - Letter of Reference NexStox.pdf',
+  },
+};
+
 export const experience: typeof en.experience = {
   badge: 'Sự nghiệp',
   heading: 'Kinh nghiệm',

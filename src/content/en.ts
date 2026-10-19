@@ -430,6 +430,19 @@ export const careerRoute = {
   ],
 };
 
+export const recommendation = {
+  heading: 'A Recommendation from NexStox',
+  quote:
+    'For one person to run an entire department entirely on her own is beyond impressive … when she is given the responsibility she rises to the occasion.',
+  author: 'Cathal Donnellan',
+  authorTitle: 'President, NexStox Inc.',
+  letter: {
+    label: 'Full Letter of Recommendation',
+    description: 'Read the full signed letter (PDF).',
+    href: '/assets/Jasmine Nguyen - Letter of Reference NexStox.pdf',
+  },
+};
+
 export const experience = {
   badge: 'Career',
   heading: 'Experience',

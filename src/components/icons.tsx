@@ -124,6 +124,17 @@ export const icons = {
       <path d="M9 18h6M10 22h4" />
     </svg>
   ),
+  quote: (
+    <svg {...common} fill="currentColor" stroke="none">
+      <path d="M10 7.5C7 8.4 5 10.8 5 14v3.5h5V12H7.6c.4-1.5 1.4-2.5 2.9-3l-.5-1.5Zm9 0c-3 .9-5 3.3-5 6.5v3.5h5V12h-2.4c.4-1.5 1.4-2.5 2.9-3l-.5-1.5Z" />
+    </svg>
+  ),
+  fileText: (
+    <svg {...common}>
+      <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" />
+      <path d="M14 3v5h5M9 13h6M9 17h6" />
+    </svg>
+  ),
   palette: (
     <svg {...common}>
       <path d="M12 2a10 10 0 1 0 0 20c1.1 0 2-.9 2-2 0-.5-.2-1-.5-1.3-.3-.4-.5-.8-.5-1.2 0-.9.7-1.5 1.5-1.5H16a4 4 0 0 0 4-4c0-5.5-4.5-10-8-10z" />

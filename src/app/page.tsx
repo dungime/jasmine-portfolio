@@ -8,6 +8,7 @@ import { Projects } from '@/components/Projects/Projects';
 import { CareerRouteSteps } from '@/components/CareerRoute/CareerRouteSteps';
 import { CareerRouteTimeline } from '@/components/CareerRoute/CareerRouteTimeline';
 // import { Experience } from "@/components/Experience/Experience";
+import { Recommendation } from '@/components/Recommendation/Recommendation';
 import { Education } from '@/components/Education/Education';
 import { Skills } from '@/components/Skills/Skills';
 // import { Languages } from "@/components/Languages/Languages";
@@ -55,6 +56,9 @@ export default function Home() {
               impossible to satisfy, leaving it stuck at opacity:0. */}
           <CareerRouteTimeline />
         </div>
+        <Reveal>
+          <Recommendation />
+        </Reveal>
         <Reveal>
           <Education />
         </Reveal>

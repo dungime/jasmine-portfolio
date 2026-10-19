@@ -1,0 +1,109 @@
+@use "../../styles/variables" as *;
+
+.section {
+  @include container;
+  padding-bottom: $space-section;
+}
+
+.card {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: clamp(24px, 4vw, 32px);
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+}
+
+.quoteMark {
+  display: inline-flex;
+  margin-bottom: 12px;
+  color: $color-black;
+
+  svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.heading {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.quote {
+  margin: 0 0 14px;
+  font-size: 16px;
+  font-style: italic;
+  line-height: 1.7;
+  color: $color-black;
+}
+
+.author {
+  font-size: 13px;
+  color: $color-gray;
+}
+
+.letter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid $color-border;
+
+  &:hover {
+    .letterLabel {
+      text-decoration: underline;
+    }
+
+    .arrow {
+      background: $color-lime;
+    }
+  }
+}
+
+.letterText {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.letterLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: $color-black;
+}
+
+.letterIcon {
+  display: inline-flex;
+  flex-shrink: 0;
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.letterDescription {
+  font-size: 13px;
+  color: $color-gray;
+}
+
+// Same circled arrow as the project cards and career company links.
+.arrow {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid $color-border;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+  transition: background 0.15s ease;
+}
