@@ -14,7 +14,10 @@ export const site = {
     { label: 'Career', href: '#career-route' },
     { label: 'Contact', href: '#contact' },
   ],
-  contactCta: { label: 'Download CV', href: '/assets/Dung Nguyen - Senior Frontend Developer Resume.pdf' },
+  contactCta: {
+    label: 'Download CV',
+    href: '/assets/Dung Nguyen - Senior Frontend Developer Resume.pdf',
+  },
 };
 
 export const hero = {
@@ -234,8 +237,8 @@ export const projects = {
       built: [
         'Architected a fully decoupled headless commerce stack — a Next.js 16 storefront consuming a Medusa v2 backend purely through its REST API, so either side can evolve independently',
         'Designed a typed, generic HTTP data layer built around a **discriminated-union Result type** instead of exceptions, so a failed or empty API response can never silently corrupt a page render',
-        'Diagnosed and fixed a production build failure by correctly identifying Next.js\'s **static-vs-dynamic rendering boundary**, converting a backend-dependent route from implicit build-time prerendering to request-time rendering',
-        'Planned Vietnam market-specific checkout, including **Cash on Delivery and a custom PayOS/VNPay payment provider** on top of Medusa\'s extensible payment architecture',
+        "Diagnosed and fixed a production build failure by correctly identifying Next.js's **static-vs-dynamic rendering boundary**, converting a backend-dependent route from implicit build-time prerendering to request-time rendering",
+        "Planned Vietnam market-specific checkout, including **Cash on Delivery and a custom PayOS/VNPay payment provider** on top of Medusa's extensible payment architecture",
         'Mapped a full delivery roadmap — data layer, design system, catalog, cart, checkout, accounts, and local payments — with **phase-by-phase milestones and realistic time estimates**',
         'Set a testing strategy spanning the stack: **Vitest** for the data layer, **React Testing Library** for interactive components, **Playwright** reserved for critical end-to-end flows',
       ],
@@ -524,11 +527,18 @@ export const contact = {
   heading: 'Let’s Build Something Great',
   subheading:
     'I’m always open to discussing interesting products, challenging frontend problems, and opportunities to build better experiences together.',
-  resumeCta: { label: 'Download Résumé', href: '/assets/Dung Nguyen - Senior Frontend Developer Resume.pdf' },
+  resumeCta: {
+    label: 'Download Résumé',
+    href: '/assets/Dung Nguyen - Senior Frontend Developer Resume.pdf',
+  },
   links: [
     // Rendered in a 2-column grid: phone · email, then GitHub · address.
     { icon: 'phone', label: '0398 060 569', href: 'tel:+84398060569' },
-    { icon: 'mail', label: 'dungntp.contact@gmail.com', href: 'mailto:dungntp.contact@gmail.com' },
+    {
+      icon: 'mail',
+      label: 'dungntp.contact@gmail.com',
+      href: 'mailto:dungntp.contact@gmail.com',
+    },
     { icon: 'github', label: 'GitHub', href: 'https://github.com/dungime' },
     { icon: 'mapPin', label: 'Ho Chi Minh', href: '' },
     // { label: "LinkedIn", href: "https://linkedin.com" },
