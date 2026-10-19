@@ -16,7 +16,10 @@ export const site: typeof en.site = {
     { label: 'Sự nghiệp', href: '#career-route' },
     { label: 'Liên hệ', href: '#contact' },
   ],
-  contactCta: { label: 'Tải CV', href: '/assets/Dung Nguyen - Senior Frontend Developer Resume.pdf' },
+  contactCta: {
+    label: 'Tải CV',
+    href: '/assets/Dung Nguyen - Senior Frontend Developer Resume.pdf',
+  },
 };
 
 export const hero: typeof en.hero = {
@@ -72,7 +75,8 @@ export const mission: typeof en.mission = {
 export const services: typeof en.services = {
   badge: 'Trọng tâm',
   heading: 'Những việc tôi thích làm',
-  subheading: 'Những bài toán, sản phẩm và công việc tôi thích dành thời gian cho chúng.',
+  subheading:
+    'Những bài toán, sản phẩm và công việc tôi thích dành thời gian cho chúng.',
   items: [
     {
       icon: 'code',
@@ -119,7 +123,12 @@ export const skills: typeof en.skills = {
     {
       icon: 'palette',
       category: 'UI & Styling',
-      technologies: ['Ant Design', 'Material UI', 'Tailwind CSS', 'CSS Modules'],
+      technologies: [
+        'Ant Design',
+        'Material UI',
+        'Tailwind CSS',
+        'CSS Modules',
+      ],
     },
     {
       icon: 'sparkles',
@@ -163,7 +172,13 @@ export const projects: typeof en.projects = {
         'Triển khai **giao diện đa ngôn ngữ** hỗ trợ nhiều ngôn ngữ trên toàn nền tảng',
         'Xử lý các lỗi nghiêm trọng trên giao diện sàn giao dịch mới và cải thiện độ ổn định của các luồng giao dịch chính',
       ],
-      tags: ['React', 'TypeScript', 'Material UI', 'REST APIs', 'Real-time Data'],
+      tags: [
+        'React',
+        'TypeScript',
+        'Material UI',
+        'REST APIs',
+        'Real-time Data',
+      ],
       thumbnail: '/assets/images/thumb-trading.webp',
     },
     {
@@ -181,7 +196,15 @@ export const projects: typeof en.projects = {
         'Xây dựng **hệ thống bình luận real-time** hỗ trợ bình luận, thích và phản hồi một cấp từ giáo viên',
         'Tích hợp **REST API và luồng dữ liệu real-time** để đồng bộ hoạt động học tập và tương tác',
       ],
-      tags: ['React', 'TypeScript', 'Next.js', 'Ant Design', 'Jotai', 'REST APIs', 'Real-time Data'],
+      tags: [
+        'React',
+        'TypeScript',
+        'Next.js',
+        'Ant Design',
+        'Jotai',
+        'REST APIs',
+        'Real-time Data',
+      ],
       thumbnail: '/assets/images/thumb-elearning.png',
     },
     {
@@ -201,7 +224,15 @@ export const projects: typeof en.projects = {
         'Xây dựng giao diện dữ liệu phức tạp kết hợp **lịch tương tác, bảng, biểu đồ, drawer và tree view**',
         'Phát triển **form tạo mới phức tạp** để quản lý quy trình vận hành và dữ liệu nghiệp vụ',
       ],
-      tags: ['React', 'TypeScript', 'Ant Design', 'Jotai', 'Vite', 'Turborepo', 'REST APIs'],
+      tags: [
+        'React',
+        'TypeScript',
+        'Ant Design',
+        'Jotai',
+        'Vite',
+        'Turborepo',
+        'REST APIs',
+      ],
       thumbnail: '/assets/images/thumb-cleaning.png',
     },
     {
@@ -220,7 +251,15 @@ export const projects: typeof en.projects = {
         'Vạch lộ trình triển khai đầy đủ — tầng data, design system, catalog, giỏ hàng, checkout, tài khoản, thanh toán nội địa — với **mốc rõ ràng theo từng giai đoạn và ước lượng thời gian thực tế**',
         'Xác định chiến lược test xuyên suốt dự án: **Vitest** cho tầng data, **React Testing Library** cho component tương tác, **Playwright** dành cho luồng end-to-end quan trọng',
       ],
-      tags: ['Next.js', 'TypeScript', 'Medusa', 'PostgreSQL', 'Tailwind CSS', 'Turborepo', 'REST APIs'],
+      tags: [
+        'Next.js',
+        'TypeScript',
+        'Medusa',
+        'PostgreSQL',
+        'Tailwind CSS',
+        'Turborepo',
+        'REST APIs',
+      ],
     },
   ],
 };
@@ -293,7 +332,13 @@ export const careerRoute: typeof en.careerRoute = {
         'Triển khai các tính năng dùng API với phân trang, lọc và form chỉnh sửa',
         'Làm việc sát với QA trong suốt quá trình phát triển và phát hành để đảm bảo chất lượng.',
       ],
-      tech: ['HTML5', 'CSS3', 'JavaScript (ES5 + ES6)', 'Bootstrap', 'REST APIs'],
+      tech: [
+        'HTML5',
+        'CSS3',
+        'JavaScript (ES5 + ES6)',
+        'Bootstrap',
+        'REST APIs',
+      ],
     },
     {
       id: 'lecle',
@@ -494,11 +539,18 @@ export const contact: typeof en.contact = {
   heading: 'Cùng xây dựng điều tuyệt vời',
   subheading:
     'Tôi luôn sẵn sàng trao đổi về những sản phẩm thú vị, những bài toán frontend thử thách và cơ hội cùng nhau tạo ra trải nghiệm tốt hơn.',
-  resumeCta: { label: 'Tải CV', href: '/assets/Dung Nguyen - Senior Frontend Developer Resume.pdf' },
+  resumeCta: {
+    label: 'Tải CV',
+    href: '/assets/Dung Nguyen - Senior Frontend Developer Resume.pdf',
+  },
   links: [
     // Rendered in a 2-column grid: phone · email, then GitHub · address.
     { icon: 'phone', label: '0398 060 569', href: 'tel:+84398060569' },
-    { icon: 'mail', label: 'dungntp.contact@gmail.com', href: 'mailto:dungntp.contact@gmail.com' },
+    {
+      icon: 'mail',
+      label: 'dungntp.contact@gmail.com',
+      href: 'mailto:dungntp.contact@gmail.com',
+    },
     { icon: 'github', label: 'GitHub', href: 'https://github.com/dungime' },
     { icon: 'mapPin', label: 'Hồ Chí Minh', href: '' },
   ],
