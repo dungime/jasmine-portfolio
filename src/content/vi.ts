@@ -25,14 +25,17 @@ export const hero: typeof en.hero = {
   subtitle: 'React · TypeScript · Next.js · Làm chủ sản phẩm',
   greeting: 'Xin chào, tôi là Jasmine',
   role: 'Frontend Engineer',
-  tagline: 'Xây dựng sản phẩm tốt hơn với frontend engineering hiện đại và phát triển có AI hỗ trợ.',
-  description:
-    'Tôi xây dựng **các ứng dụng web có khả năng mở rộng, dễ bảo trì** với React, TypeScript và Next.js — kết hợp hơn 10 năm kinh nghiệm frontend engineering với phát triển có AI hỗ trợ để tăng tốc triển khai, cải thiện quy trình và mang đến phần mềm ổn định.',
+  tagline:
+    'Xây dựng sản phẩm tốt hơn với frontend engineering hiện đại và phát triển có AI hỗ trợ.',
+  description1:
+    'Với hơn **9 năm** kinh nghiệm frontend engineering, tôi xây dựng các ứng dụng web có **khả năng mở rộng, dễ bảo trì** và đưa các tính năng phức tạp **từ yêu cầu đến sản phẩm chất lượng.**',
+  description2:
+    'Tôi **sử dụng AI** hỗ trợ để khám phá các giải pháp, giải quyết vấn đề và **cải thiện quy trình kỹ thuật.**',
   tags: ['React', 'TypeScript', 'Next.js', 'Phát triển có AI hỗ trợ'],
   primaryCta: { label: 'Xem dự án', href: '#projects' },
   secondaryCta: { label: 'Liên hệ', href: '#contact' },
   stats: [
-    { value: '10+', label: 'Năm kinh nghiệm' },
+    { value: '9+', label: 'Năm kinh nghiệm' },
     { value: '30+', label: 'Dự án đã triển khai' },
   ],
   scrollLabel: 'Tìm hiểu thêm',
@@ -40,10 +43,22 @@ export const hero: typeof en.hero = {
 
 export const stats: typeof en.stats = {
   items: [
-    { value: '10+', label: 'Năm kinh nghiệm', detail: 'Từ năm 2014' },
-    { value: '4', label: 'Thực tập sinh đã hướng dẫn', detail: 'Hướng dẫn 4 thực tập sinh frontend.' },
-    { value: '30+', label: 'Dự án đã triển khai', detail: 'E-commerce · E-learning · ERP · Fintech · Shopify' },
-    { value: '∞', label: 'Đam mê xây dựng sản phẩm', detail: 'Vẫn tò mò. Vẫn tiếp tục xây dựng.' },
+    { value: '9+', label: 'Năm kinh nghiệm', detail: 'Từ năm 2016' },
+    {
+      value: '5',
+      label: 'Freshers đã hướng dẫn',
+      detail: 'Hướng dẫn 5 freshers frontend.',
+    },
+    {
+      value: '30+',
+      label: 'Dự án đã triển khai',
+      detail: 'E-commerce · E-learning · ERP · Fintech · Shopify',
+    },
+    {
+      value: '∞',
+      label: 'Đam mê xây dựng sản phẩm',
+      detail: 'Vẫn tò mò. Vẫn tiếp tục xây dựng.',
+    },
   ],
 };
 

@@ -28,9 +28,8 @@ export function Hero() {
           <span className={styles.headingHighlight}>{hero.role}</span>
         </h1>
         {/* <p className={styles.tagline}>{hero.tagline}</p> */}
-        <p className={styles.description}>{renderBold(hero.description)}</p>
-
-        
+        <p className={styles.description}>{renderBold(hero.description1)}</p>
+        <p className={styles.description}>{renderBold(hero.description2)}</p>
 
         {/* <div className={styles.stats}>
           {hero.stats.map((stat) => (

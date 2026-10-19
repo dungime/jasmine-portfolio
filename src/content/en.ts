@@ -28,8 +28,9 @@ export const hero = {
   role: 'Frontend Engineer',
   tagline:
     'Building better products with modern frontend engineering and AI-assited development.',
-  description:
-    'With **8+ years** of frontend engineering experience, I build **scalable, maintainable** web applications and use **AI-assisted development** to solve problems, **improve workflows**, and deliver **high-quality products**.',
+  description1: 
+  'With **9+ years** of frontend engineering experience, I build **scalable, maintainable** web applications and take complex features **from requirements to quality production**.',
+  description2: 'I use **AI-assisted development** to explore solutions, solve problems, and **improve engineering workflows.**',  
   tags: ['React', 'TypeScript', 'Next.js', 'AI-Assisted Development'],
   primaryCta: { label: 'View Projects', href: '#projects' },
   secondaryCta: { label: 'Get in Touch', href: '#contact' },
@@ -42,16 +43,16 @@ export const hero = {
 
 export const stats = {
   items: [
-    { value: '8+', label: 'Years of Experience', detail: 'Since 2016' },
+    { value: '9+', label: 'Years of Experience', detail: 'Since 2016' },
     {
       value: '30+',
       label: 'Projects Shipped',
       detail: 'E-commerce · E-learning · ERP · Fintech · Shopify',
     },
     {
-      value: '4',
-      label: 'Interns Mentored',
-      detail: 'Mentored 4 frontend interns.',
+      value: '5',
+      label: 'Freshers Mentored',
+      detail: 'Mentored 5 frontend freshers.',
     },
     {
       value: '∞',
