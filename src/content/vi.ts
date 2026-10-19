@@ -107,6 +107,11 @@ export const skills: typeof en.skills = {
       technologies: ['Ant Design', 'Material UI', 'Tailwind CSS', 'CSS Modules'],
     },
     {
+      icon: 'sparkles',
+      category: 'AI agents',
+      technologies: ['Claude Code', 'Cursor', 'GitHub Copilot', 'ChatGPT'],
+    },
+    {
       icon: 'server',
       category: 'Khác',
       technologies: [

@@ -127,6 +127,11 @@ export const skills = {
       ],
     },
     {
+      icon: 'sparkles',
+      category: 'AI agents',
+      technologies: ['Claude Code', 'Cursor', 'GitHub Copilot', 'ChatGPT'],
+    },
+    {
       icon: 'server',
       category: 'Additional',
       technologies: [
