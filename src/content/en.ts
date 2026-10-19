@@ -10,9 +10,9 @@ export const site = {
     { label: 'About', href: '#' },
     // { label: 'What I Do', href: '#services' },
     // { label: 'Skills', href: '#skills' },
+    { label: 'Featured Works', href: '#projects' },
     { label: 'Career', href: '#career-route' },
-    { label: 'Projects', href: '#projects' },
-    // { label: 'Education', href: '#education' },
+    { label: 'Contact', href: '#contact' },
   ],
   contactCta: { label: 'Download CV', href: '/assets/Dung Nguyen - Senior Frontend Developer Resume.pdf' },
 };
@@ -40,9 +40,21 @@ export const hero = {
 export const stats = {
   items: [
     { value: '10+', label: 'Years of Experience', detail: 'Since 2014' },
-    { value: '15', label: 'Team Size Worked With', detail: 'Worked in teams of up to 15 people.' },
-    { value: '30+', label: 'Projects Shipped', detail: 'E-commerce · E-learning · ERP · Fintech · Shopify' },
-    { value: '∞', label: 'Passion in Coding', detail: 'Still curious. Still building.' },
+    {
+      value: '15',
+      label: 'Team Size Worked With',
+      detail: 'Worked in teams of up to 15 people.',
+    },
+    {
+      value: '30+',
+      label: 'Projects Shipped',
+      detail: 'E-commerce · E-learning · ERP · Fintech · Shopify',
+    },
+    {
+      value: '∞',
+      label: 'Passion for Building Products',
+      detail: 'Still curious. Still building.',
+    },
   ],
 };
 
@@ -128,7 +140,7 @@ export const skills = {
 };
 
 export const projects = {
-  badge: 'Selected Work',
+  badge: 'Featured Works',
   heading: 'Key projects',
   subheading: "A few things I've built and released recently.",
   items: [

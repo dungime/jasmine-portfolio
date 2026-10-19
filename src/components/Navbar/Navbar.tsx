@@ -97,7 +97,7 @@ export function Navbar() {
       <div className={styles.inner}>
         <a href="#top" className={styles.logo} onClick={(e) => handleSectionLinkClick(e, "#top")}>
           <span className={styles.logoMark}>{site.logo}</span>
-          {site.name}
+          {/* {site.name} */}
         </a>
 
         <nav className={styles.links}>

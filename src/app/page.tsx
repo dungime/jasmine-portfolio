@@ -2,8 +2,8 @@ import { Navbar } from '@/components/Navbar/Navbar';
 import { Hero } from '@/components/Hero/Hero';
 import { Stats } from '@/components/Stats/Stats';
 // import { IntroBanner } from "@/components/IntroBanner/IntroBanner";
-import { Mission } from '@/components/Mission/Mission';
-import { Services } from '@/components/Services/Services';
+// import { Mission } from '@/components/Mission/Mission';
+// import { Services } from '@/components/Services/Services';
 import { Projects } from '@/components/Projects/Projects';
 import { CareerRouteSteps } from '@/components/CareerRoute/CareerRouteSteps';
 import { CareerRouteTimeline } from '@/components/CareerRoute/CareerRouteTimeline';
@@ -26,9 +26,9 @@ export default function Home() {
           <Stats />
         </Reveal>
         {/* <IntroBanner /> */}
-        <Reveal>
+        {/* <Reveal>
           <Mission />
-        </Reveal>
+        </Reveal> */}
 
         {/* <Reveal>
           <Services />

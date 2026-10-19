@@ -12,9 +12,9 @@ export const site: typeof en.site = {
     { label: 'Giới thiệu', href: '#' },
     // { label: 'Công việc', href: '#services' },
     // { label: 'Kỹ năng', href: '#skills' },
+    { label: 'Dự án nổi bật', href: '#projects' },
     { label: 'Sự nghiệp', href: '#career-route' },
-    { label: 'Dự án', href: '#projects' },
-    // { label: 'Học vấn', href: '#education' },
+    { label: 'Liên hệ', href: '#contact' },
   ],
   contactCta: { label: 'Tải CV', href: '/assets/Dung Nguyen - Senior Frontend Developer Resume.pdf' },
 };
@@ -43,7 +43,7 @@ export const stats: typeof en.stats = {
     { value: '10+', label: 'Năm kinh nghiệm', detail: 'Từ năm 2014' },
     { value: '15', label: 'Quy mô team từng làm', detail: 'Làm việc trong team tối đa 15 người.' },
     { value: '30+', label: 'Dự án đã triển khai', detail: 'E-commerce · E-learning · ERP · Fintech · Shopify' },
-    { value: '∞', label: 'Đam mê lập trình', detail: 'Vẫn tò mò. Vẫn tiếp tục xây dựng.' },
+    { value: '∞', label: 'Đam mê xây dựng sản phẩm', detail: 'Vẫn tò mò. Vẫn tiếp tục xây dựng.' },
   ],
 };
 
