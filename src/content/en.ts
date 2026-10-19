@@ -42,16 +42,16 @@ export const hero = {
 
 export const stats = {
   items: [
-    { value: '10+', label: 'Years of Experience', detail: 'Since 2014' },
-    {
-      value: '15',
-      label: 'Team Size Worked With',
-      detail: 'Worked in teams of up to 15 people.',
-    },
+    { value: '8+', label: 'Years of Experience', detail: 'Since 2016' },
     {
       value: '30+',
       label: 'Projects Shipped',
       detail: 'E-commerce · E-learning · ERP · Fintech · Shopify',
+    },
+    {
+      value: '4',
+      label: 'Interns Mentored',
+      detail: 'Mentored 4 frontend interns.',
     },
     {
       value: '∞',
