@@ -184,20 +184,16 @@
 .company {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   font-size: 17px;
   font-weight: 700;
 
   &[href]:hover {
     text-decoration: underline;
-
-    .companyIcon {
-      transform: translate(2px, -2px);
-    }
   }
 }
 
-// External-link hint so the company name reads as clickable.
+// External-link hint so the company name reads as clickable — same circled
 .companyIcon {
   flex-shrink: 0;
   font-size: 15px;

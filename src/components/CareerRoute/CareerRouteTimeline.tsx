@@ -65,7 +65,9 @@ export function CareerRouteTimeline() {
                       className={styles.company}
                     >
                       {station.company}
-                      <ArrowUpRightIcon className={styles.companyIcon} aria-hidden="true" />
+                      <span className={styles.companyIcon} aria-hidden="true">
+                        <ArrowUpRightIcon />
+                      </span>
                     </Link>
                   ) : (
                     <span className={styles.company}>{station.company}</span>
