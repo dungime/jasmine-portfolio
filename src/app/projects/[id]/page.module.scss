@@ -70,7 +70,7 @@
 .section {
   margin-top: 40px;
   padding-top: 32px;
-  border-top: 1px solid $color-border;
+  @include wavy-line(top);
 }
 
 .sectionHeading {
@@ -192,10 +192,9 @@
 
 .screenshotCard {
   margin: 40px 0 0;
-  border: 1px solid $color-border;
+  @include wavy-box;
   border-radius: $radius-md;
   overflow: hidden;
-  box-shadow: $shadow-card;
 
   img {
     display: block;

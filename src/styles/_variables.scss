@@ -1,5 +1,6 @@
 // Palette + font from the brand style guide (Martian Mono / #191314 / #ecf95a / #f4f4f4 / #ffffff)
 @use "sass:color";
+@use "sass:list";
 
 $color-bg: #f4f4f4;
 $color-bg-sage: #c9cfa0;
@@ -69,4 +70,33 @@ $shadow-card: 0 1px 2px rgba(25, 19, 20, 0.04), 0 12px 24px -12px rgba(25, 19, 2
   &:hover {
     transform: translateY(-1px);
   }
+}
+
+// Wavy lines and borders, matching the career timeline's curved connectors.
+
+// One wavelength of the divider line (320 x 12px), tiled horizontally.
+$wave-line-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='12' viewBox='0 0 320 12'%3E%3Cpath d='M0 6C53 -1 107 -1 160 6S267 13 320 6' fill='none' stroke='rgba(25,19,20,0.1)' stroke-width='1.5'/%3E%3C/svg%3E");
+
+// Wavy divider in place of a border-top / border-bottom: pass the sides,
+// e.g. `@include wavy-line(top, bottom)`. The wave takes the first/last 12px
+// of the element's padding.
+@mixin wavy-line($sides...) {
+  $images: ();
+  $positions: ();
+  @each $side in $sides {
+    $images: list.append($images, $wave-line-image, comma);
+    $positions: list.append($positions, left $side, comma);
+  }
+  background-image: $images;
+  background-position: $positions;
+  background-repeat: repeat-x;
+  background-size: 320px 12px;
+}
+
+// Box outlined by <WavyBorder />, which clips it to a wavy shape and draws
+// the edge — so no CSS border, and no box-shadow (it would be clipped away).
+@mixin wavy-box {
+  position: relative;
+  border: none;
+  box-shadow: none;
 }
