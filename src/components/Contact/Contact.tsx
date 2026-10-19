@@ -4,6 +4,7 @@ import Link from "next/link";
 import styles from "./Contact.module.scss";
 import { useContent } from "@/content";
 import { CopyEmailButton } from "./CopyEmailButton";
+import { WavyBorder } from "./WavyBorder";
 import { ArrowUpRightIcon, icons, type IconName } from "@/components/icons";
 
 // Lets an e-mail address wrap right after the "@" on narrow screens
@@ -26,8 +27,9 @@ export function Contact() {
 
   return (
     <section id="contact" className={styles.section}>
-      {/* Closing call to action — set apart from the other sections as a dark panel. */}
+      {/* Closing call to action — set apart from the other sections by a wavy outline. */}
       <div className={styles.panel}>
+        <WavyBorder className={styles.wavyBorder} />
         <span className={styles.badge}>{contact.badge}</span>
         <h2 className={styles.heading}>
           <span className={styles.headingHighlight}>{contact.heading}</span>
