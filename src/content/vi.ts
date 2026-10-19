@@ -21,12 +21,14 @@ export const site: typeof en.site = {
 
 export const hero: typeof en.hero = {
   badge: 'Portfolio',
-  heading: 'Jasmine.',
+  heading: 'Jasmine. - Senior Frontend Engineer',
   subtitle: 'React · TypeScript · Next.js · Làm chủ sản phẩm',
-  subheading: [
-    'Senior Frontend Developer với **hơn 10 năm** kinh nghiệm xây dựng ứng dụng web production trong các lĩnh vực fintech, thương mại điện tử, admin dashboard, e-learning và bán vé sự kiện',
-    'Chuyên sâu **React, TypeScript và Next.js** — biến những bài toán phức tạp thành trải nghiệm đơn giản, ổn định và dễ bảo trì.',
-  ],
+  greeting: 'Xin chào, tôi là Jasmine',
+  role: 'Frontend Engineer',
+  tagline: 'Xây dựng sản phẩm tốt hơn với frontend engineering hiện đại và phát triển có AI hỗ trợ.',
+  description:
+    'Tôi xây dựng **các ứng dụng web có khả năng mở rộng, dễ bảo trì** với React, TypeScript và Next.js — kết hợp hơn 10 năm kinh nghiệm frontend engineering với phát triển có AI hỗ trợ để tăng tốc triển khai, cải thiện quy trình và mang đến phần mềm ổn định.',
+  tags: ['React', 'TypeScript', 'Next.js', 'Phát triển có AI hỗ trợ'],
   primaryCta: { label: 'Xem dự án', href: '#projects' },
   secondaryCta: { label: 'Liên hệ', href: '#contact' },
   stats: [

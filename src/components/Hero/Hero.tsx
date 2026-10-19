@@ -8,6 +8,7 @@ import { withBasePath } from '@/lib/base-path';
 
 const BOLD_PATTERN = /\*\*(.+?)\*\*/g;
 
+// Wrap a phrase in **double asterisks** in the content file to bold it.
 function renderBold(text: string) {
   return text
     .split(BOLD_PATTERN)
@@ -20,18 +21,16 @@ export function Hero() {
   return (
     <section id='top' className={styles.section}>
       <div>
-        <span className={styles.badge}>{hero.badge}</span>
+        {/* <span className={styles.badge}>{hero.badge}</span> */}
 
-        <div>
-          <h1 className={styles.heading}>{hero.heading}</h1>
-        </div>
+        <p className={styles.greeting}>{hero.greeting}</p>
+        <h1 className={styles.heading}>
+          <span className={styles.headingHighlight}>{hero.role}</span>
+        </h1>
+        {/* <p className={styles.tagline}>{hero.tagline}</p> */}
+        <p className={styles.description}>{renderBold(hero.description)}</p>
 
-        {/* <h2 className={styles.subtitle}>{hero.subtitle}</h2> */}
-        {hero.subheading.map((paragraph) => (
-          <p key={paragraph} className={styles.subheading}>
-            {renderBold(paragraph)}
-          </p>
-        ))}
+        
 
         {/* <div className={styles.stats}>
           {hero.stats.map((stat) => (

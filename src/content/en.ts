@@ -21,10 +21,13 @@ export const hero = {
   badge: 'Portfolio',
   heading: 'Jasmine.',
   subtitle: 'React · TypeScript · Next.js · Owning Products',
-  subheading: [
-    'Senior Frontend Developer with **10+ years** of experience building production web applications across fintech, e-commerce, admin dashboards, e-learning, and event ticketing',
-    'Specialized in **React, TypeScript, and Next.js** — turning complex problems into simple, reliable, and maintainable experiences."',
-  ],
+  greeting: 'Hi, I’m Jasmine.',
+  role: 'Frontend Engineer',
+  tagline:
+    'Building better products with modern frontend engineering and AI-assited development.',
+  description:
+    'With **8+ years** of frontend engineering experience, I build **scalable, maintainable** web applications and use **AI-assisted development** to solve problems, **improve workflows**, and deliver **high-quality products**.',
+  tags: ['React', 'TypeScript', 'Next.js', 'AI-Assisted Development'],
   primaryCta: { label: 'View Projects', href: '#projects' },
   secondaryCta: { label: 'Get in Touch', href: '#contact' },
   stats: [

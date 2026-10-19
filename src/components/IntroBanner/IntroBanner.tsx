@@ -28,7 +28,7 @@ export function IntroBanner() {
 
         <h2 className={styles.name}>{hero.heading}</h2>
 
-        <p className={styles.bio}>{hero.subheading}</p>
+        <p className={styles.bio}>{hero.description}</p>
 
         <div className={styles.ctaRow}>
           <Link href={hero.primaryCta.href} className={styles.primaryCta}>
