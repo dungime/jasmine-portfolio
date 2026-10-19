@@ -11,8 +11,10 @@
 .panel {
   position: relative;
   isolation: isolate;
-  padding: clamp(28px, 5vw, 56px);
+  padding: clamp(28px, 5vw, 60px);
   color: $color-black;
+  max-width: 98%;
+  margin: 0 auto;
 }
 
 .wavyBorder {
@@ -32,12 +34,19 @@
   }
 }
 
+.content {
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
+}
+
 .badge {
   @include pill-badge;
   margin-bottom: 20px;
 }
 
 .heading {
+  width: fit-content;
   // max-width: 720px;
   font-size: clamp(28px, 3.6vw, 40px);
   font-weight: 700;
@@ -50,11 +59,12 @@
 }
 
 .subheading {
+  width: fit-content;
   font-size: 15px;
   color: $color-gray;
   line-height: 1.6;
   margin-bottom: 36px;
-  max-width: 860px;
+  max-width: 760px;
 }
 
 .resumeCta {
@@ -70,6 +80,7 @@
 }
 
 .grid {
+  width: fit-content;
   display: grid;
   // Columns are capped instead of the grid, so the divider (border-top)
   // still spans the whole panel while the boxes stay compact. 340px fits the

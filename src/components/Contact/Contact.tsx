@@ -30,51 +30,54 @@ export function Contact() {
       {/* Closing call to action — set apart from the other sections by a wavy outline. */}
       <div className={styles.panel}>
         <WavyBorder className={styles.wavyBorder} />
-        <span className={styles.badge}>{contact.badge}</span>
-        <h2 className={styles.heading}>
-          <span className={styles.headingHighlight}>{contact.heading}</span>
-        </h2>
-        <p className={styles.subheading}>{contact.subheading}</p>
+        {/* Shrink-wrapped and centered in the panel; text stays left-aligned. */}
+        <div className={styles.content}>
+          <span className={styles.badge}>{contact.badge}</span>
+          <h2 className={styles.heading}>
+            <span className={styles.headingHighlight}>{contact.heading}</span>
+          </h2>
+          <p className={styles.subheading}>{contact.subheading}</p>
 
-        {/* <a href={contact.resumeCta.href} download className={styles.resumeCta}>
-          {contact.resumeCta.label}
-        </a> */}
+          {/* <a href={contact.resumeCta.href} download className={styles.resumeCta}>
+            {contact.resumeCta.label}
+          </a> */}
 
-        <div className={styles.grid}>
-          {contact.links.map((link) => {
-            const label = (
-              <span className={styles.cardLabel}>
-                <span className={styles.cardIcon}>{icons[link.icon as IconName]}</span>
-                <span className={styles.cardText}>{withEmailBreak(link.label)}</span>
-              </span>
-            );
-
-            if (link.href.startsWith("mailto:")) {
-              return (
-                <CopyEmailButton key={link.label} email={link.href.replace("mailto:", "")}>
-                  {label}
-                </CopyEmailButton>
-              );
-            }
-
-            // No href (e.g. the city) — shown as plain info, not a link.
-            if (!link.href) {
-              return (
-                <div key={link.label} className={`${styles.card} ${styles.static}`}>
-                  {label}
-                </div>
-              );
-            }
-
-            return (
-              <Link key={link.label} href={link.href} className={styles.card}>
-                {label}
-                <span className={styles.arrow}>
-                  <ArrowUpRightIcon stroke="currentColor" />
+          <div className={styles.grid}>
+            {contact.links.map((link) => {
+              const label = (
+                <span className={styles.cardLabel}>
+                  <span className={styles.cardIcon}>{icons[link.icon as IconName]}</span>
+                  <span className={styles.cardText}>{withEmailBreak(link.label)}</span>
                 </span>
-              </Link>
-            );
-          })}
+              );
+
+              if (link.href.startsWith("mailto:")) {
+                return (
+                  <CopyEmailButton key={link.label} email={link.href.replace("mailto:", "")}>
+                    {label}
+                  </CopyEmailButton>
+                );
+              }
+
+              // No href (e.g. the city) — shown as plain info, not a link.
+              if (!link.href) {
+                return (
+                  <div key={link.label} className={`${styles.card} ${styles.static}`}>
+                    {label}
+                  </div>
+                );
+              }
+
+              return (
+                <Link key={link.label} href={link.href} className={styles.card}>
+                  {label}
+                  <span className={styles.arrow}>
+                    <ArrowUpRightIcon stroke="currentColor" />
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
