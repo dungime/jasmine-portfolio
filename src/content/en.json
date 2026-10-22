@@ -1,7 +1,7 @@
 {
   "site": {
     "name": "Jasmine",
-    "role": "Frontend Developer",
+    "role": "Frontend Engineer",
     "logo": "J.",
     "nav": [
       {
@@ -23,7 +23,7 @@
     ],
     "contactCta": {
       "label": "Download CV",
-      "href": "/assets/Dung Nguyen - Senior Frontend Developer Resume.pdf"
+      "href": "/assets/Jasmine_Frontend Engineer_Resume.pdf"
     }
   },
   "hero": {
@@ -187,6 +187,12 @@
         "subtitle": "Fintech Trading & Staking Platforms",
         "category": "Fintech",
         "description": "Sole frontend developer for two fintech platforms for the first 3 months, delivering staking, Launchpad, and a new platform build while stabilizing key trading workflows.",
+        "screenshots": [
+          "/assets/projects/nxmarket-trading-view.png",
+          "/assets/projects/nxmarket-staking-pool.png",
+          "/assets/projects/nxmarket-untaking.png",
+          "/assets/projects/nxmarket-kyc.png"
+        ],
         "role": "I was the sole frontend developer for both platforms during the first three months, independently reviewing product documentation, UI designs, and API documentation to scope and implement features, and clarifying requirements with the team when needed.",
         "built": [
           "Developed and delivered **staking features** covering staking rules, single and compound staking rewards, staking, unstaking, stake-more, and penalty flows",
@@ -203,7 +209,7 @@
           "REST APIs",
           "Real-time Data"
         ],
-        "thumbnail": "/assets/images/thumb-trading.webp"
+        "thumbnail": "/assets/projects/nxmarket-trading-view.png"
       },
       {
         "id": "e-learning-platform",
@@ -236,9 +242,9 @@
         "subtitle": "Operations Management Platform",
         "description": "An admin platform for managing cleaning service operations, including requests, maintenance, reports, and inventory.",
         "screenshots": [
-          "/assets/images/projects/cleaning/dashboard-workflow.jpg",
-          "/assets/images/projects/cleaning/stock-details.jpg",
-          "/assets/images/projects/cleaning/cleaning-calendar.jpg"
+          "/assets/projects/cleaning-service-calendar.png",
+          "/assets/projects/cleaning-service-admin-dashboard.png",
+          "/assets/projects/cleaning-service-stock-details.png"
         ],
         "contributions": [
           "Set up the **entire architecture from scratch**",
@@ -255,7 +261,7 @@
           "Turborepo",
           "REST APIs"
         ],
-        "thumbnail": "/assets/images/thumb-cleaning.png"
+        "thumbnail": "/assets/projects/cleaning-service-calendar.png"
       },
       {
         "id": "aimee-by-j",
@@ -550,7 +556,7 @@
     "subheading": "I’m always open to discussing interesting products, challenging frontend problems, and opportunities to build better experiences together.",
     "resumeCta": {
       "label": "Download Résumé",
-      "href": "/assets/Dung Nguyen - Senior Frontend Developer Resume.pdf"
+      "href": "/assets/Jasmine_Frontend Engineer_Resume.pdf"
     },
     "links": [
       {

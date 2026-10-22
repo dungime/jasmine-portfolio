@@ -1,6 +1,5 @@
 "use client";
 
-import { Fragment, type ReactNode } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useContent } from "@/content";
@@ -38,67 +37,7 @@ export function ProjectDetail({ id }: { id: string }) {
 
   if (!project) return null;
 
-  const [heroScreenshot, ...inlineScreenshots] = project.screenshots ?? [];
-
-  const renderScreenshot = (src: string) => (
-    <figure key={src} className={styles.screenshotCard}>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={withBasePath(src)} alt={project.title} />
-    </figure>
-  );
-
-  // Content blocks in reading order; screenshots after the first are
-  // interleaved one per block, and any left over land before Tech Stack.
-  const blocks: { key: string; node: ReactNode }[] = [
-    {
-      key: "intro",
-      node: (
-        <>
-          <h1 className={styles.title}>{project.title}</h1>
-          {project.subtitle && <p className={styles.subtitle}>{project.subtitle}</p>}
-          <p className={styles.description}>{project.description}</p>
-        </>
-      ),
-    },
-  ];
-
-  if (project.role) {
-    blocks.push({
-      key: "role",
-      node: (
-        <section className={styles.section}>
-          <h2 className={styles.sectionHeading}>{t("myRole")}</h2>
-          <p className={styles.paragraph}>{project.role}</p>
-        </section>
-      ),
-    });
-  }
-
-  if (project.built && project.built.length > 0) {
-    blocks.push({
-      key: "built",
-      node: (
-        <section className={styles.section}>
-          <h2 className={styles.sectionHeading}>{t("whatIBuilt")}</h2>
-          {renderBulletList(project.built)}
-        </section>
-      ),
-    });
-  }
-
-  if (project.contributions && project.contributions.length > 0) {
-    blocks.push({
-      key: "contributions",
-      node: (
-        <section className={styles.section}>
-          <h2 className={styles.sectionHeading}>{t("myContribution")}</h2>
-          {renderBulletList(project.contributions)}
-        </section>
-      ),
-    });
-  }
-
-  const leftoverScreenshots = inlineScreenshots.slice(blocks.length);
+  const screenshots = project.screenshots ?? [];
 
   return (
     <main className={styles.main}>
@@ -107,9 +46,7 @@ export function ProjectDetail({ id }: { id: string }) {
           {t("backToProjects")}
         </BackLink>
 
-        {heroScreenshot ? (
-          <div className={styles.heroScreenshot}>{renderScreenshot(heroScreenshot)}</div>
-        ) : (
+        {screenshots.length === 0 && (
           <div className={styles.thumb}>
             {project.thumbnail && (
               <Image
@@ -124,14 +61,42 @@ export function ProjectDetail({ id }: { id: string }) {
           </div>
         )}
 
-        {blocks.map((block, index) => (
-          <Fragment key={block.key}>
-            {block.node}
-            {inlineScreenshots[index] && renderScreenshot(inlineScreenshots[index])}
-          </Fragment>
-        ))}
+        <h1 className={styles.title}>{project.title}</h1>
+        {project.subtitle && <p className={styles.subtitle}>{project.subtitle}</p>}
 
-        {leftoverScreenshots.map(renderScreenshot)}
+        {screenshots.length > 0 && (
+          <div className={styles.screenshots}>
+            {screenshots.map((src) => (
+              <figure key={src} className={styles.screenshotCard}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={withBasePath(src)} alt={project.title} />
+              </figure>
+            ))}
+          </div>
+        )}
+
+        <p className={styles.description}>{project.description}</p>
+
+        {project.role && (
+          <section className={styles.section}>
+            <h2 className={styles.sectionHeading}>{t("myRole")}</h2>
+            <p className={styles.paragraph}>{project.role}</p>
+          </section>
+        )}
+
+        {project.built && project.built.length > 0 && (
+          <section className={styles.section}>
+            <h2 className={styles.sectionHeading}>{t("whatIBuilt")}</h2>
+            {renderBulletList(project.built)}
+          </section>
+        )}
+
+        {project.contributions && project.contributions.length > 0 && (
+          <section className={styles.section}>
+            <h2 className={styles.sectionHeading}>{t("myContribution")}</h2>
+            {renderBulletList(project.contributions)}
+          </section>
+        )}
 
         <section className={styles.section}>
           <h2 className={styles.sectionHeading}>{t("techStack")}</h2>

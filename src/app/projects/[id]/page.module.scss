@@ -7,7 +7,7 @@
 
 .container {
   @include container;
-  max-width: 760px;
+  max-width: 940px;
 }
 
 .back {
@@ -181,17 +181,14 @@
   text-transform: uppercase;
 }
 
-// First screenshot takes the thumbnail's slot at the top of the page.
-.heroScreenshot {
-  margin-bottom: 32px;
-
-  .screenshotCard {
-    margin-top: 0;
-  }
+.screenshots {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 24px;
 }
 
 .screenshotCard {
-  margin: 40px 0 0;
   @include wavy-box;
   border-radius: $radius-md;
   overflow: hidden;

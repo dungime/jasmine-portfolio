@@ -23,12 +23,12 @@
     ],
     "contactCta": {
       "label": "Tải CV",
-      "href": "/assets/Dung Nguyen - Senior Frontend Developer Resume.pdf"
+      "href": "/assets/Jasmine_Frontend Engineer_Resume.pdf"
     }
   },
   "hero": {
     "badge": "Portfolio",
-    "heading": "Jasmine. - Senior Frontend Engineer",
+    "heading": "Jasmine. - Frontend Engineer",
     "subtitle": "React · TypeScript · Next.js · Làm chủ sản phẩm",
     "greeting": "Xin chào, tôi là Jasmine",
     "role": "Frontend Engineer",
@@ -187,6 +187,12 @@
         "subtitle": "Nền tảng giao dịch & staking fintech",
         "category": "Fintech",
         "description": "Frontend developer duy nhất cho hai nền tảng fintech trong 3 tháng đầu, triển khai staking, Launchpad và một nền tảng mới, đồng thời ổn định các luồng giao dịch quan trọng.",
+        "screenshots": [
+          "/assets/projects/nxmarket-trading-view.png",
+          "/assets/projects/nxmarket-staking-pool.png",
+          "/assets/projects/nxmarket-untaking.png",
+          "/assets/projects/nxmarket-kyc.png"
+        ],
         "role": "Tôi là frontend developer duy nhất của cả hai nền tảng trong ba tháng đầu, tự đọc tài liệu sản phẩm, thiết kế UI và tài liệu API để xác định phạm vi và triển khai tính năng, đồng thời làm rõ yêu cầu với team khi cần.",
         "built": [
           "Phát triển và bàn giao **tính năng staking** gồm quy tắc staking, phần thưởng staking đơn và kép, stake, unstake, stake thêm và luồng phạt",
@@ -203,7 +209,7 @@
           "REST APIs",
           "Real-time Data"
         ],
-        "thumbnail": "/assets/images/thumb-trading.webp"
+        "thumbnail": "/assets/projects/nxmarket-trading-view.png"
       },
       {
         "id": "e-learning-platform",
@@ -236,9 +242,9 @@
         "subtitle": "Nền tảng quản lý vận hành",
         "description": "Nền tảng quản trị cho hoạt động dịch vụ vệ sinh, bao gồm yêu cầu dịch vụ, bảo trì, báo cáo và kho hàng.",
         "screenshots": [
-          "/assets/images/projects/cleaning/dashboard-workflow.jpg",
-          "/assets/images/projects/cleaning/stock-details.jpg",
-          "/assets/images/projects/cleaning/cleaning-calendar.jpg"
+          "/assets/projects/cleaning-service-calendar.png",
+          "/assets/projects/cleaning-service-admin-dashboard.png",
+          "/assets/projects/cleaning-service-stock-details.png"
         ],
         "contributions": [
           "Thiết lập **toàn bộ kiến trúc từ đầu**",
@@ -255,7 +261,7 @@
           "Turborepo",
           "REST APIs"
         ],
-        "thumbnail": "/assets/images/thumb-cleaning.png"
+        "thumbnail": "/assets/projects/cleaning-service-calendar.png"
       },
       {
         "id": "aimee-by-j",
@@ -550,7 +556,7 @@
     "subheading": "Tôi luôn sẵn sàng trao đổi về những sản phẩm thú vị, những bài toán frontend thử thách và cơ hội cùng nhau tạo ra trải nghiệm tốt hơn.",
     "resumeCta": {
       "label": "Tải CV",
-      "href": "/assets/Dung Nguyen - Senior Frontend Developer Resume.pdf"
+      "href": "/assets/Jasmine_Frontend Engineer_Resume.pdf"
     },
     "links": [
       {
