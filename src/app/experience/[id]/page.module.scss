@@ -14,7 +14,7 @@
 .back {
   display: inline-flex;
   align-items: center;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   color: $color-gray;
   margin-bottom: 32px;
@@ -27,7 +27,7 @@
 
 .category {
   display: inline-block;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
   padding: 4px 10px;
   border-radius: $radius-pill;
@@ -44,7 +44,7 @@
 }
 
 .meta {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   color: $color-gray;
   margin-bottom: 24px;
@@ -57,7 +57,7 @@
 }
 
 .description {
-  font-size: 16px;
+  font-size: 18px;
   color: $color-gray;
   line-height: 1.7;
   margin-bottom: 32px;
@@ -74,7 +74,7 @@
 
 .columnLabel {
   display: block;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.03em;
@@ -90,7 +90,7 @@
   li {
     position: relative;
     padding-left: 16px;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.6;
     color: $color-gray;
 
@@ -112,7 +112,7 @@
 }
 
 .sectionHeading {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.03em;
@@ -133,7 +133,7 @@
   padding: 6px 14px 6px 6px;
   border: 1px solid $color-border;
   border-radius: $radius-pill;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 500;
 }
 

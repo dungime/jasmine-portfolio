@@ -34,7 +34,7 @@
 }
 
 .subheading {
-  font-size: 15px;
+  font-size: 16px;
   color: $color-gray;
   max-width: 460px;
 }
@@ -108,12 +108,12 @@
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 13px;
+  font-size: 16px;
   border: 3px solid $color-bg;
 }
 
 .stepStage {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   line-height: 1.3;
   min-height: 2.6em;
@@ -123,7 +123,7 @@
 }
 
 .stepPeriod {
-  font-size: 11px;
+  font-size: 12px;
   color: $color-gray;
 }
 
@@ -185,7 +185,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 700;
 
   &[href]:hover {
@@ -196,14 +196,14 @@
 // External-link hint so the company name reads as clickable — same circled
 .companyIcon {
   flex-shrink: 0;
-  font-size: 15px;
+  font-size: 16px;
   stroke: $color-lime-dark;
   transition: transform 0.15s ease;
 }
 
 .category {
   flex-shrink: 0;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
   padding: 4px 10px;
   border-radius: $radius-pill;
@@ -212,7 +212,7 @@
 }
 
 .meta {
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 600;
   color: $color-gray;
   margin-bottom: 14px;
@@ -225,7 +225,7 @@
 }
 
 .description {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.65;
   color: $color-gray;
   margin-bottom: 18px;
@@ -241,7 +241,7 @@
 
 .columnLabel {
   display: block;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.03em;
@@ -288,7 +288,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
+  font-size: 18px;
   transition: transform 0.25s ease, background-color 0.15s ease, color 0.15s ease;
 }
 
@@ -327,7 +327,7 @@
   li {
     position: relative;
     padding-left: 14px;
-    font-size: 13px;
+    font-size: 16px;
     line-height: 1.5;
     color: $color-gray;
 
@@ -353,7 +353,7 @@
   margin-top: 16px;
   padding-top: 16px;
   border-top: 1px solid $color-border;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.5;
   color: $color-gray;
 }
@@ -377,7 +377,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
   padding: 5px 12px;
   border-radius: $radius-pill;
@@ -426,7 +426,7 @@
 }
 
 .nodeNumber {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   color: $color-gray;
 }
@@ -441,7 +441,7 @@
 //   border-radius: $radius-lg;
 //   background: $color-card;
 //   text-align: center;
-//   font-size: 16px;
+//   font-size: 18px;
 //   font-style: italic;
 //   line-height: 1.6;
 //   color: $color-gray;
@@ -451,13 +451,13 @@
   max-width: 640px;
   margin: 56px auto 0;
   text-align: center;
-  font-size: 13px;
+  font-size: 16px;
   color: $color-gray-light;
 }
 
 // .footnote {
 //   margin-top: 20px;
 //   text-align: center;
-//   font-size: 12px;
+//   font-size: 13px;
 //   color: $color-gray-light;
 // }

@@ -25,27 +25,27 @@
 }
 
 .heading {
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 700;
   margin-bottom: 14px;
 }
 
 .quote {
   margin: 0 0 14px;
-  font-size: 16px;
+  font-size: 18px;
   font-style: italic;
   line-height: 1.7;
   color: $color-black;
 }
 
 .author {
-  font-size: 13px;
+  font-size: 16px;
   color: $color-gray;
 }
 
 .note {
   margin-bottom: 6px;
-  font-size: 13px;
+  font-size: 16px;
   color: $color-gray;
 }
 
@@ -80,7 +80,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   color: $color-black;
 }
@@ -96,7 +96,7 @@
 }
 
 .letterDescription {
-  font-size: 13px;
+  font-size: 16px;
   color: $color-gray;
 }
 
@@ -109,7 +109,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+  font-size: 15px;
   flex-shrink: 0;
   transition: background 0.15s ease;
 }

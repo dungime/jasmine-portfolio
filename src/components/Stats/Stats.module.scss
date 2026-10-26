@@ -50,7 +50,7 @@
 }
 
 .label {
-  font-size: 14px;
+  font-size: 15px;
   color: $color-gray;
   line-height: 1.6;
 }
@@ -71,12 +71,12 @@
 }
 
 .revealValue {
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 700;
 }
 
 .detail {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1.5;
   opacity: 0;
@@ -136,7 +136,7 @@
   .detail {
     opacity: 1;
     transform: none;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 500;
   }
 }

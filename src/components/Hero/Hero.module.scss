@@ -50,7 +50,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 15px;
+  font-size: 16px;
   color: $color-black;
 }
 
@@ -97,7 +97,7 @@
 }
 
 .description {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.7;
   color: $color-gray;
   margin-bottom: 14px;
@@ -121,7 +121,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
   padding: 5px 12px;
   border-radius: $radius-pill;
@@ -187,7 +187,7 @@
 }
 
 .statLabel {
-  font-size: 14px;
+  font-size: 15px;
   color: $color-gray;
   margin-top: 2px;
 }
@@ -211,7 +211,7 @@
 }
 
 .visualEyebrow {
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 600;
   color: color.adjust($color-black, $lightness: 15%);
 }
@@ -249,11 +249,11 @@
 }
 
 .floatingCardValue {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
 }
 
 .floatingCardLabel {
-  font-size: 11px;
+  font-size: 12px;
   color: $color-gray;
 }
