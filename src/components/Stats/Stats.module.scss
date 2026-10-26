@@ -41,6 +41,7 @@
 }
 
 .value {
+  font-family: $font-heading;
   font-size: clamp(30px, 3.2vw, 40px);
   font-weight: 700;
   color: $color-black;

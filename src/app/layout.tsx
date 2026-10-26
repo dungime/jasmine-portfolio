@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { JetBrains_Mono, Martian_Mono } from "next/font/google";
+import { Be_Vietnam_Pro, JetBrains_Mono, Martian_Mono } from "next/font/google";
 import "./globals.scss";
 import { ScrollToHash } from "@/components/ScrollToHash/ScrollToHash";
 import { BackToTop } from "@/components/BackToTop/BackToTop";
@@ -11,13 +11,20 @@ import messages from "../../messages/en.json";
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
+// Not a variable font, so each weight used in the styles must be listed.
+const beVietnamPro = Be_Vietnam_Pro({
+  variable: "--font-body",
+  subsets: ["latin", "vietnamese"],
+  weight: ["400", "500", "600", "700"],
+});
+
+// Title fonts (see globals.scss). Martian Mono has no Vietnamese glyphs, so
+// Vietnamese pages use JetBrains Mono for titles instead.
 const martianMono = Martian_Mono({
   variable: "--font-martian-mono",
   subsets: ["latin"],
 });
 
-// Vietnamese-capable face: body font when the page is in Vietnamese (see
-// globals.scss) and always for the language switcher.
 const jetBrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
   subsets: ["latin", "vietnamese"],
@@ -56,7 +63,7 @@ export default function RootLayout({
     // before React hydrates.
     <html
       lang={defaultLocale}
-      className={`${martianMono.variable} ${jetBrainsMono.variable}`}
+      className={`${beVietnamPro.variable} ${martianMono.variable} ${jetBrainsMono.variable}`}
       suppressHydrationWarning
     >
       <head>

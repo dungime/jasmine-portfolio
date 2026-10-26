@@ -84,7 +84,7 @@
   display: grid;
   // Columns are capped instead of the grid, so the divider (border-top)
   // still spans the whole panel while the boxes stay compact. 340px fits the
-  // e-mail address on one line in Martian Mono (the widest of the page fonts).
+  // e-mail address on one line.
   grid-template-columns: repeat(2, minmax(0, 340px));
   gap: 10px;
   padding-top: 28px;

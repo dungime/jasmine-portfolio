@@ -4,13 +4,13 @@
   box-sizing: border-box;
 }
 
-// Martian Mono has no Vietnamese glyphs (ế, ợ, ...), and a per-character
-// fallback mixes two fonts mid-word, so Vietnamese pages swap the whole face.
+// A per-character fallback would mix two fonts mid-word, so Vietnamese pages
+// swap the whole title face rather than relying on Martian Mono's fallback.
 html {
-  --font-body: var(--font-martian-mono);
+  --font-heading: var(--font-martian-mono);
 
   &:lang(vi) {
-    --font-body: var(--font-jetbrains-mono);
+    --font-heading: var(--font-jetbrains-mono);
   }
 
   // Set by LOCALE_BOOT_SCRIPT while a stored non-default language is applied
@@ -58,6 +58,15 @@ h3,
 h4,
 p {
   margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-heading;
 }
 
 a {
