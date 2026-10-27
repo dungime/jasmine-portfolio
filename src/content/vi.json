@@ -186,21 +186,98 @@
         "title": "Nền tảng giao dịch NexStox & NXMarket",
         "subtitle": "Nền tảng giao dịch & staking fintech",
         "category": "Fintech",
-        "description": "Frontend developer duy nhất cho hai nền tảng fintech trong 3 tháng đầu, triển khai staking, Launchpad và một nền tảng mới, đồng thời ổn định các luồng giao dịch quan trọng.",
+        "description": "Làm chủ frontend của hai nền tảng fintech đang vận hành — một mình trong 3 tháng đầu — triển khai staking, Launchpad, KYC và một nền tảng mới, đồng thời ổn định các luồng giao dịch cốt lõi.",
         "screenshots": [
-          "/assets/projects/nxmarket-trading-view.png",
+          "/assets/projects/nxmarket-trading-view.jpg",
+          "/assets/projects/nxmarket-spot-wallet.png",
           "/assets/projects/nxmarket-staking-pool.png",
-          "/assets/projects/nxmarket-untaking.png",
-          "/assets/projects/nxmarket-kyc.png"
+          "/assets/projects/nxmarket-staking-info.png",
+          "/assets/projects/nxmarket-staking-detail.png",
+          "/assets/projects/nxmarket-staking-confirmation.png",
+          "/assets/projects/nxmarket-staking-unstaking.png",
+          "/assets/projects/nxmarket-kyc.png",
+          "/assets/projects/nxmarket-profile-main.png"
         ],
-        "role": "Tôi là frontend developer duy nhất của cả hai nền tảng trong ba tháng đầu, tự đọc tài liệu sản phẩm, thiết kế UI và tài liệu API để xác định phạm vi và triển khai tính năng, đồng thời làm rõ yêu cầu với team khi cần.",
-        "built": [
-          "Phát triển và bàn giao **tính năng staking** gồm quy tắc staking, phần thưởng staking đơn và kép, stake, unstake, stake thêm và luồng phạt",
-          "Xây dựng **tính năng Launchpad** hiển thị thông tin dự án và xử lý giao dịch mua Launchpad",
-          "Phát triển **một nền tảng mới dựa trên sản phẩm hiện có**, điều chỉnh các chức năng cốt lõi cho phù hợp",
-          "Triển khai UI mới, **luồng đăng ký và KYC**",
-          "Triển khai **giao diện đa ngôn ngữ** hỗ trợ nhiều ngôn ngữ trên toàn nền tảng",
-          "Xử lý các lỗi nghiêm trọng trên giao diện sàn giao dịch mới và cải thiện độ ổn định của các luồng giao dịch chính"
+        "overview": [
+          {
+            "label": "Vai trò",
+            "value": "Senior Frontend Engineer · frontend engineer duy nhất trong 3 tháng đầu"
+          },
+          {
+            "label": "Thời gian",
+            "value": "05/2025 – 05/2026"
+          },
+          {
+            "label": "Đội ngũ",
+            "value": "1–3 frontend engineer, làm việc cùng Product, Backend, QA và DevOps"
+          },
+          {
+            "label": "Phạm vi",
+            "value": "Giao dịch, staking, Launchpad, đăng ký & KYC, quản trị và giao diện đa ngôn ngữ"
+          }
+        ],
+        "context": "NexStox và NXMarket là hai nền tảng fintech nơi người dùng giao dịch tài sản số, staking để nhận thưởng và đầu tư vào dự án mới qua Launchpad. Tôi tham gia với vai trò **frontend engineer duy nhất**, nên mọi thứ từ tài liệu sản phẩm đến lúc phát hành production đều do tôi chịu trách nhiệm — trên cả hai nền tảng cùng lúc.",
+        "challenges": [
+          {
+            "title": "Một frontend engineer, hai nền tảng đang chạy",
+            "body": "Trong ba tháng đầu không có frontend engineer nào khác. Mọi tính năng, bản sửa lỗi và đợt phát hành trên cả hai nền tảng đều phụ thuộc vào tôi, với deadline không thể dời."
+          },
+          {
+            "title": "Quy tắc tiền bạc mà người dùng phải tin được",
+            "body": "Staking kết hợp phần thưởng đơn và kép, stake thêm, unstake và phạt rút sớm. Chỉ cần màn hình hiển thị lệch với kết quả backend tính toán là người dùng mất tiền — và sản phẩm mất uy tín."
+          },
+          {
+            "title": "Nền tảng mới mà không làm lại từ đầu",
+            "body": "Doanh nghiệp cần ra mắt NXMarket dựa trên sản phẩm hiện có, với UI riêng, luồng đăng ký và KYC riêng, hỗ trợ nhiều ngôn ngữ — mà không làm ảnh hưởng nền tảng người dùng đang sử dụng."
+          },
+          {
+            "title": "Giao diện sàn giao dịch thiếu ổn định",
+            "body": "Giao diện sàn giao dịch mới gặp lỗi nghiêm trọng ở các luồng giao dịch chính — phần người dùng thao tác nhiều nhất và khó chấp nhận lỗi nhất."
+          }
+        ],
+        "solutions": [
+          {
+            "title": "Tự chuyển tài liệu thành công việc rõ phạm vi",
+            "body": "Tôi làm việc trực tiếp từ tài liệu sản phẩm, thiết kế UI và tài liệu API để xác định phạm vi từng tính năng, và chủ động nêu sớm những chỗ thiếu hoặc mâu thuẫn với team thay vì phỏng đoán."
+          },
+          {
+            "title": "Mô hình hoá mọi trạng thái staking trước khi dựng màn hình",
+            "body": "Tôi vẽ ra toàn bộ vòng đời — **phần thưởng đơn và kép, stake, stake thêm, unstake và phạt** — rồi xây luồng xoay quanh nó, để người dùng thấy rõ điều gì sẽ xảy ra với tài sản trước khi xác nhận."
+          },
+          {
+            "title": "Xây nền tảng mới từ phần lõi đã được kiểm chứng",
+            "body": "Tôi điều chỉnh các chức năng cốt lõi của sản phẩm hiện có cho NXMarket, rồi bổ sung **UI mới, luồng đăng ký và KYC, cùng hỗ trợ đa ngôn ngữ**, tái sử dụng logic đã chạy tốt thay vì viết lại."
+          },
+          {
+            "title": "Triển khai Launchpad trọn vẹn",
+            "body": "Tôi xây dựng trải nghiệm Launchpad — hiển thị thông tin dự án và xử lý giao dịch mua — thành một luồng hoàn chỉnh từ khám phá đến thanh toán."
+          },
+          {
+            "title": "Ổn định giao dịch cùng QA",
+            "body": "Tôi truy vết và sửa các lỗi nghiêm trọng trên giao diện sàn, đồng thời phối hợp sát với QA — nhiều khi ngoài giờ làm việc — để kiểm thử nền tảng và **độ chính xác của dữ liệu hiển thị** trước mỗi lần phát hành."
+          }
+        ],
+        "impact": {
+          "metrics": [
+            {
+              "value": "2",
+              "label": "nền tảng production do tôi làm chủ phần frontend"
+            },
+            {
+              "value": "3 tháng",
+              "label": "là frontend engineer duy nhất"
+            },
+            {
+              "value": "5",
+              "label": "module lớn đã phát hành: staking, Launchpad, đăng ký & KYC, giao diện đa ngôn ngữ và một nền tảng mới"
+            }
+          ],
+          "summary": "Staking, Launchpad và nền tảng NXMarket mới đều lên production đúng tiến độ, các luồng giao dịch chính ổn định hơn rõ rệt. Trong thư giới thiệu, Chủ tịch công ty mô tả đây là **một người tự vận hành cả một bộ phận frontend**."
+        },
+        "learnings": [
+          "**Làm chủ nằm ở những khoảng trống.** Khi tài liệu, thiết kế và API không khớp nhau, frontend engineer thường là người phát hiện đầu tiên — nêu ra sớm luôn rẻ hơn sửa sau khi phát hành.",
+          "**Trong fintech, độ chính xác chính là tính năng.** Kiểm thử con số trên màn hình cùng QA quan trọng không kém phần UI bao quanh nó.",
+          "**Tái sử dụng tốt hơn viết lại** khi ranh giới giữa phần dùng chung và phần mới đủ rõ — đó là cách nền tảng thứ hai ra mắt mà không làm chậm nền tảng thứ nhất."
         ],
         "tags": [
           "React",
@@ -209,21 +286,85 @@
           "REST APIs",
           "Real-time Data"
         ],
-        "thumbnail": "/assets/projects/nxmarket-trading-view.png"
+        "thumbnail": "/assets/projects/nxmarket-trading-view.jpg"
       },
       {
         "id": "e-learning-platform",
         "title": "Nền tảng E-Learning",
         "subtitle": "Nền tảng quản lý học tập",
         "category": "Giáo dục",
-        "description": "Nền tảng học tập mà tôi dựng monorepo từ đầu và xây dựng trải nghiệm học của học viên, bao gồm phát video, thông báo real-time và hệ thống bình luận trực tiếp.",
-        "role": "Tôi chịu trách nhiệm kiến trúc frontend của nền tảng từ con số không, bao gồm thiết lập monorepo, và xây dựng các tính năng học tập cốt lõi cũng như tính năng tương tác real-time.",
-        "built": [
-          "Thiết lập **toàn bộ kiến trúc monorepo từ đầu** cho nền tảng",
-          "Xây dựng trải nghiệm học của học viên với **trình phát video, chế độ sách, phụ đề, chương, trang và đánh dấu trang**",
-          "Phát triển **tính năng thông báo real-time**, bao gồm tương tác với thông báo và bình luận",
-          "Xây dựng **hệ thống bình luận real-time** hỗ trợ bình luận, thích và phản hồi một cấp từ giáo viên",
-          "Tích hợp **REST API và luồng dữ liệu real-time** để đồng bộ hoạt động học tập và tương tác"
+        "description": "Dựng frontend từ một repository trống và xây dựng trải nghiệm học tập cốt lõi — trình phát bài học đa định dạng cùng bình luận và thông báo real-time.",
+        "overview": [
+          {
+            "label": "Vai trò",
+            "value": "Frontend Engineer · làm chủ kiến trúc frontend từ ngày đầu"
+          },
+          {
+            "label": "Công ty",
+            "value": "Lecle Vietnam · dự án khách hàng"
+          },
+          {
+            "label": "Người dùng",
+            "value": "Học viên và giáo viên"
+          },
+          {
+            "label": "Phạm vi",
+            "value": "Thiết lập monorepo, trình phát bài học, bình luận và thông báo real-time"
+          }
+        ],
+        "context": "Một nền tảng học tập nơi học viên xem bài giảng, đọc tài liệu và trao đổi với giáo viên, bạn học. Tôi bắt đầu từ một **repository trống** và chịu trách nhiệm cả nền móng frontend lẫn những tính năng học viên dùng hằng ngày.",
+        "challenges": [
+          {
+            "title": "Bắt đầu từ con số không",
+            "body": "Chưa có cấu trúc nào sẵn. Những quyết định ban đầu về repository và kiến trúc sẽ quyết định tốc độ — và độ an toàn — khi xây mọi tính năng sau này."
+          },
+          {
+            "title": "Nhiều cách học trong cùng một nơi",
+            "body": "Video, book mode, phụ đề, chương, trang và bookmark phải hoạt động cùng nhau, để học viên chuyển định dạng và tiếp tục đúng chỗ đang học."
+          },
+          {
+            "title": "Tính năng tương tác phải thật sự real-time",
+            "body": "Bình luận, lượt thích, phản hồi của giáo viên và thông báo phải cập nhật tức thì, mà nội dung học và lớp tương tác không bị lệch nhau."
+          }
+        ],
+        "solutions": [
+          {
+            "title": "Nền móng monorepo sẵn sàng mở rộng",
+            "body": "Tôi thiết lập **toàn bộ kiến trúc monorepo từ đầu**, giúp team có cấu trúc nhất quán để phát triển tính năng ngay từ sprint đầu tiên."
+          },
+          {
+            "title": "Một trình phát, mọi định dạng",
+            "body": "Tôi xây dựng trải nghiệm học tập quanh một trình phát hỗ trợ **video, book mode, phụ đề, chương, trang và bookmark**, để học viên tự chọn cách học mà không rời bài học."
+          },
+          {
+            "title": "Thảo luận real-time với cấu trúc rõ ràng",
+            "body": "Tôi xây dựng hệ thống bình luận real-time với **bình luận, lượt thích và phản hồi một cấp từ giáo viên**, giúp câu trả lời của giáo viên dễ tìm giữa những cuộc thảo luận sôi nổi."
+          },
+          {
+            "title": "Thông báo và dữ liệu luôn đồng bộ",
+            "body": "Tôi phát triển thông báo real-time cùng các tương tác đi kèm, và tích hợp **REST API với luồng dữ liệu real-time** để tiến độ học và hoạt động tương tác luôn nhất quán."
+          }
+        ],
+        "impact": {
+          "metrics": [
+            {
+              "value": "0 → 1",
+              "label": "kiến trúc frontend và monorepo dựng từ đầu"
+            },
+            {
+              "value": "6",
+              "label": "công cụ học trong một trình phát: video, book mode, phụ đề, chương, trang, bookmark"
+            },
+            {
+              "value": "Real-time",
+              "label": "bình luận, lượt thích, phản hồi của giáo viên và thông báo"
+            }
+          ],
+          "summary": "Học viên có một nơi duy nhất để học theo định dạng phù hợp và trao đổi bài học với giáo viên ngay lập tức — trên một codebase được tổ chức để tiếp tục phát triển."
+        },
+        "learnings": [
+          "**Nền móng tạo hiệu ứng cộng dồn.** Thời gian đầu tư cho monorepo được trả lại ở mọi tính năng sau đó.",
+          "**Real-time là bài toán dữ liệu trước khi là bài toán UI.** Xác định rõ cái gì đồng bộ và khi nào giúp giao diện trở nên đơn giản."
         ],
         "tags": [
           "React",
@@ -240,17 +381,88 @@
         "id": "cleaning-services-dashboard",
         "title": "Dashboard dịch vụ vệ sinh",
         "subtitle": "Nền tảng quản lý vận hành",
-        "description": "Nền tảng quản trị cho hoạt động dịch vụ vệ sinh, bao gồm yêu cầu dịch vụ, bảo trì, báo cáo và kho hàng.",
+        "category": "Vận hành",
+        "description": "Dựng kiến trúc từ đầu cho một dashboard vận hành, biến yêu cầu vệ sinh, bảo trì, báo cáo và kho hàng thành các quy trình end-to-end liên kết với nhau.",
         "screenshots": [
-          "/assets/projects/cleaning-service-calendar.png",
+          "/assets/projects/cleaning-service-admin-dashboard-main.png",
           "/assets/projects/cleaning-service-admin-dashboard.png",
-          "/assets/projects/cleaning-service-stock-details.png"
+          "/assets/projects/cleaning-service-admin-dashboard-chart.png",
+          "/assets/projects/cleaning-service-admin-dashboard-inquiry-creation.png",
+          "/assets/projects/cleaning-service-admin-dashboard-office-clean.png",
+          "/assets/projects/cleaning-service-admin-dashboard-stock-details.png",
+          "/assets/projects/cleaning-service-admin-dashboard-login.png"
         ],
-        "contributions": [
-          "Thiết lập **toàn bộ kiến trúc từ đầu**",
-          "Phát triển **luồng CRUD end-to-end** cho yêu cầu vệ sinh, bảo trì, báo cáo và kho hàng",
-          "Xây dựng giao diện dữ liệu phức tạp kết hợp **lịch tương tác, bảng, biểu đồ, drawer và tree view**",
-          "Phát triển **form tạo mới phức tạp** để quản lý quy trình vận hành và dữ liệu nghiệp vụ"
+        "overview": [
+          {
+            "label": "Vai trò",
+            "value": "Frontend Engineer · thiết lập kiến trúc từ đầu"
+          },
+          {
+            "label": "Công ty",
+            "value": "Lecle Vietnam · dự án khách hàng"
+          },
+          {
+            "label": "Người dùng",
+            "value": "Nhân viên vận hành và quản trị"
+          },
+          {
+            "label": "Phạm vi",
+            "value": "Yêu cầu dịch vụ, bảo trì, báo cáo, kho hàng, lịch làm việc và thống kê"
+          }
+        ],
+        "context": "Một nền tảng quản trị mà nhân viên vận hành dùng hằng ngày để điều hành dịch vụ vệ sinh — xếp lịch công việc, xử lý bảo trì, theo dõi kho và báo cáo. Tôi làm chủ frontend từ **commit đầu tiên**.",
+        "challenges": [
+          {
+            "title": "Dữ liệu dày đặc trên nhiều mảng liên kết",
+            "body": "Yêu cầu dịch vụ, bảo trì, báo cáo và kho hàng liên quan đến nhau nhưng mỗi mảng có dữ liệu và quy trình riêng. Nhân viên cần chuyển qua lại mà không mất ngữ cảnh."
+          },
+          {
+            "title": "Công việc theo thời gian cần nhìn là hiểu",
+            "body": "Lịch vệ sinh chỉ có ý nghĩa khi hiển thị trên lịch, bên cạnh bảng và biểu đồ giải thích cho nó."
+          },
+          {
+            "title": "Form chứa quy tắc nghiệp vụ thật",
+            "body": "Tạo bản ghi vận hành đồng nghĩa với những form dài, nhiều phần, nơi một sai sót sẽ ảnh hưởng thẳng vào hoạt động hằng ngày."
+          }
+        ],
+        "solutions": [
+          {
+            "title": "Thiết lập kiến trúc từ đầu",
+            "body": "Tôi thiết lập **toàn bộ kiến trúc frontend** — Vite, Turborepo, Ant Design và Jotai — để mọi mảng được xây trên cùng một nền tảng chung."
+          },
+          {
+            "title": "CRUD hoàn chỉnh cho từng mảng",
+            "body": "Tôi phát triển **quy trình tạo, xem, sửa, xoá end-to-end** cho yêu cầu vệ sinh, bảo trì, báo cáo và kho hàng."
+          },
+          {
+            "title": "Đúng giao diện cho đúng công việc",
+            "body": "Tôi kết hợp **lịch tương tác, bảng, biểu đồ, drawer và tree view**, để nhân viên xếp lịch, xem chi tiết và đào sâu dữ liệu mà không phải rời trang đang làm việc."
+          },
+          {
+            "title": "Form dành cho nghiệp vụ phức tạp",
+            "body": "Tôi xây dựng các form tạo mới phức tạp cho quy trình vận hành và dữ liệu nghiệp vụ, được chia cấu trúc để những form dài vẫn dễ thao tác."
+          }
+        ],
+        "impact": {
+          "metrics": [
+            {
+              "value": "4",
+              "label": "mảng vận hành trong một dashboard: yêu cầu, bảo trì, báo cáo, kho hàng"
+            },
+            {
+              "value": "5",
+              "label": "dạng giao diện kết hợp: lịch, bảng, biểu đồ, drawer, tree view"
+            },
+            {
+              "value": "0 → 1",
+              "label": "kiến trúc frontend do tôi làm chủ từ commit đầu tiên"
+            }
+          ],
+          "summary": "Nhân viên vận hành quản lý lịch làm việc, bảo trì, kho hàng và báo cáo trên một dashboard duy nhất thay vì nhiều công cụ rời rạc, với mọi quy trình được bao phủ end-to-end."
+        },
+        "learnings": [
+          "**Công cụ quản trị được đánh giá bằng tốc độ làm việc, không phải vẻ ngoài.** Chọn đúng dạng hiển thị — lịch, bảng hay cây — quan trọng hơn trau chuốt giao diện.",
+          "**Nền tảng dùng chung giữ cho nhiều mảng CRUD nhất quán**, để mỗi phần mới đều quen thuộc với người dùng."
         ],
         "tags": [
           "React",
@@ -261,22 +473,85 @@
           "Turborepo",
           "REST APIs"
         ],
-        "thumbnail": "/assets/projects/cleaning-service-calendar.png"
+        "thumbnail": "/assets/projects/cleaning-service-admin-dashboard-main.png"
       },
       {
         "id": "aimee-by-j",
         "title": "Aimee by J — Nền tảng Ecommerce Headless",
         "subtitle": "Thời trang Việt Nam · Đang phát triển",
         "category": "Ecommerce",
-        "description": "Dự án độc lập xây lại từ đầu một storefront ecommerce headless cho thương hiệu thời trang Việt Nam, kết hợp backend Medusa v2 với storefront Next.js 16 — đang trong quá trình phát triển.",
-        "role": "Tôi là developer và người kiến trúc duy nhất của dự án độc lập này, chịu trách nhiệm toàn bộ các tầng: kiến trúc backend/storefront, tầng data API có type, chiến lược render, và lộ trình triển khai, bao gồm nghiên cứu tích hợp thanh toán đặc thù thị trường Việt Nam.",
-        "built": [
-          "Thiết kế kiến trúc headless commerce tách biệt hoàn toàn — storefront Next.js 16 gọi backend Medusa v2 thuần qua REST API, cho phép hai phía phát triển độc lập",
-          "Xây dựng tầng data HTTP có type, generic, dựa trên **kiểu Result dạng discriminated union** thay cho exception — đảm bảo response lỗi hoặc rỗng không bao giờ làm hỏng render trang một cách âm thầm",
-          "Chẩn đoán và sửa lỗi build production bằng cách xác định đúng **ranh giới static-vs-dynamic rendering** của Next.js, chuyển một route phụ thuộc backend từ prerender tĩnh lúc build sang render theo request",
-          "Lên kế hoạch thanh toán đặc thù thị trường Việt Nam, gồm **thanh toán khi nhận hàng (COD) và payment provider tuỳ chỉnh PayOS/VNPay** trên kiến trúc payment mở rộng của Medusa",
-          "Vạch lộ trình triển khai đầy đủ — tầng data, design system, catalog, giỏ hàng, checkout, tài khoản, thanh toán nội địa — với **mốc rõ ràng theo từng giai đoạn và ước lượng thời gian thực tế**",
-          "Xác định chiến lược test xuyên suốt dự án: **Vitest** cho tầng data, **React Testing Library** cho component tương tác, **Playwright** dành cho luồng end-to-end quan trọng"
+        "description": "Dự án cá nhân xây dựng lại từ đầu một storefront headless commerce cho thương hiệu thời trang Việt Nam — storefront Next.js 16 trên backend Medusa v2, thiết kế cho độ tin cậy và thanh toán nội địa.",
+        "overview": [
+          {
+            "label": "Vai trò",
+            "value": "Developer và kiến trúc sư duy nhất"
+          },
+          {
+            "label": "Trạng thái",
+            "value": "Đang phát triển"
+          },
+          {
+            "label": "Loại",
+            "value": "Dự án cá nhân"
+          },
+          {
+            "label": "Phạm vi",
+            "value": "Kiến trúc, data layer, chiến lược rendering, thanh toán và lộ trình triển khai"
+          }
+        ],
+        "context": "Aimee by J là một thương hiệu thời trang Việt Nam. Tôi đang xây dựng lại storefront thành một **hệ thống headless commerce**, làm chủ mọi tầng — từ kiến trúc backend, storefront đến kế hoạch triển khai.",
+        "challenges": [
+          {
+            "title": "Hai hệ thống phải phát triển độc lập",
+            "body": "Storefront và backend thương mại cần thay đổi và deploy theo tiến độ riêng mà không làm hỏng nhau."
+          },
+          {
+            "title": "Lỗi API âm thầm làm hỏng trang",
+            "body": "Một response lỗi hoặc rỗng lọt qua có thể âm thầm làm sai cả trang — loại lỗi khách hàng thấy trước cả developer."
+          },
+          {
+            "title": "Thanh toán phù hợp thị trường Việt Nam",
+            "body": "Người mua Việt Nam quen với COD và các cổng thanh toán nội địa như PayOS, VNPay — không chỉ thẻ quốc tế."
+          }
+        ],
+        "solutions": [
+          {
+            "title": "Headless stack tách biệt hoàn toàn",
+            "body": "**Storefront Next.js 16 giao tiếp với Medusa v2 hoàn toàn qua REST API**, nên mỗi bên có thể phát triển độc lập."
+          },
+          {
+            "title": "Lỗi là giá trị, không phải exception",
+            "body": "Tôi thiết kế data layer HTTP có kiểu dữ liệu quanh một **Result type dạng discriminated union**, buộc mọi trang phải xử lý lỗi tường minh để response sai không thể lọt qua."
+          },
+          {
+            "title": "Sửa lỗi build production từ gốc",
+            "body": "Tôi truy vết lỗi build về **ranh giới static/dynamic rendering** của Next.js và chuyển một route phụ thuộc backend từ prerender lúc build sang render theo request."
+          },
+          {
+            "title": "Thanh toán nội địa và lộ trình thực tế",
+            "body": "Tôi lên kế hoạch **COD và payment provider PayOS/VNPay tuỳ chỉnh** trên kiến trúc thanh toán của Medusa, đồng thời chia lộ trình theo từng giai đoạn kèm ước lượng thời gian và chiến lược kiểm thử với Vitest, React Testing Library và Playwright."
+          }
+        ],
+        "impact": {
+          "metrics": [
+            {
+              "value": "2",
+              "label": "ứng dụng deploy độc lập: storefront và backend thương mại"
+            },
+            {
+              "value": "100%",
+              "label": "lời gọi API trả về Result có kiểu mà trang bắt buộc phải xử lý"
+            },
+            {
+              "value": "3",
+              "label": "tầng kiểm thử đã lên kế hoạch: unit, component và end-to-end"
+            }
+          ],
+          "summary": "Dự án vẫn đang phát triển. Đến nay đã có một nền tảng tách biệt, đáng tin cậy và lộ trình rõ ràng đến một quy trình thanh toán dành cho người mua Việt Nam."
+        },
+        "learnings": [
+          "**Biến lỗi thành thứ không thể bỏ qua.** Mã hoá lỗi trong kiểu dữ liệu đã chuyển cả một nhóm bug từ production về lúc compile.",
+          "**Hiểu framework render ở đâu.** Nắm rõ ranh giới rendering của Next.js biến một lỗi build khó hiểu thành bản sửa một dòng."
         ],
         "tags": [
           "Next.js",

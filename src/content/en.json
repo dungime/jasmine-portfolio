@@ -186,21 +186,98 @@
         "title": "NexStox & NXMarket Trading Platforms",
         "subtitle": "Fintech Trading & Staking Platforms",
         "category": "Fintech",
-        "description": "Sole frontend developer for two fintech platforms for the first 3 months, delivering staking, Launchpad, and a new platform build while stabilizing key trading workflows.",
+        "description": "Owned the frontend of two live fintech platforms — alone for the first 3 months — shipping staking, Launchpad, KYC, and a brand-new platform while stabilizing core trading workflows.",
         "screenshots": [
-          "/assets/projects/nxmarket-trading-view.png",
+          "/assets/projects/nxmarket-trading-view.jpg",
+          "/assets/projects/nxmarket-spot-wallet.png",
           "/assets/projects/nxmarket-staking-pool.png",
-          "/assets/projects/nxmarket-untaking.png",
-          "/assets/projects/nxmarket-kyc.png"
+          "/assets/projects/nxmarket-staking-info.png",
+          "/assets/projects/nxmarket-staking-detail.png",
+          "/assets/projects/nxmarket-staking-confirmation.png",
+          "/assets/projects/nxmarket-staking-unstaking.png",
+          "/assets/projects/nxmarket-kyc.png",
+          "/assets/projects/nxmarket-profile-main.png"
         ],
-        "role": "I was the sole frontend developer for both platforms during the first three months, independently reviewing product documentation, UI designs, and API documentation to scope and implement features, and clarifying requirements with the team when needed.",
-        "built": [
-          "Developed and delivered **staking features** covering staking rules, single and compound staking rewards, staking, unstaking, stake-more, and penalty flows",
-          "Built **Launchpad features** for displaying project information and handling Launchpad purchases",
-          "Developed a **new platform based on the existing product**, adapting core functionality for it",
-          "Implemented the new UI, **sign-up flow, and KYC flows**",
-          "Implemented **multilingual interfaces** to support multiple languages across the platform",
-          "Resolved critical issues in the new exchange interface and improved the stability of key trading workflows"
+        "overview": [
+          {
+            "label": "Role",
+            "value": "Senior Frontend Engineer · sole frontend engineer for the first 3 months"
+          },
+          {
+            "label": "Timeline",
+            "value": "May 2025 – May 2026"
+          },
+          {
+            "label": "Team",
+            "value": "1–3 frontend engineers, working with Product, Backend, QA, and DevOps"
+          },
+          {
+            "label": "Scope",
+            "value": "Trading, staking, Launchpad, sign-up & KYC, admin, and multilingual UI"
+          }
+        ],
+        "context": "NexStox and NXMarket are two fintech platforms where users trade digital assets, stake to earn rewards, and invest in new projects through a Launchpad. I joined as the **only frontend engineer**, so everything between a product spec and a production release was mine to own — across both platforms at once.",
+        "challenges": [
+          {
+            "title": "One frontend engineer, two live platforms",
+            "body": "For the first three months there was no other frontend engineer. Every feature, bug fix, and release on both platforms depended on me, with deadlines that did not move."
+          },
+          {
+            "title": "Money rules users have to trust",
+            "body": "Staking combined single and compound rewards, stake-more, unstaking, and early-withdrawal penalties. Any gap between what the screen showed and what the backend calculated would cost users money — and the product its credibility."
+          },
+          {
+            "title": "A new platform without starting over",
+            "body": "The business needed NXMarket launched on top of the existing product, with its own UI, sign-up and KYC flows, and multiple languages — without destabilizing the platform users already relied on."
+          },
+          {
+            "title": "An unstable exchange interface",
+            "body": "The new exchange interface had critical issues in key trading workflows — the part of the product users touch most and tolerate failure least."
+          }
+        ],
+        "solutions": [
+          {
+            "title": "Turned specs into scoped work, without hand-holding",
+            "body": "I worked directly from product documents, UI designs, and API documentation to scope each feature, and raised gaps and conflicts with the team early instead of guessing."
+          },
+          {
+            "title": "Modelled every staking state before building screens",
+            "body": "I mapped the full lifecycle — **single and compound rewards, stake, stake-more, unstake, and penalties** — and built the flows around it, so users could see exactly what would happen to their funds before confirming."
+          },
+          {
+            "title": "Built the new platform from the proven core",
+            "body": "I adapted the existing product's core functionality for NXMarket, then added the **new UI, sign-up and KYC flows, and multilingual support** on top, reusing logic that already worked rather than rebuilding it."
+          },
+          {
+            "title": "Shipped Launchpad end to end",
+            "body": "I built the Launchpad experience — presenting project information and handling purchases — as a complete flow from discovery to checkout."
+          },
+          {
+            "title": "Stabilized trading together with QA",
+            "body": "I traced and fixed critical issues in the exchange interface, and worked closely with QA — often past working hours — on platform testing and the **accuracy of data shown on screen** before every release."
+          }
+        ],
+        "impact": {
+          "metrics": [
+            {
+              "value": "2",
+              "label": "production platforms owned on the frontend"
+            },
+            {
+              "value": "3 months",
+              "label": "as the sole frontend engineer"
+            },
+            {
+              "value": "5",
+              "label": "major modules shipped: staking, Launchpad, sign-up & KYC, multilingual UI, and a new platform"
+            }
+          ],
+          "summary": "Staking, Launchpad, and the new NXMarket platform reached production on schedule, and key trading workflows became noticeably more stable. In his letter of recommendation, the company's President described it as **one person running an entire frontend department on her own**."
+        },
+        "learnings": [
+          "**Ownership lives in the gaps.** When specs, designs, and APIs disagree, the frontend engineer is usually the first to notice — raising it early is cheaper than fixing it after release.",
+          "**In fintech, accuracy is the feature.** Testing the numbers on screen with QA mattered as much as the UI around them.",
+          "**Reuse beats rewrite** when the boundary between shared and new behaviour is clear — it is how a second platform shipped without slowing the first."
         ],
         "tags": [
           "React",
@@ -209,21 +286,85 @@
           "REST APIs",
           "Real-time Data"
         ],
-        "thumbnail": "/assets/projects/nxmarket-trading-view.png"
+        "thumbnail": "/assets/projects/nxmarket-trading-view.jpg"
       },
       {
         "id": "e-learning-platform",
         "title": "E-Learning Platform",
         "subtitle": "Learning Management Platform",
         "category": "Education",
-        "description": "A learning platform where I set up the monorepo from scratch and built the student learning experience, including video playback, real-time notifications, and a live commenting system.",
-        "role": "I was responsible for the platform’s frontend architecture from the ground up, including the monorepo setup, and for building the core student learning and real-time social features.",
-        "built": [
-          "Set up the **entire monorepo architecture from scratch** for the platform",
-          "Built the student learning experience with a **video player, book mode, subtitles, chapters, pages, and bookmarking**",
-          "Developed **real-time notification features**, including notification interactions and comments",
-          "Built a **real-time commenting system** supporting comments, likes, and one-level teacher replies",
-          "Integrated **REST APIs and real-time data flows** to keep learning and social interactions synchronized"
+        "description": "Set up the frontend from an empty repository and built the core student experience — a multi-format lesson player plus real-time comments and notifications.",
+        "overview": [
+          {
+            "label": "Role",
+            "value": "Frontend Engineer · owned the frontend architecture from day one"
+          },
+          {
+            "label": "Company",
+            "value": "Lecle Vietnam · client project"
+          },
+          {
+            "label": "Users",
+            "value": "Students and teachers"
+          },
+          {
+            "label": "Scope",
+            "value": "Monorepo setup, lesson player, real-time comments and notifications"
+          }
+        ],
+        "context": "A learning platform where students watch lessons, read course material, and discuss it with teachers and classmates. I started from an **empty repository** and was responsible for both the frontend foundation and the features students use every day.",
+        "challenges": [
+          {
+            "title": "Starting from nothing",
+            "body": "There was no existing structure. Early decisions about the repository and architecture would shape how quickly — and how safely — every later feature could be built."
+          },
+          {
+            "title": "Many ways to learn in one place",
+            "body": "Video, book mode, subtitles, chapters, pages, and bookmarks all had to work together, so learners could switch formats and pick up exactly where they left off."
+          },
+          {
+            "title": "Social features that feel live",
+            "body": "Comments, likes, teacher replies, and notifications had to update in real time, without the learning content and the social layer drifting out of sync."
+          }
+        ],
+        "solutions": [
+          {
+            "title": "A monorepo foundation built to grow",
+            "body": "I set up the **entire monorepo architecture from scratch**, giving the team a consistent structure to add features on from the first sprint."
+          },
+          {
+            "title": "One player, every format",
+            "body": "I built the learning experience around a single player supporting **video, book mode, subtitles, chapters, pages, and bookmarking**, so students choose how they learn without leaving the lesson."
+          },
+          {
+            "title": "Real-time discussion with a clear thread model",
+            "body": "I built a real-time commenting system with **comments, likes, and one-level teacher replies**, which keeps answers from teachers easy to find inside busy discussions."
+          },
+          {
+            "title": "Notifications and data kept in sync",
+            "body": "I developed real-time notifications with their own interactions, and integrated **REST APIs with real-time data flows** so learning progress and social activity stayed consistent."
+          }
+        ],
+        "impact": {
+          "metrics": [
+            {
+              "value": "0 → 1",
+              "label": "frontend architecture and monorepo built from scratch"
+            },
+            {
+              "value": "6",
+              "label": "learning tools in one player: video, book mode, subtitles, chapters, pages, bookmarks"
+            },
+            {
+              "value": "Real-time",
+              "label": "comments, likes, teacher replies, and notifications"
+            }
+          ],
+          "summary": "Students got one place to learn in the format that suits them and to discuss lessons with teachers as they happen — on a codebase structured to keep growing."
+        },
+        "learnings": [
+          "**Foundations compound.** Time spent on the monorepo up front paid back on every feature that followed.",
+          "**Real-time is a data problem before it is a UI problem.** Deciding what syncs, and when, made the interface simple."
         ],
         "tags": [
           "React",
@@ -240,17 +381,88 @@
         "id": "cleaning-services-dashboard",
         "title": "Cleaning Services Dashboard",
         "subtitle": "Operations Management Platform",
-        "description": "An admin platform for managing cleaning service operations, including requests, maintenance, reports, and inventory.",
+        "category": "Operations",
+        "description": "Architected an operations dashboard from scratch, turning cleaning requests, maintenance, reports, and inventory into connected end-to-end workflows.",
         "screenshots": [
-          "/assets/projects/cleaning-service-calendar.png",
+          "/assets/projects/cleaning-service-admin-dashboard-main.png",
           "/assets/projects/cleaning-service-admin-dashboard.png",
-          "/assets/projects/cleaning-service-stock-details.png"
+          "/assets/projects/cleaning-service-admin-dashboard-chart.png",
+          "/assets/projects/cleaning-service-admin-dashboard-inquiry-creation.png",
+          "/assets/projects/cleaning-service-admin-dashboard-office-clean.png",
+          "/assets/projects/cleaning-service-admin-dashboard-stock-details.png",
+          "/assets/projects/cleaning-service-admin-dashboard-login.png"
         ],
-        "contributions": [
-          "Set up the **entire architecture from scratch**",
-          "Developed **end-to-end CRUD workflows** for cleaning requests, maintenance, reports, and inventory",
-          "Built complex data-driven interfaces combining **interactive calendars, tables, charts, drawers, and tree views**",
-          "Developed **complex creation forms** for managing operational workflows and business data"
+        "overview": [
+          {
+            "label": "Role",
+            "value": "Frontend Engineer · set up the architecture from scratch"
+          },
+          {
+            "label": "Company",
+            "value": "Lecle Vietnam · client project"
+          },
+          {
+            "label": "Users",
+            "value": "Operations and admin staff"
+          },
+          {
+            "label": "Scope",
+            "value": "Requests, maintenance, reports, inventory, scheduling, and analytics"
+          }
+        ],
+        "context": "An admin platform that operations staff use to run a cleaning services business day to day — scheduling work, handling maintenance, tracking stock, and reporting. I owned the frontend from the **first commit**.",
+        "challenges": [
+          {
+            "title": "Dense data across many connected areas",
+            "body": "Requests, maintenance, reports, and inventory are related but each has its own data and workflow. Staff needed to move between them without losing context."
+          },
+          {
+            "title": "Time-based work that has to be seen at a glance",
+            "body": "Scheduled cleaning work only makes sense on a calendar, alongside the tables and charts that explain it."
+          },
+          {
+            "title": "Forms that carry real business rules",
+            "body": "Creating operational records meant long, multi-part forms where mistakes flow straight into daily operations."
+          }
+        ],
+        "solutions": [
+          {
+            "title": "Architecture set up from scratch",
+            "body": "I set up the **entire frontend architecture** — Vite, Turborepo, Ant Design, and Jotai — so each area could be built on shared foundations."
+          },
+          {
+            "title": "Complete CRUD for every area",
+            "body": "I developed **end-to-end create, read, update, and delete workflows** for cleaning requests, maintenance, reports, and inventory."
+          },
+          {
+            "title": "The right view for each job",
+            "body": "I combined **interactive calendars, tables, charts, drawers, and tree views**, so staff could schedule, inspect, and drill into data without leaving the page they were on."
+          },
+          {
+            "title": "Forms built for complex operations",
+            "body": "I built complex creation forms for operational workflows and business data, structured so long inputs stay manageable."
+          }
+        ],
+        "impact": {
+          "metrics": [
+            {
+              "value": "4",
+              "label": "operational areas in one dashboard: requests, maintenance, reports, inventory"
+            },
+            {
+              "value": "5",
+              "label": "interface patterns combined: calendars, tables, charts, drawers, tree views"
+            },
+            {
+              "value": "0 → 1",
+              "label": "frontend architecture owned from the first commit"
+            }
+          ],
+          "summary": "Operations staff manage scheduling, maintenance, stock, and reporting from a single dashboard instead of separate tools, with every workflow covered end to end."
+        },
+        "learnings": [
+          "**Admin tools are judged on speed of work, not looks.** Choosing the right view — calendar, table, or tree — mattered more than visual polish.",
+          "**Shared foundations keep many CRUD areas consistent**, so each new section felt familiar to the people using it."
         ],
         "tags": [
           "React",
@@ -261,22 +473,85 @@
           "Turborepo",
           "REST APIs"
         ],
-        "thumbnail": "/assets/projects/cleaning-service-calendar.png"
+        "thumbnail": "/assets/projects/cleaning-service-admin-dashboard-main.png"
       },
       {
         "id": "aimee-by-j",
         "title": "Aimee by J — Headless Ecommerce Storefront",
         "subtitle": "Vietnamese Fashion Ecommerce · In Progress",
         "category": "Ecommerce",
-        "description": "An independent, ground-up rebuild of a headless commerce storefront for a Vietnamese fashion brand, pairing a Medusa v2 backend with a Next.js 16 storefront — currently in active development.",
-        "role": "Sole developer and architect on this independent project, owning every layer end-to-end: backend/storefront architecture, the typed API data layer, rendering strategy, and the delivery roadmap, including research into Vietnam-specific payment integrations.",
-        "built": [
-          "Architected a fully decoupled headless commerce stack — a Next.js 16 storefront consuming a Medusa v2 backend purely through its REST API, so either side can evolve independently",
-          "Designed a typed, generic HTTP data layer built around a **discriminated-union Result type** instead of exceptions, so a failed or empty API response can never silently corrupt a page render",
-          "Diagnosed and fixed a production build failure by correctly identifying Next.js's **static-vs-dynamic rendering boundary**, converting a backend-dependent route from implicit build-time prerendering to request-time rendering",
-          "Planned Vietnam market-specific checkout, including **Cash on Delivery and a custom PayOS/VNPay payment provider** on top of Medusa's extensible payment architecture",
-          "Mapped a full delivery roadmap — data layer, design system, catalog, cart, checkout, accounts, and local payments — with **phase-by-phase milestones and realistic time estimates**",
-          "Set a testing strategy spanning the stack: **Vitest** for the data layer, **React Testing Library** for interactive components, **Playwright** reserved for critical end-to-end flows"
+        "description": "An independent, ground-up headless commerce build for a Vietnamese fashion brand — a Next.js 16 storefront on a Medusa v2 backend, designed for reliability and local payments.",
+        "overview": [
+          {
+            "label": "Role",
+            "value": "Sole developer and architect"
+          },
+          {
+            "label": "Status",
+            "value": "In active development"
+          },
+          {
+            "label": "Type",
+            "value": "Independent project"
+          },
+          {
+            "label": "Scope",
+            "value": "Architecture, data layer, rendering strategy, payments, and delivery roadmap"
+          }
+        ],
+        "context": "Aimee by J is a Vietnamese fashion brand. I am rebuilding its storefront as a **headless commerce stack**, owning every layer — from backend and storefront architecture to the delivery plan.",
+        "challenges": [
+          {
+            "title": "Two systems that must evolve independently",
+            "body": "The storefront and the commerce backend needed to change and deploy on their own schedules, without breaking each other."
+          },
+          {
+            "title": "API failures that silently break pages",
+            "body": "A failed or empty API response that slips through can quietly corrupt a page render — the kind of bug customers notice before developers do."
+          },
+          {
+            "title": "Checkout that fits the Vietnamese market",
+            "body": "Local shoppers expect Cash on Delivery and local payment gateways such as PayOS and VNPay — not only international cards."
+          }
+        ],
+        "solutions": [
+          {
+            "title": "A fully decoupled headless stack",
+            "body": "The **Next.js 16 storefront consumes Medusa v2 purely through its REST API**, so either side can evolve independently."
+          },
+          {
+            "title": "Errors as values, not exceptions",
+            "body": "I designed a typed HTTP data layer around a **discriminated-union Result type**, so every page must handle failure explicitly and a bad response cannot slip through unnoticed."
+          },
+          {
+            "title": "Fixed a production build at its root",
+            "body": "I traced a build failure to Next.js's **static-vs-dynamic rendering boundary** and moved a backend-dependent route from build-time prerendering to request-time rendering."
+          },
+          {
+            "title": "Local payments and a realistic roadmap",
+            "body": "I planned **Cash on Delivery and a custom PayOS/VNPay payment provider** on Medusa's payment architecture, and mapped delivery phase by phase with time estimates and a testing strategy using Vitest, React Testing Library, and Playwright."
+          }
+        ],
+        "impact": {
+          "metrics": [
+            {
+              "value": "2",
+              "label": "independently deployable apps: storefront and commerce backend"
+            },
+            {
+              "value": "100%",
+              "label": "of API calls return a typed Result the page must handle"
+            },
+            {
+              "value": "3",
+              "label": "testing layers planned: unit, component, and end-to-end"
+            }
+          ],
+          "summary": "The project is still in progress. So far it has a reliable, decoupled foundation and a clear path to a checkout built for Vietnamese shoppers."
+        },
+        "learnings": [
+          "**Make failure impossible to ignore.** Encoding errors in types moved a whole class of bugs from production to compile time.",
+          "**Know where your framework renders.** Understanding Next.js's rendering boundary turned a confusing build failure into a one-line fix."
         ],
         "tags": [
           "Next.js",

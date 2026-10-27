@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { useContent } from "@/content";
 import styles from "./page.module.scss";
@@ -33,11 +34,15 @@ function renderBulletList(items: string[]) {
 // page.tsx has already checked that `id` exists.
 export function ProjectDetail({ id }: { id: string }) {
   const t = useTranslations("ui");
-  const project = useContent().projects.items.find((item) => item.id === id);
+  const { items } = useContent().projects;
+  const project = items.find((item) => item.id === id);
 
   if (!project) return null;
 
+  const otherProjects = items.filter((item) => item.id !== id);
+
   const screenshots = project.screenshots ?? [];
+  const eyebrow = [t("caseStudy"), project.category].filter(Boolean).join(" · ");
 
   return (
     <main className={styles.main}>
@@ -46,25 +51,24 @@ export function ProjectDetail({ id }: { id: string }) {
           {t("backToProjects")}
         </BackLink>
 
-        {screenshots.length === 0 && (
-          <div className={styles.thumb}>
-            {project.thumbnail && (
-              <Image
-                src={withBasePath(project.thumbnail)}
-                alt={project.title}
-                fill
-                sizes="(max-width: 760px) 100vw, 760px"
-                style={{ objectFit: "cover" }}
-                priority
-              />
-            )}
-          </div>
-        )}
+        <header className={styles.header}>
+          <span className={styles.eyebrow}>{eyebrow}</span>
+          <h1 className={styles.title}>{project.title}</h1>
+          <p className={styles.lead}>{project.description}</p>
+        </header>
 
-        <h1 className={styles.title}>{project.title}</h1>
-        {project.subtitle && <p className={styles.subtitle}>{project.subtitle}</p>}
+        <section className={styles.overview} aria-label={t("overview")}>
+          <dl className={styles.overviewGrid}>
+            {project.overview.map((entry) => (
+              <div key={entry.label} className={styles.overviewItem}>
+                <dt>{entry.label}</dt>
+                <dd>{entry.value}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
 
-        {screenshots.length > 0 && (
+        {screenshots.length > 0 ? (
           <div className={styles.screenshots}>
             {screenshots.map((src) => (
               <figure key={src} className={styles.screenshotCard}>
@@ -73,30 +77,73 @@ export function ProjectDetail({ id }: { id: string }) {
               </figure>
             ))}
           </div>
+        ) : (
+          <div className={styles.thumb}>
+            {project.thumbnail && (
+              <Image
+                src={withBasePath(project.thumbnail)}
+                alt={project.title}
+                fill
+                sizes="(max-width: 940px) 100vw, 940px"
+                style={{ objectFit: "cover" }}
+                priority
+              />
+            )}
+          </div>
         )}
 
-        <p className={styles.description}>{project.description}</p>
+        <section className={styles.section}>
+          <h2 className={styles.sectionHeading}>{t("context")}</h2>
+          <p className={styles.paragraph}>{renderBold(project.context)}</p>
+        </section>
 
-        {project.role && (
-          <section className={styles.section}>
-            <h2 className={styles.sectionHeading}>{t("myRole")}</h2>
-            <p className={styles.paragraph}>{project.role}</p>
-          </section>
-        )}
+        <section className={styles.section}>
+          <h2 className={styles.sectionHeading}>{t("challenge")}</h2>
+          <ol className={styles.challengeGrid}>
+            {project.challenges.map((challenge, index) => (
+              <li key={challenge.title} className={styles.challengeCard}>
+                <span className={styles.challengeIndex}>{String(index + 1).padStart(2, "0")}</span>
+                <h3 className={styles.itemTitle}>{challenge.title}</h3>
+                <p className={styles.itemBody}>{renderBold(challenge.body)}</p>
+              </li>
+            ))}
+          </ol>
+        </section>
 
-        {project.built && project.built.length > 0 && (
-          <section className={styles.section}>
-            <h2 className={styles.sectionHeading}>{t("whatIBuilt")}</h2>
-            {renderBulletList(project.built)}
-          </section>
-        )}
+        <section className={styles.section}>
+          <h2 className={styles.sectionHeading}>{t("approach")}</h2>
+          <ol className={styles.solutionList}>
+            {project.solutions.map((solution, index) => (
+              <li key={solution.title} className={styles.solutionItem}>
+                <span className={styles.solutionIndex}>{index + 1}</span>
+                <div>
+                  <h3 className={styles.itemTitle}>{solution.title}</h3>
+                  <p className={styles.itemBody}>{renderBold(solution.body)}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </section>
 
-        {project.contributions && project.contributions.length > 0 && (
-          <section className={styles.section}>
-            <h2 className={styles.sectionHeading}>{t("myContribution")}</h2>
-            {renderBulletList(project.contributions)}
-          </section>
-        )}
+        <section className={styles.section}>
+          <h2 className={styles.sectionHeading}>{t("impact")}</h2>
+          <div className={styles.metricGrid}>
+            {project.impact.metrics.map((metric) => (
+              <div key={metric.label} className={styles.metricCard}>
+                <span className={styles.metricValue}>{metric.value}</span>
+                <span className={styles.metricLabel}>{metric.label}</span>
+              </div>
+            ))}
+          </div>
+          <p className={`${styles.paragraph} ${styles.impactSummary}`}>
+            {renderBold(project.impact.summary)}
+          </p>
+        </section>
+
+        <section className={styles.section}>
+          <h2 className={styles.sectionHeading}>{t("learnings")}</h2>
+          {renderBulletList(project.learnings)}
+        </section>
 
         <section className={styles.section}>
           <h2 className={styles.sectionHeading}>{t("techStack")}</h2>
@@ -120,6 +167,39 @@ export function ProjectDetail({ id }: { id: string }) {
             })}
           </div>
         </section>
+
+        {otherProjects.length > 0 && (
+          <section className={styles.moreProjects}>
+            <h2 className={styles.sectionHeading}>{t("moreProjects")}</h2>
+            <div className={styles.moreGrid}>
+              {otherProjects.map((other) => (
+                <Link key={other.id} href={`/projects/${other.id}`} className={styles.moreCard}>
+                  <div className={styles.moreThumb}>
+                    {other.thumbnail && (
+                      <Image
+                        src={withBasePath(other.thumbnail)}
+                        alt={other.title}
+                        fill
+                        sizes="(max-width: 760px) 100vw, 470px"
+                        style={{ objectFit: "cover" }}
+                      />
+                    )}
+                  </div>
+                  <div className={styles.moreBody}>
+                    {other.subtitle && <span className={styles.moreEyebrow}>{other.subtitle}</span>}
+                    <h3 className={styles.moreTitle}>{other.title}</h3>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <div className={styles.homeLinkWrap}>
+          <Link href="/" className={styles.homeLink}>
+            {t("backToHome")}
+          </Link>
+        </div>
       </div>
     </main>
   );

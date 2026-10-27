@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getContent } from "@/content";
 import { defaultLocale } from "@/i18n/config";
+import { Contact } from "@/components/Contact/Contact";
+import { Footer } from "@/components/Footer/Footer";
+import { Reveal } from "@/components/Reveal/Reveal";
 import { ProjectDetail } from "./ProjectDetail";
 
 // Ids are shared across locales, so the default locale's content is enough
@@ -30,5 +33,13 @@ export default async function ProjectDetailPage({ params }: Props) {
     notFound();
   }
 
-  return <ProjectDetail id={id} />;
+  return (
+    <>
+      <ProjectDetail id={id} />
+      <Reveal>
+        <Contact />
+      </Reveal>
+      <Footer />
+    </>
+  );
 }
