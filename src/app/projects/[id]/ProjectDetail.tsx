@@ -9,6 +9,9 @@ import { withBasePath } from "@/lib/base-path";
 import { icons, techLogos, techIcons } from "@/components/icons";
 import { BackLink } from "@/components/BackLink/BackLink";
 
+// Only some projects illustrate their approach, so the JSON infers a union per project.
+type Solution = { title: string; body: string; images?: { src: string; caption: string }[] };
+
 const BOLD_PATTERN = /\*\*(.+?)\*\*/g;
 
 function renderBold(text: string) {
@@ -42,6 +45,9 @@ export function ProjectDetail({ id }: { id: string }) {
   const otherProjects = items.filter((item) => item.id !== id);
 
   const screenshots = project.screenshots ?? [];
+  const solutions: Solution[] = project.solutions;
+  // Projects that illustrate their approach inline skip the hero image.
+  const hasInlineImages = solutions.some((solution) => solution.images?.length);
   const eyebrow = [t("caseStudy"), project.category].filter(Boolean).join(" · ");
 
   return (
@@ -77,7 +83,7 @@ export function ProjectDetail({ id }: { id: string }) {
               </figure>
             ))}
           </div>
-        ) : (
+        ) : hasInlineImages ? null : (
           <div className={styles.thumb}>
             {project.thumbnail && (
               <Image
@@ -113,12 +119,23 @@ export function ProjectDetail({ id }: { id: string }) {
         <section className={styles.section}>
           <h2 className={styles.sectionHeading}>{t("approach")}</h2>
           <ol className={styles.solutionList}>
-            {project.solutions.map((solution, index) => (
+            {solutions.map((solution, index) => (
               <li key={solution.title} className={styles.solutionItem}>
                 <span className={styles.solutionIndex}>{index + 1}</span>
-                <div>
+                <div className={styles.solutionContent}>
                   <h3 className={styles.itemTitle}>{solution.title}</h3>
                   <p className={styles.itemBody}>{renderBold(solution.body)}</p>
+                  {solution.images && solution.images.length > 0 && (
+                    <div className={styles.solutionMedia}>
+                      {solution.images.map((image) => (
+                        <figure key={image.src} className={styles.solutionFigure}>
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img src={withBasePath(image.src)} alt={image.caption} loading="lazy" />
+                          <figcaption>{image.caption}</figcaption>
+                        </figure>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </li>
             ))}

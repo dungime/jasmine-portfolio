@@ -200,6 +200,44 @@
   gap: 18px;
 }
 
+.solutionContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.solutionMedia {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: start;
+  gap: 16px;
+  margin-top: 18px;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.solutionFigure {
+  margin: 0;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 520px;
+    object-fit: cover;
+    object-position: top;
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+  }
+
+  figcaption {
+    margin-top: 8px;
+    font-size: 14px;
+    opacity: 0.7;
+  }
+}
+
 .solutionIndex {
   flex-shrink: 0;
   width: 34px;

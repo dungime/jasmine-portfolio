@@ -186,18 +186,7 @@
         "title": "NexStox & NXMarket Trading Platforms",
         "subtitle": "Fintech Trading & Staking Platforms",
         "category": "Fintech",
-        "description": "Owned the frontend of two live fintech platforms — alone for the first 3 months — shipping staking, Launchpad, KYC, and a brand-new platform while stabilizing core trading workflows.",
-        "screenshots": [
-          "/assets/projects/nxmarket-trading-view.jpg",
-          "/assets/projects/nxmarket-spot-wallet.png",
-          "/assets/projects/nxmarket-staking-pool.png",
-          "/assets/projects/nxmarket-staking-info.png",
-          "/assets/projects/nxmarket-staking-detail.png",
-          "/assets/projects/nxmarket-staking-confirmation.png",
-          "/assets/projects/nxmarket-staking-unstaking.png",
-          "/assets/projects/nxmarket-kyc.png",
-          "/assets/projects/nxmarket-profile-main.png"
-        ],
+        "description": "Owned the frontend of two live fintech platforms — both the user-facing apps and their admin panels — shipping staking, Launchpad, KYC, and a brand-new platform, and testing every feature end to end from admin to user.",
         "overview": [
           {
             "label": "Role",
@@ -213,14 +202,14 @@
           },
           {
             "label": "Scope",
-            "value": "Trading, staking, Launchpad, sign-up & KYC, admin, and multilingual UI"
+            "value": "Trading, staking, Launchpad, sign-up & KYC, admin panel and API integration, multilingual UI"
           }
         ],
-        "context": "NexStox and NXMarket are two fintech platforms where users trade digital assets, stake to earn rewards, and invest in new projects through a Launchpad. I joined as the **only frontend engineer**, so everything between a product spec and a production release was mine to own — across both platforms at once.",
+        "context": "NexStox and NXMarket are two fintech platforms where users trade digital assets, stake to earn rewards, and invest in new projects through a Launchpad. Each platform has two sides: an **admin panel** where the operations team configures staking pools, Launchpad projects, and KYC reviews, and the **user app** where customers act on them. I joined as the **only frontend engineer** and owned both sides — from reading the product spec to verifying the feature in production.",
         "challenges": [
           {
-            "title": "One frontend engineer, two live platforms",
-            "body": "For the first three months there was no other frontend engineer. Every feature, bug fix, and release on both platforms depended on me, with deadlines that did not move."
+            "title": "Two platforms, two sides each",
+            "body": "For the first three months I was the only frontend engineer. Every feature had to be built twice over — configured in the admin panel, consumed in the user app — on two platforms, with deadlines that did not move."
           },
           {
             "title": "Money rules users have to trust",
@@ -237,31 +226,77 @@
         ],
         "solutions": [
           {
-            "title": "Turned specs into scoped work, without hand-holding",
-            "body": "I worked directly from product documents, UI designs, and API documentation to scope each feature, and raised gaps and conflicts with the team early instead of guessing."
+            "title": "From spec to shipped feature, in the open",
+            "body": "Each feature started from the Product Owner's document. I read it end to end, then **discussed it with the backend team and the designer** — agreeing on API contracts, edge cases, and UI states — before implementing, and went back to them whenever a feature needed updating."
+          },
+          {
+            "title": "Owned the admin panel as well as the user app",
+            "body": "Alongside the user-facing apps, I built the admin screens and **integrated their APIs** — creating and configuring staking pools and Launchpad projects, and reviewing and approving KYC submissions — so every feature was complete on both sides."
           },
           {
             "title": "Modelled every staking state before building screens",
-            "body": "I mapped the full lifecycle — **single and compound rewards, stake, stake-more, unstake, and penalties** — and built the flows around it, so users could see exactly what would happen to their funds before confirming."
+            "body": "I mapped the full lifecycle — **single and compound rewards, stake, stake-more, unstake, and penalties** — and built the flows around it, so users could see exactly what would happen to their funds before confirming.",
+            "images": [
+              {
+                "src": "/assets/projects/nxmarket-staking-pool.png",
+                "caption": "Staking pools overview"
+              },
+              {
+                "src": "/assets/projects/nxmarket-staking-info.png",
+                "caption": "Pool position with dividends and rewards"
+              },
+              {
+                "src": "/assets/projects/nxmarket-staking-confirmation.png",
+                "caption": "Stake confirmation"
+              },
+              {
+                "src": "/assets/projects/nxmarket-staking-unstaking.png",
+                "caption": "Unstaking with penalty preview"
+              }
+            ]
           },
           {
             "title": "Built the new platform from the proven core",
-            "body": "I adapted the existing product's core functionality for NXMarket, then added the **new UI, sign-up and KYC flows, and multilingual support** on top, reusing logic that already worked rather than rebuilding it."
+            "body": "I adapted the existing product's core functionality for NXMarket, then added the **new UI, sign-up and KYC flows, and multilingual support** on top, reusing logic that already worked rather than rebuilding it.",
+            "images": [
+              {
+                "src": "/assets/projects/nxmarket-kyc.png",
+                "caption": "KYC verification flow"
+              },
+              {
+                "src": "/assets/projects/nxmarket-profile-main.png",
+                "caption": "Profile with KYC and security status"
+              }
+            ]
           },
           {
-            "title": "Shipped Launchpad end to end",
-            "body": "I built the Launchpad experience — presenting project information and handling purchases — as a complete flow from discovery to checkout."
+            "title": "Tested every feature end to end, admin to user",
+            "body": "I didn't stop at my own screens. For each feature I ran the **full flow**: create a staking pool or Launchpad project in the admin panel, or submit a KYC application and approve it there — then switch to the user app and verify that what users see and can do matches what was configured."
+          },
+          {
+            "title": "Thought like a product owner, as a team",
+            "body": "Our team worked with a shared rule: **everyone acts as a product owner**. We set aside time to use the product ourselves, walking features from admin to user to hunt for bugs and **propose improvements** to existing features — not just wait for tickets."
           },
           {
             "title": "Stabilized trading together with QA",
-            "body": "I traced and fixed critical issues in the exchange interface, and worked closely with QA — often past working hours — on platform testing and the **accuracy of data shown on screen** before every release."
+            "body": "I traced and fixed critical issues in the exchange interface, and worked closely with QA — often past working hours — on platform testing and the **accuracy of data shown on screen** before every release.",
+            "images": [
+              {
+                "src": "/assets/projects/nxmarket-trading-view.jpg",
+                "caption": "Exchange trading view"
+              },
+              {
+                "src": "/assets/projects/nxmarket-spot-wallet.png",
+                "caption": "Spot wallet balances"
+              }
+            ]
           }
         ],
         "impact": {
           "metrics": [
             {
-              "value": "2",
-              "label": "production platforms owned on the frontend"
+              "value": "2 × 2",
+              "label": "platforms, each with an admin panel and a user app"
             },
             {
               "value": "3 months",
@@ -277,6 +312,7 @@
         "learnings": [
           "**Ownership lives in the gaps.** When specs, designs, and APIs disagree, the frontend engineer is usually the first to notice — raising it early is cheaper than fixing it after release.",
           "**In fintech, accuracy is the feature.** Testing the numbers on screen with QA mattered as much as the UI around them.",
+          "**Test the whole loop, not just the screen.** Creating a pool in admin and watching it reach users catches bugs that no single-screen review ever would.",
           "**Reuse beats rewrite** when the boundary between shared and new behaviour is clear — it is how a second platform shipped without slowing the first."
         ],
         "tags": [

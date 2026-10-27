@@ -186,18 +186,7 @@
         "title": "Nền tảng giao dịch NexStox & NXMarket",
         "subtitle": "Nền tảng giao dịch & staking fintech",
         "category": "Fintech",
-        "description": "Làm chủ frontend của hai nền tảng fintech đang vận hành — một mình trong 3 tháng đầu — triển khai staking, Launchpad, KYC và một nền tảng mới, đồng thời ổn định các luồng giao dịch cốt lõi.",
-        "screenshots": [
-          "/assets/projects/nxmarket-trading-view.jpg",
-          "/assets/projects/nxmarket-spot-wallet.png",
-          "/assets/projects/nxmarket-staking-pool.png",
-          "/assets/projects/nxmarket-staking-info.png",
-          "/assets/projects/nxmarket-staking-detail.png",
-          "/assets/projects/nxmarket-staking-confirmation.png",
-          "/assets/projects/nxmarket-staking-unstaking.png",
-          "/assets/projects/nxmarket-kyc.png",
-          "/assets/projects/nxmarket-profile-main.png"
-        ],
+        "description": "Làm chủ frontend của hai nền tảng fintech đang vận hành — cả ứng dụng người dùng lẫn trang quản trị — triển khai staking, Launchpad, KYC và một nền tảng mới, đồng thời kiểm thử trọn luồng mọi tính năng từ admin đến người dùng.",
         "overview": [
           {
             "label": "Vai trò",
@@ -213,14 +202,14 @@
           },
           {
             "label": "Phạm vi",
-            "value": "Giao dịch, staking, Launchpad, đăng ký & KYC, quản trị và giao diện đa ngôn ngữ"
+            "value": "Giao dịch, staking, Launchpad, đăng ký & KYC, trang quản trị và tích hợp API, giao diện đa ngôn ngữ"
           }
         ],
-        "context": "NexStox và NXMarket là hai nền tảng fintech nơi người dùng giao dịch tài sản số, staking để nhận thưởng và đầu tư vào dự án mới qua Launchpad. Tôi tham gia với vai trò **frontend engineer duy nhất**, nên mọi thứ từ tài liệu sản phẩm đến lúc phát hành production đều do tôi chịu trách nhiệm — trên cả hai nền tảng cùng lúc.",
+        "context": "NexStox và NXMarket là hai nền tảng fintech nơi người dùng giao dịch tài sản số, staking để nhận thưởng và đầu tư vào dự án mới qua Launchpad. Mỗi nền tảng có hai phía: **trang quản trị (admin)** nơi đội vận hành cấu hình staking pool, dự án Launchpad và duyệt KYC, và **ứng dụng người dùng** nơi khách hàng sử dụng chúng. Tôi tham gia với vai trò **frontend engineer duy nhất** và làm chủ cả hai phía — từ lúc đọc tài liệu sản phẩm đến khi kiểm chứng tính năng trên production.",
         "challenges": [
           {
-            "title": "Một frontend engineer, hai nền tảng đang chạy",
-            "body": "Trong ba tháng đầu không có frontend engineer nào khác. Mọi tính năng, bản sửa lỗi và đợt phát hành trên cả hai nền tảng đều phụ thuộc vào tôi, với deadline không thể dời."
+            "title": "Hai nền tảng, mỗi nền tảng hai phía",
+            "body": "Trong ba tháng đầu tôi là frontend engineer duy nhất. Mỗi tính năng phải hoàn thiện ở cả hai đầu — cấu hình trong admin, sử dụng trên ứng dụng người dùng — trên hai nền tảng, với deadline không thể dời."
           },
           {
             "title": "Quy tắc tiền bạc mà người dùng phải tin được",
@@ -237,31 +226,77 @@
         ],
         "solutions": [
           {
-            "title": "Tự chuyển tài liệu thành công việc rõ phạm vi",
-            "body": "Tôi làm việc trực tiếp từ tài liệu sản phẩm, thiết kế UI và tài liệu API để xác định phạm vi từng tính năng, và chủ động nêu sớm những chỗ thiếu hoặc mâu thuẫn với team thay vì phỏng đoán."
+            "title": "Từ tài liệu đến tính năng, minh bạch với cả team",
+            "body": "Mỗi tính năng bắt đầu từ tài liệu của Product Owner. Tôi đọc kỹ toàn bộ, sau đó **trao đổi với team backend và designer** — thống nhất API, các trường hợp biên và trạng thái giao diện — trước khi triển khai, và tiếp tục phối hợp với họ mỗi khi tính năng cần cập nhật."
+          },
+          {
+            "title": "Làm chủ cả trang quản trị lẫn ứng dụng người dùng",
+            "body": "Song song với ứng dụng người dùng, tôi xây dựng các màn hình admin và **tích hợp API** cho chúng — tạo và cấu hình staking pool, dự án Launchpad, xem xét và duyệt hồ sơ KYC — để mỗi tính năng đều hoàn chỉnh ở cả hai phía."
           },
           {
             "title": "Mô hình hoá mọi trạng thái staking trước khi dựng màn hình",
-            "body": "Tôi vẽ ra toàn bộ vòng đời — **phần thưởng đơn và kép, stake, stake thêm, unstake và phạt** — rồi xây luồng xoay quanh nó, để người dùng thấy rõ điều gì sẽ xảy ra với tài sản trước khi xác nhận."
+            "body": "Tôi vẽ ra toàn bộ vòng đời — **phần thưởng đơn và kép, stake, stake thêm, unstake và phạt** — rồi xây luồng xoay quanh nó, để người dùng thấy rõ điều gì sẽ xảy ra với tài sản trước khi xác nhận.",
+            "images": [
+              {
+                "src": "/assets/projects/nxmarket-staking-pool.png",
+                "caption": "Tổng quan các staking pool"
+              },
+              {
+                "src": "/assets/projects/nxmarket-staking-info.png",
+                "caption": "Vị thế trong pool với cổ tức và phần thưởng"
+              },
+              {
+                "src": "/assets/projects/nxmarket-staking-confirmation.png",
+                "caption": "Xác nhận stake"
+              },
+              {
+                "src": "/assets/projects/nxmarket-staking-unstaking.png",
+                "caption": "Unstake kèm xem trước khoản phạt"
+              }
+            ]
           },
           {
             "title": "Xây nền tảng mới từ phần lõi đã được kiểm chứng",
-            "body": "Tôi điều chỉnh các chức năng cốt lõi của sản phẩm hiện có cho NXMarket, rồi bổ sung **UI mới, luồng đăng ký và KYC, cùng hỗ trợ đa ngôn ngữ**, tái sử dụng logic đã chạy tốt thay vì viết lại."
+            "body": "Tôi điều chỉnh các chức năng cốt lõi của sản phẩm hiện có cho NXMarket, rồi bổ sung **UI mới, luồng đăng ký và KYC, cùng hỗ trợ đa ngôn ngữ**, tái sử dụng logic đã chạy tốt thay vì viết lại.",
+            "images": [
+              {
+                "src": "/assets/projects/nxmarket-kyc.png",
+                "caption": "Luồng xác minh KYC"
+              },
+              {
+                "src": "/assets/projects/nxmarket-profile-main.png",
+                "caption": "Trang hồ sơ với trạng thái KYC và bảo mật"
+              }
+            ]
           },
           {
-            "title": "Triển khai Launchpad trọn vẹn",
-            "body": "Tôi xây dựng trải nghiệm Launchpad — hiển thị thông tin dự án và xử lý giao dịch mua — thành một luồng hoàn chỉnh từ khám phá đến thanh toán."
+            "title": "Kiểm thử trọn luồng mọi tính năng, từ admin đến người dùng",
+            "body": "Tôi không dừng lại ở màn hình mình làm. Với mỗi tính năng, tôi chạy **toàn bộ luồng**: tạo staking pool hoặc dự án Launchpad trong admin, hay gửi hồ sơ KYC rồi duyệt nó ở đó — sau đó chuyển sang ứng dụng người dùng để kiểm chứng những gì người dùng thấy và thao tác được khớp với cấu hình."
+          },
+          {
+            "title": "Tư duy như product owner, ở cấp độ cả team",
+            "body": "Team chúng tôi làm việc theo một nguyên tắc chung: **mỗi người đều là một product owner**. Chúng tôi dành thời gian tự sử dụng sản phẩm, đi qua từng tính năng từ admin đến người dùng để tìm lỗi và **đề xuất cải tiến** cho các tính năng hiện có — không chỉ chờ ticket."
           },
           {
             "title": "Ổn định giao dịch cùng QA",
-            "body": "Tôi truy vết và sửa các lỗi nghiêm trọng trên giao diện sàn, đồng thời phối hợp sát với QA — nhiều khi ngoài giờ làm việc — để kiểm thử nền tảng và **độ chính xác của dữ liệu hiển thị** trước mỗi lần phát hành."
+            "body": "Tôi truy vết và sửa các lỗi nghiêm trọng trên giao diện sàn, đồng thời phối hợp sát với QA — nhiều khi ngoài giờ làm việc — để kiểm thử nền tảng và **độ chính xác của dữ liệu hiển thị** trước mỗi lần phát hành.",
+            "images": [
+              {
+                "src": "/assets/projects/nxmarket-trading-view.jpg",
+                "caption": "Giao diện giao dịch trên sàn"
+              },
+              {
+                "src": "/assets/projects/nxmarket-spot-wallet.png",
+                "caption": "Số dư ví Spot"
+              }
+            ]
           }
         ],
         "impact": {
           "metrics": [
             {
-              "value": "2",
-              "label": "nền tảng production do tôi làm chủ phần frontend"
+              "value": "2 × 2",
+              "label": "nền tảng, mỗi nền tảng gồm trang quản trị và ứng dụng người dùng"
             },
             {
               "value": "3 tháng",
@@ -277,6 +312,7 @@
         "learnings": [
           "**Làm chủ nằm ở những khoảng trống.** Khi tài liệu, thiết kế và API không khớp nhau, frontend engineer thường là người phát hiện đầu tiên — nêu ra sớm luôn rẻ hơn sửa sau khi phát hành.",
           "**Trong fintech, độ chính xác chính là tính năng.** Kiểm thử con số trên màn hình cùng QA quan trọng không kém phần UI bao quanh nó.",
+          "**Kiểm thử cả vòng, không chỉ một màn hình.** Tạo pool trong admin rồi theo dõi nó đến tay người dùng giúp bắt được những lỗi mà việc review từng màn hình riêng lẻ không bao giờ thấy.",
           "**Tái sử dụng tốt hơn viết lại** khi ranh giới giữa phần dùng chung và phần mới đủ rõ — đó là cách nền tảng thứ hai ra mắt mà không làm chậm nền tảng thứ nhất."
         ],
         "tags": [
