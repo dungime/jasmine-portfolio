@@ -24,5 +24,32 @@
     "copy": "Sao chép",
     "copied": "Đã sao chép!",
     "allRightsReserved": "Bảo lưu mọi quyền."
+  },
+  "voiceChat": {
+    "open": "Hỏi AI về Jasmine",
+    "title": "Hỏi về Jasmine",
+    "subtitle": "Trợ lý AI · trả lời dựa trên portfolio",
+    "greeting": "Xin chào! Mình là trợ lý AI của Jasmine. Bạn có thể hỏi về kinh nghiệm, dự án hoặc kỹ năng của cô ấy — bằng giọng nói hoặc gõ chữ.",
+    "suggestions": [
+      "Jasmine đã làm những dự án nào?",
+      "Thế mạnh công nghệ của cô ấy là gì?",
+      "Cô ấy đã làm gì ở NexStox?"
+    ],
+    "placeholder": "Nhập câu hỏi hoặc bấm micro…",
+    "listening": "Đang nghe…",
+    "send": "Gửi",
+    "close": "Đóng",
+    "startListening": "Hỏi bằng giọng nói",
+    "stopListening": "Dừng nghe",
+    "muteVoice": "Tắt đọc câu trả lời",
+    "unmuteVoice": "Bật đọc câu trả lời",
+    "errors": {
+      "rateLimited": "Bạn hỏi hơi nhanh. Trợ lý này đang dùng gói miễn phí nên có giới hạn số lượt hỏi, bạn vui lòng chờ khoảng một phút rồi thử lại nhé.",
+      "quotaExceeded": "Trợ lý này đang dùng gói miễn phí và đã hết lượt dùng AI của tháng này. Bạn có thể liên hệ Jasmine qua email hoặc tải CV để xem thông tin.",
+      "unavailable": "Trợ lý tạm thời chưa hoạt động. Bạn vui lòng thử lại sau vài phút nhé.",
+      "network": "Không kết nối được tới trợ lý. Bạn kiểm tra kết nối mạng rồi thử lại nhé.",
+      "badRequest": "Cuộc trò chuyện gặp lỗi. Bạn đóng khung chat rồi mở lại để bắt đầu cuộc trò chuyện mới nhé."
+    },
+    "disclaimer": "AI có thể trả lời sai. Xem CV để biết thông tin chính xác."
   }
 }

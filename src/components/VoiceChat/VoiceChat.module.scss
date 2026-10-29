@@ -1,0 +1,301 @@
+@use "../../styles/variables" as *;
+
+.launcher {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 50;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: $color-lime;
+  color: $color-black;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(25, 19, 20, 0.25);
+  transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    background: $color-lime-dark;
+  }
+
+  @media (max-width: 760px) {
+    right: 16px;
+    bottom: 16px;
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.launcherOpen {
+  background: $color-black;
+  color: $color-lime;
+
+  &:hover {
+    background: $color-black;
+  }
+}
+
+.panel {
+  position: fixed;
+  right: 24px;
+  bottom: 96px;
+  z-index: 50;
+  width: min(380px, calc(100vw - 32px));
+  height: min(560px, calc(100dvh - 128px));
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  background: $color-white;
+  box-shadow: 0 24px 48px -12px rgba(25, 19, 20, 0.3);
+  overflow: hidden;
+
+  @media (max-width: 760px) {
+    right: 16px;
+    bottom: 80px;
+    height: min(560px, calc(100dvh - 104px));
+  }
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 18px;
+  background: $color-black;
+  color: $color-white;
+}
+
+.title {
+  margin: 0;
+  font-family: $font-heading;
+  font-size: 16px;
+  color: $color-lime;
+}
+
+.subtitle {
+  margin: 4px 0 0;
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.iconButton {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  background: transparent;
+  color: $color-white;
+  cursor: pointer;
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  &:hover {
+    color: $color-lime;
+    border-color: $color-lime;
+  }
+}
+
+.messages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px;
+  overflow-y: auto;
+  background: $color-bg;
+}
+
+.bubble {
+  max-width: 85%;
+  margin: 0;
+  padding: 10px 14px;
+  border-radius: $radius-sm;
+  font-size: 15px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.assistant {
+  align-self: flex-start;
+  background: $color-white;
+  border: 1px solid $color-border;
+  color: $color-black;
+}
+
+.user {
+  align-self: flex-end;
+  background: $color-black;
+  color: $color-white;
+}
+
+.failed {
+  color: $color-gray;
+  font-style: italic;
+}
+
+.typing {
+  display: flex;
+  gap: 4px;
+  padding: 14px;
+
+  span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: $color-gray-light;
+    animation: typing 1s infinite ease-in-out;
+
+    &:nth-child(2) {
+      animation-delay: 0.15s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+  }
+}
+
+@keyframes typing {
+  0%,
+  80%,
+  100% {
+    opacity: 0.3;
+    transform: translateY(0);
+  }
+
+  40% {
+    opacity: 1;
+    transform: translateY(-3px);
+  }
+}
+
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.suggestion {
+  padding: 8px 12px;
+  border: 1px solid $color-border;
+  border-radius: $radius-pill;
+  background: $color-white;
+  color: $color-black;
+  font: inherit;
+  font-size: 13px;
+  text-align: left;
+  cursor: pointer;
+
+  &:hover {
+    background: $color-lime;
+  }
+}
+
+.composer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  border-top: 1px solid $color-border;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 14px;
+  border: 1px solid $color-border;
+  border-radius: $radius-pill;
+  background: $color-bg;
+  color: $color-black;
+  font: inherit;
+  font-size: 16px; // 16px keeps iOS Safari from zooming in on focus
+
+  &:focus {
+    outline: 2px solid $color-black;
+    outline-offset: 1px;
+  }
+}
+
+.micButton,
+.sendButton {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
+
+.micButton {
+  background: $color-lime;
+  color: $color-black;
+}
+
+.listening {
+  background: #e5484d;
+  color: $color-white;
+  animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(229, 72, 77, 0.45);
+  }
+
+  100% {
+    box-shadow: 0 0 0 10px rgba(229, 72, 77, 0);
+  }
+}
+
+.sendButton {
+  background: $color-black;
+  color: $color-lime;
+}
+
+.disclaimer {
+  margin: 0;
+  padding: 0 12px 10px;
+  font-size: 12px;
+  color: $color-gray;
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .typing span,
+  .listening {
+    animation: none;
+  }
+}

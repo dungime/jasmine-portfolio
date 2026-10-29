@@ -32,6 +32,9 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          # Repository variable; while unset, the voice chat button is hidden.
+          NEXT_PUBLIC_CHAT_API_URL: ${{ vars.CHAT_API_URL }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

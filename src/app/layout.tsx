@@ -4,6 +4,7 @@ import { Be_Vietnam_Pro, JetBrains_Mono, Martian_Mono } from "next/font/google";
 import "./globals.scss";
 import { ScrollToHash } from "@/components/ScrollToHash/ScrollToHash";
 import { BackToTop } from "@/components/BackToTop/BackToTop";
+import { VoiceChat } from "@/components/VoiceChat/VoiceChat";
 import { defaultLocale } from "@/i18n/config";
 import { LOCALE_BOOT_SCRIPT, LocaleProvider } from "@/i18n/LocaleProvider";
 import { withBasePath } from "@/lib/base-path";
@@ -94,6 +95,7 @@ export default function RootLayout({
               in place before it scrolls to a URL hash on load. */}
           <ScrollToHash />
           <BackToTop />
+          <VoiceChat />
         </LocaleProvider>
       </body>
     </html>

@@ -24,5 +24,32 @@
     "copy": "Copy",
     "copied": "Copied!",
     "allRightsReserved": "All rights reserved."
+  },
+  "voiceChat": {
+    "open": "Ask AI about Jasmine",
+    "title": "Ask about Jasmine",
+    "subtitle": "AI assistant · answers from her portfolio",
+    "greeting": "Hi! I'm Jasmine's AI assistant. Ask me about her experience, projects, or skills — by voice or by typing.",
+    "suggestions": [
+      "What projects has Jasmine built?",
+      "What is her strongest tech stack?",
+      "What did she do at NexStox?"
+    ],
+    "placeholder": "Type a question or tap the mic…",
+    "listening": "Listening…",
+    "send": "Send",
+    "close": "Close",
+    "startListening": "Ask by voice",
+    "stopListening": "Stop listening",
+    "muteVoice": "Mute spoken answers",
+    "unmuteVoice": "Read answers aloud",
+    "errors": {
+      "rateLimited": "Too many questions in a short time. This assistant runs on a free plan, so please wait a minute and try again.",
+      "quotaExceeded": "This assistant runs on a free plan and has used up this month's AI credit. Please contact Jasmine by email or download her CV instead.",
+      "unavailable": "The assistant is temporarily unavailable. Please try again in a few minutes.",
+      "network": "Can't reach the assistant. Please check your internet connection and try again.",
+      "badRequest": "Something went wrong with this conversation. Please close the chat and start a new one."
+    },
+    "disclaimer": "AI can make mistakes. Check her CV for the details."
   }
 }
