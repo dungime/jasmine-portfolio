@@ -73,7 +73,13 @@ export function VoiceChat() {
         aria-label={open ? t("close") : t("open")}
         aria-expanded={open}
       >
-        {open ? icons.close : icons.mic}
+        <span className={styles.launcherIcon}>{open ? icons.close : icons.sparkles}</span>
+        {!open && (
+          <span className={styles.launcherText} aria-hidden>
+            <strong>{t("launcherTitle")}</strong>
+            <small>{t("launcherHint")}</small>
+          </span>
+        )}
       </button>
     </>
   );

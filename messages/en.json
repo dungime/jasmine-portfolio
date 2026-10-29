@@ -27,6 +27,8 @@
   },
   "voiceChat": {
     "open": "Ask AI about Jasmine",
+    "launcherTitle": "Ask AI about me",
+    "launcherHint": "By voice or text",
     "title": "Ask about Jasmine",
     "subtitle": "AI assistant · answers from her portfolio",
     "greeting": "Hi! I'm Jasmine's AI assistant. Ask me about her experience, projects, or skills — by voice or by typing.",

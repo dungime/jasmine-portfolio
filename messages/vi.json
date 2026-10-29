@@ -27,6 +27,8 @@
   },
   "voiceChat": {
     "open": "Hỏi AI về Jasmine",
+    "launcherTitle": "Hỏi AI về mình",
+    "launcherHint": "Bằng giọng nói hoặc gõ chữ",
     "title": "Hỏi về Jasmine",
     "subtitle": "Trợ lý AI · trả lời dựa trên portfolio",
     "greeting": "Xin chào! Mình là trợ lý AI của Jasmine. Bạn có thể hỏi về kinh nghiệm, dự án hoặc kỹ năng của cô ấy — bằng giọng nói hoặc gõ chữ.",

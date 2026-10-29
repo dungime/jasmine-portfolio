@@ -5,9 +5,6 @@ import styles from "./BackToTop.module.scss";
 
 const SHOW_AFTER_PX = 480;
 
-// The voice chat button takes this corner when the chat API is configured.
-const hasVoiceChat = Boolean(process.env.NEXT_PUBLIC_CHAT_API_URL);
-
 function handleClick() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
@@ -27,7 +24,7 @@ export function BackToTop() {
     <button
       type="button"
       onClick={handleClick}
-      className={`${styles.button} ${visible ? styles.visible : ""} ${hasVoiceChat ? styles.aboveChat : ""}`}
+      className={`${styles.button} ${visible ? styles.visible : ""}`}
       aria-label="Back to top"
       aria-hidden={!visible}
       tabIndex={visible ? 0 : -1}
