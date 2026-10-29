@@ -598,6 +598,104 @@
           "Turborepo",
           "REST APIs"
         ]
+      },
+      {
+        "id": "english-with-j",
+        "title": "English with J — Nền tảng luyện nghe chủ động",
+        "subtitle": "Nền tảng học tiếng Anh · Đang phát triển",
+        "category": "Giáo dục",
+        "description": "Nền tảng học tiếng Anh do tôi tự xây dựng, biến mỗi bài nghe thành một buổi luyện tập chủ động — nghe chép chính tả, bộ câu hỏi IELTS/TOEIC do AI tạo, nhận xét lỗi sai cá nhân hoá và shadowing theo kiểu karaoke — kèm thanh toán bằng mã QR ngân hàng cho người học Việt Nam.",
+        "overview": [
+          {
+            "label": "Vai trò",
+            "value": "Lập trình viên duy nhất — sản phẩm, thiết kế và frontend"
+          },
+          {
+            "label": "Trạng thái",
+            "value": "Đang phát triển · Giai đoạn 1"
+          },
+          {
+            "label": "Loại",
+            "value": "Dự án cá nhân"
+          },
+          {
+            "label": "Phạm vi",
+            "value": "Đăng ký & đăng nhập, thanh toán QR ngân hàng, luồng luyện nghe, câu hỏi và nhận xét bằng AI, lưu tiến độ học và giao diện song ngữ"
+          }
+        ],
+        "context": "Phần lớn người học luyện nghe bằng cách bật đi bật lại bài nghe và hy vọng mình nhớ được. English with J là nền tảng tôi đang xây dựng để việc nghe trở nên **chủ động**: mỗi bài học dẫn người học đi từ nắm ý chính, chép lại từng câu, kiểm tra mức độ hiểu, đến nói theo. Giai đoạn 1 tập trung vào trải nghiệm luyện nghe cốt lõi, tài khoản và tiến độ học, cùng luồng thanh toán phù hợp với **người học Việt Nam**.",
+        "challenges": [
+          {
+            "title": "Nghe thụ động không tạo ra kỹ năng",
+            "body": "Nghe lại một bản ghi cho cảm giác là đang luyện tập, nhưng nếu không viết, không kiểm tra và không nói, người học hiếm khi biết mình thực sự nghe sót chỗ nào."
+          },
+          {
+            "title": "Nhận xét đủ cụ thể để sửa được",
+            "body": "Một con số điểm không nói lên nhiều. Người học cần thấy mình nghe nhầm từ nào, từng đoạn có nghĩa là gì, và những lỗi nào mình hay lặp lại."
+          },
+          {
+            "title": "Bản miễn phí đủ thuyết phục, giới hạn trả phí đủ chắc chắn",
+            "body": "Người mới cần được thử những bài nghe thật trước khi trả tiền, trong khi các bài trả phí vẫn phải khoá với người chưa thanh toán — bất kể trình duyệt hiển thị gì."
+          },
+          {
+            "title": "Thanh toán phù hợp với người học Việt Nam",
+            "body": "Nhiều người học ở Việt Nam không dùng thẻ quốc tế. Họ quen thanh toán bằng cách quét mã QR ngân hàng trong ứng dụng ngân hàng của mình."
+          }
+        ],
+        "solutions": [
+          {
+            "title": "Luồng luyện nghe bảy bước",
+            "body": "Mỗi bài học đi theo cùng một lộ trình: **nghe tổng quát → ghi lại ý chính → nghe chép chính tả từng đoạn → làm bộ câu hỏi do AI tạo → chấm điểm → xem lại lỗi thường gặp → shadowing theo script**. Mỗi bước dựa trên bước trước, để khi kết thúc bài, người học đã nghe, viết, hiểu và nói."
+          },
+          {
+            "title": "Chép chính tả với kiểm tra tức thì từng đoạn",
+            "body": "Người học gõ lại những gì nghe được cho từng đoạn. Hệ thống **so sánh câu trả lời với script**, đánh dấu phần đúng và sai, và hiển thị **bản dịch tiếng Việt** bên cạnh. Người học có thể **lưu ghi chú cho từng đoạn**, và bật **chế độ giọng nói** để điền vào ô nhập bằng cách nói thay vì gõ."
+          },
+          {
+            "title": "Câu hỏi AI và nhận xét lỗi sai cá nhân hoá",
+            "body": "Sau phần chép chính tả, AI tạo **bộ câu hỏi theo dạng IELTS và TOEIC** dựa trên chính bài nghe đó để kiểm tra mức độ hiểu, rồi chấm điểm. Sau đó AI **phân tích lỗi sai của người học** để chỉ ra những lỗi họ hay mắc nhất."
+          },
+          {
+            "title": "Kết thúc bài bằng shadowing kiểu karaoke",
+            "body": "Bước cuối là một video script **chạy chữ từ dưới lên theo từng dòng như karaoke**, kèm giọng đọc — để người học vừa nhìn, vừa nghe và **shadowing** theo người nói, luyện phát âm và ngữ điệu."
+          },
+          {
+            "title": "Học thử miễn phí, thanh toán QR, quyền truy cập do backend kiểm tra",
+            "body": "Trước khi thanh toán, người học được mở một vài bài nghe mẫu. **Thanh toán bằng mã QR ngân hàng Việt Nam** sẽ mở khoá toàn bộ thư viện. Giao diện hiển thị theo gói của người học, nhưng **quyền truy cập mỗi bài trả phí đều do backend kiểm tra**, nên việc ẩn biểu tượng khoá không bao giờ mở được nội dung."
+          },
+          {
+            "title": "Lưu tiến độ học và giao diện song ngữ",
+            "body": "Người học đã đăng nhập có thể học tiếp từ chỗ đã dừng, với tiến độ và ghi chú được lưu vào tài khoản. Giao diện có **tiếng Anh và tiếng Việt**, và mã nguồn được tổ chức theo từng tính năng để mỗi phần của luồng học có thể phát triển độc lập."
+          }
+        ],
+        "impact": {
+          "metrics": [
+            {
+              "value": "7",
+              "label": "bước trong mỗi bài nghe, từ lần nghe đầu đến shadowing"
+            },
+            {
+              "value": "2",
+              "label": "ngôn ngữ giao diện: tiếng Anh và tiếng Việt"
+            },
+            {
+              "value": "Miễn phí → Trả phí",
+              "label": "một vài bài mở sẵn, toàn bộ thư viện sau khi thanh toán QR"
+            }
+          ],
+          "summary": "Dự án vẫn đang được phát triển. Giai đoạn 1 xác định một vòng luyện nghe hoàn chỉnh, từ lần nghe đầu tiên đến nói theo, cùng tài khoản, lưu tiến độ và thanh toán nội địa. Phần nền tảng đã sẵn sàng để lần lượt bổ sung bài học, câu hỏi và thanh toán."
+        },
+        "learnings": [
+          "**Thiết kế vòng học trước khi thiết kế màn hình.** Vạch ra đủ bảy bước trước giúp tôi thấy rõ mỗi màn hình cần chuyển gì cho màn hình tiếp theo.",
+          "**Frontend hiển thị quyền truy cập, backend quyết định nó.** Giữ việc kiểm tra quyền trả phí ở server giúp giới hạn trả phí luôn chắc chắn mà giao diện không bị phức tạp."
+        ],
+        "tags": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "AI"
+        ]
       }
     ]
   },

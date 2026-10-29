@@ -598,6 +598,104 @@
           "Turborepo",
           "REST APIs"
         ]
+      },
+      {
+        "id": "english-with-j",
+        "title": "English with J — Active Listening Platform",
+        "subtitle": "English Learning Platform · In Progress",
+        "category": "Education",
+        "description": "An independent English-learning platform that turns every listening lesson into active practice — dictation, AI-generated IELTS/TOEIC quizzes, personalised mistake feedback, and karaoke-style shadowing — with QR bank payments for Vietnamese learners.",
+        "overview": [
+          {
+            "label": "Role",
+            "value": "Sole developer — product, design, and frontend"
+          },
+          {
+            "label": "Status",
+            "value": "In active development · Phase 1"
+          },
+          {
+            "label": "Type",
+            "value": "Independent project"
+          },
+          {
+            "label": "Scope",
+            "value": "Sign-up & login, QR bank payments, the listening practice flow, AI quizzes and feedback, saved progress, and a bilingual interface"
+          }
+        ],
+        "context": "Most English learners practise listening by replaying audio and hoping it sticks. English with J is a platform I am building to make listening **active**: each lesson guides the learner from understanding the gist, to writing down every sentence, to testing comprehension, to speaking along. Phase 1 focuses on that core listening experience, accounts and progress, and a payment flow built for **Vietnamese learners**.",
+        "challenges": [
+          {
+            "title": "Passive listening doesn't build skill",
+            "body": "Replaying a recording feels like practice, but without writing, checking, and speaking, learners rarely find out what they actually missed."
+          },
+          {
+            "title": "Feedback that is specific enough to act on",
+            "body": "A single score says little. Learners need to see which words they misheard, what each part means, and which mistakes they keep repeating."
+          },
+          {
+            "title": "A free tier that sells, and a paywall that holds",
+            "body": "New learners should be able to try real lessons before paying, while paid lessons stay locked to anyone who hasn't paid — no matter what the browser shows."
+          },
+          {
+            "title": "Payments that fit Vietnamese learners",
+            "body": "Many learners in Vietnam don't use international cards. They expect to pay by scanning a bank QR code in their banking app."
+          }
+        ],
+        "solutions": [
+          {
+            "title": "A seven-step listening flow",
+            "body": "Every lesson follows the same path: **listen for the gist → write down the main ideas → dictate part by part → answer an AI-generated quiz → get a score → review common mistakes → shadow the script**. Each step builds on the one before, so learners finish a lesson having listened, written, understood, and spoken."
+          },
+          {
+            "title": "Dictation with instant, part-by-part checking",
+            "body": "Learners type what they hear for each part of the recording. The platform **checks each answer against the script**, highlights what is right and wrong, and shows a **Vietnamese translation** alongside. They can **save a note on any part**, and switch on **voice mode** to fill the text box by speaking instead of typing."
+          },
+          {
+            "title": "AI quizzes and personalised mistake feedback",
+            "body": "After dictation, AI creates **IELTS- and TOEIC-style questions** based on that lesson to test real comprehension, then scores the answers. It then **analyses the learner's mistakes** to point out the patterns they fall into most often."
+          },
+          {
+            "title": "Karaoke-style shadowing to finish the lesson",
+            "body": "The final step is a video of the script that **scrolls up line by line like karaoke**, with a voice reading it aloud — so learners can watch, listen, and **shadow** the speaker to practise pronunciation and rhythm."
+          },
+          {
+            "title": "Free preview, QR payment, and backend-checked access",
+            "body": "Before paying, learners can open a few sample lessons. **Paying by Vietnamese bank QR code** unlocks the full library. The interface reflects the learner's plan, but **access to every paid lesson is checked by the backend**, so hiding a lock icon never unlocks content."
+          },
+          {
+            "title": "Saved progress and a bilingual interface",
+            "body": "Signed-in learners pick up where they left off, with their progress and notes saved to their account. The interface is available in **English and Vietnamese**, and the code is organised by feature so each part of the lesson flow can grow on its own."
+          }
+        ],
+        "impact": {
+          "metrics": [
+            {
+              "value": "7",
+              "label": "steps in every listening lesson, from first listen to shadowing"
+            },
+            {
+              "value": "2",
+              "label": "interface languages: English and Vietnamese"
+            },
+            {
+              "value": "Free → Paid",
+              "label": "a few open lessons, then the full library after QR payment"
+            }
+          ],
+          "summary": "The project is still in progress. Phase 1 defines a complete listening loop, from first listen to speaking along, with accounts, saved progress, and local payments. Its foundation is ready for lessons, quizzes, and payments to be added step by step."
+        },
+        "learnings": [
+          "**Design the learning loop before the screens.** Mapping all seven steps first made it clear what each screen must hand to the next.",
+          "**The frontend shows access; the backend decides it.** Keeping paid access checks on the server keeps the paywall reliable without making the interface complicated."
+        ],
+        "tags": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "AI"
+        ]
       }
     ]
   },
