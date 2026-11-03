@@ -37,7 +37,7 @@ export default async function ProjectDetailPage({ params }: Props) {
     <>
       <ProjectDetail id={id} />
       <Reveal>
-        <Contact />
+        <Contact borderStyle="straight" variant="project" />
       </Reveal>
       <Footer />
     </>

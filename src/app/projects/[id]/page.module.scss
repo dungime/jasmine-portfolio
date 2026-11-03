@@ -2,7 +2,6 @@
 
 .main {
   padding-top: 60px;
-  padding-bottom: $space-section;
 }
 
 .container {
@@ -74,7 +73,7 @@
 .section {
   margin-top: 40px;
   padding-top: 32px;
-  @include wavy-line(top);
+  border-top: 1px solid $color-border;
 }
 
 .sectionHeading {
@@ -390,7 +389,7 @@
 }
 
 .screenshotCard {
-  @include wavy-box;
+  border: 1px solid $color-border;
   border-radius: $radius-md;
   overflow: hidden;
 
@@ -402,15 +401,49 @@
 }
 
 .moreProjects {
-  margin-top: 64px;
+  margin-top: clamp(72px, 9vw, 120px);
+  padding-block: clamp(40px, 6vw, 72px);
+  background: rgba($color-bg-sage, 0.22);
+  border-block: 1px solid $color-border;
+}
+
+.moreContainer {
+  @include container;
+  max-width: 1160px;
+}
+
+.moreHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 28px;
+
+  .sectionHeading {
+    margin-bottom: 0;
+  }
+}
+
+.moreLabel {
+  margin-bottom: 10px;
+  color: $color-gray;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .moreGrid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
 
-  @media (max-width: 760px) {
+  @media (max-width: 1023px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (max-width: 600px) {
     grid-template-columns: 1fr;
   }
 }
@@ -427,6 +460,19 @@
   &:hover {
     transform: translateY(-3px);
     box-shadow: $shadow-card;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-black;
+    outline-offset: 4px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+
+    &:hover {
+      transform: none;
+    }
   }
 }
 
@@ -453,18 +499,13 @@
 }
 
 .moreTitle {
-  font-size: 19px;
+  font-size: 17px;
   font-weight: 600;
   line-height: 1.4;
 }
 
-.homeLinkWrap {
-  display: flex;
-  justify-content: center;
-  margin-top: 56px;
-}
-
 .homeLink {
+  flex-shrink: 0;
   font-size: 16px;
   font-weight: 600;
   color: $color-black;

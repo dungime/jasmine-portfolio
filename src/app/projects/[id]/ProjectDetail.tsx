@@ -60,7 +60,7 @@ export function ProjectDetail({ id }: { id: string }) {
         <header className={styles.header}>
           <span className={styles.eyebrow}>{eyebrow}</span>
           <h1 className={styles.title}>{project.title}</h1>
-          <p className={styles.lead}>{project.description}</p>
+          <p className={styles.lead}>{renderBold(project.context)}</p>
         </header>
 
         <section className={styles.overview} aria-label={t("overview")}>
@@ -99,8 +99,31 @@ export function ProjectDetail({ id }: { id: string }) {
         )}
 
         <section className={styles.section}>
+          <h2 className={styles.sectionHeading}>{t("techStack")}</h2>
+          <div className={styles.techGrid}>
+            {project.tags.map((tag) => {
+              const logoSrc = techLogos[tag.toLowerCase()];
+              const iconName = techIcons[tag.toLowerCase()];
+              return (
+                <span key={tag} className={styles.techChip}>
+                  {logoSrc ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={logoSrc} alt={tag} className={styles.techLogo} />
+                  ) : iconName ? (
+                    <span className={styles.techLogo}>{icons[iconName]}</span>
+                  ) : (
+                    <span className={styles.techAvatar}>{tag.slice(0, 2)}</span>
+                  )}
+                  {tag}
+                </span>
+              );
+            })}
+          </div>
+        </section>
+
+        <section className={styles.section}>
           <h2 className={styles.sectionHeading}>{t("context")}</h2>
-          <p className={styles.paragraph}>{renderBold(project.context)}</p>
+          {/* <p className={styles.paragraph}>{renderBold(project.context)}</p> */}
         </section>
 
         <section className={styles.section}>
@@ -161,33 +184,20 @@ export function ProjectDetail({ id }: { id: string }) {
           <h2 className={styles.sectionHeading}>{t("learnings")}</h2>
           {renderBulletList(project.learnings)}
         </section>
+      </div>
 
-        <section className={styles.section}>
-          <h2 className={styles.sectionHeading}>{t("techStack")}</h2>
-          <div className={styles.techGrid}>
-            {project.tags.map((tag) => {
-              const logoSrc = techLogos[tag.toLowerCase()];
-              const iconName = techIcons[tag.toLowerCase()];
-              return (
-                <span key={tag} className={styles.techChip}>
-                  {logoSrc ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img src={logoSrc} alt={tag} className={styles.techLogo} />
-                  ) : iconName ? (
-                    <span className={styles.techLogo}>{icons[iconName]}</span>
-                  ) : (
-                    <span className={styles.techAvatar}>{tag.slice(0, 2)}</span>
-                  )}
-                  {tag}
-                </span>
-              );
-            })}
-          </div>
-        </section>
-
-        {otherProjects.length > 0 && (
-          <section className={styles.moreProjects}>
-            <h2 className={styles.sectionHeading}>{t("moreProjects")}</h2>
+      {otherProjects.length > 0 && (
+        <section className={styles.moreProjects} aria-labelledby="more-projects-title">
+          <div className={styles.moreContainer}>
+            <header className={styles.moreHeader}>
+              <div>
+                <p className={styles.moreLabel}>{t("exploreMore")}</p>
+                <h2 id="more-projects-title" className={styles.sectionHeading}>{t("moreProjects")}</h2>
+              </div>
+              <Link href="/" className={styles.homeLink}>
+                {t("backToHome")}
+              </Link>
+            </header>
             <div className={styles.moreGrid}>
               {otherProjects.map((other) => (
                 <Link key={other.id} href={`/projects/${other.id}`} className={styles.moreCard}>
@@ -197,7 +207,7 @@ export function ProjectDetail({ id }: { id: string }) {
                         src={withBasePath(other.thumbnail)}
                         alt={other.title}
                         fill
-                        sizes="(max-width: 760px) 100vw, 470px"
+                        sizes="(max-width: 600px) 100vw, (max-width: 1023px) 50vw, 280px"
                         style={{ objectFit: "cover" }}
                       />
                     )}
@@ -209,15 +219,9 @@ export function ProjectDetail({ id }: { id: string }) {
                 </Link>
               ))}
             </div>
-          </section>
-        )}
-
-        <div className={styles.homeLinkWrap}>
-          <Link href="/" className={styles.homeLink}>
-            {t("backToHome")}
-          </Link>
-        </div>
-      </div>
+          </div>
+        </section>
+      )}
     </main>
   );
 }

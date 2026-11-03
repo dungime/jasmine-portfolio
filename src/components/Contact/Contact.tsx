@@ -22,14 +22,20 @@ function withEmailBreak(text: string) {
   );
 }
 
-export function Contact() {
+export function Contact({
+  borderStyle = "wavy",
+  variant = "default",
+}: {
+  borderStyle?: "wavy" | "straight";
+  variant?: "default" | "project";
+}) {
   const { contact } = useContent();
 
   return (
-    <section id="contact" className={styles.section}>
-      {/* Closing call to action — set apart from the other sections by a wavy outline. */}
-      <div className={styles.panel}>
-        <WavyBorder className={styles.wavyBorder} />
+    <section id="contact" className={`${styles.section} ${variant === "project" ? styles.projectSection : ""}`}>
+      {/* Closing call to action. */}
+      <div className={`${styles.panel} ${borderStyle === "straight" ? styles.straightPanel : ""}`}>
+        {borderStyle === "wavy" && <WavyBorder className={styles.wavyBorder} />}
         {/* Shrink-wrapped and centered in the panel; text stays left-aligned. */}
         <div className={styles.content}>
           <span className={styles.badge}>{contact.badge}</span>
