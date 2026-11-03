@@ -7,6 +7,9 @@ import { useContent } from "@/content";
 import styles from "./page.module.scss";
 import { withBasePath } from "@/lib/base-path";
 import { icons, techLogos, techIcons } from "@/components/icons";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher/LanguageSwitcher";
+import { NexStoxCaseStudy } from "./NexStoxCaseStudy";
+import caseStudyStyles from "./NexStoxCaseStudy.module.scss";
 
 // Only some projects illustrate their approach, so the JSON infers a union per project.
 type Solution = { title: string; body: string; images?: { src: string; caption: string }[] };
@@ -41,6 +44,7 @@ export function ProjectDetail({ id }: { id: string }) {
 
   if (!project) return null;
 
+  const caseStudy = id === "nexstox-nxmarket" ? project.caseStudy : undefined;
   const otherProjects = items.filter((item) => item.id !== id);
 
   const screenshots = project.screenshots ?? [];
@@ -51,138 +55,154 @@ export function ProjectDetail({ id }: { id: string }) {
 
   return (
     <main className={styles.main}>
-      <div className={styles.container}>
-        <Link href="/#projects" className={styles.back}>
-          {t("backToProjects")}
-        </Link>
-
-        <header className={styles.header}>
-          <span className={styles.eyebrow}>{eyebrow}</span>
-          <h1 className={styles.title}>{project.title}</h1>
-          <p className={styles.lead}>{renderBold(project.context)}</p>
-        </header>
-
-        <section className={styles.overview} aria-label={t("overview")}>
-          <dl className={styles.overviewGrid}>
-            {project.overview.map((entry) => (
-              <div key={entry.label} className={styles.overviewItem}>
-                <dt>{entry.label}</dt>
-                <dd>{entry.value}</dd>
-              </div>
-            ))}
-          </dl>
-        </section>
-
-        {screenshots.length > 0 ? (
-          <div className={styles.screenshots}>
-            {screenshots.map((src) => (
-              <figure key={src} className={styles.screenshotCard}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={withBasePath(src)} alt={project.title} />
-              </figure>
-            ))}
+      <div className={`${styles.container} ${caseStudy ? caseStudyStyles.container : ""}`}>
+        {caseStudy ? (
+          <div className={caseStudyStyles.navigation}>
+            <Link href="/#projects" className={styles.back}>
+              {t("backToProjects")}
+            </Link>
+            <LanguageSwitcher />
           </div>
-        ) : hasInlineImages ? null : (
-          <div className={styles.thumb}>
-            {project.thumbnail && (
-              <Image
-                src={withBasePath(project.thumbnail)}
-                alt={project.title}
-                fill
-                sizes="(max-width: 940px) 100vw, 940px"
-                style={{ objectFit: "cover" }}
-                priority
-              />
-            )}
-          </div>
+        ) : (
+          <Link href="/#projects" className={styles.back}>
+            {t("backToProjects")}
+          </Link>
         )}
 
-        <section className={styles.section}>
-          <h2 className={styles.sectionHeading}>{t("techStack")}</h2>
-          <div className={styles.techGrid}>
-            {project.tags.map((tag) => {
-              const logoSrc = techLogos[tag.toLowerCase()];
-              const iconName = techIcons[tag.toLowerCase()];
-              return (
-                <span key={tag} className={styles.techChip}>
-                  {logoSrc ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img src={logoSrc} alt={tag} className={styles.techLogo} />
-                  ) : iconName ? (
-                    <span className={styles.techLogo}>{icons[iconName]}</span>
-                  ) : (
-                    <span className={styles.techAvatar}>{tag.slice(0, 2)}</span>
-                  )}
-                  {tag}
-                </span>
-              );
-            })}
-          </div>
-        </section>
+        {caseStudy ? (
+          <NexStoxCaseStudy content={caseStudy} />
+        ) : (
+          <>
+            <header className={styles.header}>
+              <span className={styles.eyebrow}>{eyebrow}</span>
+              <h1 className={styles.title}>{project.title}</h1>
+              <p className={styles.lead}>{renderBold(project.context)}</p>
+            </header>
 
-        <section className={styles.section}>
-          <h2 className={styles.sectionHeading}>{t("context")}</h2>
-          {/* <p className={styles.paragraph}>{renderBold(project.context)}</p> */}
-        </section>
+            <section className={styles.overview} aria-label={t("overview")}>
+              <dl className={styles.overviewGrid}>
+                {project.overview.map((entry) => (
+                  <div key={entry.label} className={styles.overviewItem}>
+                    <dt>{entry.label}</dt>
+                    <dd>{entry.value}</dd>
+                  </div>
+                ))}
+              </dl>
+            </section>
 
-        <section className={styles.section}>
-          <h2 className={styles.sectionHeading}>{t("challenge")}</h2>
-          <ol className={styles.challengeGrid}>
-            {project.challenges.map((challenge, index) => (
-              <li key={challenge.title} className={styles.challengeCard}>
-                <span className={styles.challengeIndex}>{String(index + 1).padStart(2, "0")}</span>
-                <h3 className={styles.itemTitle}>{challenge.title}</h3>
-                <p className={styles.itemBody}>{renderBold(challenge.body)}</p>
-              </li>
-            ))}
-          </ol>
-        </section>
-
-        <section className={styles.section}>
-          <h2 className={styles.sectionHeading}>{t("approach")}</h2>
-          <ol className={styles.solutionList}>
-            {solutions.map((solution, index) => (
-              <li key={solution.title} className={styles.solutionItem}>
-                <span className={styles.solutionIndex}>{index + 1}</span>
-                <div className={styles.solutionContent}>
-                  <h3 className={styles.itemTitle}>{solution.title}</h3>
-                  <p className={styles.itemBody}>{renderBold(solution.body)}</p>
-                  {solution.images && solution.images.length > 0 && (
-                    <div className={styles.solutionMedia}>
-                      {solution.images.map((image) => (
-                        <figure key={image.src} className={styles.solutionFigure}>
-                          {/* eslint-disable-next-line @next/next/no-img-element */}
-                          <img src={withBasePath(image.src)} alt={image.caption} loading="lazy" />
-                          <figcaption>{image.caption}</figcaption>
-                        </figure>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              </li>
-            ))}
-          </ol>
-        </section>
-
-        <section className={styles.section}>
-          <h2 className={styles.sectionHeading}>{t("impact")}</h2>
-          <div className={styles.metricGrid}>
-            {project.impact.metrics.map((metric) => (
-              <div key={metric.label} className={styles.metricCard}>
-                <span className={styles.metricValue}>{metric.value}</span>
-                <span className={styles.metricLabel}>{metric.label}</span>
+            {screenshots.length > 0 ? (
+              <div className={styles.screenshots}>
+                {screenshots.map((src) => (
+                  <figure key={src} className={styles.screenshotCard}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={withBasePath(src)} alt={project.title} />
+                  </figure>
+                ))}
               </div>
-            ))}
-          </div>
-          <p className={`${styles.paragraph} ${styles.impactSummary}`}>
-            {renderBold(project.impact.summary)}
-          </p>
-        </section>
+            ) : hasInlineImages ? null : (
+              <div className={styles.thumb}>
+                {project.thumbnail && (
+                  <Image
+                    src={withBasePath(project.thumbnail)}
+                    alt={project.title}
+                    fill
+                    sizes="(max-width: 940px) 100vw, 940px"
+                    style={{ objectFit: "cover" }}
+                    priority
+                  />
+                )}
+              </div>
+            )}
 
-        <section className={styles.section}>
-          <h2 className={styles.sectionHeading}>{t("learnings")}</h2>
-          {renderBulletList(project.learnings)}
-        </section>
+            <section className={styles.section}>
+              <h2 className={styles.sectionHeading}>{t("techStack")}</h2>
+              <div className={styles.techGrid}>
+                {project.tags.map((tag) => {
+                  const logoSrc = techLogos[tag.toLowerCase()];
+                  const iconName = techIcons[tag.toLowerCase()];
+                  return (
+                    <span key={tag} className={styles.techChip}>
+                      {logoSrc ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img src={logoSrc} alt={tag} className={styles.techLogo} />
+                      ) : iconName ? (
+                        <span className={styles.techLogo}>{icons[iconName]}</span>
+                      ) : (
+                        <span className={styles.techAvatar}>{tag.slice(0, 2)}</span>
+                      )}
+                      {tag}
+                    </span>
+                  );
+                })}
+              </div>
+            </section>
+
+            <section className={styles.section}>
+              <h2 className={styles.sectionHeading}>{t("context")}</h2>
+              {/* <p className={styles.paragraph}>{renderBold(project.context)}</p> */}
+            </section>
+
+            <section className={styles.section}>
+              <h2 className={styles.sectionHeading}>{t("challenge")}</h2>
+              <ol className={styles.challengeGrid}>
+                {project.challenges.map((challenge, index) => (
+                  <li key={challenge.title} className={styles.challengeCard}>
+                    <span className={styles.challengeIndex}>{String(index + 1).padStart(2, "0")}</span>
+                    <h3 className={styles.itemTitle}>{challenge.title}</h3>
+                    <p className={styles.itemBody}>{renderBold(challenge.body)}</p>
+                  </li>
+                ))}
+              </ol>
+            </section>
+
+            <section className={styles.section}>
+              <h2 className={styles.sectionHeading}>{t("approach")}</h2>
+              <ol className={styles.solutionList}>
+                {solutions.map((solution, index) => (
+                  <li key={solution.title} className={styles.solutionItem}>
+                    <span className={styles.solutionIndex}>{index + 1}</span>
+                    <div className={styles.solutionContent}>
+                      <h3 className={styles.itemTitle}>{solution.title}</h3>
+                      <p className={styles.itemBody}>{renderBold(solution.body)}</p>
+                      {solution.images && solution.images.length > 0 && (
+                        <div className={styles.solutionMedia}>
+                          {solution.images.map((image) => (
+                            <figure key={image.src} className={styles.solutionFigure}>
+                              {/* eslint-disable-next-line @next/next/no-img-element */}
+                              <img src={withBasePath(image.src)} alt={image.caption} loading="lazy" />
+                              <figcaption>{image.caption}</figcaption>
+                            </figure>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </section>
+
+            <section className={styles.section}>
+              <h2 className={styles.sectionHeading}>{t("impact")}</h2>
+              <div className={styles.metricGrid}>
+                {project.impact.metrics.map((metric) => (
+                  <div key={metric.label} className={styles.metricCard}>
+                    <span className={styles.metricValue}>{metric.value}</span>
+                    <span className={styles.metricLabel}>{metric.label}</span>
+                  </div>
+                ))}
+              </div>
+              <p className={`${styles.paragraph} ${styles.impactSummary}`}>
+                {renderBold(project.impact.summary)}
+              </p>
+            </section>
+
+            <section className={styles.section}>
+              <h2 className={styles.sectionHeading}>{t("learnings")}</h2>
+              {renderBulletList(project.learnings)}
+            </section>
+          </>
+        )}
+
       </div>
 
       {otherProjects.length > 0 && (

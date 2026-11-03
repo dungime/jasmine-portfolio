@@ -1,0 +1,256 @@
+@use "../../../styles/variables" as *;
+
+.container {
+  max-width: 1160px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid $color-border;
+  margin-bottom: 48px;
+
+  a { margin-bottom: 0; }
+}
+
+.article {
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+
+  h2 {
+    font-size: clamp(24px, 3vw, 36px);
+    line-height: 1.25;
+    letter-spacing: -0.035em;
+  }
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: $color-gray;
+  margin-bottom: 12px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 40px;
+  align-items: center;
+
+  h1 {
+    font-size: clamp(32px, 3.6vw, 48px);
+    line-height: 1.15;
+    letter-spacing: -0.055em;
+    margin-bottom: 22px;
+  }
+}
+
+.heroCopy, .heroVisual, .caseContent, .workflowVisual { min-width: 0; }
+
+.lead {
+  font-size: clamp(19px, 2vw, 23px);
+  font-weight: 600;
+  line-height: 1.45;
+  margin-bottom: 16px;
+}
+
+.description, .ownershipDescription {
+  color: $color-gray;
+  max-width: 72ch;
+}
+
+.meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 24px;
+  margin: 26px 0 0;
+
+  > div:last-child { grid-column: 1 / -1; }
+  dt {
+    color: $color-gray;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+  }
+  dd { margin: 0; font-size: 13px; font-weight: 600; }
+}
+
+.team { margin-top: 20px; font-size: 13px; color: $color-gray; }
+
+.heroVisual {
+  padding: 16px;
+  background: $color-card;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  box-shadow: $shadow-card;
+}
+
+.screenshot {
+  margin: 0;
+
+  img {
+    width: 100%;
+    height: auto;
+    border: 1px solid $color-border;
+    border-radius: $radius-sm;
+  }
+  figcaption {
+    margin-top: 12px;
+    color: $color-gray;
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
+.section {
+  margin-top: 64px;
+  padding-top: 56px;
+  border-top: 1px solid $color-border;
+}
+
+.sectionHeader { margin-bottom: 28px; }
+
+.cardMarker {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $color-gray;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.case {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 40px;
+
+  + .case { margin-top: 56px; }
+}
+
+.caseReverse .workflowVisual { order: 2; }
+
+.caseContent h3 {
+  font-size: clamp(19px, 2vw, 23px);
+  line-height: 1.4;
+  letter-spacing: -0.025em;
+  margin-bottom: 22px;
+}
+
+.diagram, .workflowVisual {
+  margin: 0;
+  padding: 24px;
+  background: $color-card;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+}
+
+.diagram {
+  text-align: center;
+
+  figcaption { margin-top: 18px; font-size: 12px; color: $color-gray; }
+}
+
+.node {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 18px 12px;
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
+  background: $color-bg;
+  font-size: 14px;
+
+  span { color: $color-gray; font-size: 12px; }
+}
+
+.connector { display: block; font-size: 26px; padding-block: 8px; }
+
+.branches, .branchConnectors { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.branchConnectors { font-size: 24px; padding-block: 8px; }
+.platform { padding: 14px 8px; border: 1px solid $color-border; border-radius: $radius-sm; background: rgba($color-lime, 0.2); font-size: 14px; font-weight: 600; }
+
+.facts {
+  display: grid;
+  gap: 18px;
+  margin: 0;
+
+  > div { padding-left: 16px; border-left: 2px solid $color-bg-sage; }
+  dt { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+  dd { margin: 0; font-size: 15px; color: $color-gray; }
+}
+
+.caseNote { margin-top: 20px; font-size: 13px; color: $color-gray; }
+.ownershipLead { font-weight: 600; margin-bottom: 10px; }
+
+.flow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+  padding: 0;
+  margin: 28px 0 0;
+  list-style: none;
+}
+
+.step {
+  position: relative;
+  padding: 22px;
+  background: $color-card;
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
+
+  h3 { font-family: $font-sans; font-size: 16px; line-height: 1.45; margin-bottom: 8px; }
+  p { font-size: 14px; color: $color-gray; }
+}
+
+.stepNumber { display: block; font-size: 12px; font-weight: 600; margin-bottom: 14px; color: $color-gray; }
+.flowArrow { position: absolute; top: 50%; right: -30px; transform: translateY(-50%); font-size: 24px; }
+
+.outcomes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+
+  li { display: flex; align-items: flex-start; gap: 12px; padding: 22px; border: 1px solid $color-border; border-radius: $radius-sm; background: $color-card; font-size: 14px; }
+}
+
+.takeaway {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid $color-border;
+
+  h3 { font-family: $font-sans; font-size: 16px; margin-bottom: 10px; }
+  p {  color: $color-gray; }
+}
+
+@media (max-width: 1023px) {
+  .hero, .case { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .heroVisual { width: 100%; max-width: 680px; justify-self: center; }
+  .caseContent { order: -1; }
+  .caseReverse .workflowVisual { order: 0; }
+  .meta { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .meta > div:last-child { grid-column: auto; }
+  .flow { gap: 28px; }
+  .step { padding: 18px; }
+  .flowArrow { right: -23px; font-size: 20px; }
+  .outcomes { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .navigation { margin-bottom: 32px; }
+  .section { margin-top: 44px; padding-top: 36px; }
+  .meta { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .meta > div:last-child { grid-column: 1 / -1; }
+  .heroVisual, .diagram, .workflowVisual { padding: 16px; }
+  .flow { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+  .flowArrow { top: auto; bottom: -34px; right: 50%; transform: translateX(50%) rotate(90deg); font-size: 24px; }
+}

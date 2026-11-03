@@ -163,6 +163,152 @@
     "items": [
       {
         "id": "nexstox-nxmarket",
+        "caseStudy": {
+          "title": "NexStox & NXMarket",
+          "eyebrow": "DỰ ÁN THỰC TẾ · FINTECH",
+          "lead": "Một frontend dùng chung. Hai trải nghiệm fintech khác biệt.",
+          "description": "Tôi cải tiến giao diện fintech hiện có, phát triển các luồng Launchpad và Staking, đồng thời triển khai cấu hình theo nền tảng để hỗ trợ hai sản phẩm trên cùng một frontend codebase.",
+          "meta": [
+            {
+              "label": "Vai trò",
+              "value": "Senior Frontend Engineer"
+            },
+            {
+              "label": "Thời gian",
+              "value": "05/2025 – 05/2026"
+            },
+            {
+              "label": "Công nghệ",
+              "value": "React · TypeScript · Material UI · REST APIs"
+            }
+          ],
+          "team": {
+            "label": "Frontend team",
+            "value": "1–3 engineers; là frontend engineer duy nhất trong 3 tháng đầu"
+          },
+          "heroImage": {
+            "src": "/assets/projects/nxmarket-trading-view.jpg",
+            "width": 1920,
+            "height": 1530,
+            "caption": "NXMarket · Giao diện giao dịch"
+          },
+          "contributions": {
+            "eyebrow": "01 / ĐÓNG GÓP",
+            "title": "Đóng góp của tôi",
+            "items": [
+              {
+                "title": "Multi-platform",
+                "body": "Đề xuất và triển khai cấu hình bằng environment variables để phân biệt theme, trang và tính năng của từng nền tảng."
+              },
+              {
+                "title": "Fintech workflows",
+                "body": "Phát triển Launchpad Purchase, Launchpad Detail và Staking, bao gồm validation và tích hợp API."
+              },
+              {
+                "title": "Feature modernization",
+                "body": "Cải tiến Trading, Wallet, Deposit, Withdrawal, KYC, User Profile và các tính năng bảo mật tài khoản."
+              },
+              {
+                "title": "Quality ownership",
+                "body": "Tham gia kiểm thử toàn bộ luồng từ cấu hình Admin đến thao tác người dùng và kiểm tra dữ liệu."
+              }
+            ]
+          },
+          "engineering": {
+            "eyebrow": "02 / ENGINEERING",
+            "title": "Engineering Highlights",
+            "items": [
+              {
+                "eyebrow": "01 / QUYẾT ĐỊNH KỸ THUẬT",
+                "title": "Một codebase cho hai nền tảng",
+                "facts": [
+                  {
+                    "label": "Bài toán",
+                    "body": "Nền tảng thứ hai cần giao diện, nội dung và một số tính năng riêng, trong khi phần lớn nghiệp vụ giống sản phẩm hiện có."
+                  },
+                  {
+                    "label": "Quyết định",
+                    "body": "Thay vì clone ứng dụng, tôi chọn tái sử dụng frontend và dùng environment variables để điều khiển theme, trang hiển thị và hành vi riêng của từng platform."
+                  },
+                  {
+                    "label": "Kết quả",
+                    "body": "Những tính năng dùng chung có thể được cập nhật tại một nơi, hạn chế việc phải duy trì cùng một thay đổi trong hai codebase độc lập."
+                  }
+                ]
+              },
+              {
+                "eyebrow": "02 / GIẢI QUYẾT VẤN ĐỀ",
+                "title": "Chuyển nghiệp vụ fintech thành luồng sử dụng rõ ràng",
+                "facts": [
+                  {
+                    "label": "Bài toán",
+                    "body": "Launchpad và Staking đòi hỏi hiểu các khái niệm tài chính và quy tắc giao dịch mới, không chỉ dựng giao diện từ design."
+                  },
+                  {
+                    "label": "Cách tiếp cận",
+                    "body": "Tôi trải nghiệm sản phẩm tương tự, trao đổi với team để làm rõ nghiệp vụ, đọc code hiện có và xác định những thành phần UI có thể tái sử dụng."
+                  },
+                  {
+                    "label": "Triển khai",
+                    "body": "Với Launchpad, tôi xử lý hiển thị số dư, giới hạn mua, validation số lượng, trạng thái bán và phản hồi giao dịch. Với Staking, tôi tạo reusable components và tích hợp các trạng thái, giá trị ước tính từ backend."
+                  }
+                ],
+                "note": "Tôi cũng xử lý lỗi tham số Trading API và cải tiến input mua/bán, slider, dữ liệu realtime."
+              }
+            ],
+            "diagram": {
+              "sharedTitle": "Frontend dùng chung",
+              "sharedDetail": "Components & logic dùng chung",
+              "configTitle": "Cấu hình theo môi trường",
+              "configDetail": "Theme · Trang · Hiển thị",
+              "platforms": [
+                "NexStox",
+                "NXMarket"
+              ],
+              "caption": "Sơ đồ khái niệm, không phải cấu trúc source code."
+            },
+            "workflow": {
+              "eyebrow": "LUỒNG STAKING",
+              "image": {
+                "src": "/assets/projects/nxmarket-staking-confirmation.png",
+                "width": 1440,
+                "height": 1080,
+                "caption": "NXMarket · Xác nhận unstaking với số dư và trạng thái sau thao tác"
+              }
+            }
+          },
+          "ownership": {
+            "eyebrow": "03 / TINH THẦN LÀM CHỦ",
+            "title": "Beyond Implementation",
+            "lead": "Kiểm thử toàn bộ luồng, không chỉ từng màn hình.",
+            "description": "Team không có QA chuyên trách nên các developer dành thời gian kiểm thử sản phẩm định kỳ. Tôi kiểm tra các luồng như cấu hình Staking pool trong Admin, thực hiện Stake trên ứng dụng người dùng và đối chiếu dữ liệu, trạng thái sau thao tác. Tôi cũng tham gia kiểm thử Deposit và Trading Buy/Sell.",
+            "steps": [
+              {
+                "title": "Cấu hình trong Admin",
+                "body": "Tạo hoặc cập nhật Staking pool"
+              },
+              {
+                "title": "Thao tác trên User App",
+                "body": "Thực hiện Stake trong pool tương ứng"
+              },
+              {
+                "title": "Kiểm tra kết quả",
+                "body": "Đối chiếu dữ liệu, trạng thái, hành vi"
+              }
+            ]
+          },
+          "results": {
+            "eyebrow": "04 / KẾT QUẢ",
+            "title": "Kết quả & Bài học",
+            "items": [
+              "Hỗ trợ hai nền tảng fintech trên một frontend implementation dùng chung.",
+              "Phát triển Launchpad, Staking và cải tiến nhiều giao diện tài chính, quản lý tài khoản.",
+              "Xử lý các lỗi tích hợp Trading và tham gia kiểm thử sản phẩm xuyên suốt nhiều tính năng."
+            ],
+            "takeawayTitle": "Bài học quan trọng",
+            "takeaway": "Frontend đáng tin cậy bắt đầu từ việc hiểu nghiệp vụ, chọn giải pháp dễ bảo trì và kiểm chứng trải nghiệm thực tế của người dùng."
+          }
+        },
         "title": "Nền tảng giao dịch NexStox & NXMarket",
         "subtitle": "Nền tảng giao dịch & staking fintech",
         "category": "Fintech",

@@ -183,6 +183,152 @@
     "items": [
       {
         "id": "nexstox-nxmarket",
+        "caseStudy": {
+          "title": "NexStox & NXMarket",
+          "eyebrow": "CASE STUDY · FINTECH",
+          "lead": "One shared frontend. Two fintech experiences.",
+          "description": "I modernized existing fintech interfaces, developed Launchpad and Staking workflows, and introduced platform-based configuration to support two products on a shared frontend codebase.",
+          "meta": [
+            {
+              "label": "Role",
+              "value": "Senior Frontend Engineer"
+            },
+            {
+              "label": "Timeline",
+              "value": "May 2025 – May 2026"
+            },
+            {
+              "label": "Stack",
+              "value": "React · TypeScript · Material UI · REST APIs"
+            }
+          ],
+          "team": {
+            "label": "Frontend team",
+            "value": "1–3 engineers; sole frontend engineer for the first 3 months"
+          },
+          "heroImage": {
+            "src": "/assets/projects/nxmarket-trading-view.jpg",
+            "width": 1920,
+            "height": 1530,
+            "caption": "NXMarket · Trading interface"
+          },
+          "contributions": {
+            "eyebrow": "01 / CONTRIBUTIONS",
+            "title": "What I Contributed",
+            "items": [
+              {
+                "title": "Multi-platform",
+                "body": "Proposed and implemented environment-based configuration for platform-specific themes, pages, and features."
+              },
+              {
+                "title": "Financial workflows",
+                "body": "Built Launchpad Purchase, Launchpad Detail, and Staking interfaces with validation and API integration."
+              },
+              {
+                "title": "Feature modernization",
+                "body": "Improved Trading, Wallet, Deposit, Withdrawal, KYC, Profile, and account security experiences."
+              },
+              {
+                "title": "Quality ownership",
+                "body": "Helped test complete user journeys, from admin configuration through user actions and resulting data."
+              }
+            ]
+          },
+          "engineering": {
+            "eyebrow": "02 / ENGINEERING",
+            "title": "Engineering Highlights",
+            "items": [
+              {
+                "eyebrow": "01 / TECHNICAL DECISION",
+                "title": "One codebase, two platforms",
+                "facts": [
+                  {
+                    "label": "Challenge",
+                    "body": "The second platform needed its own branding, content, and selected features while sharing most of the existing product's behavior."
+                  },
+                  {
+                    "label": "Decision",
+                    "body": "I chose a shared frontend instead of duplicating the application, using environment variables for themes, page visibility, and platform-specific behavior."
+                  },
+                  {
+                    "label": "Outcome",
+                    "body": "Common features can evolve in one implementation, reducing the need to maintain equivalent changes in two independent codebases."
+                  }
+                ]
+              },
+              {
+                "eyebrow": "02 / PROBLEM SOLVING",
+                "title": "Turning fintech rules into usable flows",
+                "facts": [
+                  {
+                    "label": "Challenge",
+                    "body": "Launchpad and Staking required me to understand unfamiliar financial concepts and transaction rules—not simply reproduce UI designs."
+                  },
+                  {
+                    "label": "Approach",
+                    "body": "I explored comparable products, clarified business rules with teammates, examined existing code, and identified reusable interface patterns before implementation."
+                  },
+                  {
+                    "label": "Implementation",
+                    "body": "For Launchpad, I handled balance display, purchase limits, quantity validation, sale availability, and transaction feedback. For Staking, I built reusable interfaces and integrated backend-driven states and estimates."
+                  }
+                ],
+                "note": "I also investigated Trading API parameter mismatches and improved buy/sell inputs, sliders, and realtime data integration."
+              }
+            ],
+            "diagram": {
+              "sharedTitle": "Shared frontend",
+              "sharedDetail": "Common components & feature logic",
+              "configTitle": "Environment-based config",
+              "configDetail": "Theme · Pages · Visibility",
+              "platforms": [
+                "NexStox",
+                "NXMarket"
+              ],
+              "caption": "Conceptual diagram, not a source-code map."
+            },
+            "workflow": {
+              "eyebrow": "STAKING WORKFLOW",
+              "image": {
+                "src": "/assets/projects/nxmarket-staking-confirmation.png",
+                "width": 1440,
+                "height": 1080,
+                "caption": "NXMarket · Unstaking confirmation with balances and resulting position"
+              }
+            }
+          },
+          "ownership": {
+            "eyebrow": "03 / OWNERSHIP",
+            "title": "Beyond Implementation",
+            "lead": "Testing the full journey, not just the screen.",
+            "description": "With no dedicated QA tester on the team, we set aside time for regular product checks. I tested workflows such as configuring a Staking pool in Admin, staking through the user app, and verifying the displayed data and resulting states. I also checked deposit and token buy/sell flows.",
+            "steps": [
+              {
+                "title": "Configure in Admin",
+                "body": "Create or update a Staking pool"
+              },
+              {
+                "title": "Act in User App",
+                "body": "Stake in the corresponding pool"
+              },
+              {
+                "title": "Verify Result",
+                "body": "Check data, state, and behavior"
+              }
+            ]
+          },
+          "results": {
+            "eyebrow": "04 / RESULTS",
+            "title": "Outcomes & Takeaways",
+            "items": [
+              "Supported two fintech products through a shared frontend implementation.",
+              "Delivered Launchpad and Staking workflows and modernized financial and account interfaces.",
+              "Resolved identified trading integration issues and contributed to cross-feature product verification."
+            ],
+            "takeawayTitle": "What I learned",
+            "takeaway": "Reliable frontend engineering starts with understanding the business rules, choosing maintainable solutions, and verifying what users actually experience."
+          }
+        },
         "title": "NexStox & NXMarket Trading Platforms",
         "subtitle": "Fintech Trading & Staking Platforms",
         "category": "Fintech",
