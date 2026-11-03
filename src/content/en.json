@@ -604,7 +604,7 @@
         "title": "English with J — Active Listening Platform",
         "subtitle": "English Learning Platform · In Progress",
         "category": "Education",
-        "description": "An independent English-learning platform that turns every listening lesson into active practice — dictation, AI-generated IELTS/TOEIC quizzes, personalised mistake feedback, and karaoke-style shadowing — with QR bank payments for Vietnamese learners.",
+        "description": "An independent English-learning platform that turns every listening lesson into active practice — dictation, AI-generated IELTS/TOEIC quizzes, personalised mistake feedback, and karaoke-style shadowing.",
         "overview": [
           {
             "label": "Role",
@@ -620,10 +620,10 @@
           },
           {
             "label": "Scope",
-            "value": "Sign-up & login, QR bank payments, the listening practice flow, AI quizzes and feedback, saved progress, and a bilingual interface"
+            "value": "Sign-up & login, the listening practice flow, AI quizzes and feedback, saved progress, and a bilingual interface"
           }
         ],
-        "context": "Most English learners practise listening by replaying audio and hoping it sticks. English with J is a platform I am building to make listening **active**: each lesson guides the learner from understanding the gist, to writing down every sentence, to testing comprehension, to speaking along. Phase 1 focuses on that core listening experience, accounts and progress, and a payment flow built for **Vietnamese learners**.",
+        "context": "Most English learners practise listening by replaying audio and hoping it sticks. English with J is a platform I am building to make listening **active**: each lesson guides the learner from understanding the gist, to writing down every sentence, to testing comprehension, to speaking along. Phase 1 focuses on that core listening experience, accounts, and saved progress.",
         "challenges": [
           {
             "title": "Passive listening doesn't build skill",
@@ -636,10 +636,6 @@
           {
             "title": "A free tier that sells, and a paywall that holds",
             "body": "New learners should be able to try real lessons before paying, while paid lessons stay locked to anyone who hasn't paid — no matter what the browser shows."
-          },
-          {
-            "title": "Payments that fit Vietnamese learners",
-            "body": "Many learners in Vietnam don't use international cards. They expect to pay by scanning a bank QR code in their banking app."
           }
         ],
         "solutions": [
@@ -660,8 +656,8 @@
             "body": "The final step is a video of the script that **scrolls up line by line like karaoke**, with a voice reading it aloud — so learners can watch, listen, and **shadow** the speaker to practise pronunciation and rhythm."
           },
           {
-            "title": "Free preview, QR payment, and backend-checked access",
-            "body": "Before paying, learners can open a few sample lessons. **Paying by Vietnamese bank QR code** unlocks the full library. The interface reflects the learner's plan, but **access to every paid lesson is checked by the backend**, so hiding a lock icon never unlocks content."
+            "title": "Free preview and backend-checked access",
+            "body": "Learners can open a few sample lessons before choosing a paid plan. The interface reflects the learner's plan, but **access to every paid lesson is checked by the backend**, so hiding a lock icon never unlocks content."
           },
           {
             "title": "Saved progress and a bilingual interface",
@@ -680,10 +676,10 @@
             },
             {
               "value": "Free → Paid",
-              "label": "a few open lessons, then the full library after QR payment"
+              "label": "a few open lessons, with full-library access on a paid plan"
             }
           ],
-          "summary": "The project is still in progress. Phase 1 defines a complete listening loop, from first listen to speaking along, with accounts, saved progress, and local payments. Its foundation is ready for lessons, quizzes, and payments to be added step by step."
+          "summary": "The project is still in progress. Phase 1 defines a complete listening loop, from first listen to speaking along, with accounts and saved progress. Its foundation is ready for lessons and quizzes to be added step by step."
         },
         "learnings": [
           "**Design the learning loop before the screens.** Mapping all seven steps first made it clear what each screen must hand to the next.",
