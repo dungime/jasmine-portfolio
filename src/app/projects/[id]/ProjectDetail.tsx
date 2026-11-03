@@ -7,7 +7,6 @@ import { useContent } from "@/content";
 import styles from "./page.module.scss";
 import { withBasePath } from "@/lib/base-path";
 import { icons, techLogos, techIcons } from "@/components/icons";
-import { BackLink } from "@/components/BackLink/BackLink";
 
 // Only some projects illustrate their approach, so the JSON infers a union per project.
 type Solution = { title: string; body: string; images?: { src: string; caption: string }[] };
@@ -53,9 +52,9 @@ export function ProjectDetail({ id }: { id: string }) {
   return (
     <main className={styles.main}>
       <div className={styles.container}>
-        <BackLink href="/#projects" className={styles.back}>
+        <Link href="/#projects" className={styles.back}>
           {t("backToProjects")}
-        </BackLink>
+        </Link>
 
         <header className={styles.header}>
           <span className={styles.eyebrow}>{eyebrow}</span>
