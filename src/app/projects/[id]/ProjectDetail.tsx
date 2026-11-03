@@ -9,6 +9,7 @@ import { withBasePath } from "@/lib/base-path";
 import { icons, techLogos, techIcons } from "@/components/icons";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher/LanguageSwitcher";
 import { NexStoxCaseStudy } from "./NexStoxCaseStudy";
+import { ELearningCaseStudy } from "./ELearningCaseStudy";
 import caseStudyStyles from "./NexStoxCaseStudy.module.scss";
 
 // Only some projects illustrate their approach, so the JSON infers a union per project.
@@ -45,6 +46,8 @@ export function ProjectDetail({ id }: { id: string }) {
   if (!project) return null;
 
   const caseStudy = id === "nexstox-nxmarket" ? project.caseStudy : undefined;
+  const learningCaseStudy = id === "e-learning-platform" ? project.learningCaseStudy : undefined;
+  const hasCaseStudy = Boolean(caseStudy || learningCaseStudy);
   const otherProjects = items.filter((item) => item.id !== id);
 
   const screenshots = project.screenshots ?? [];
@@ -55,8 +58,8 @@ export function ProjectDetail({ id }: { id: string }) {
 
   return (
     <main className={styles.main}>
-      <div className={`${styles.container} ${caseStudy ? caseStudyStyles.container : ""}`}>
-        {caseStudy ? (
+      <div className={`${styles.container} ${hasCaseStudy ? caseStudyStyles.container : ""}`}>
+        {hasCaseStudy ? (
           <div className={caseStudyStyles.navigation}>
             <Link href="/#projects" className={styles.back}>
               {t("backToProjects")}
@@ -71,6 +74,8 @@ export function ProjectDetail({ id }: { id: string }) {
 
         {caseStudy ? (
           <NexStoxCaseStudy content={caseStudy} />
+        ) : learningCaseStudy ? (
+          <ELearningCaseStudy content={learningCaseStudy} />
         ) : (
           <>
             <header className={styles.header}>

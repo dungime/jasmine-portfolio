@@ -472,6 +472,151 @@
       },
       {
         "id": "e-learning-platform",
+        "learningCaseStudy": {
+          "eyebrow": "CASE STUDY · E-LEARNING",
+          "title": "E-Learning Platform",
+          "lead": "Book-based learning meets interactive video lessons.",
+          "description": "I helped establish the frontend foundation and built the core student learning experience, combining chapter-based navigation, video–script interactions, and page-aware real-time discussions.",
+          "meta": [
+            {
+              "label": "Role",
+              "value": "Frontend Engineer"
+            },
+            {
+              "label": "Team",
+              "value": "3 frontend developers"
+            },
+            {
+              "label": "Stack",
+              "value": "Turborepo · TypeScript"
+            }
+          ],
+          "conceptualCaption": "Conceptual diagram · Not a product screenshot",
+          "heroDiagram": {
+            "title": "Study Screen",
+            "modes": [
+              "Book mode",
+              "Video mode"
+            ],
+            "discussion": "Page-aware discussions"
+          },
+          "contributions": {
+            "eyebrow": "01 / CONTRIBUTIONS",
+            "title": "What I Contributed",
+            "items": [
+              {
+                "title": "Frontend Foundation",
+                "body": "Set up the Turborepo project after team discussions, organizing Admin and Student apps in one repository with shared TypeScript data models."
+              },
+              {
+                "title": "Core Learning Experience",
+                "body": "Built the study screen with book/video modes, chapter and page navigation, video controls, script-based seeking, and saved pages."
+              },
+              {
+                "title": "Page-Aware Discussions",
+                "body": "Implemented real-time comments, two-level threads, likes, instructor distinction, custom display ordering, and infinite scrolling."
+              },
+              {
+                "title": "Access & Notifications",
+                "body": "Handled frontend enrollment-based access rules, limited lesson previews, and real-time notifications."
+              }
+            ]
+          },
+          "engineering": {
+            "eyebrow": "02 / ENGINEERING",
+            "title": "Engineering Highlights",
+            "items": [
+              {
+                "eyebrow": "01 / LEARNING EXPERIENCE",
+                "title": "Connecting book navigation with video playback",
+                "facts": [
+                  {
+                    "label": "Challenge",
+                    "body": "Lessons were structured as books, chapters, and pages, but learners could also switch to a video mode. Each page related to a script segment, so navigation and playback needed to work together."
+                  },
+                  {
+                    "label": "Approach",
+                    "body": "Built the student study screen around the chapter/page structure and its corresponding video content, connecting script selection with playback seeking."
+                  },
+                  {
+                    "label": "Delivered",
+                    "body": "Students could move between lessons and pages, control playback, jump to the relevant video position from a script segment, and save pages for later reference."
+                  }
+                ]
+              },
+              {
+                "eyebrow": "02 / REAL-TIME INTERACTION",
+                "title": "Building discussions tied to each lesson page",
+                "facts": [
+                  {
+                    "label": "Challenge",
+                    "body": "Comments needed to stay associated with the correct lesson page while supporting real-time activity, instructor visibility, different interaction permissions, and large discussion lists."
+                  },
+                  {
+                    "label": "Implementation",
+                    "body": "Built two-level comment/reply interactions, likes, role-based UI rules, instructor-specific styling, custom ordering, and incremental loading with infinite scroll. Integrated real-time comment updates and notifications."
+                  },
+                  {
+                    "label": "Delivered",
+                    "body": "Students and instructors could interact through page-specific discussions with updates appearing in real time. The interface enforced the relevant frontend access restrictions."
+                  }
+                ]
+              }
+            ],
+            "learningDiagram": {
+              "nodes": [
+                "Book → Chapter → Page",
+                "Script segment",
+                "Video position"
+              ],
+              "connectors": [
+                "↕",
+                "↓"
+              ]
+            },
+            "discussionDiagram": {
+              "nodes": [
+                "Current page",
+                "Discussion thread",
+                "Real-time updates"
+              ],
+              "detail": "Instructor priority · Newest comments · Replies"
+            }
+          },
+          "ownership": {
+            "eyebrow": "03 / BEYOND IMPLEMENTATION",
+            "title": "Establishing a shared frontend foundation",
+            "description": "After discussing technical choices with the team, I configured the project with Turborepo, keeping Admin and Student apps in one repository and sharing TypeScript data-model definitions between them.",
+            "reflection": "This was also my first experience using AI-assisted coding on a challenging feature. I used Cursor to explore implementation approaches for large comment lists and learned the importance of understanding and reviewing generated code.",
+            "diagram": {
+              "workspace": "Turborepo",
+              "apps": [
+                "Admin App",
+                "Student App"
+              ],
+              "models": "Shared TypeScript Models",
+              "example": "e.g. Student"
+            }
+          },
+          "results": {
+            "eyebrow": "04 / RESULTS",
+            "title": "Outcomes",
+            "items": [
+              {
+                "title": "Frontend setup",
+                "body": "Configured the initial frontend monorepo and shared data-model definitions for Admin and Student applications."
+              },
+              {
+                "title": "Core learning interface",
+                "body": "Delivered the main study screen with book/video navigation, script-to-video seeking, and page-saving interactions."
+              },
+              {
+                "title": "Interactive discussions",
+                "body": "Delivered page-specific comments, real-time updates, role-aware interactions, infinite scrolling, and notifications."
+              }
+            ]
+          }
+        },
         "title": "E-Learning Platform",
         "subtitle": "Learning Management Platform",
         "category": "Education",

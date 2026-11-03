@@ -452,6 +452,151 @@
       },
       {
         "id": "e-learning-platform",
+        "learningCaseStudy": {
+          "eyebrow": "DỰ ÁN THỰC TẾ · E-LEARNING",
+          "title": "E-Learning Platform",
+          "lead": "Kết hợp học theo sách với bài học video tương tác.",
+          "description": "Tôi tham gia thiết lập nền tảng frontend và phát triển màn hình học chính, kết hợp điều hướng chương/trang, tương tác video–script và thảo luận realtime theo từng trang.",
+          "meta": [
+            {
+              "label": "Vai trò",
+              "value": "Frontend Engineer"
+            },
+            {
+              "label": "Đội ngũ",
+              "value": "3 frontend developers"
+            },
+            {
+              "label": "Công nghệ",
+              "value": "Turborepo · TypeScript"
+            }
+          ],
+          "conceptualCaption": "Sơ đồ khái niệm · Không phải ảnh giao diện sản phẩm",
+          "heroDiagram": {
+            "title": "Màn hình học",
+            "modes": [
+              "Chế độ đọc sách",
+              "Chế độ video"
+            ],
+            "discussion": "Thảo luận theo từng trang"
+          },
+          "contributions": {
+            "eyebrow": "01 / ĐÓNG GÓP",
+            "title": "Đóng góp của tôi",
+            "items": [
+              {
+                "title": "Frontend Foundation",
+                "body": "Thiết lập dự án với Turborepo sau khi cùng team thảo luận, tổ chức Admin và Student trong một repository và dùng chung các TypeScript data models."
+              },
+              {
+                "title": "Core Learning Experience",
+                "body": "Phát triển study screen với chế độ đọc/xem video, điều hướng chương/trang, video controls, click script để tìm vị trí video và lưu trang."
+              },
+              {
+                "title": "Page-Aware Discussions",
+                "body": "Triển khai bình luận realtime, hai cấp comment/reply, like, phân biệt instructor, thứ tự hiển thị tùy chỉnh và infinite scrolling."
+              },
+              {
+                "title": "Access & Notifications",
+                "body": "Xử lý các giới hạn tương tác frontend dựa trên enrollment, xem thử bài học có giới hạn và thông báo realtime."
+              }
+            ]
+          },
+          "engineering": {
+            "eyebrow": "02 / ENGINEERING",
+            "title": "Engineering Highlights",
+            "items": [
+              {
+                "eyebrow": "01 / LEARNING EXPERIENCE",
+                "title": "Kết nối cấu trúc sách với video playback",
+                "facts": [
+                  {
+                    "label": "Bài toán",
+                    "body": "Nội dung học được tổ chức theo sách, chương và trang, nhưng học viên cũng có thể chuyển sang xem video. Mỗi trang gắn với một script segment nên điều hướng và playback cần hoạt động nhất quán."
+                  },
+                  {
+                    "label": "Cách tiếp cận",
+                    "body": "Tôi xây dựng study screen theo cấu trúc chương/trang và nội dung video tương ứng, liên kết lựa chọn script với thao tác seek video."
+                  },
+                  {
+                    "label": "Bàn giao",
+                    "body": "Học viên có thể chuyển bài/trang, điều khiển video, nhấn vào script để tới đoạn video tương ứng và lưu trang để xem lại."
+                  }
+                ]
+              },
+              {
+                "eyebrow": "02 / REAL-TIME INTERACTION",
+                "title": "Xây dựng thảo luận gắn với từng trang học",
+                "facts": [
+                  {
+                    "label": "Bài toán",
+                    "body": "Comment cần hiển thị đúng trang, cập nhật realtime, phân biệt instructor, tuân theo quyền tương tác và hỗ trợ danh sách lớn."
+                  },
+                  {
+                    "label": "Triển khai",
+                    "body": "Tôi triển khai hai cấp comment/reply, like, điều kiện UI theo vai trò, kiểu hiển thị instructor, thứ tự comment tùy chỉnh và infinite scrolling; đồng thời tích hợp cập nhật comment và notification realtime."
+                  },
+                  {
+                    "label": "Bàn giao",
+                    "body": "Học viên và giảng viên có thể thảo luận theo từng trang học với cập nhật realtime, trong giới hạn tương tác frontend tương ứng."
+                  }
+                ]
+              }
+            ],
+            "learningDiagram": {
+              "nodes": [
+                "Sách → Chương → Trang",
+                "Đoạn script",
+                "Vị trí video"
+              ],
+              "connectors": [
+                "↕",
+                "↓"
+              ]
+            },
+            "discussionDiagram": {
+              "nodes": [
+                "Trang học hiện tại",
+                "Luồng thảo luận",
+                "Cập nhật realtime"
+              ],
+              "detail": "Ưu tiên instructor · Comment mới nhất · Replies"
+            }
+          },
+          "ownership": {
+            "eyebrow": "03 / BEYOND IMPLEMENTATION",
+            "title": "Thiết lập nền tảng frontend dùng chung",
+            "description": "Sau khi cùng team thống nhất các lựa chọn kỹ thuật, tôi cấu hình dự án bằng Turborepo, tổ chức Admin và Student trong một repository và dùng chung các định nghĩa TypeScript data models.",
+            "reflection": "Đây cũng là lần đầu tôi sử dụng AI hỗ trợ code cho một tính năng khó. Tôi dùng Cursor để tìm hiểu cách triển khai danh sách comment lớn và nhận ra tầm quan trọng của việc đọc hiểu, kiểm tra code do AI tạo ra.",
+            "diagram": {
+              "workspace": "Turborepo",
+              "apps": [
+                "Admin App",
+                "Student App"
+              ],
+              "models": "TypeScript data models dùng chung",
+              "example": "Ví dụ: Student"
+            }
+          },
+          "results": {
+            "eyebrow": "04 / KẾT QUẢ",
+            "title": "Kết quả",
+            "items": [
+              {
+                "title": "Frontend setup",
+                "body": "Thiết lập frontend monorepo ban đầu và shared data models cho Admin và Student."
+              },
+              {
+                "title": "Core learning interface",
+                "body": "Bàn giao study screen với điều hướng theo sách/video, script-to-video seeking và lưu trang."
+              },
+              {
+                "title": "Interactive discussions",
+                "body": "Bàn giao comments theo từng trang, cập nhật realtime, tương tác theo vai trò, infinite scrolling và thông báo."
+              }
+            ]
+          }
+        },
         "title": "Nền tảng E-Learning",
         "subtitle": "Nền tảng quản lý học tập",
         "category": "Giáo dục",
