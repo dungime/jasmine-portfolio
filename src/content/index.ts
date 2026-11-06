@@ -12,7 +12,14 @@ export type SiteContent = typeof en;
 const contentByLocale: Record<Locale, SiteContent> = { en, vi };
 
 export function getContent(locale: Locale): SiteContent {
-  return contentByLocale[locale];
+  const content = contentByLocale[locale];
+  return {
+    ...content,
+    projects: {
+      ...content.projects,
+      items: content.projects.items.filter((project) => !("hidden" in project && project.hidden === true)),
+    },
+  };
 }
 
 /**

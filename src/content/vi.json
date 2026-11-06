@@ -1282,6 +1282,7 @@
       },
       {
         "id": "aimee-by-j",
+        "hidden": true,
         "title": "Aimee by J — Nền tảng Ecommerce Headless",
         "subtitle": "Thời trang Việt Nam · Đang phát triển",
         "category": "Ecommerce",

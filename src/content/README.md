@@ -3,6 +3,10 @@
 Nội dung nằm trong `en.json` và `vi.json`, tại `projects.items`.
 Giữ cùng `id` dự án, `id` section và cấu trúc ở hai ngôn ngữ.
 
+Để tạm ẩn dự án, thêm `"hidden": true` vào dự án trong cả hai file.
+Dự án sẽ không xuất hiện ở trang chủ, mục dự án khác hoặc các trang được
+export khi build. Đổi thành `false` hoặc xóa trường này để hiển thị lại.
+
 ## Dùng mẫu case study chung
 
 Thêm `caseStudy` vào bất kỳ dự án nào để dùng mẫu chung. Không cần tạo
