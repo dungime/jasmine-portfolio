@@ -739,32 +739,30 @@
    },
    {
     "number": "05",
-    "stage": "Building My Own",
-    "category": "Gap Year",
-    "company": "Building My Own Product",
-    "period": "May 2026 – Present",
-    "role": "Founder & Developer",
+    "stage": "Building & Learning",
+    "category": "Personal Development",
+    "company": "English with J & Personal Development",
+    "period": "Late May 2026 – Present",
+    "role": "Independent Developer",
     "team": "Solo",
-    "description": "A deliberate gap year to step back from client and company work and build a product of my own — owning every layer, from backend and storefront architecture to the delivery roadmap, rather than the frontend alone.",
+    "description": "My role at NexStox ended in late May 2026 as part of a company restructuring and layoffs. Since then, I have been developing English with J, my English-learning platform, while studying English independently and continuing to develop my frontend skills.",
     "learned": [
-     "Owning a product end-to-end, beyond the frontend",
-     "Designing backend and storefront architecture together",
-     "Planning scope and roadmap as the sole decision-maker"
+     "Planning and developing an independent learning product",
+     "Designing a learning flow around listening, dictation, and shadowing",
+     "Balancing product development with independent English study"
     ],
     "contributions": [
-     "Building Aimee by J, a headless e-commerce storefront for a Vietnamese fashion brand, with a Next.js 16 storefront on a Medusa v2 backend.",
-     "Designed a typed API data layer and the rendering strategy for the storefront.",
-     "Planning Vietnam-specific checkout, including Cash on Delivery and local payment providers.",
-     "Using the time to deepen backend, architecture, and testing skills alongside frontend work."
+     "Building English with J, an independent English-learning platform focused on active listening practice.",
+     "Developing the core learning flow, including dictation, comprehension quizzes, feedback, and shadowing.",
+     "Studying English independently alongside product development.",
+     "Continuing to deepen frontend and product-development skills through hands-on work."
     ],
     "tech": [
      "Next.js",
+     "React",
      "TypeScript",
-     "Medusa",
-     "PostgreSQL",
      "Tailwind CSS",
-     "Turborepo",
-     "REST APIs"
+     "AI"
     ]
    }
   ]

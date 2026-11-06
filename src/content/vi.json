@@ -1616,32 +1616,30 @@
         "id": "own-product",
         "number": "05",
         "icon": "lightbulb",
-        "stage": "Xây sản phẩm riêng",
-        "category": "Gap Year",
-        "company": "Xây dựng sản phẩm của riêng tôi",
-        "period": "05/2026 – nay",
-        "role": "Founder & Developer",
+        "stage": "Xây dựng & học hỏi",
+        "category": "Phát triển cá nhân",
+        "company": "English with J & phát triển bản thân",
+        "period": "Cuối 05/2026 – nay",
+        "role": "Lập trình viên độc lập",
         "team": "Solo",
-        "description": "Một năm gap year có chủ đích để tạm rời công việc cho khách hàng và công ty, tập trung xây dựng sản phẩm của riêng mình — làm chủ mọi tầng, từ kiến trúc backend và storefront đến lộ trình triển khai, chứ không chỉ riêng frontend.",
+        "description": "Cuối tháng 5/2026, công việc của tôi tại NexStox kết thúc do công ty tái cơ cấu và cắt giảm nhân sự. Từ đó đến nay, tôi tập trung phát triển English with J — nền tảng học tiếng Anh của riêng mình, đồng thời tự học tiếng Anh và tiếp tục trau dồi kỹ năng frontend.",
         "learned": [
-          "Làm chủ sản phẩm end-to-end, vượt ra ngoài phạm vi frontend",
-          "Thiết kế đồng thời kiến trúc backend và storefront",
-          "Tự lên phạm vi và lộ trình với vai trò người ra quyết định duy nhất"
+          "Lên kế hoạch và phát triển một sản phẩm học tập độc lập",
+          "Thiết kế luồng học xoay quanh luyện nghe, chép chính tả và shadowing",
+          "Cân bằng việc xây dựng sản phẩm với tự học tiếng Anh"
         ],
         "contributions": [
-          "Xây dựng Aimee by J, storefront ecommerce headless cho một thương hiệu thời trang Việt Nam, với storefront Next.js 16 chạy trên backend Medusa v2.",
-          "Thiết kế tầng data API có type và chiến lược render cho storefront.",
-          "Lên kế hoạch checkout đặc thù thị trường Việt Nam, gồm thanh toán khi nhận hàng (COD) và các cổng thanh toán nội địa.",
-          "Tận dụng thời gian để đào sâu kỹ năng backend, kiến trúc và testing song song với frontend."
+          "Xây dựng English with J, nền tảng học tiếng Anh độc lập tập trung vào luyện nghe chủ động.",
+          "Phát triển luồng học cốt lõi, gồm nghe chép chính tả, câu hỏi kiểm tra mức độ hiểu, phản hồi và shadowing.",
+          "Tự học tiếng Anh song song với việc phát triển sản phẩm.",
+          "Tiếp tục đào sâu kỹ năng frontend và phát triển sản phẩm thông qua thực hành."
         ],
         "tech": [
           "Next.js",
+          "React",
           "TypeScript",
-          "Medusa",
-          "PostgreSQL",
           "Tailwind CSS",
-          "Turborepo",
-          "REST APIs"
+          "AI"
         ]
       }
     ]
@@ -1721,8 +1719,8 @@
   },
   "contact": {
     "badge": "Liên hệ",
-    "heading": "Cùng xây dựng điều tuyệt vời",
-    "subheading": "Tôi luôn sẵn sàng trao đổi về những sản phẩm thú vị, những bài toán frontend thử thách và cơ hội cùng nhau tạo ra trải nghiệm tốt hơn.",
+    "heading": "Kết nối và trao đổi",
+    "subheading": "Nếu bạn muốn trao đổi về công việc, dự án hoặc các vấn đề liên quan đến frontend, hãy liên hệ với tôi.",
     "resumeCta": {
       "label": "Tải CV",
       "href": "/assets/Jasmine_Frontend Engineer_Resume.pdf"
