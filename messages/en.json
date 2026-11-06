@@ -42,6 +42,8 @@
     "listening": "Listening…",
     "send": "Send",
     "close": "Close",
+    "expand": "Expand chat",
+    "collapse": "Collapse chat",
     "startListening": "Ask by voice",
     "stopListening": "Stop listening",
     "muteVoice": "Mute spoken answers",

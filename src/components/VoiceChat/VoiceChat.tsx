@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { icons } from "@/components/icons";
+import { ChatResizeIcon } from "@/components/graphics/ChatResizeIcon";
 import styles from "./VoiceChat.module.scss";
 
 // The chat API is a separate Vercel project (see chat-api/). Without its URL
@@ -60,6 +61,13 @@ const SENTENCE_PATTERN = /^[\s\S]*?[.!?…](?=\s)/;
 export function VoiceChat() {
   const t = useTranslations("voiceChat");
   const [open, setOpen] = useState(false);
+  const launcherRef = useRef<HTMLButtonElement>(null);
+  const wasOpenRef = useRef(false);
+
+  useEffect(() => {
+    if (wasOpenRef.current && !open) launcherRef.current?.focus();
+    wasOpenRef.current = open;
+  }, [open]);
 
   if (!CHAT_API_URL) return null;
 
@@ -67,6 +75,7 @@ export function VoiceChat() {
     <>
       {open && <ChatPanel apiUrl={CHAT_API_URL} onClose={() => setOpen(false)} />}
       <button
+        ref={launcherRef}
         type="button"
         className={`${styles.launcher} ${open ? styles.launcherOpen : ""}`}
         onClick={() => setOpen((value) => !value)}
@@ -96,6 +105,8 @@ function ChatPanel({ apiUrl, onClose }: { apiUrl: string; onClose: () => void })
   const [busy, setBusy] = useState(false);
   const [listening, setListening] = useState(false);
   const [speakAnswers, setSpeakAnswers] = useState(true);
+  const [expanded, setExpanded] = useState(false);
+  const panelRef = useRef<HTMLDialogElement>(null);
 
   const [RecognitionCtor] = useState(getRecognitionConstructor);
   const canSpeak = typeof window !== "undefined" && "speechSynthesis" in window;
@@ -104,6 +115,22 @@ function ChatPanel({ apiUrl, onClose }: { apiUrl: string; onClose: () => void })
   const abortRef = useRef<AbortController | null>(null);
   const speakAnswersRef = useRef(speakAnswers);
   const listRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const panel = panelRef.current;
+    if (!panel) return;
+    const focused = document.activeElement;
+    if (panel.open) panel.close();
+    if (expanded) panel.showModal();
+    else panel.show();
+    if (focused instanceof HTMLElement && panel.contains(focused)) focused.focus();
+
+    if (expanded) {
+      const previousOverflow = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+      return () => { document.body.style.overflow = previousOverflow; };
+    }
+  }, [expanded]);
 
   useEffect(() => {
     speakAnswersRef.current = speakAnswers;
@@ -125,7 +152,10 @@ function ChatPanel({ apiUrl, onClose }: { apiUrl: string; onClose: () => void })
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") onClose();
+      if (event.key === "Escape") {
+        event.preventDefault();
+        onClose();
+      }
     };
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
@@ -248,24 +278,44 @@ function ChatPanel({ apiUrl, onClose }: { apiUrl: string; onClose: () => void })
   const lastMessage = messages[messages.length - 1];
 
   return (
-    <section className={styles.panel} aria-label={t("title")}>
+    <dialog
+      ref={panelRef}
+      className={`${styles.panel} ${expanded ? styles.panelExpanded : ""}`}
+      aria-label={t("title")}
+      onCancel={(event) => { event.preventDefault(); onClose(); }}
+    >
       <header className={styles.header}>
         <div>
           <h2 className={styles.title}>{t("title")}</h2>
           <p className={styles.subtitle}>{t("subtitle")}</p>
         </div>
-        {canSpeak && (
+        <div className={styles.headerActions}>
           <button
             type="button"
             className={styles.iconButton}
-            onClick={() => setSpeakAnswers((value) => !value)}
-            aria-label={speakAnswers ? t("muteVoice") : t("unmuteVoice")}
-            aria-pressed={speakAnswers}
-            title={speakAnswers ? t("muteVoice") : t("unmuteVoice")}
+            onClick={() => setExpanded((value) => !value)}
+            aria-label={expanded ? t("collapse") : t("expand")}
+            aria-pressed={expanded}
+            title={expanded ? t("collapse") : t("expand")}
           >
-            {speakAnswers ? icons.volume : icons.volumeOff}
+            <ChatResizeIcon expanded={expanded} />
           </button>
-        )}
+          {canSpeak && (
+            <button
+              type="button"
+              className={styles.iconButton}
+              onClick={() => setSpeakAnswers((value) => !value)}
+              aria-label={speakAnswers ? t("muteVoice") : t("unmuteVoice")}
+              aria-pressed={speakAnswers}
+              title={speakAnswers ? t("muteVoice") : t("unmuteVoice")}
+            >
+              {speakAnswers ? icons.volume : icons.volumeOff}
+            </button>
+          )}
+          <button type="button" className={styles.iconButton} onClick={onClose} aria-label={t("close")} title={t("close")}>
+            {icons.close}
+          </button>
+        </div>
       </header>
 
       <div className={styles.messages} ref={listRef} aria-live="polite">
@@ -338,6 +388,6 @@ function ChatPanel({ apiUrl, onClose }: { apiUrl: string; onClose: () => void })
         </button>
       </form>
       <p className={styles.disclaimer}>{t("disclaimer")}</p>
-    </section>
+    </dialog>
   );
 }

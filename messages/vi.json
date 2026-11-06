@@ -42,6 +42,8 @@
     "listening": "Đang nghe…",
     "send": "Gửi",
     "close": "Đóng",
+    "expand": "Mở rộng khung chat",
+    "collapse": "Thu gọn khung chat",
     "startListening": "Hỏi bằng giọng nói",
     "stopListening": "Dừng nghe",
     "muteVoice": "Tắt đọc câu trả lời",
