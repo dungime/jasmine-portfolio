@@ -33,8 +33,8 @@
     "greeting": "Xin chào, tôi là Jasmine",
     "role": "Frontend Engineer",
     "tagline": "Xây dựng sản phẩm tốt hơn với frontend engineering hiện đại và phát triển có AI hỗ trợ.",
-    "description1": "Với hơn **9 năm** kinh nghiệm frontend engineering, tôi xây dựng các ứng dụng web có **khả năng mở rộng, dễ bảo trì** và đưa các tính năng phức tạp **từ yêu cầu đến sản phẩm chất lượng.**",
-    "description2": "Tôi **sử dụng AI** hỗ trợ để khám phá các giải pháp, giải quyết vấn đề và **cải thiện quy trình kỹ thuật.**",
+    "description1": "Tôi xây dựng và duy trì các ứng dụng web phức tạp bằng React và TypeScript, từ thiết kế kiến trúc frontend đến triển khai sản phẩm thực tế.",
+    "description2": "Với hơn 9 năm kinh nghiệm trong các lĩnh vực fintech, học trực tuyến và nền tảng doanh nghiệp, tôi chịu trách nhiệm xuyên suốt cho những tính năng phức tạp, đưa ra các quyết định kỹ thuật phù hợp với thực tế và xây dựng giải pháp để đội ngũ có thể tiếp tục bảo trì và mở rộng.",
     "tags": ["React", "TypeScript", "Next.js", "Phát triển có AI hỗ trợ"],
     "primaryCta": {
       "label": "Xem dự án",
