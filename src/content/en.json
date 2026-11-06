@@ -825,98 +825,253 @@
         "title": "Cleaning Services Dashboard",
         "subtitle": "Operations Management Platform",
         "category": "Operations",
-        "description": "Architected an operations dashboard from scratch, turning cleaning requests, maintenance, reports, and inventory into connected end-to-end workflows.",
+        "description": "A multi-module administration platform for managing cleaning services, maintenance operations, inventory, and related day-to-day workflows.",
         "screenshots": [
           "/assets/projects/cleaning-service-admin-dashboard-main.png",
-          "/assets/projects/cleaning-service-admin-dashboard.png",
-          "/assets/projects/cleaning-service-admin-dashboard-chart.png",
-          "/assets/projects/cleaning-service-admin-dashboard-inquiry-creation.png",
-          "/assets/projects/cleaning-service-admin-dashboard-office-clean.png",
           "/assets/projects/cleaning-service-admin-dashboard-stock-details.png",
-          "/assets/projects/cleaning-service-admin-dashboard-login.png"
+          "/assets/projects/cleaning-service-admin-dashboard-inquiry-creation.png",
+          "/assets/projects/cleaning-service-admin-dashboard-office-clean.png"
         ],
         "overview": [
           {
             "label": "Role",
-            "value": "Frontend Engineer · set up the architecture from scratch"
+            "value": "Frontend Developer"
           },
           {
-            "label": "Company",
-            "value": "Lecle Vietnam · client project"
+            "label": "Team",
+            "value": "2 frontend developers"
           },
           {
-            "label": "Users",
-            "value": "Operations and admin staff"
+            "label": "Timeline",
+            "value": "Late 2023 · 2-month primary development phase"
           },
           {
-            "label": "Scope",
-            "value": "Requests, maintenance, reports, inventory, scheduling, and analytics"
+            "label": "Focus",
+            "value": "Admin workflows · Data-driven UI · MRO inventory"
           }
         ],
-        "context": "An admin platform that operations staff use to run a cleaning services business day to day — scheduling work, handling maintenance, tracking stock, and reporting. I owned the frontend from the **first commit**.",
+        "context": "I helped set up the frontend project and implemented multiple administrative modules, translating extensive UI designs into working pages for cleaning services, maintenance, MRO inventory, and related operations. The frontend relied primarily on Ant Design, with React state and Ant Design Form APIs used to manage interactive forms and data-driven views.",
         "challenges": [
           {
-            "title": "Dense data across many connected areas",
-            "body": "Requests, maintenance, reports, and inventory are related but each has its own data and workflow. Staff needed to move between them without losing context."
+            "title": "MRO Inventory Data Transformation",
+            "body": "The Stock Details screen needed to present inventory across several dimensions at once: building floor, space, inventory item, and date. Its dense table layout required more than a straightforward mapping of records into rows."
           },
           {
-            "title": "Time-based work that has to be seen at a glance",
-            "body": "Scheduled cleaning work only makes sense on a calendar, alongside the tables and charts that explain it."
-          },
-          {
-            "title": "Forms that carry real business rules",
-            "body": "Creating operational records meant long, multi-part forms where mistakes flow straight into daily operations."
+            "title": "Multi-Module Data-Driven Admin Interfaces",
+            "body": "The product covered many administrative workflows, each with different forms, data structures, and UI interactions, within a short delivery window."
           }
         ],
         "solutions": [
           {
-            "title": "Architecture set up from scratch",
-            "body": "I set up the **entire frontend architecture** — Vite, Turborepo, Ant Design, and Jotai — so each area could be built on shared foundations."
+            "title": "Frontend Project Setup",
+            "body": "Helped initialize the frontend application and establish the starting structure for a two-developer frontend team."
           },
           {
-            "title": "Complete CRUD for every area",
-            "body": "I developed **end-to-end create, read, update, and delete workflows** for cleaning requests, maintenance, reports, and inventory."
+            "title": "Cleaning & Maintenance Modules",
+            "body": "Developed administration pages and CRUD workflows supporting cleaning services, maintenance operations, and related management tasks."
           },
           {
-            "title": "The right view for each job",
-            "body": "I combined **interactive calendars, tables, charts, drawers, and tree views**, so staff could schedule, inspect, and drill into data without leaving the page they were on."
+            "title": "MRO Inventory Interfaces",
+            "body": "Built inventory-focused pages, including a detailed stock view that required adapting data for a complex, date-based table layout."
           },
           {
-            "title": "Forms built for complex operations",
-            "body": "I built complex creation forms for operational workflows and business data, structured so long inputs stay manageable."
+            "title": "Interactive Admin Screens",
+            "body": "Implemented forms, data tables, calendars, drawers, and hierarchical views using Ant Design, with tailored styling where needed."
           }
         ],
         "impact": {
-          "metrics": [
-            {
-              "value": "4",
-              "label": "operational areas in one dashboard: requests, maintenance, reports, inventory"
-            },
-            {
-              "value": "5",
-              "label": "interface patterns combined: calendars, tables, charts, drawers, tree views"
-            },
-            {
-              "value": "0 → 1",
-              "label": "frontend architecture owned from the first commit"
-            }
-          ],
-          "summary": "Operations staff manage scheduling, maintenance, stock, and reporting from a single dashboard instead of separate tools, with every workflow covered end to end."
+          "metrics": [],
+          "summary": "Contributed to the agreed two-month development milestone, followed by client testing, remaining work, and bug fixing."
         },
         "learnings": [
-          "**Admin tools are judged on speed of work, not looks.** Choosing the right view — calendar, table, or tree — mattered more than visual polish.",
-          "**Shared foundations keep many CRUD areas consistent**, so each new section felt familiar to the people using it."
+          "This project strengthened my experience translating extensive admin designs into working, data-heavy React interfaces under practical delivery constraints."
         ],
         "tags": [
           "React",
-          "TypeScript",
           "Ant Design",
-          "Jotai",
-          "Vite",
-          "Turborepo",
-          "REST APIs"
+          "React State",
+          "Form.useForm"
         ],
-        "thumbnail": "/assets/projects/cleaning-service-admin-dashboard-main.png"
+        "thumbnail": "/assets/projects/cleaning-service-admin-dashboard-main.png",
+        "caseStudy": {
+          "hero": {
+            "layout": "full",
+            "eyebrow": "FRONTEND PROJECT / OPERATIONS DASHBOARD",
+            "title": "Cleaning Services Dashboard",
+            "lead": "A multi-module administration platform for managing cleaning services, maintenance operations, inventory, and related day-to-day workflows.",
+            "description": "I helped set up the frontend project and implemented multiple administrative modules, translating extensive UI designs into working pages for cleaning services, maintenance, MRO inventory, and related operations. The frontend relied primarily on Ant Design, with React state and Ant Design Form APIs used to manage interactive forms and data-driven views.",
+            "meta": [
+              {
+                "label": "Role",
+                "value": "Frontend Developer"
+              },
+              {
+                "label": "Team",
+                "value": "2 frontend developers"
+              },
+              {
+                "label": "Timeline",
+                "value": "Late 2023 · 2-month primary development phase"
+              },
+              {
+                "label": "Focus",
+                "value": "Admin workflows · Data-driven UI · MRO inventory"
+              }
+            ],
+            "techTags": [
+              "React",
+              "Ant Design",
+              "React State",
+              "Form.useForm"
+            ],
+            "heroImage": {
+              "src": "/assets/projects/cleaning-service-admin-dashboard-main.png",
+              "width": 1920,
+              "height": 1499,
+              "caption": "Office cleaning — calendar and work status",
+              "alt": "Office-cleaning administration screen showing a monthly work calendar and task status entries.",
+              "openLabel": "Open full-size image in a new tab"
+            }
+          },
+          "sections": [
+            {
+              "id": "contributions",
+              "eyebrow": "02 / CONTRIBUTIONS",
+              "title": "Key Contributions",
+              "cards": [
+                {
+                  "title": "Frontend Project Setup",
+                  "body": "Helped initialize the frontend application and establish the starting structure for a two-developer frontend team.",
+                  "icon": "code"
+                },
+                {
+                  "title": "Cleaning & Maintenance Modules",
+                  "body": "Developed administration pages and CRUD workflows supporting cleaning services, maintenance operations, and related management tasks.",
+                  "icon": "clipboard"
+                },
+                {
+                  "title": "MRO Inventory Interfaces",
+                  "body": "Built inventory-focused pages, including a detailed stock view that required adapting data for a complex, date-based table layout.",
+                  "icon": "database"
+                },
+                {
+                  "title": "Interactive Admin Screens",
+                  "body": "Implemented forms, data tables, calendars, drawers, and hierarchical views using Ant Design, with tailored styling where needed.",
+                  "icon": "layout"
+                }
+              ]
+            },
+            {
+              "id": "engineering",
+              "eyebrow": "03 / ENGINEERING",
+              "title": "Engineering Highlights",
+              "features": [
+                {
+                  "eyebrow": "01 / ENGINEERING HIGHLIGHT",
+                  "title": "MRO Inventory Data Transformation",
+                  "facts": [
+                    {
+                      "label": "Challenge",
+                      "body": "The Stock Details screen needed to present inventory across several dimensions at once: building floor, space, inventory item, and date. Its dense table layout required more than a straightforward mapping of records into rows."
+                    },
+                    {
+                      "label": "Implementation",
+                      "body": "",
+                      "points": [
+                        "Adapted and transformed inventory data to match the table structure required by the UI design.",
+                        "Implemented the stock details view with grouped headers, location-based rows, and date-oriented inventory values using Ant Design.",
+                        "Incorporated the screen's date and stock-status controls into the interface."
+                      ]
+                    },
+                    {
+                      "label": "Result",
+                      "body": "Delivered an inventory view that organizes stock information by location and date, making complex operational data easier to inspect in a single screen."
+                    }
+                  ],
+                  "visual": {
+                    "framed": true,
+                    "image": {
+                      "src": "/assets/projects/cleaning-service-admin-dashboard-stock-details.png",
+                      "width": 1920,
+                      "height": 1158,
+                      "caption": "MRO Stock Details — inventory grouped by floor, space, item, and date",
+                      "alt": "MRO Stock Details table with floor, space, and item grouping, date-grouped headers, colored stock-status indicators, and date and status controls.",
+                      "openLabel": "Open full-size image in a new tab"
+                    }
+                  }
+                },
+                {
+                  "eyebrow": "02 / ENGINEERING HIGHLIGHT",
+                  "title": "Multi-Module Data-Driven Admin Interfaces",
+                  "facts": [
+                    {
+                      "label": "Challenge",
+                      "body": "The product covered many administrative workflows, each with different forms, data structures, and UI interactions, within a short delivery window."
+                    },
+                    {
+                      "label": "Implementation",
+                      "body": "",
+                      "points": [
+                        "Developed operational pages using Ant Design tables, calendars, drawers, forms, and tree views according to module requirements.",
+                        "Used Form.useForm and React state to manage form values, interactions, and data changes.",
+                        "Integrated APIs for standard create, read, update, and delete workflows.",
+                        "Added limited reusable wrappers where custom Ant Design styling was needed, while using library components directly for most screens."
+                      ]
+                    },
+                    {
+                      "label": "Result",
+                      "body": "Implemented practical administration interfaces across cleaning, maintenance, MRO inventory, and additional related modules."
+                    }
+                  ],
+                  "images": [
+                    {
+                      "src": "/assets/projects/cleaning-service-admin-dashboard-inquiry-creation.png",
+                      "width": 1920,
+                      "height": 1230,
+                      "caption": "Inquiry management — list and creation form",
+                      "alt": "Inquiry administration table with a side drawer containing form fields for an inquiry.",
+                      "openLabel": "Open full-size image in a new tab"
+                    },
+                    {
+                      "src": "/assets/projects/cleaning-service-admin-dashboard-office-clean.png",
+                      "width": 1920,
+                      "height": 1297,
+                      "caption": "Office cleaning — details drawer",
+                      "alt": "Office-cleaning interface with a details drawer showing location, care period, photos, and notes.",
+                      "openLabel": "Open full-size image in a new tab"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "ownership",
+              "eyebrow": "04 / BEYOND IMPLEMENTATION",
+              "title": "Working Within a Tight Delivery Window",
+              "description": "The project involved a two-developer frontend team working from a broad set of administration designs. I contributed to the initial frontend setup and implemented many of the operational pages during a two-month primary development phase. At the agreed milestone, remaining reporting functionality and full client-led testing were handled as follow-up work, alongside bug fixes."
+            },
+            {
+              "id": "outcomes",
+              "eyebrow": "05 / OUTCOMES",
+              "title": "Outcomes",
+              "outcomes": [
+                {
+                  "title": "Multiple operational modules implemented",
+                  "body": "Delivered frontend pages for cleaning services, maintenance, MRO inventory, and other related administration workflows."
+                },
+                {
+                  "title": "Complex stock view completed",
+                  "body": "Transformed inventory data for a detailed location- and date-based stock table."
+                },
+                {
+                  "title": "Primary delivery milestone reached",
+                  "body": "Contributed to the agreed two-month development milestone, followed by client testing, remaining work, and bug fixing."
+                }
+              ],
+              "takeaway": "This project strengthened my experience translating extensive admin designs into working, data-heavy React interfaces under practical delivery constraints."
+            }
+          ]
+        }
       },
       {
         "id": "aimee-by-j",

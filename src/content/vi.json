@@ -805,98 +805,253 @@
         "title": "Dashboard dịch vụ vệ sinh",
         "subtitle": "Nền tảng quản lý vận hành",
         "category": "Vận hành",
-        "description": "Dựng kiến trúc từ đầu cho một dashboard vận hành, biến yêu cầu vệ sinh, bảo trì, báo cáo và kho hàng thành các quy trình end-to-end liên kết với nhau.",
+        "description": "Nền tảng quản trị đa phân hệ dành cho dịch vụ vệ sinh, hoạt động bảo trì, kho vật tư và các quy trình vận hành hằng ngày liên quan.",
         "screenshots": [
           "/assets/projects/cleaning-service-admin-dashboard-main.png",
-          "/assets/projects/cleaning-service-admin-dashboard.png",
-          "/assets/projects/cleaning-service-admin-dashboard-chart.png",
-          "/assets/projects/cleaning-service-admin-dashboard-inquiry-creation.png",
-          "/assets/projects/cleaning-service-admin-dashboard-office-clean.png",
           "/assets/projects/cleaning-service-admin-dashboard-stock-details.png",
-          "/assets/projects/cleaning-service-admin-dashboard-login.png"
+          "/assets/projects/cleaning-service-admin-dashboard-inquiry-creation.png",
+          "/assets/projects/cleaning-service-admin-dashboard-office-clean.png"
         ],
         "overview": [
           {
             "label": "Vai trò",
-            "value": "Frontend Engineer · thiết lập kiến trúc từ đầu"
+            "value": "Frontend Developer"
           },
           {
-            "label": "Công ty",
-            "value": "Lecle Vietnam · dự án khách hàng"
+            "label": "Đội ngũ",
+            "value": "2 lập trình viên frontend"
           },
           {
-            "label": "Người dùng",
-            "value": "Nhân viên vận hành và quản trị"
+            "label": "Thời gian",
+            "value": "Cuối năm 2023 · Giai đoạn phát triển chính kéo dài 2 tháng"
           },
           {
-            "label": "Phạm vi",
-            "value": "Yêu cầu dịch vụ, bảo trì, báo cáo, kho hàng, lịch làm việc và thống kê"
+            "label": "Trọng tâm",
+            "value": "Quy trình quản trị · Giao diện dữ liệu · Kho MRO"
           }
         ],
-        "context": "Một nền tảng quản trị mà nhân viên vận hành dùng hằng ngày để điều hành dịch vụ vệ sinh — xếp lịch công việc, xử lý bảo trì, theo dõi kho và báo cáo. Tôi làm chủ frontend từ **commit đầu tiên**.",
+        "context": "Tôi tham gia thiết lập dự án frontend và triển khai nhiều phân hệ quản trị, chuyển bộ thiết kế giao diện lớn thành các trang hoạt động thực tế cho dịch vụ vệ sinh, bảo trì, kho MRO và các nghiệp vụ liên quan. Frontend chủ yếu sử dụng Ant Design, kết hợp React state và các API Form của Ant Design để quản lý form tương tác và giao diện dữ liệu.",
         "challenges": [
           {
-            "title": "Dữ liệu dày đặc trên nhiều mảng liên kết",
-            "body": "Yêu cầu dịch vụ, bảo trì, báo cáo và kho hàng liên quan đến nhau nhưng mỗi mảng có dữ liệu và quy trình riêng. Nhân viên cần chuyển qua lại mà không mất ngữ cảnh."
+            "title": "Chuyển đổi dữ liệu tồn kho MRO",
+            "body": "Màn hình Stock Details cần hiển thị tồn kho theo nhiều chiều cùng lúc: tầng của tòa nhà, không gian, vật tư và ngày. Bố cục bảng dày đặc này đòi hỏi nhiều hơn việc ánh xạ trực tiếp các bản ghi thành hàng."
           },
           {
-            "title": "Công việc theo thời gian cần nhìn là hiểu",
-            "body": "Lịch vệ sinh chỉ có ý nghĩa khi hiển thị trên lịch, bên cạnh bảng và biểu đồ giải thích cho nó."
-          },
-          {
-            "title": "Form chứa quy tắc nghiệp vụ thật",
-            "body": "Tạo bản ghi vận hành đồng nghĩa với những form dài, nhiều phần, nơi một sai sót sẽ ảnh hưởng thẳng vào hoạt động hằng ngày."
+            "title": "Giao diện quản trị dữ liệu cho nhiều phân hệ",
+            "body": "Sản phẩm bao gồm nhiều quy trình quản trị với các form, cấu trúc dữ liệu và tương tác giao diện khác nhau, trong một khoảng thời gian triển khai ngắn."
           }
         ],
         "solutions": [
           {
-            "title": "Thiết lập kiến trúc từ đầu",
-            "body": "Tôi thiết lập **toàn bộ kiến trúc frontend** — Vite, Turborepo, Ant Design và Jotai — để mọi mảng được xây trên cùng một nền tảng chung."
+            "title": "Thiết lập dự án frontend",
+            "body": "Tham gia khởi tạo ứng dụng frontend và thiết lập cấu trúc ban đầu cho đội ngũ gồm hai lập trình viên frontend."
           },
           {
-            "title": "CRUD hoàn chỉnh cho từng mảng",
-            "body": "Tôi phát triển **quy trình tạo, xem, sửa, xoá end-to-end** cho yêu cầu vệ sinh, bảo trì, báo cáo và kho hàng."
+            "title": "Phân hệ vệ sinh và bảo trì",
+            "body": "Phát triển các trang quản trị và quy trình CRUD phục vụ dịch vụ vệ sinh, hoạt động bảo trì và các tác vụ quản lý liên quan."
           },
           {
-            "title": "Đúng giao diện cho đúng công việc",
-            "body": "Tôi kết hợp **lịch tương tác, bảng, biểu đồ, drawer và tree view**, để nhân viên xếp lịch, xem chi tiết và đào sâu dữ liệu mà không phải rời trang đang làm việc."
+            "title": "Giao diện kho MRO",
+            "body": "Xây dựng các trang quản lý kho, bao gồm màn hình chi tiết tồn kho cần điều chỉnh dữ liệu cho bố cục bảng phức tạp theo ngày."
           },
           {
-            "title": "Form dành cho nghiệp vụ phức tạp",
-            "body": "Tôi xây dựng các form tạo mới phức tạp cho quy trình vận hành và dữ liệu nghiệp vụ, được chia cấu trúc để những form dài vẫn dễ thao tác."
+            "title": "Màn hình quản trị tương tác",
+            "body": "Triển khai form, bảng dữ liệu, lịch, drawer và giao diện phân cấp bằng Ant Design, tùy chỉnh giao diện ở những nơi cần thiết."
           }
         ],
         "impact": {
-          "metrics": [
-            {
-              "value": "4",
-              "label": "mảng vận hành trong một dashboard: yêu cầu, bảo trì, báo cáo, kho hàng"
-            },
-            {
-              "value": "5",
-              "label": "dạng giao diện kết hợp: lịch, bảng, biểu đồ, drawer, tree view"
-            },
-            {
-              "value": "0 → 1",
-              "label": "kiến trúc frontend do tôi làm chủ từ commit đầu tiên"
-            }
-          ],
-          "summary": "Nhân viên vận hành quản lý lịch làm việc, bảo trì, kho hàng và báo cáo trên một dashboard duy nhất thay vì nhiều công cụ rời rạc, với mọi quy trình được bao phủ end-to-end."
+          "metrics": [],
+          "summary": "Góp phần đạt mốc phát triển hai tháng đã thống nhất, sau đó tiếp tục kiểm thử với khách hàng, hoàn thiện công việc còn lại và sửa lỗi."
         },
         "learnings": [
-          "**Công cụ quản trị được đánh giá bằng tốc độ làm việc, không phải vẻ ngoài.** Chọn đúng dạng hiển thị — lịch, bảng hay cây — quan trọng hơn trau chuốt giao diện.",
-          "**Nền tảng dùng chung giữ cho nhiều mảng CRUD nhất quán**, để mỗi phần mới đều quen thuộc với người dùng."
+          "Dự án giúp tôi củng cố kinh nghiệm chuyển bộ thiết kế quản trị lớn thành giao diện React hoạt động thực tế với nhiều dữ liệu, trong các ràng buộc triển khai thực tế."
         ],
         "tags": [
           "React",
-          "TypeScript",
           "Ant Design",
-          "Jotai",
-          "Vite",
-          "Turborepo",
-          "REST APIs"
+          "React State",
+          "Form.useForm"
         ],
-        "thumbnail": "/assets/projects/cleaning-service-admin-dashboard-main.png"
+        "thumbnail": "/assets/projects/cleaning-service-admin-dashboard-main.png",
+        "caseStudy": {
+          "hero": {
+            "layout": "full",
+            "eyebrow": "DỰ ÁN FRONTEND / DASHBOARD VẬN HÀNH",
+            "title": "Dashboard dịch vụ vệ sinh",
+            "lead": "Nền tảng quản trị đa phân hệ dành cho dịch vụ vệ sinh, hoạt động bảo trì, kho vật tư và các quy trình vận hành hằng ngày liên quan.",
+            "description": "Tôi tham gia thiết lập dự án frontend và triển khai nhiều phân hệ quản trị, chuyển bộ thiết kế giao diện lớn thành các trang hoạt động thực tế cho dịch vụ vệ sinh, bảo trì, kho MRO và các nghiệp vụ liên quan. Frontend chủ yếu sử dụng Ant Design, kết hợp React state và các API Form của Ant Design để quản lý form tương tác và giao diện dữ liệu.",
+            "meta": [
+              {
+                "label": "Vai trò",
+                "value": "Frontend Developer"
+              },
+              {
+                "label": "Đội ngũ",
+                "value": "2 lập trình viên frontend"
+              },
+              {
+                "label": "Thời gian",
+                "value": "Cuối năm 2023 · Giai đoạn phát triển chính kéo dài 2 tháng"
+              },
+              {
+                "label": "Trọng tâm",
+                "value": "Quy trình quản trị · Giao diện dữ liệu · Kho MRO"
+              }
+            ],
+            "techTags": [
+              "React",
+              "Ant Design",
+              "React State",
+              "Form.useForm"
+            ],
+            "heroImage": {
+              "src": "/assets/projects/cleaning-service-admin-dashboard-main.png",
+              "width": 1920,
+              "height": 1499,
+              "caption": "Vệ sinh văn phòng — lịch và trạng thái công việc",
+              "alt": "Màn hình quản trị vệ sinh văn phòng hiển thị lịch làm việc theo tháng và trạng thái các công việc.",
+              "openLabel": "Mở ảnh kích thước đầy đủ trong tab mới"
+            }
+          },
+          "sections": [
+            {
+              "id": "contributions",
+              "eyebrow": "02 / ĐÓNG GÓP",
+              "title": "Đóng góp chính",
+              "cards": [
+                {
+                  "title": "Thiết lập dự án frontend",
+                  "body": "Tham gia khởi tạo ứng dụng frontend và thiết lập cấu trúc ban đầu cho đội ngũ gồm hai lập trình viên frontend.",
+                  "icon": "code"
+                },
+                {
+                  "title": "Phân hệ vệ sinh và bảo trì",
+                  "body": "Phát triển các trang quản trị và quy trình CRUD phục vụ dịch vụ vệ sinh, hoạt động bảo trì và các tác vụ quản lý liên quan.",
+                  "icon": "clipboard"
+                },
+                {
+                  "title": "Giao diện kho MRO",
+                  "body": "Xây dựng các trang quản lý kho, bao gồm màn hình chi tiết tồn kho cần điều chỉnh dữ liệu cho bố cục bảng phức tạp theo ngày.",
+                  "icon": "database"
+                },
+                {
+                  "title": "Màn hình quản trị tương tác",
+                  "body": "Triển khai form, bảng dữ liệu, lịch, drawer và giao diện phân cấp bằng Ant Design, tùy chỉnh giao diện ở những nơi cần thiết.",
+                  "icon": "layout"
+                }
+              ]
+            },
+            {
+              "id": "engineering",
+              "eyebrow": "03 / KỸ THUẬT",
+              "title": "Điểm nhấn kỹ thuật",
+              "features": [
+                {
+                  "eyebrow": "01 / ĐIỂM NHẤN KỸ THUẬT",
+                  "title": "Chuyển đổi dữ liệu tồn kho MRO",
+                  "facts": [
+                    {
+                      "label": "Thách thức",
+                      "body": "Màn hình Stock Details cần hiển thị tồn kho theo nhiều chiều cùng lúc: tầng của tòa nhà, không gian, vật tư và ngày. Bố cục bảng dày đặc này đòi hỏi nhiều hơn việc ánh xạ trực tiếp các bản ghi thành hàng."
+                    },
+                    {
+                      "label": "Triển khai",
+                      "body": "",
+                      "points": [
+                        "Điều chỉnh và chuyển đổi dữ liệu tồn kho để phù hợp với cấu trúc bảng trong thiết kế giao diện.",
+                        "Triển khai màn hình chi tiết tồn kho với tiêu đề cột theo nhóm, các hàng theo vị trí và giá trị tồn kho theo ngày bằng Ant Design.",
+                        "Tích hợp các bộ chọn ngày và trạng thái tồn kho vào giao diện."
+                      ]
+                    },
+                    {
+                      "label": "Kết quả",
+                      "body": "Hoàn thành giao diện tồn kho sắp xếp thông tin theo vị trí và ngày, giúp dữ liệu vận hành phức tạp dễ kiểm tra hơn trên cùng một màn hình."
+                    }
+                  ],
+                  "visual": {
+                    "framed": true,
+                    "image": {
+                      "src": "/assets/projects/cleaning-service-admin-dashboard-stock-details.png",
+                      "width": 1920,
+                      "height": 1158,
+                      "caption": "Chi tiết tồn kho MRO — tồn kho theo tầng, không gian, vật tư và ngày",
+                      "alt": "Bảng chi tiết tồn kho MRO với các nhóm tầng, không gian và vật tư, tiêu đề cột theo ngày, chỉ báo màu cho trạng thái tồn kho cùng các bộ chọn ngày và trạng thái.",
+                      "openLabel": "Mở ảnh kích thước đầy đủ trong tab mới"
+                    }
+                  }
+                },
+                {
+                  "eyebrow": "02 / ĐIỂM NHẤN KỸ THUẬT",
+                  "title": "Giao diện quản trị dữ liệu cho nhiều phân hệ",
+                  "facts": [
+                    {
+                      "label": "Thách thức",
+                      "body": "Sản phẩm bao gồm nhiều quy trình quản trị với các form, cấu trúc dữ liệu và tương tác giao diện khác nhau, trong một khoảng thời gian triển khai ngắn."
+                    },
+                    {
+                      "label": "Triển khai",
+                      "body": "",
+                      "points": [
+                        "Phát triển các trang vận hành bằng bảng, lịch, drawer, form và tree view của Ant Design theo yêu cầu của từng phân hệ.",
+                        "Sử dụng Form.useForm và React state để quản lý giá trị form, tương tác và thay đổi dữ liệu.",
+                        "Tích hợp API cho các quy trình tạo, đọc, cập nhật và xóa dữ liệu thông thường.",
+                        "Bổ sung một số ít component bọc khi cần tùy chỉnh giao diện Ant Design, đồng thời sử dụng trực tiếp component của thư viện cho phần lớn màn hình."
+                      ]
+                    },
+                    {
+                      "label": "Kết quả",
+                      "body": "Triển khai các giao diện quản trị phục vụ công việc thực tế trong các phân hệ vệ sinh, bảo trì, kho MRO và những phân hệ liên quan khác."
+                    }
+                  ],
+                  "images": [
+                    {
+                      "src": "/assets/projects/cleaning-service-admin-dashboard-inquiry-creation.png",
+                      "width": 1920,
+                      "height": 1230,
+                      "caption": "Quản lý yêu cầu — danh sách và form tạo mới",
+                      "alt": "Bảng quản trị yêu cầu với một ngăn bên chứa các trường nhập liệu cho yêu cầu.",
+                      "openLabel": "Mở ảnh kích thước đầy đủ trong tab mới"
+                    },
+                    {
+                      "src": "/assets/projects/cleaning-service-admin-dashboard-office-clean.png",
+                      "width": 1920,
+                      "height": 1297,
+                      "caption": "Vệ sinh văn phòng — ngăn thông tin chi tiết",
+                      "alt": "Giao diện vệ sinh văn phòng với ngăn thông tin chi tiết hiển thị vị trí, thời gian chăm sóc, hình ảnh và ghi chú.",
+                      "openLabel": "Mở ảnh kích thước đầy đủ trong tab mới"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "ownership",
+              "eyebrow": "04 / NGOÀI PHẦN TRIỂN KHAI",
+              "title": "Làm việc trong thời gian triển khai hạn chế",
+              "description": "Dự án có hai lập trình viên frontend làm việc từ một bộ thiết kế quản trị lớn. Tôi tham gia thiết lập frontend ban đầu và triển khai nhiều trang vận hành trong giai đoạn phát triển chính kéo dài hai tháng. Tại mốc đã thống nhất, chức năng báo cáo còn lại và việc kiểm thử đầy đủ do khách hàng thực hiện được chuyển sang giai đoạn tiếp theo, cùng với việc sửa lỗi."
+            },
+            {
+              "id": "outcomes",
+              "eyebrow": "05 / KẾT QUẢ",
+              "title": "Kết quả",
+              "outcomes": [
+                {
+                  "title": "Triển khai nhiều phân hệ vận hành",
+                  "body": "Hoàn thành các trang frontend cho dịch vụ vệ sinh, bảo trì, kho MRO và những quy trình quản trị liên quan khác."
+                },
+                {
+                  "title": "Hoàn thành màn hình tồn kho phức tạp",
+                  "body": "Chuyển đổi dữ liệu tồn kho cho bảng chi tiết theo vị trí và ngày."
+                },
+                {
+                  "title": "Đạt mốc phát triển chính",
+                  "body": "Góp phần đạt mốc phát triển hai tháng đã thống nhất, sau đó tiếp tục kiểm thử với khách hàng, hoàn thiện công việc còn lại và sửa lỗi."
+                }
+              ],
+              "takeaway": "Dự án giúp tôi củng cố kinh nghiệm chuyển bộ thiết kế quản trị lớn thành giao diện React hoạt động thực tế với nhiều dữ liệu, trong các ràng buộc triển khai thực tế."
+            }
+          ]
+        }
       },
       {
         "id": "aimee-by-j",
