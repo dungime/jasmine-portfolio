@@ -1074,6 +1074,233 @@
         }
       },
       {
+        "id": "shopify-theme-development",
+        "title": "Shopify Theme Development & Customization",
+        "subtitle": "Freelance Work · E-commerce",
+        "category": "Freelance Work · E-commerce",
+        "cardEyebrow": "Freelance Work · E-commerce",
+        "description": "Custom Shopify storefronts with Liquid templates, sections, Mailchimp integration, and multilingual support.",
+        "seoDescription": "Custom Shopify storefronts with Liquid templates, sections, Mailchimp integration, and multilingual support.",
+        "overview": [
+          {
+            "label": "Role",
+            "value": "Frontend Developer · Shopify Theme Development"
+          },
+          {
+            "label": "Work type",
+            "value": "Freelance / Client Projects"
+          },
+          {
+            "label": "Scope",
+            "value": "2 featured storefronts + additional maintenance work"
+          },
+          {
+            "label": "Stack",
+            "value": "Shopify · Liquid · JavaScript · SCSS · HTML/CSS"
+          }
+        ],
+        "context": "I worked on Shopify storefronts by adapting existing themes and developing custom templates and sections where default components could not match the design. My work includes Mailchimp newsletter integration for Ladder Locker and multilingual storefront support for OZKIZ Global.",
+        "challenges": [],
+        "solutions": [],
+        "impact": {
+          "metrics": [],
+          "summary": "Custom Shopify storefronts with Liquid templates, sections, Mailchimp integration, and multilingual support."
+        },
+        "learnings": [],
+        "tags": [
+          "Shopify",
+          "Liquid",
+          "JavaScript",
+          "SCSS"
+        ],
+        "thumbnail": "/assets/projects/shopify-ladder-locker-home.jpg",
+        "caseStudy": {
+          "hero": {
+            "layout": "full",
+            "eyebrow": "FREELANCE WORK · E-COMMERCE",
+            "title": "Shopify Theme Development & Customization",
+            "lead": "Custom Shopify storefronts tailored to client designs through Liquid templates, Shopify sections, JavaScript interactions, and SCSS styling.",
+            "description": "I worked on Shopify storefronts by adapting existing themes and developing custom templates and sections where default components could not match the design. My work includes Mailchimp newsletter integration for Ladder Locker and multilingual storefront support for OZKIZ Global.",
+            "meta": [
+              {
+                "label": "Role",
+                "value": "Frontend Developer · Shopify Theme Development"
+              },
+              {
+                "label": "Work type",
+                "value": "Freelance / Client Projects"
+              },
+              {
+                "label": "Scope",
+                "value": "2 featured storefronts + additional maintenance work"
+              },
+              {
+                "label": "Stack",
+                "value": "Shopify · Liquid · JavaScript · SCSS · HTML/CSS"
+              }
+            ],
+            "heroImages": [
+              {
+                "src": "/assets/projects/shopify-ladder-locker-home.jpg",
+                "width": 1440,
+                "height": 1000,
+                "caption": "Ladder Locker — current live homepage",
+                "alt": "Ladder Locker homepage showing the store navigation, ladder tie-down product imagery, and main call to action.",
+                "openLabel": "Open full-size image in a new tab"
+              },
+              {
+                "src": "/assets/projects/shopify-ozkiz-global-home.jpg",
+                "width": 1440,
+                "height": 1000,
+                "caption": "OZKIZ Global — current live homepage",
+                "alt": "OZKIZ Global homepage showing the storefront navigation, language selector, and a collection banner.",
+                "openLabel": "Open full-size image in a new tab"
+              }
+            ],
+            "imageNote": "Screenshots show the current live storefronts and may include changes made after my involvement."
+          },
+          "sections": [
+            {
+              "id": "storefronts",
+              "eyebrow": "02 / FEATURED STOREFRONTS",
+              "title": "Featured Storefronts",
+              "showcases": [
+                {
+                  "title": "Ladder Locker",
+                  "subhead": "Custom Shopify Storefront · Mailchimp Integration",
+                  "description": "Customized a Shopify storefront to match a client-specific design, creating and modifying Liquid templates and sections beyond the default theme. Integrated Mailchimp newsletter signup to connect storefront interactions with an external email marketing service.",
+                  "points": [
+                    "Created and customized Liquid templates and Shopify sections for design-specific storefront layouts.",
+                    "Used JavaScript and SCSS to implement and style frontend interactions.",
+                    "Integrated Mailchimp newsletter subscriptions through a form and API submission flow."
+                  ],
+                  "image": {
+                    "src": "/assets/projects/shopify-ladder-locker-home.jpg",
+                    "width": 1440,
+                    "height": 1000,
+                    "caption": "Ladder Locker — current live homepage",
+                    "alt": "Ladder Locker homepage showing the store navigation, ladder tie-down product imagery, and main call to action.",
+                    "openLabel": "Open full-size image in a new tab"
+                  },
+                  "link": {
+                    "label": "Visit Ladder Locker",
+                    "href": "https://ladderlocker.com.au/"
+                  }
+                },
+                {
+                  "title": "OZKIZ Global",
+                  "subhead": "Custom Shopify Storefront · Multilingual Support",
+                  "description": "Customized a Shopify storefront using Liquid templates and sections to reproduce client-provided designs, with multilingual support for the international shopping experience.",
+                  "points": [
+                    "Built and customized Liquid templates and sections to support distinctive storefront layouts.",
+                    "Implemented multilingual storefront support.",
+                    "Developed frontend styles and interactions using SCSS and JavaScript."
+                  ],
+                  "image": {
+                    "src": "/assets/projects/shopify-ozkiz-global-home.jpg",
+                    "width": 1440,
+                    "height": 1000,
+                    "caption": "OZKIZ Global — current live homepage",
+                    "alt": "OZKIZ Global homepage showing the storefront navigation, language selector, and a collection banner.",
+                    "openLabel": "Open full-size image in a new tab"
+                  },
+                  "link": {
+                    "label": "Visit OZKIZ Global",
+                    "href": "https://global.ozkiz.com/"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "contributions",
+              "eyebrow": "03 / TECHNICAL CONTRIBUTIONS",
+              "title": "Technical Contributions",
+              "cards": [
+                {
+                  "title": "Liquid Templates & Custom Sections",
+                  "body": "Created and modified Shopify Liquid templates and sections to reproduce layouts that standard theme components could not support.",
+                  "icon": "code"
+                },
+                {
+                  "title": "Storefront Interactions",
+                  "body": "Customized frontend behavior with JavaScript, including product-variant display logic when required by the storefront design.",
+                  "icon": "layout"
+                },
+                {
+                  "title": "Third-Party Integration",
+                  "body": "Connected Ladder Locker’s newsletter signup flow with Mailchimp through a frontend form and API submission.",
+                  "icon": "mail"
+                },
+                {
+                  "title": "Multilingual & Styling Workflow",
+                  "body": "Implemented multilingual storefront support for OZKIZ Global and authored SCSS compiled into production CSS.",
+                  "icon": "palette"
+                }
+              ]
+            },
+            {
+              "id": "workflow",
+              "eyebrow": "04 / DEVELOPMENT WORKFLOW",
+              "title": "From Existing Theme to Client-Specific Storefront",
+              "description": "My workflow starts with a Shopify theme as a foundation, then extends it through code to meet the client's visual and functional requirements.",
+              "steps": [
+                {
+                  "title": "Start with a Shopify theme",
+                  "body": "Pull the starting theme into a local development environment."
+                },
+                {
+                  "title": "Build custom Liquid UI",
+                  "body": "Modify templates and create sections for unique page layouts."
+                },
+                {
+                  "title": "Add interactions and integrations",
+                  "body": "Customize JavaScript and connect features such as newsletter subscriptions when required."
+                },
+                {
+                  "title": "Style with SCSS",
+                  "body": "Maintain styles in SCSS and compile production CSS."
+                },
+                {
+                  "title": "Review the storefront",
+                  "body": "Compare rendered pages with the supplied design and refine responsive presentation."
+                }
+              ]
+            },
+            {
+              "id": "outcomes",
+              "eyebrow": "05 / ADDITIONAL ENGAGEMENT & OUTCOMES",
+              "title": "Additional Engagement & Outcomes",
+              "engagements": [
+                {
+                  "eyebrow": "Additional Shopify Maintenance",
+                  "title": "ADO E-Bike Vietnam",
+                  "body": "Completed minor bug fixes and maintenance on ADO E-Bike's earlier Shopify storefront. The business later moved to Haravan, so its current website is included for reference rather than presented as a live Shopify example.",
+                  "link": {
+                    "label": "Current ADO E-Bike website",
+                    "href": "https://adoebike.vn/"
+                  }
+                }
+              ],
+              "outcomesTitle": "Delivered Work",
+              "outcomes": [
+                {
+                  "title": "Two customized storefronts",
+                  "body": "Ladder Locker and OZKIZ Global."
+                },
+                {
+                  "title": "Custom theme code",
+                  "body": "Liquid templates/sections, JavaScript and SCSS-based styling."
+                },
+                {
+                  "title": "Client-specific functionality",
+                  "body": "Mailchimp newsletter integration (Ladder Locker) and multilingual storefront support (OZKIZ)."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
         "id": "aimee-by-j",
         "title": "Aimee by J — Headless Ecommerce Storefront",
         "subtitle": "Vietnamese Fashion Ecommerce · In Progress",

@@ -91,3 +91,19 @@ hiển thị hoàn toàn mới vẫn cần bổ sung vào component chung.
 
 Sau khi sửa, kiểm tra cả EN/VI và chạy `npm run lint`,
 `npx tsc --noEmit --incremental false`, `npm run build`.
+
+## Dự án có nhiều website tiêu biểu
+
+- `hero.heroImages`: danh sách ảnh dùng cho phần mở đầu hai cột; `hero.imageNote`
+  cung cấp chú thích chung về nguồn hoặc thời điểm của ảnh.
+- `section.showcases`: các khối ảnh và nội dung, gồm `title`, `subhead`,
+  `description`, `points`, `image`, `link: { label, href }`. Ảnh nằm trên nội dung
+  ở mobile; link website mở trong tab mới.
+- `section.engagements`: các công việc bổ sung ngắn, gồm `eyebrow`, `title`,
+  `body` và `link` tùy chọn. Hiển thị trước các kết quả.
+- `section.outcomesTitle`: tiêu đề phụ đặt ngay trước danh sách kết quả.
+- `steps` hỗ trợ quy trình năm bước nằm ngang trên desktop, dọc trên tablet/mobile.
+- `cardEyebrow` ở cấp dự án thêm dòng phân loại trên card trang chủ.
+- `seoDescription` ở cấp dự án cung cấp meta description riêng cho trang dự án.
+
+Các trường mới đều tùy chọn; không cần sửa dự án đang dùng mẫu hiện tại.

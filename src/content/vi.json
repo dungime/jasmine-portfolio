@@ -1054,6 +1054,233 @@
         }
       },
       {
+        "id": "shopify-theme-development",
+        "title": "Phát triển & tùy chỉnh theme Shopify",
+        "subtitle": "Dự án freelance · Thương mại điện tử",
+        "category": "Dự án freelance · Thương mại điện tử",
+        "cardEyebrow": "Dự án freelance · Thương mại điện tử",
+        "description": "Tùy chỉnh cửa hàng Shopify với template Liquid, section, tích hợp Mailchimp và hỗ trợ đa ngôn ngữ.",
+        "seoDescription": "Tùy chỉnh cửa hàng Shopify với template Liquid, section, tích hợp Mailchimp và hỗ trợ đa ngôn ngữ.",
+        "overview": [
+          {
+            "label": "Vai trò",
+            "value": "Frontend Developer · Phát triển theme Shopify"
+          },
+          {
+            "label": "Hình thức",
+            "value": "Freelance / Dự án khách hàng"
+          },
+          {
+            "label": "Phạm vi",
+            "value": "2 cửa hàng tiêu biểu + công việc bảo trì bổ sung"
+          },
+          {
+            "label": "Công nghệ",
+            "value": "Shopify · Liquid · JavaScript · SCSS · HTML/CSS"
+          }
+        ],
+        "context": "Tôi phát triển các cửa hàng Shopify bằng cách điều chỉnh theme có sẵn và xây dựng template, section riêng khi component mặc định không đáp ứng được thiết kế. Công việc của tôi bao gồm tích hợp đăng ký nhận bản tin Mailchimp cho Ladder Locker và hỗ trợ đa ngôn ngữ cho OZKIZ Global.",
+        "challenges": [],
+        "solutions": [],
+        "impact": {
+          "metrics": [],
+          "summary": "Tùy chỉnh cửa hàng Shopify với template Liquid, section, tích hợp Mailchimp và hỗ trợ đa ngôn ngữ."
+        },
+        "learnings": [],
+        "tags": [
+          "Shopify",
+          "Liquid",
+          "JavaScript",
+          "SCSS"
+        ],
+        "thumbnail": "/assets/projects/shopify-ladder-locker-home.jpg",
+        "caseStudy": {
+          "hero": {
+            "layout": "full",
+            "eyebrow": "DỰ ÁN FREELANCE · THƯƠNG MẠI ĐIỆN TỬ",
+            "title": "Phát triển & tùy chỉnh theme Shopify",
+            "lead": "Tùy chỉnh giao diện cửa hàng Shopify theo thiết kế của khách hàng bằng template Liquid, section Shopify, tương tác JavaScript và SCSS.",
+            "description": "Tôi phát triển các cửa hàng Shopify bằng cách điều chỉnh theme có sẵn và xây dựng template, section riêng khi component mặc định không đáp ứng được thiết kế. Công việc của tôi bao gồm tích hợp đăng ký nhận bản tin Mailchimp cho Ladder Locker và hỗ trợ đa ngôn ngữ cho OZKIZ Global.",
+            "meta": [
+              {
+                "label": "Vai trò",
+                "value": "Frontend Developer · Phát triển theme Shopify"
+              },
+              {
+                "label": "Hình thức",
+                "value": "Freelance / Dự án khách hàng"
+              },
+              {
+                "label": "Phạm vi",
+                "value": "2 cửa hàng tiêu biểu + công việc bảo trì bổ sung"
+              },
+              {
+                "label": "Công nghệ",
+                "value": "Shopify · Liquid · JavaScript · SCSS · HTML/CSS"
+              }
+            ],
+            "heroImages": [
+              {
+                "src": "/assets/projects/shopify-ladder-locker-home.jpg",
+                "width": 1440,
+                "height": 1000,
+                "caption": "Ladder Locker — trang chủ hiện tại",
+                "alt": "Trang chủ Ladder Locker hiển thị menu cửa hàng, hình ảnh sản phẩm cố định thang và nút hành động chính.",
+                "openLabel": "Mở ảnh kích thước đầy đủ trong tab mới"
+              },
+              {
+                "src": "/assets/projects/shopify-ozkiz-global-home.jpg",
+                "width": 1440,
+                "height": 1000,
+                "caption": "OZKIZ Global — trang chủ hiện tại",
+                "alt": "Trang chủ OZKIZ Global hiển thị menu cửa hàng, bộ chọn ngôn ngữ và banner bộ sưu tập.",
+                "openLabel": "Mở ảnh kích thước đầy đủ trong tab mới"
+              }
+            ],
+            "imageNote": "Ảnh chụp hiển thị các cửa hàng đang hoạt động và có thể bao gồm thay đổi được thực hiện sau thời gian tôi tham gia."
+          },
+          "sections": [
+            {
+              "id": "storefronts",
+              "eyebrow": "02 / CỬA HÀNG TIÊU BIỂU",
+              "title": "Cửa hàng tiêu biểu",
+              "showcases": [
+                {
+                  "title": "Ladder Locker",
+                  "subhead": "Tùy chỉnh cửa hàng Shopify · Tích hợp Mailchimp",
+                  "description": "Tùy chỉnh cửa hàng Shopify theo thiết kế riêng của khách hàng, tạo và điều chỉnh template Liquid cùng các section vượt ra ngoài khả năng của theme mặc định. Tích hợp đăng ký nhận bản tin Mailchimp để kết nối tương tác trên cửa hàng với dịch vụ email marketing bên ngoài.",
+                  "points": [
+                    "Tạo và tùy chỉnh template Liquid, section Shopify cho bố cục cửa hàng theo thiết kế riêng.",
+                    "Sử dụng JavaScript và SCSS để triển khai tương tác frontend và định dạng giao diện.",
+                    "Tích hợp đăng ký nhận bản tin Mailchimp thông qua form và luồng gửi dữ liệu qua API."
+                  ],
+                  "image": {
+                    "src": "/assets/projects/shopify-ladder-locker-home.jpg",
+                    "width": 1440,
+                    "height": 1000,
+                    "caption": "Ladder Locker — trang chủ hiện tại",
+                    "alt": "Trang chủ Ladder Locker hiển thị menu cửa hàng, hình ảnh sản phẩm cố định thang và nút hành động chính.",
+                    "openLabel": "Mở ảnh kích thước đầy đủ trong tab mới"
+                  },
+                  "link": {
+                    "label": "Xem Ladder Locker",
+                    "href": "https://ladderlocker.com.au/"
+                  }
+                },
+                {
+                  "title": "OZKIZ Global",
+                  "subhead": "Tùy chỉnh cửa hàng Shopify · Hỗ trợ đa ngôn ngữ",
+                  "description": "Tùy chỉnh cửa hàng Shopify bằng template Liquid và section để thể hiện thiết kế do khách hàng cung cấp, đồng thời hỗ trợ đa ngôn ngữ cho trải nghiệm mua sắm quốc tế.",
+                  "points": [
+                    "Xây dựng và tùy chỉnh template Liquid, section cho các bố cục cửa hàng riêng biệt.",
+                    "Triển khai hỗ trợ đa ngôn ngữ cho cửa hàng.",
+                    "Phát triển giao diện và tương tác frontend bằng SCSS và JavaScript."
+                  ],
+                  "image": {
+                    "src": "/assets/projects/shopify-ozkiz-global-home.jpg",
+                    "width": 1440,
+                    "height": 1000,
+                    "caption": "OZKIZ Global — trang chủ hiện tại",
+                    "alt": "Trang chủ OZKIZ Global hiển thị menu cửa hàng, bộ chọn ngôn ngữ và banner bộ sưu tập.",
+                    "openLabel": "Mở ảnh kích thước đầy đủ trong tab mới"
+                  },
+                  "link": {
+                    "label": "Xem OZKIZ Global",
+                    "href": "https://global.ozkiz.com/"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "contributions",
+              "eyebrow": "03 / ĐÓNG GÓP KỸ THUẬT",
+              "title": "Đóng góp kỹ thuật",
+              "cards": [
+                {
+                  "title": "Template Liquid & section tùy chỉnh",
+                  "body": "Tạo và điều chỉnh template Liquid cùng section Shopify để thể hiện những bố cục mà component của theme tiêu chuẩn không đáp ứng được.",
+                  "icon": "code"
+                },
+                {
+                  "title": "Tương tác trên cửa hàng",
+                  "body": "Tùy chỉnh hành vi frontend bằng JavaScript, bao gồm logic hiển thị biến thể sản phẩm khi thiết kế cửa hàng yêu cầu.",
+                  "icon": "layout"
+                },
+                {
+                  "title": "Tích hợp dịch vụ bên thứ ba",
+                  "body": "Kết nối luồng đăng ký nhận bản tin của Ladder Locker với Mailchimp thông qua form frontend và việc gửi dữ liệu qua API.",
+                  "icon": "mail"
+                },
+                {
+                  "title": "Đa ngôn ngữ & quy trình styling",
+                  "body": "Triển khai hỗ trợ đa ngôn ngữ cho OZKIZ Global và viết SCSS để biên dịch thành CSS dùng cho production.",
+                  "icon": "palette"
+                }
+              ]
+            },
+            {
+              "id": "workflow",
+              "eyebrow": "04 / QUY TRÌNH PHÁT TRIỂN",
+              "title": "Từ theme có sẵn đến cửa hàng theo thiết kế riêng",
+              "description": "Quy trình của tôi bắt đầu từ một theme Shopify làm nền tảng, sau đó mở rộng bằng code để đáp ứng yêu cầu giao diện và chức năng của khách hàng.",
+              "steps": [
+                {
+                  "title": "Bắt đầu từ theme Shopify",
+                  "body": "Tải theme nền tảng về môi trường phát triển cục bộ."
+                },
+                {
+                  "title": "Xây dựng giao diện Liquid riêng",
+                  "body": "Điều chỉnh template và tạo section cho các bố cục trang riêng biệt."
+                },
+                {
+                  "title": "Thêm tương tác và tích hợp",
+                  "body": "Tùy chỉnh JavaScript và kết nối những chức năng như đăng ký nhận bản tin khi cần."
+                },
+                {
+                  "title": "Định dạng giao diện bằng SCSS",
+                  "body": "Quản lý giao diện bằng SCSS và biên dịch CSS cho production."
+                },
+                {
+                  "title": "Rà soát cửa hàng",
+                  "body": "Đối chiếu trang hiển thị với thiết kế được cung cấp và tinh chỉnh cách trình bày responsive."
+                }
+              ]
+            },
+            {
+              "id": "outcomes",
+              "eyebrow": "05 / CÔNG VIỆC BỔ SUNG & KẾT QUẢ",
+              "title": "Công việc bổ sung & kết quả",
+              "engagements": [
+                {
+                  "eyebrow": "Bảo trì Shopify bổ sung",
+                  "title": "ADO E-Bike Vietnam",
+                  "body": "Thực hiện các chỉnh sửa lỗi nhỏ và bảo trì trên phiên bản Shopify trước đây của ADO E-Bike. Doanh nghiệp sau đó chuyển sang Haravan, vì vậy website hiện tại được đưa vào để tham khảo, không được giới thiệu như một ví dụ Shopify đang hoạt động.",
+                  "link": {
+                    "label": "Website ADO E-Bike hiện tại",
+                    "href": "https://adoebike.vn/"
+                  }
+                }
+              ],
+              "outcomesTitle": "Công việc đã thực hiện",
+              "outcomes": [
+                {
+                  "title": "Hai cửa hàng được tùy chỉnh",
+                  "body": "Ladder Locker và OZKIZ Global."
+                },
+                {
+                  "title": "Code tùy chỉnh cho theme",
+                  "body": "Template/section Liquid, JavaScript và giao diện viết bằng SCSS."
+                },
+                {
+                  "title": "Chức năng theo yêu cầu khách hàng",
+                  "body": "Tích hợp bản tin Mailchimp (Ladder Locker) và hỗ trợ đa ngôn ngữ (OZKIZ)."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
         "id": "aimee-by-j",
         "title": "Aimee by J — Nền tảng Ecommerce Headless",
         "subtitle": "Thời trang Việt Nam · Đang phát triển",

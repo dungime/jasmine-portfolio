@@ -23,6 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: project ? `${project.title} — Jasmine` : "Project not found",
+    ...(project?.seoDescription ? { description: project.seoDescription } : {}),
   };
 }
 
