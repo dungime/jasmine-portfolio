@@ -418,3 +418,55 @@
     }
   }
 }
+
+.additionalDescription { margin-top: 16px; }
+
+.status {
+  @include pill-badge;
+  font-size: 13px;
+  color: $color-black;
+  background: $color-lime;
+}
+
+.metaWithStatus {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  > div:last-child { grid-column: auto; }
+}
+
+.ownershipDescription + .engagement { margin-top: 28px; }
+
+.previewAction { margin-top: 24px; }
+
+.previewLink {
+  @include button-pill;
+  background: $color-black;
+  color: $color-white;
+  text-align: center;
+
+  &:focus-visible {
+    outline: 2px solid $color-black;
+    outline-offset: 4px;
+  }
+}
+
+.previewNote {
+  margin-top: 12px;
+  color: $color-gray;
+  font-size: 13px;
+}
+
+.supportingItems {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin: 28px 0 0;
+
+  > div { padding-left: 16px; border-left: 2px solid $color-bg-sage; }
+  dt { font-weight: 600; margin-bottom: 8px; }
+  dd { margin: 0; color: $color-gray; font-size: 14px; }
+
+  @media (max-width: 640px) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

@@ -6,6 +6,17 @@ import { withBasePath } from "@/lib/base-path";
 import shared from "./page.module.scss";
 import styles from "./ProjectCaseStudy.module.scss";
 
+function PreviewLink({ link }: { link: { label: string; href: string; note?: string } }) {
+  return (
+    <div className={styles.previewAction}>
+      <a className={styles.previewLink} href={link.href} target="_blank" rel="noopener noreferrer">
+        {link.label}<span aria-hidden="true">↗</span>
+      </a>
+      {link.note && <p className={styles.previewNote}>{link.note}</p>}
+    </div>
+  );
+}
+
 function ProjectScreenshot({ image, hero = false, full = false, card = false }: {
   image: ProjectImage;
   hero?: boolean;
@@ -182,6 +193,11 @@ function CaseStudySection({ section }: { section: ProjectSection }) {
       {section.features?.map((feature) => <EngineeringFeature key={feature.title} feature={feature} />)}
       {section.lead && <p className={styles.ownershipLead}>{section.lead}</p>}
       {section.description && <p className={styles.ownershipDescription}>{section.description}</p>}
+      {section.supportingItems && <dl className={styles.supportingItems}>
+        {section.supportingItems.map((item) => <div key={item.title}>
+          <dt>{item.title}</dt><dd>{item.body}</dd>
+        </div>)}
+      </dl>}
       {section.diagram && <Diagram content={section.diagram} standalone />}
       {section.steps && <ol
         className={`${styles.flow} ${section.steps.length > 3 ? styles.flowExtended : ""}`}
@@ -223,6 +239,7 @@ function CaseStudySection({ section }: { section: ProjectSection }) {
         {section.takeawayTitle && <h3>{section.takeawayTitle}</h3>}
         <p>{section.takeaway}</p>
       </div>}
+      {section.primaryLink && <PreviewLink link={section.primaryLink} />}
     </section>
   );
 }
@@ -233,20 +250,28 @@ export function ProjectCaseStudy({ content }: { content: ProjectCaseStudyContent
 
   return (
     <article className={styles.article} aria-labelledby="project-title">
-      <header className={`${styles.hero} ${full ? styles.heroFull : ""} ${!hero.heroImage ? styles.textOnly : ""}`}>
+      <header className={`${styles.hero} ${full ? styles.heroFull : ""} ${!hero.heroImage && !hero.diagram ? styles.textOnly : ""}`}>
         <div className={styles.heroCopy}>
           <p className={styles.eyebrow}>{hero.eyebrow}</p>
           <h1 id="project-title">{hero.title}</h1>
           <p className={styles.lead}>{hero.lead}</p>
           <p className={styles.description}>{hero.description}</p>
-          <dl className={styles.meta}>
-            {hero.meta.map((entry) => <div key={entry.label}><dt>{entry.label}</dt><dd>{entry.value}</dd></div>)}
+          {hero.additionalDescription && <p className={`${styles.description} ${styles.additionalDescription}`}>{hero.additionalDescription}</p>}
+          <dl className={`${styles.meta} ${hero.status ? styles.metaWithStatus : ""}`}>
+            {hero.meta.map((entry) => <div key={entry.label}>
+              <dt>{entry.label}</dt>
+              <dd>{hero.status && entry.value.startsWith(hero.status) ? <>
+                <span className={styles.status}>{hero.status}</span>{entry.value.slice(hero.status.length)}
+              </> : entry.value}</dd>
+            </div>)}
           </dl>
           {hero.team && <p className={styles.team}><strong>{hero.team.label}:</strong> {hero.team.value}</p>}
           {hero.techTags && <ul className={`${shared.techGrid} ${styles.techTags}`}>
             {hero.techTags.map((tag) => <li className={shared.techChip} key={tag}>{tag}</li>)}
           </ul>}
+          {hero.primaryLink && <PreviewLink link={hero.primaryLink} />}
         </div>
+        {hero.diagram && <Diagram content={hero.diagram} />}
         {hero.heroImage && <div className={`${styles.heroVisual} ${full ? styles.heroMedia : ""}`}>
           <ProjectScreenshot image={hero.heroImage} hero full={full} />
         </div>}

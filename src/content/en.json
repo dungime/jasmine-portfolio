@@ -1391,97 +1391,246 @@
       },
       {
         "id": "english-with-j",
-        "title": "English with J — Active Listening Platform",
-        "subtitle": "English Learning Platform · In Progress",
-        "category": "Education",
-        "description": "An independent English-learning platform that turns every listening lesson into active practice — dictation, AI-generated IELTS/TOEIC quizzes, personalised mistake feedback, and karaoke-style shadowing.",
-        "overview": [
-          {
-            "label": "Role",
-            "value": "Sole developer — product, design, and frontend"
-          },
-          {
-            "label": "Status",
-            "value": "In active development · Phase 1"
-          },
-          {
-            "label": "Type",
-            "value": "Independent project"
-          },
-          {
-            "label": "Scope",
-            "value": "Sign-up & login, the listening practice flow, AI quizzes and feedback, saved progress, and a bilingual interface"
-          }
-        ],
-        "context": "Most English learners practise listening by replaying audio and hoping it sticks. English with J is a platform I am building to make listening **active**: each lesson guides the learner from understanding the gist, to writing down every sentence, to testing comprehension, to speaking along. Phase 1 focuses on that core listening experience, accounts, and saved progress.",
-        "challenges": [
-          {
-            "title": "Passive listening doesn't build skill",
-            "body": "Replaying a recording feels like practice, but without writing, checking, and speaking, learners rarely find out what they actually missed."
-          },
-          {
-            "title": "Feedback that is specific enough to act on",
-            "body": "A single score says little. Learners need to see which words they misheard, what each part means, and which mistakes they keep repeating."
-          },
-          {
-            "title": "A free tier that sells, and a paywall that holds",
-            "body": "New learners should be able to try real lessons before paying, while paid lessons stay locked to anyone who hasn't paid — no matter what the browser shows."
-          }
-        ],
-        "solutions": [
-          {
-            "title": "A seven-step listening flow",
-            "body": "Every lesson follows the same path: **listen for the gist → write down the main ideas → dictate part by part → answer an AI-generated quiz → get a score → review common mistakes → shadow the script**. Each step builds on the one before, so learners finish a lesson having listened, written, understood, and spoken."
-          },
-          {
-            "title": "Dictation with instant, part-by-part checking",
-            "body": "Learners type what they hear for each part of the recording. The platform **checks each answer against the script**, highlights what is right and wrong, and shows a **Vietnamese translation** alongside. They can **save a note on any part**, and switch on **voice mode** to fill the text box by speaking instead of typing."
-          },
-          {
-            "title": "AI quizzes and personalised mistake feedback",
-            "body": "After dictation, AI creates **IELTS- and TOEIC-style questions** based on that lesson to test real comprehension, then scores the answers. It then **analyses the learner's mistakes** to point out the patterns they fall into most often."
-          },
-          {
-            "title": "Karaoke-style shadowing to finish the lesson",
-            "body": "The final step is a video of the script that **scrolls up line by line like karaoke**, with a voice reading it aloud — so learners can watch, listen, and **shadow** the speaker to practise pronunciation and rhythm."
-          },
-          {
-            "title": "Free preview and backend-checked access",
-            "body": "Learners can open a few sample lessons before choosing a paid plan. The interface reflects the learner's plan, but **access to every paid lesson is checked by the backend**, so hiding a lock icon never unlocks content."
-          },
-          {
-            "title": "Saved progress and a bilingual interface",
-            "body": "Signed-in learners pick up where they left off, with their progress and notes saved to their account. The interface is available in **English and Vietnamese**, and the code is organised by feature so each part of the lesson flow can grow on its own."
-          }
-        ],
-        "impact": {
-          "metrics": [
-            {
-              "value": "7",
-              "label": "steps in every listening lesson, from first listen to shadowing"
-            },
-            {
-              "value": "2",
-              "label": "interface languages: English and Vietnamese"
-            },
-            {
-              "value": "Free → Paid",
-              "label": "a few open lessons, with full-library access on a paid plan"
-            }
-          ],
-          "summary": "The project is still in progress. Phase 1 defines a complete listening loop, from first listen to speaking along, with accounts and saved progress. Its foundation is ready for lessons and quizzes to be added step by step."
-        },
-        "learnings": [
-          "**Design the learning loop before the screens.** Mapping all seven steps first made it clear what each screen must hand to the next.",
-          "**The frontend shows access; the backend decides it.** Keeping paid access checks on the server keeps the paywall reliable without making the interface complicated."
-        ],
+        "title": "English with J",
+        "subtitle": "Personal Project · In Progress",
+        "category": "English Learning",
+        "cardEyebrow": "Personal Project · English Learning",
+        "status": "In Progress",
+        "description": "An independent English learning product in progress, focused on guided listening, segment-based dictation and caption-based shadowing.",
+        "seoTitle": "English with J — English Listening Platform (In Progress) | Jasmine",
+        "seoDescription": "An independent English learning product in progress, focused on guided listening, segment-based dictation and caption-based shadowing.",
         "tags": [
           "Next.js",
           "React",
-          "TypeScript",
-          "Tailwind CSS",
-          "AI"
-        ]
+          "TypeScript"
+        ],
+        "caseStudy": {
+          "hero": {
+            "layout": "split",
+            "eyebrow": "PERSONAL PROJECT · ENGLISH LEARNING",
+            "status": "In Progress",
+            "title": "English with J",
+            "lead": "Building an active listening experience, one practice step at a time.",
+            "description": "English with J is an independent English-learning platform I'm developing to make listening practice more structured and actionable. Instead of repeatedly playing an audio lesson without knowing what went wrong, learners will be guided through focused listening, note-taking, segment-based dictation, and shadowing.",
+            "additionalDescription": "I'm shaping the product around a practical Phase 1 MVP, with room to expand into AI-supported comprehension and feedback in later phases.",
+            "meta": [
+              {
+                "label": "Role",
+                "value": "Solo Developer · Product & Frontend"
+              },
+              {
+                "label": "Project Type",
+                "value": "Independent Product"
+              },
+              {
+                "label": "Status",
+                "value": "In Progress · Phase 1 MVP"
+              },
+              {
+                "label": "Technology",
+                "value": "Next.js · React · TypeScript"
+              }
+            ],
+            "primaryLink": {
+              "label": "View Live Preview",
+              "href": "https://englishwithj.xyz/",
+              "note": "This is an in-development product preview; features may still be changing."
+            },
+            "diagram": {
+              "nodes": [
+                {
+                  "title": "First listen + personal notes"
+                },
+                {
+                  "title": "Segment-based dictation"
+                },
+                {
+                  "title": "Caption-based shadowing"
+                },
+                {
+                  "title": "Completion + saved progress"
+                }
+              ],
+              "caption": "Planned Phase 1 lesson flow · Conceptual diagram, not a product screenshot"
+            }
+          },
+          "sections": [
+            {
+              "id": "focus",
+              "eyebrow": "01 / KEY FOCUS AREAS",
+              "title": "What I'm Building",
+              "cards": [
+                {
+                  "title": "Guided Listening Flow",
+                  "body": "A lesson experience that moves beyond passive playback, guiding learners through their first listen, notes, focused practice, and a clear end-of-lesson review."
+                },
+                {
+                  "title": "Segment-Based Dictation",
+                  "body": "Short, replayable audio segments paired with learner input and the original script, designed to help learners notice missed or incorrect words."
+                },
+                {
+                  "title": "Caption-Based Shadowing",
+                  "body": "An audio player concept that highlights synchronized captions using timestamp data, allowing learners to follow the script and practice speaking along with the audio."
+                },
+                {
+                  "title": "Learning Progress & Access",
+                  "body": "A foundation for saving notes and lesson progress, presenting English/Vietnamese UI, and offering limited free previews before paid access."
+                }
+              ]
+            },
+            {
+              "id": "engineering",
+              "eyebrow": "02 / PRODUCT & ENGINEERING",
+              "title": "Designing the Core Learning Experience",
+              "features": [
+                {
+                  "eyebrow": "01",
+                  "title": "Segment-Based Dictation & Script Comparison",
+                  "facts": [
+                    {
+                      "label": "Challenge",
+                      "body": "Listening to an entire recording can make it difficult to identify exactly which words a learner missed. A more useful practice experience needs a connection between small audio segments, learner input, and the original transcript."
+                    },
+                    {
+                      "label": "Planned Approach",
+                      "body": "The Phase 1 design divides lessons into timed segments. Learners listen to a short segment, type what they hear, and compare their answer with the reference script. The review is intended to distinguish correct, incorrect, and missing words while preserving notes for later practice."
+                    },
+                    {
+                      "label": "Intended Experience",
+                      "body": "A focused loop where learners can return to difficult moments and understand what needs another listen, rather than relying on a single overall score."
+                    }
+                  ],
+                  "reverse": false,
+                  "visual": {
+                    "framed": true,
+                    "diagram": {
+                      "nodes": [
+                        {
+                          "title": "Listen to segment"
+                        },
+                        {
+                          "title": "Type answer"
+                        },
+                        {
+                          "title": "Compare with script"
+                        },
+                        {
+                          "title": "Review / Notes"
+                        }
+                      ],
+                      "caption": "Planned interaction · Not a product screenshot"
+                    }
+                  }
+                },
+                {
+                  "eyebrow": "02",
+                  "title": "Timestamp-Synchronized Caption Player",
+                  "facts": [
+                    {
+                      "label": "Challenge",
+                      "body": "Traditional transcripts remain static while audio moves forward. For shadowing, learners benefit from knowing which part of the script aligns with the current playback position."
+                    },
+                    {
+                      "label": "Planned Approach",
+                      "body": "The MVP concept combines an existing audio recording with timestamped caption data. A browser-based player will highlight the corresponding word or phrase as audio progresses, creating a karaoke-style reading experience without rendering a separate video file."
+                    },
+                    {
+                      "label": "Intended Experience",
+                      "body": "Learners can listen, follow the words in real time, and speak along with the same recording as part of a structured practice session."
+                    }
+                  ],
+                  "reverse": true,
+                  "visual": {
+                    "framed": true,
+                    "diagram": {
+                      "nodes": [
+                        {
+                          "title": "Audio playback + Timed captions"
+                        },
+                        {
+                          "title": "Active text highlight"
+                        },
+                        {
+                          "title": "Shadowing"
+                        }
+                      ],
+                      "caption": "Planned caption-player concept · Not a product screenshot"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ownership",
+              "eyebrow": "03 / PRODUCT OWNERSHIP",
+              "title": "Taking an Idea Toward a Focused MVP",
+              "description": "I'm developing English with J independently, from defining the learning problem and planning the lesson journey to making frontend and product decisions. One of the key priorities is keeping the first release focused: validate the listening and dictation experience before adding more expensive AI-powered workflows.",
+              "supportingItems": [
+                {
+                  "title": "Product Thinking",
+                  "body": "Turning a fragmented learning process into a guided practice journey."
+                },
+                {
+                  "title": "UX Planning",
+                  "body": "Keeping audio, transcription, review, and speaking exercises connected."
+                },
+                {
+                  "title": "Phased Delivery",
+                  "body": "Prioritizing a usable MVP and deferring higher-cost AI features until later."
+                }
+              ]
+            },
+            {
+              "id": "roadmap",
+              "eyebrow": "04 / CURRENT STATUS",
+              "title": "Phase 1 — In Progress",
+              "description": "English with J is currently in development. The goal of the first release is to establish the core listening workflow and validate the learning experience before expanding the product.",
+              "engagements": [
+                {
+                  "eyebrow": "Phase 1 — Building the MVP",
+                  "title": "Active focus — Phase 1 MVP",
+                  "body": "Guided listening, notes, segment-based dictation, an audio-synchronized caption player, lesson progress, bilingual UI, and a freemium access model are part of the planned MVP scope. Individual feature completion remains subject to source-code verification."
+                },
+                {
+                  "eyebrow": "Phase 2 AI · Phase 3 caption refinements",
+                  "title": "Later phases — Planned",
+                  "body": "AI-generated IELTS/TOEIC-style questions, personalized mistake analysis, and voice-input assistance are planned for a later phase. Caption synchronization may also be refined as the content library grows."
+                }
+              ],
+              "takeaway": "I'm continuing to iterate on the product and use what I learn from building it to refine both the learning experience and technical implementation.",
+              "primaryLink": {
+                "label": "View Live Preview",
+                "href": "https://englishwithj.xyz/"
+              }
+            }
+          ]
+        },
+        "overview": [
+          {
+            "label": "Role",
+            "value": "Solo Developer · Product & Frontend"
+          },
+          {
+            "label": "Project Type",
+            "value": "Independent Product"
+          },
+          {
+            "label": "Status",
+            "value": "In Progress · Phase 1 MVP"
+          },
+          {
+            "label": "Technology",
+            "value": "Next.js · React · TypeScript"
+          }
+        ],
+        "context": "English with J is an independent English-learning platform I'm developing to make listening practice more structured and actionable. Instead of repeatedly playing an audio lesson without knowing what went wrong, learners will be guided through focused listening, note-taking, segment-based dictation, and shadowing.",
+        "challenges": [],
+        "solutions": [],
+        "impact": {
+          "metrics": [],
+          "summary": "An independent English learning product in progress, focused on guided listening, segment-based dictation and caption-based shadowing."
+        },
+        "learnings": []
       }
     ]
   },

@@ -1371,91 +1371,246 @@
       },
       {
         "id": "english-with-j",
-        "title": "English with J — Nền tảng luyện nghe chủ động",
-        "subtitle": "Nền tảng học tiếng Anh · Đang phát triển",
-        "category": "Giáo dục",
-        "description": "Nền tảng học tiếng Anh do tôi tự xây dựng, biến mỗi bài nghe thành một buổi luyện tập chủ động — nghe chép chính tả, bộ câu hỏi IELTS/TOEIC do AI tạo, nhận xét lỗi sai cá nhân hoá và shadowing theo kiểu karaoke.",
+        "title": "English with J",
+        "subtitle": "Dự án cá nhân · Đang phát triển",
+        "category": "Học tiếng Anh",
+        "cardEyebrow": "Dự án cá nhân · Học tiếng Anh",
+        "status": "Đang phát triển",
+        "description": "Sản phẩm học tiếng Anh cá nhân đang phát triển, tập trung vào luyện nghe có hướng dẫn, dictation theo đoạn và shadowing với phụ đề đồng bộ.",
+        "seoTitle": "English with J — Nền tảng luyện nghe tiếng Anh (Đang phát triển) | Jasmine",
+        "seoDescription": "Sản phẩm học tiếng Anh cá nhân đang phát triển, tập trung vào luyện nghe có hướng dẫn, dictation theo đoạn và shadowing với phụ đề đồng bộ.",
+        "tags": [
+          "Next.js",
+          "React",
+          "TypeScript"
+        ],
+        "caseStudy": {
+          "hero": {
+            "layout": "split",
+            "eyebrow": "DỰ ÁN CÁ NHÂN · HỌC TIẾNG ANH",
+            "status": "Đang phát triển",
+            "title": "English with J",
+            "lead": "Xây dựng trải nghiệm luyện nghe chủ động qua từng bước thực hành.",
+            "description": "English with J là nền tảng học tiếng Anh cá nhân mình đang phát triển nhằm giúp việc luyện nghe có cấu trúc và dễ nhận ra điểm cần cải thiện hơn. Thay vì chỉ nghe đi nghe lại một bài audio, người học sẽ được hướng dẫn qua các bước nghe tổng quát, ghi chú, nghe chép chính tả theo đoạn và luyện shadowing.",
+            "additionalDescription": "Mình đang tập trung xây dựng MVP cho Phase 1 trước, sau đó mới mở rộng sang các tính năng luyện hiểu và phản hồi có AI trong những giai đoạn tiếp theo.",
+            "meta": [
+              {
+                "label": "Vai trò",
+                "value": "Tự phát triển sản phẩm · Product & Frontend"
+              },
+              {
+                "label": "Loại dự án",
+                "value": "Dự án cá nhân"
+              },
+              {
+                "label": "Trạng thái",
+                "value": "Đang phát triển · Phase 1 MVP"
+              },
+              {
+                "label": "Công nghệ",
+                "value": "Next.js · React · TypeScript"
+              }
+            ],
+            "primaryLink": {
+              "label": "Xem bản đang phát triển",
+              "href": "https://englishwithj.xyz/",
+              "note": "Sản phẩm đang trong quá trình phát triển; các tính năng có thể thay đổi."
+            },
+            "diagram": {
+              "nodes": [
+                {
+                  "title": "Nghe lần đầu + ghi chú cá nhân"
+                },
+                {
+                  "title": "Dictation theo đoạn"
+                },
+                {
+                  "title": "Shadowing với phụ đề đồng bộ"
+                },
+                {
+                  "title": "Hoàn thành + lưu tiến trình"
+                }
+              ],
+              "caption": "Quy trình Phase 1 dự kiến · Sơ đồ ý tưởng, không phải ảnh chụp sản phẩm"
+            }
+          },
+          "sections": [
+            {
+              "id": "focus",
+              "eyebrow": "01 / TRỌNG TÂM PHÁT TRIỂN",
+              "title": "Những phần mình đang phát triển",
+              "cards": [
+                {
+                  "title": "Quy trình luyện nghe có hướng dẫn",
+                  "body": "Thiết kế hành trình học vượt ra ngoài việc phát audio, từ nghe lần đầu và ghi chú đến luyện tập tập trung và tổng kết bài học."
+                },
+                {
+                  "title": "Nghe chép chính tả theo đoạn",
+                  "body": "Chia audio thành các đoạn ngắn có thể nghe lại, kết hợp phần nhập câu trả lời và đối chiếu với transcript gốc để nhận biết từ nghe sai hoặc bỏ sót."
+                },
+                {
+                  "title": "Shadowing với phụ đề đồng bộ",
+                  "body": "Thiết kế trình phát audio làm nổi bật phụ đề theo timestamp, giúp người học vừa nghe, theo dõi nội dung và nói theo."
+                },
+                {
+                  "title": "Tiến trình học và quyền truy cập",
+                  "body": "Định hướng lưu ghi chú, tiến trình từng bài, giao diện Anh/Việt và cơ chế dùng thử giới hạn trước khi mở khóa nội dung trả phí."
+                }
+              ]
+            },
+            {
+              "id": "engineering",
+              "eyebrow": "02 / SẢN PHẨM & KỸ THUẬT",
+              "title": "Thiết kế trải nghiệm học tập cốt lõi",
+              "features": [
+                {
+                  "eyebrow": "01",
+                  "title": "Dictation theo đoạn và đối chiếu transcript",
+                  "facts": [
+                    {
+                      "label": "Thách thức",
+                      "body": "Khi nghe cả bài dài, người học khó xác định chính xác những từ mình đã bỏ lỡ. Trải nghiệm luyện tập hiệu quả hơn cần kết nối đoạn audio, câu trả lời và transcript gốc."
+                    },
+                    {
+                      "label": "Cách tiếp cận dự kiến",
+                      "body": "Phase 1 chia bài nghe thành các đoạn có mốc thời gian. Người học nghe từng đoạn, gõ lại nội dung và so sánh với script. Phần đối chiếu dự kiến thể hiện các từ đúng, sai hoặc thiếu và cho phép lưu ghi chú."
+                    },
+                    {
+                      "label": "Trải nghiệm hướng tới",
+                      "body": "Người học có thể quay lại những đoạn khó và biết cụ thể mình cần nghe lại điều gì."
+                    }
+                  ],
+                  "reverse": false,
+                  "visual": {
+                    "framed": true,
+                    "diagram": {
+                      "nodes": [
+                        {
+                          "title": "Nghe từng đoạn"
+                        },
+                        {
+                          "title": "Nhập câu trả lời"
+                        },
+                        {
+                          "title": "Đối chiếu với script"
+                        },
+                        {
+                          "title": "Xem lại / Ghi chú"
+                        }
+                      ],
+                      "caption": "Tương tác dự kiến · Không phải ảnh chụp sản phẩm"
+                    }
+                  }
+                },
+                {
+                  "eyebrow": "02",
+                  "title": "Caption Player đồng bộ timestamp",
+                  "facts": [
+                    {
+                      "label": "Thách thức",
+                      "body": "Transcript tĩnh không giúp người học biết câu chữ nào đang ứng với thời điểm hiện tại của audio khi luyện shadowing."
+                    },
+                    {
+                      "label": "Cách tiếp cận dự kiến",
+                      "body": "Kết hợp audio có sẵn với dữ liệu phụ đề có timestamp. Trình phát trên web sẽ làm nổi bật từ hoặc cụm từ tương ứng khi audio chạy, không cần xuất một file video mới."
+                    },
+                    {
+                      "label": "Trải nghiệm hướng tới",
+                      "body": "Người học nghe, nhìn theo phụ đề và nói theo cùng một bản ghi âm."
+                    }
+                  ],
+                  "reverse": true,
+                  "visual": {
+                    "framed": true,
+                    "diagram": {
+                      "nodes": [
+                        {
+                          "title": "Phát audio + phụ đề có timestamp"
+                        },
+                        {
+                          "title": "Làm nổi bật chữ tương ứng"
+                        },
+                        {
+                          "title": "Luyện shadowing"
+                        }
+                      ],
+                      "caption": "Ý tưởng caption player dự kiến · Không phải ảnh chụp sản phẩm"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ownership",
+              "eyebrow": "03 / TỰ PHÁT TRIỂN SẢN PHẨM",
+              "title": "Tự phát triển sản phẩm theo hướng MVP",
+              "description": "Mình phát triển English with J độc lập, từ xác định vấn đề học tập, xây dựng quy trình luyện nghe đến đưa ra các quyết định về sản phẩm và frontend. Ưu tiên hiện tại là giữ phạm vi bản đầu tiên vừa đủ: kiểm chứng trải nghiệm nghe và dictation trước khi mở rộng sang những tính năng AI có chi phí vận hành cao hơn.",
+              "supportingItems": [
+                {
+                  "title": "Tư duy sản phẩm",
+                  "body": "Kết nối các bước học rời rạc thành một hành trình luyện tập có hướng dẫn."
+                },
+                {
+                  "title": "Thiết kế hành trình học",
+                  "body": "Giữ cho việc nghe, chép lại, xem lại và luyện nói luôn gắn kết."
+                },
+                {
+                  "title": "Phát triển theo từng phase",
+                  "body": "Ưu tiên MVP có thể sử dụng và dành các tính năng AI có chi phí cao hơn cho giai đoạn sau."
+                }
+              ]
+            },
+            {
+              "id": "roadmap",
+              "eyebrow": "04 / TIẾN ĐỘ HIỆN TẠI",
+              "title": "Phase 1 — Đang phát triển",
+              "description": "English with J vẫn đang trong quá trình xây dựng. Mục tiêu của phiên bản đầu tiên là hoàn thiện trải nghiệm luyện nghe cốt lõi và kiểm chứng tính hữu ích của sản phẩm trước khi mở rộng.",
+              "engagements": [
+                {
+                  "eyebrow": "Phase 1 — Xây dựng MVP",
+                  "title": "Phase 1 — Đang triển khai",
+                  "body": "Phạm vi MVP dự kiến gồm nghe có hướng dẫn, ghi chú, dictation theo đoạn, caption player đồng bộ audio, lưu tiến trình, giao diện song ngữ và mô hình truy cập freemium. Trạng thái hoàn thành của từng tính năng cần đối chiếu với source code."
+                },
+                {
+                  "eyebrow": "Phase 2 AI · Phase 3 cải tiến đồng bộ phụ đề",
+                  "title": "Các phase tiếp theo — Dự kiến",
+                  "body": "Bộ câu hỏi IELTS/TOEIC có AI, phân tích lỗi cá nhân hóa, hỗ trợ nhập bằng giọng nói và cải tiến đồng bộ phụ đề."
+                }
+              ],
+              "takeaway": "Mình tiếp tục phát triển và điều chỉnh sản phẩm, đồng thời rút kinh nghiệm về trải nghiệm học tập và triển khai kỹ thuật trong quá trình xây dựng.",
+              "primaryLink": {
+                "label": "Xem bản đang phát triển",
+                "href": "https://englishwithj.xyz/"
+              }
+            }
+          ]
+        },
         "overview": [
           {
             "label": "Vai trò",
-            "value": "Lập trình viên duy nhất — sản phẩm, thiết kế và frontend"
+            "value": "Tự phát triển sản phẩm · Product & Frontend"
           },
           {
-            "label": "Trạng thái",
-            "value": "Đang phát triển · Giai đoạn 1"
-          },
-          {
-            "label": "Loại",
+            "label": "Loại dự án",
             "value": "Dự án cá nhân"
           },
           {
-            "label": "Phạm vi",
-            "value": "Đăng ký & đăng nhập, luồng luyện nghe, câu hỏi và nhận xét bằng AI, lưu tiến độ học và giao diện song ngữ"
+            "label": "Trạng thái",
+            "value": "Đang phát triển · Phase 1 MVP"
+          },
+          {
+            "label": "Công nghệ",
+            "value": "Next.js · React · TypeScript"
           }
         ],
-        "context": "Phần lớn người học luyện nghe bằng cách bật đi bật lại bài nghe và hy vọng mình nhớ được. English with J là nền tảng tôi đang xây dựng để việc nghe trở nên **chủ động**: mỗi bài học dẫn người học đi từ nắm ý chính, chép lại từng câu, kiểm tra mức độ hiểu, đến nói theo. Giai đoạn 1 tập trung vào trải nghiệm luyện nghe cốt lõi, tài khoản và lưu tiến độ học.",
-        "challenges": [
-          {
-            "title": "Nghe thụ động không tạo ra kỹ năng",
-            "body": "Nghe lại một bản ghi cho cảm giác là đang luyện tập, nhưng nếu không viết, không kiểm tra và không nói, người học hiếm khi biết mình thực sự nghe sót chỗ nào."
-          },
-          {
-            "title": "Nhận xét đủ cụ thể để sửa được",
-            "body": "Một con số điểm không nói lên nhiều. Người học cần thấy mình nghe nhầm từ nào, từng đoạn có nghĩa là gì, và những lỗi nào mình hay lặp lại."
-          },
-          {
-            "title": "Bản miễn phí đủ thuyết phục, giới hạn trả phí đủ chắc chắn",
-            "body": "Người mới cần được thử những bài nghe thật trước khi trả tiền, trong khi các bài trả phí vẫn phải khoá với người chưa thanh toán — bất kể trình duyệt hiển thị gì."
-          }
-        ],
-        "solutions": [
-          {
-            "title": "Luồng luyện nghe bảy bước",
-            "body": "Mỗi bài học đi theo cùng một lộ trình: **nghe tổng quát → ghi lại ý chính → nghe chép chính tả từng đoạn → làm bộ câu hỏi do AI tạo → chấm điểm → xem lại lỗi thường gặp → shadowing theo script**. Mỗi bước dựa trên bước trước, để khi kết thúc bài, người học đã nghe, viết, hiểu và nói."
-          },
-          {
-            "title": "Chép chính tả với kiểm tra tức thì từng đoạn",
-            "body": "Người học gõ lại những gì nghe được cho từng đoạn. Hệ thống **so sánh câu trả lời với script**, đánh dấu phần đúng và sai, và hiển thị **bản dịch tiếng Việt** bên cạnh. Người học có thể **lưu ghi chú cho từng đoạn**, và bật **chế độ giọng nói** để điền vào ô nhập bằng cách nói thay vì gõ."
-          },
-          {
-            "title": "Câu hỏi AI và nhận xét lỗi sai cá nhân hoá",
-            "body": "Sau phần chép chính tả, AI tạo **bộ câu hỏi theo dạng IELTS và TOEIC** dựa trên chính bài nghe đó để kiểm tra mức độ hiểu, rồi chấm điểm. Sau đó AI **phân tích lỗi sai của người học** để chỉ ra những lỗi họ hay mắc nhất."
-          },
-          {
-            "title": "Kết thúc bài bằng shadowing kiểu karaoke",
-            "body": "Bước cuối là một video script **chạy chữ từ dưới lên theo từng dòng như karaoke**, kèm giọng đọc — để người học vừa nhìn, vừa nghe và **shadowing** theo người nói, luyện phát âm và ngữ điệu."
-          },
-          {
-            "title": "Học thử miễn phí và quyền truy cập do backend kiểm tra",
-            "body": "Người học được mở một vài bài nghe mẫu trước khi chọn gói trả phí. Giao diện hiển thị theo gói của người học, nhưng **quyền truy cập mỗi bài trả phí đều do backend kiểm tra**, nên việc ẩn biểu tượng khoá không bao giờ mở được nội dung."
-          },
-          {
-            "title": "Lưu tiến độ học và giao diện song ngữ",
-            "body": "Người học đã đăng nhập có thể học tiếp từ chỗ đã dừng, với tiến độ và ghi chú được lưu vào tài khoản. Giao diện có **tiếng Anh và tiếng Việt**, và mã nguồn được tổ chức theo từng tính năng để mỗi phần của luồng học có thể phát triển độc lập."
-          }
-        ],
+        "context": "English with J là nền tảng học tiếng Anh cá nhân mình đang phát triển nhằm giúp việc luyện nghe có cấu trúc và dễ nhận ra điểm cần cải thiện hơn. Thay vì chỉ nghe đi nghe lại một bài audio, người học sẽ được hướng dẫn qua các bước nghe tổng quát, ghi chú, nghe chép chính tả theo đoạn và luyện shadowing.",
+        "challenges": [],
+        "solutions": [],
         "impact": {
-          "metrics": [
-            {
-              "value": "7",
-              "label": "bước trong mỗi bài nghe, từ lần nghe đầu đến shadowing"
-            },
-            {
-              "value": "2",
-              "label": "ngôn ngữ giao diện: tiếng Anh và tiếng Việt"
-            },
-            {
-              "value": "Miễn phí → Trả phí",
-              "label": "một vài bài mở sẵn, toàn bộ thư viện dành cho gói trả phí"
-            }
-          ],
-          "summary": "Dự án vẫn đang được phát triển. Giai đoạn 1 xác định một vòng luyện nghe hoàn chỉnh, từ lần nghe đầu tiên đến nói theo, cùng tài khoản và lưu tiến độ. Phần nền tảng đã sẵn sàng để lần lượt bổ sung bài học và câu hỏi."
+          "metrics": [],
+          "summary": "Sản phẩm học tiếng Anh cá nhân đang phát triển, tập trung vào luyện nghe có hướng dẫn, dictation theo đoạn và shadowing với phụ đề đồng bộ."
         },
-        "learnings": [
-          "**Thiết kế vòng học trước khi thiết kế màn hình.** Vạch ra đủ bảy bước trước giúp tôi thấy rõ mỗi màn hình cần chuyển gì cho màn hình tiếp theo.",
-          "**Frontend hiển thị quyền truy cập, backend quyết định nó.** Giữ việc kiểm tra quyền trả phí ở server giúp giới hạn trả phí luôn chắc chắn mà giao diện không bị phức tạp."
-        ],
-        "tags": ["Next.js", "React", "TypeScript", "Tailwind CSS", "AI"]
+        "learnings": []
       }
     ]
   },

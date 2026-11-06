@@ -39,6 +39,7 @@ export function Projects() {
               )}
             </div>
             <div className={styles.body}>
+              {project.status && <p className={styles.status}>{project.status}</p>}
               {project.cardEyebrow && <p className={styles.cardEyebrow}>{project.cardEyebrow}</p>}
               <div className={styles.titleRow}>
                 <h3 className={styles.title}>{project.title}</h3>

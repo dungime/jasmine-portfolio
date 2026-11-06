@@ -60,6 +60,8 @@ export interface ProjectSection {
   outcomesTitle?: string;
   takeawayTitle?: string;
   takeaway?: string;
+  supportingItems?: { title: string; body: string }[];
+  primaryLink?: { label: string; href: string };
 }
 
 export interface ProjectCaseStudyContent {
@@ -68,6 +70,10 @@ export interface ProjectCaseStudyContent {
     eyebrow: string;
     lead: string;
     description: string;
+    additionalDescription?: string;
+    status?: string;
+    primaryLink?: { label: string; href: string; note?: string };
+    diagram?: ProjectDiagram;
     // "full" places the image below the copy; "split" places it alongside.
     layout: string;
     meta: { label: string; value: string }[];
