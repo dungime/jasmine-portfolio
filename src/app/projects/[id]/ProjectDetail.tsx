@@ -4,13 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { useContent } from "@/content";
+import type { ProjectCaseStudyContent } from "@/content/project-detail";
 import styles from "./page.module.scss";
 import { withBasePath } from "@/lib/base-path";
 import { icons, techLogos, techIcons } from "@/components/icons";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher/LanguageSwitcher";
-import { NexStoxCaseStudy } from "./NexStoxCaseStudy";
-import { ELearningCaseStudy } from "./ELearningCaseStudy";
-import caseStudyStyles from "./NexStoxCaseStudy.module.scss";
+import { ProjectCaseStudy } from "./ProjectCaseStudy";
+import caseStudyStyles from "./ProjectCaseStudy.module.scss";
 
 // Only some projects illustrate their approach, so the JSON infers a union per project.
 type Solution = { title: string; body: string; images?: { src: string; caption: string }[] };
@@ -45,9 +45,8 @@ export function ProjectDetail({ id }: { id: string }) {
 
   if (!project) return null;
 
-  const caseStudy = id === "nexstox-nxmarket" ? project.caseStudy : undefined;
-  const learningCaseStudy = id === "e-learning-platform" ? project.learningCaseStudy : undefined;
-  const hasCaseStudy = Boolean(caseStudy || learningCaseStudy);
+  const caseStudy: ProjectCaseStudyContent | undefined = project.caseStudy;
+  const hasCaseStudy = Boolean(caseStudy);
   const otherProjects = items.filter((item) => item.id !== id);
 
   const screenshots = project.screenshots ?? [];
@@ -73,9 +72,7 @@ export function ProjectDetail({ id }: { id: string }) {
         )}
 
         {caseStudy ? (
-          <NexStoxCaseStudy content={caseStudy} />
-        ) : learningCaseStudy ? (
-          <ELearningCaseStudy content={learningCaseStudy} />
+          <ProjectCaseStudy content={caseStudy} />
         ) : (
           <>
             <header className={styles.header}>

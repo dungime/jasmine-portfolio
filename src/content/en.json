@@ -184,150 +184,180 @@
       {
         "id": "nexstox-nxmarket",
         "caseStudy": {
-          "title": "NexStox & NXMarket",
-          "eyebrow": "CASE STUDY · FINTECH",
-          "lead": "One shared frontend. Two fintech experiences.",
-          "description": "I modernized existing fintech interfaces, developed Launchpad and Staking workflows, and introduced platform-based configuration to support two products on a shared frontend codebase.",
-          "meta": [
-            {
-              "label": "Role",
-              "value": "Senior Frontend Engineer"
-            },
-            {
-              "label": "Timeline",
-              "value": "May 2025 – May 2026"
-            },
-            {
-              "label": "Stack",
-              "value": "React · TypeScript · Material UI · REST APIs"
-            }
-          ],
-          "team": {
-            "label": "Frontend team",
-            "value": "1–3 engineers; sole frontend engineer for the first 3 months"
-          },
-          "heroImage": {
-            "src": "/assets/projects/nxmarket-trading-view.jpg",
-            "width": 1920,
-            "height": 1530,
-            "caption": "NXMarket · Trading interface"
-          },
-          "contributions": {
-            "eyebrow": "01 / CONTRIBUTIONS",
-            "title": "What I Contributed",
-            "items": [
+          "hero": {
+            "eyebrow": "CASE STUDY · FINTECH",
+            "title": "NexStox & NXMarket",
+            "lead": "One shared frontend. Two fintech experiences.",
+            "description": "I modernized existing fintech interfaces, developed Launchpad and Staking workflows, and introduced platform-based configuration to support two products on a shared frontend codebase.",
+            "meta": [
               {
-                "title": "Multi-platform",
-                "body": "Proposed and implemented environment-based configuration for platform-specific themes, pages, and features."
+                "label": "Role",
+                "value": "Senior Frontend Engineer"
               },
               {
-                "title": "Financial workflows",
-                "body": "Built Launchpad Purchase, Launchpad Detail, and Staking interfaces with validation and API integration."
+                "label": "Timeline",
+                "value": "May 2025 – May 2026"
               },
               {
-                "title": "Feature modernization",
-                "body": "Improved Trading, Wallet, Deposit, Withdrawal, KYC, Profile, and account security experiences."
-              },
-              {
-                "title": "Quality ownership",
-                "body": "Helped test complete user journeys, from admin configuration through user actions and resulting data."
-              }
-            ]
-          },
-          "engineering": {
-            "eyebrow": "02 / ENGINEERING",
-            "title": "Engineering Highlights",
-            "items": [
-              {
-                "eyebrow": "01 / TECHNICAL DECISION",
-                "title": "One codebase, two platforms",
-                "facts": [
-                  {
-                    "label": "Challenge",
-                    "body": "The second platform needed its own branding, content, and selected features while sharing most of the existing product's behavior."
-                  },
-                  {
-                    "label": "Decision",
-                    "body": "I chose a shared frontend instead of duplicating the application, using environment variables for themes, page visibility, and platform-specific behavior."
-                  },
-                  {
-                    "label": "Outcome",
-                    "body": "Common features can evolve in one implementation, reducing the need to maintain equivalent changes in two independent codebases."
-                  }
-                ]
-              },
-              {
-                "eyebrow": "02 / PROBLEM SOLVING",
-                "title": "Turning fintech rules into usable flows",
-                "facts": [
-                  {
-                    "label": "Challenge",
-                    "body": "Launchpad and Staking required me to understand unfamiliar financial concepts and transaction rules—not simply reproduce UI designs."
-                  },
-                  {
-                    "label": "Approach",
-                    "body": "I explored comparable products, clarified business rules with teammates, examined existing code, and identified reusable interface patterns before implementation."
-                  },
-                  {
-                    "label": "Implementation",
-                    "body": "For Launchpad, I handled balance display, purchase limits, quantity validation, sale availability, and transaction feedback. For Staking, I built reusable interfaces and integrated backend-driven states and estimates."
-                  }
-                ],
-                "note": "I also investigated Trading API parameter mismatches and improved buy/sell inputs, sliders, and realtime data integration."
+                "label": "Stack",
+                "value": "React · TypeScript · Material UI · REST APIs"
               }
             ],
-            "diagram": {
-              "sharedTitle": "Shared frontend",
-              "sharedDetail": "Common components & feature logic",
-              "configTitle": "Environment-based config",
-              "configDetail": "Theme · Pages · Visibility",
-              "platforms": [
-                "NexStox",
-                "NXMarket"
-              ],
-              "caption": "Conceptual diagram, not a source-code map."
+            "heroImage": {
+              "src": "/assets/projects/nxmarket-trading-view.jpg",
+              "width": 1920,
+              "height": 1530,
+              "caption": "NXMarket · Trading interface"
             },
-            "workflow": {
-              "eyebrow": "STAKING WORKFLOW",
-              "image": {
-                "src": "/assets/projects/nxmarket-staking-confirmation.png",
-                "width": 1440,
-                "height": 1080,
-                "caption": "NXMarket · Unstaking confirmation with balances and resulting position"
-              }
+            "layout": "split",
+            "team": {
+              "label": "Frontend team",
+              "value": "1–3 engineers; sole frontend engineer for the first 3 months"
             }
           },
-          "ownership": {
-            "eyebrow": "03 / OWNERSHIP",
-            "title": "Beyond Implementation",
-            "lead": "Testing the full journey, not just the screen.",
-            "description": "With no dedicated QA tester on the team, we set aside time for regular product checks. I tested workflows such as configuring a Staking pool in Admin, staking through the user app, and verifying the displayed data and resulting states. I also checked deposit and token buy/sell flows.",
-            "steps": [
-              {
-                "title": "Configure in Admin",
-                "body": "Create or update a Staking pool"
-              },
-              {
-                "title": "Act in User App",
-                "body": "Stake in the corresponding pool"
-              },
-              {
-                "title": "Verify Result",
-                "body": "Check data, state, and behavior"
-              }
-            ]
-          },
-          "results": {
-            "eyebrow": "04 / RESULTS",
-            "title": "Outcomes & Takeaways",
-            "items": [
-              "Supported two fintech products through a shared frontend implementation.",
-              "Delivered Launchpad and Staking workflows and modernized financial and account interfaces.",
-              "Resolved identified trading integration issues and contributed to cross-feature product verification."
-            ],
-            "takeawayTitle": "What I learned",
-            "takeaway": "Reliable frontend engineering starts with understanding the business rules, choosing maintainable solutions, and verifying what users actually experience."
-          }
+          "sections": [
+            {
+              "eyebrow": "01 / CONTRIBUTIONS",
+              "title": "What I Contributed",
+              "id": "contributions",
+              "cards": [
+                {
+                  "title": "Multi-platform",
+                  "body": "Proposed and implemented environment-based configuration for platform-specific themes, pages, and features.",
+                  "icon": "layout"
+                },
+                {
+                  "title": "Financial workflows",
+                  "body": "Built Launchpad Purchase, Launchpad Detail, and Staking interfaces with validation and API integration.",
+                  "icon": "chart"
+                },
+                {
+                  "title": "Feature modernization",
+                  "body": "Improved Trading, Wallet, Deposit, Withdrawal, KYC, Profile, and account security experiences.",
+                  "icon": "code"
+                },
+                {
+                  "title": "Quality ownership",
+                  "body": "Helped test complete user journeys, from admin configuration through user actions and resulting data.",
+                  "icon": "check"
+                }
+              ]
+            },
+            {
+              "id": "engineering",
+              "eyebrow": "02 / ENGINEERING",
+              "title": "Engineering Highlights",
+              "features": [
+                {
+                  "eyebrow": "01 / TECHNICAL DECISION",
+                  "title": "One codebase, two platforms",
+                  "facts": [
+                    {
+                      "label": "Challenge",
+                      "body": "The second platform needed its own branding, content, and selected features while sharing most of the existing product's behavior."
+                    },
+                    {
+                      "label": "Decision",
+                      "body": "I chose a shared frontend instead of duplicating the application, using environment variables for themes, page visibility, and platform-specific behavior."
+                    },
+                    {
+                      "label": "Outcome",
+                      "body": "Common features can evolve in one implementation, reducing the need to maintain equivalent changes in two independent codebases."
+                    }
+                  ],
+                  "reverse": false,
+                  "visual": {
+                    "diagram": {
+                      "nodes": [
+                        {
+                          "title": "Shared frontend",
+                          "detail": "Common components & feature logic"
+                        },
+                        {
+                          "title": "Environment-based config",
+                          "detail": "Theme · Pages · Visibility"
+                        }
+                      ],
+                      "branches": [
+                        "NexStox",
+                        "NXMarket"
+                      ],
+                      "caption": "Conceptual diagram, not a source-code map."
+                    }
+                  }
+                },
+                {
+                  "eyebrow": "02 / PROBLEM SOLVING",
+                  "title": "Turning fintech rules into usable flows",
+                  "facts": [
+                    {
+                      "label": "Challenge",
+                      "body": "Launchpad and Staking required me to understand unfamiliar financial concepts and transaction rules—not simply reproduce UI designs."
+                    },
+                    {
+                      "label": "Approach",
+                      "body": "I explored comparable products, clarified business rules with teammates, examined existing code, and identified reusable interface patterns before implementation."
+                    },
+                    {
+                      "label": "Implementation",
+                      "body": "For Launchpad, I handled balance display, purchase limits, quantity validation, sale availability, and transaction feedback. For Staking, I built reusable interfaces and integrated backend-driven states and estimates."
+                    }
+                  ],
+                  "note": "I also investigated Trading API parameter mismatches and improved buy/sell inputs, sliders, and realtime data integration.",
+                  "reverse": true,
+                  "visual": {
+                    "framed": true,
+                    "eyebrow": "STAKING WORKFLOW",
+                    "image": {
+                      "src": "/assets/projects/nxmarket-staking-confirmation.png",
+                      "width": 1440,
+                      "height": 1080,
+                      "caption": "NXMarket · Unstaking confirmation with balances and resulting position"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ownership",
+              "eyebrow": "03 / OWNERSHIP",
+              "title": "Beyond Implementation",
+              "lead": "Testing the full journey, not just the screen.",
+              "description": "With no dedicated QA tester on the team, we set aside time for regular product checks. I tested workflows such as configuring a Staking pool in Admin, staking through the user app, and verifying the displayed data and resulting states. I also checked deposit and token buy/sell flows.",
+              "steps": [
+                {
+                  "title": "Configure in Admin",
+                  "body": "Create or update a Staking pool"
+                },
+                {
+                  "title": "Act in User App",
+                  "body": "Stake in the corresponding pool"
+                },
+                {
+                  "title": "Verify Result",
+                  "body": "Check data, state, and behavior"
+                }
+              ]
+            },
+            {
+              "id": "outcomes",
+              "eyebrow": "04 / RESULTS",
+              "title": "Outcomes & Takeaways",
+              "takeawayTitle": "What I learned",
+              "takeaway": "Reliable frontend engineering starts with understanding the business rules, choosing maintainable solutions, and verifying what users actually experience.",
+              "outcomes": [
+                {
+                  "body": "Supported two fintech products through a shared frontend implementation."
+                },
+                {
+                  "body": "Delivered Launchpad and Staking workflows and modernized financial and account interfaces."
+                },
+                {
+                  "body": "Resolved identified trading integration issues and contributed to cross-feature product verification."
+                }
+              ]
+            }
+          ]
         },
         "title": "NexStox & NXMarket Trading Platforms",
         "subtitle": "Fintech Trading & Staking Platforms",
@@ -472,150 +502,236 @@
       },
       {
         "id": "e-learning-platform",
-        "learningCaseStudy": {
-          "eyebrow": "CASE STUDY · E-LEARNING",
-          "title": "E-Learning Platform",
-          "lead": "Book-based learning meets interactive video lessons.",
-          "description": "I helped establish the frontend foundation and built the core student learning experience, combining chapter-based navigation, video–script interactions, and page-aware real-time discussions.",
-          "meta": [
-            {
-              "label": "Role",
-              "value": "Frontend Engineer"
-            },
-            {
-              "label": "Team",
-              "value": "3 frontend developers"
-            },
-            {
-              "label": "Stack",
-              "value": "Turborepo · TypeScript"
-            }
-          ],
-          "conceptualCaption": "Conceptual diagram · Not a product screenshot",
-          "heroDiagram": {
-            "title": "Study Screen",
-            "modes": [
-              "Book mode",
-              "Video mode"
-            ],
-            "discussion": "Page-aware discussions"
-          },
-          "contributions": {
-            "eyebrow": "01 / CONTRIBUTIONS",
-            "title": "What I Contributed",
-            "items": [
+        "caseStudy": {
+          "hero": {
+            "eyebrow": "E-LEARNING · FRONTEND CASE STUDY",
+            "title": "E-Learning Platform (Cobook)",
+            "lead": "A study interface combining video playback, book-based navigation, and discussions tied to lesson content.",
+            "description": "I joined a three-person frontend team working on the project from the beginning. After discussing the stack with the team, I set up the frontend monorepo and took responsibility for the core student study interface and most of the Page Talk discussion functionality.",
+            "meta": [
               {
-                "title": "Frontend Foundation",
-                "body": "Set up the Turborepo project after team discussions, organizing Admin and Student apps in one repository with shared TypeScript data models."
+                "label": "Role",
+                "value": "Frontend Engineer"
               },
               {
-                "title": "Core Learning Experience",
-                "body": "Built the study screen with book/video modes, chapter and page navigation, video controls, script-based seeking, and saved pages."
+                "label": "Team",
+                "value": "3 Frontend Developers"
               },
               {
-                "title": "Page-Aware Discussions",
-                "body": "Implemented real-time comments, two-level threads, likes, instructor distinction, custom display ordering, and infinite scrolling."
-              },
-              {
-                "title": "Access & Notifications",
-                "body": "Handled frontend enrollment-based access rules, limited lesson previews, and real-time notifications."
+                "label": "Focus",
+                "value": "Frontend Setup · Study Experience · Real-Time Discussions"
               }
+            ],
+            "heroImage": {
+              "src": "/assets/projects/e-learning-video-controls.png",
+              "width": 1591,
+              "height": 956,
+              "caption": "Cobook study screen with video controls, page navigation, and Page Talk.",
+              "alt": "Cobook study interface showing a lesson video, playback controls, chapter bookmarks, and the Page Talk discussion panel."
+            },
+            "layout": "full",
+            "techTags": [
+              "React",
+              "TypeScript",
+              "Turborepo",
+              "Jotai",
+              "SWR Infinite",
+              "WebSocket",
+              "ReactPlayer"
             ]
           },
-          "engineering": {
-            "eyebrow": "02 / ENGINEERING",
-            "title": "Engineering Highlights",
-            "items": [
-              {
-                "eyebrow": "01 / LEARNING EXPERIENCE",
-                "title": "Connecting book navigation with video playback",
-                "facts": [
-                  {
-                    "label": "Challenge",
-                    "body": "Lessons were structured as books, chapters, and pages, but learners could also switch to a video mode. Each page related to a script segment, so navigation and playback needed to work together."
-                  },
-                  {
-                    "label": "Approach",
-                    "body": "Built the student study screen around the chapter/page structure and its corresponding video content, connecting script selection with playback seeking."
-                  },
-                  {
-                    "label": "Delivered",
-                    "body": "Students could move between lessons and pages, control playback, jump to the relevant video position from a script segment, and save pages for later reference."
-                  }
-                ]
-              },
-              {
-                "eyebrow": "02 / REAL-TIME INTERACTION",
-                "title": "Building discussions tied to each lesson page",
-                "facts": [
-                  {
-                    "label": "Challenge",
-                    "body": "Comments needed to stay associated with the correct lesson page while supporting real-time activity, instructor visibility, different interaction permissions, and large discussion lists."
-                  },
-                  {
-                    "label": "Implementation",
-                    "body": "Built two-level comment/reply interactions, likes, role-based UI rules, instructor-specific styling, custom ordering, and incremental loading with infinite scroll. Integrated real-time comment updates and notifications."
-                  },
-                  {
-                    "label": "Delivered",
-                    "body": "Students and instructors could interact through page-specific discussions with updates appearing in real time. The interface enforced the relevant frontend access restrictions."
-                  }
-                ]
-              }
-            ],
-            "learningDiagram": {
-              "nodes": [
-                "Book → Chapter → Page",
-                "Script segment",
-                "Video position"
-              ],
-              "connectors": [
-                "↕",
-                "↓"
+          "sections": [
+            {
+              "eyebrow": "02 / CONTRIBUTIONS",
+              "title": "Key Contributions",
+              "id": "contributions",
+              "cards": [
+                {
+                  "title": "Frontend Foundation",
+                  "body": "Set up the Turborepo monorepo for Admin and Student apps, including shared TypeScript data models after discussing technical choices with the team.",
+                  "icon": "code"
+                },
+                {
+                  "title": "Core Study Interface",
+                  "body": "Built book/video learning modes, chapter and page navigation, playback controls, bookmarks, and two-way video–page navigation.",
+                  "icon": "graduationCap"
+                },
+                {
+                  "title": "Context-Aware Discussion",
+                  "body": "Implemented page- and chapter-level discussions with comments, replies, filters, permissions, ordering, and incremental loading.",
+                  "icon": "people"
+                },
+                {
+                  "title": "Real-Time & AI Workflows",
+                  "body": "Integrated WebSocket updates, notifications, attachments, AI reply requests, and instructor AI Composer interactions.",
+                  "icon": "check"
+                }
               ]
             },
-            "discussionDiagram": {
-              "nodes": [
-                "Current page",
-                "Discussion thread",
-                "Real-time updates"
-              ],
-              "detail": "Instructor priority · Newest comments · Replies"
-            }
-          },
-          "ownership": {
-            "eyebrow": "03 / BEYOND IMPLEMENTATION",
-            "title": "Establishing a shared frontend foundation",
-            "description": "After discussing technical choices with the team, I configured the project with Turborepo, keeping Admin and Student apps in one repository and sharing TypeScript data-model definitions between them.",
-            "reflection": "This was also my first experience using AI-assisted coding on a challenging feature. I used Cursor to explore implementation approaches for large comment lists and learned the importance of understanding and reviewing generated code.",
-            "diagram": {
-              "workspace": "Turborepo",
-              "apps": [
-                "Admin App",
-                "Student App"
-              ],
-              "models": "Shared TypeScript Models",
-              "example": "e.g. Student"
-            }
-          },
-          "results": {
-            "eyebrow": "04 / RESULTS",
-            "title": "Outcomes",
-            "items": [
-              {
-                "title": "Frontend setup",
-                "body": "Configured the initial frontend monorepo and shared data-model definitions for Admin and Student applications."
-              },
-              {
-                "title": "Core learning interface",
-                "body": "Delivered the main study screen with book/video navigation, script-to-video seeking, and page-saving interactions."
-              },
-              {
-                "title": "Interactive discussions",
-                "body": "Delivered page-specific comments, real-time updates, role-aware interactions, infinite scrolling, and notifications."
+            {
+              "id": "engineering",
+              "eyebrow": "03 / ENGINEERING",
+              "title": "Engineering Highlights",
+              "features": [
+                {
+                  "title": "Context-Aware Real-Time Discussion",
+                  "eyebrow": "Async Data · State & Cache · Business Rules",
+                  "facts": [
+                    {
+                      "label": "Challenge",
+                      "body": "The discussion panel needed to follow the current lesson page or switch to a whole-chapter view, while handling live updates, nested replies, large comment lists, and different interaction permissions.",
+                      "points": []
+                    },
+                    {
+                      "label": "Implementation",
+                      "body": "",
+                      "points": [
+                        "Used Jotai for active-page and notification state, and SWR Infinite with page-specific keys for paginated comment fetching and caching.",
+                        "Integrated WebSocket notifications to update relevant comments or replies; updated locally submitted comments after successful API responses rather than optimistically.",
+                        "Implemented two-level comments, reply loading on demand, custom instructor-first/time-based ordering, filters, mentions, attachments, and enrollment-based restrictions.",
+                        "Built the frontend flows for requesting AI answers and for instructor AI Composer interactions."
+                      ]
+                    },
+                    {
+                      "label": "Outcome",
+                      "body": "Delivered the core Page Talk interactions, supporting discussions tied to the current page or chapter with API-driven and real-time updates.",
+                      "points": []
+                    }
+                  ],
+                  "reverse": false,
+                  "visual": {
+                    "framed": true,
+                    "diagram": {
+                      "nodes": [
+                        {
+                          "title": "Active page or chapter mode"
+                        },
+                        {
+                          "title": "Jotai state"
+                        },
+                        {
+                          "title": "SWR Infinite key + pagination"
+                        },
+                        {
+                          "title": "Comments UI"
+                        }
+                      ],
+                      "input": [
+                        "WebSocket notification",
+                        "Cache update / revalidation"
+                      ],
+                      "caption": "Conceptual flow · Not exhaustive"
+                    }
+                  },
+                  "images": [
+                    {
+                      "src": "/assets/projects/e-learning-pagetalk.png",
+                      "width": 880,
+                      "height": 795,
+                      "caption": "Page Talk discussions linked to lesson pages and video timestamps.",
+                      "alt": "Page Talk panel showing comments grouped under lesson pages 13 and 14 with corresponding video timestamps."
+                    },
+                    {
+                      "src": "/assets/projects/e-learning-pagetalk-composer.png",
+                      "width": 692,
+                      "height": 602,
+                      "caption": "Page Talk composer with anonymous, AI answer, and instructor request options.",
+                      "alt": "Page Talk comment composer showing anonymous, AI answer, and instructor request checkboxes above a discussion thread."
+                    }
+                  ]
+                },
+                {
+                  "title": "Bidirectional Video–Page Synchronization",
+                  "eyebrow": "Event Handling · State Coordination",
+                  "facts": [
+                    {
+                      "label": "Challenge",
+                      "body": "Learning content is organized into books, chapters, and pages, each mapped to a video time range. Page navigation, playback, and page-specific discussions needed to respond to changes in the active lesson page.",
+                      "points": []
+                    },
+                    {
+                      "label": "Implementation",
+                      "body": "",
+                      "points": [
+                        "Used ReactPlayer playback timestamps and custom time-range matching to identify the active page.",
+                        "Updated the active page in Jotai as playback progressed, triggering the associated lesson content and comments.",
+                        "Implemented reverse navigation: selecting a page or script segment seeks video playback to the corresponding timestamp.",
+                        "Supported initial page selection from the URL, saved progress, or first available page; implemented chapter/page navigation and lesson-level bookmarks."
+                      ]
+                    },
+                    {
+                      "label": "Outcome",
+                      "body": "Delivered two-way navigation between structured lesson pages and video playback, with discussions loaded for the selected page.",
+                      "points": []
+                    }
+                  ],
+                  "reverse": true,
+                  "visual": {
+                    "framed": true,
+                    "diagram": {
+                      "nodes": [
+                        {
+                          "title": "ReactPlayer timestamp"
+                        },
+                        {
+                          "title": "Custom time-range-to-page mapping"
+                        },
+                        {
+                          "title": "Jotai active page"
+                        },
+                        {
+                          "title": "Page-specific comments"
+                        }
+                      ],
+                      "input": [
+                        "Select page / script",
+                        "Seek player to corresponding timestamp"
+                      ],
+                      "caption": "Conceptual flow · Not exhaustive"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ownership",
+              "eyebrow": "04 / BEYOND IMPLEMENTATION",
+              "title": "Frontend Foundation & Technical Ownership",
+              "description": "After discussing technology choices with the team, I initialized and configured the frontend project using Turborepo. The Admin and Student applications live in one repository and share TypeScript data models, keeping their common entity definitions consistent.",
+              "reflection": "While implementing the discussion feature, I also used Cursor for AI-assisted coding and explored solutions for rendering long comment lists. I reviewed the feature through implementation and testing, but I do not claim measured performance gains from list virtualization.",
+              "diagram": {
+                "nodes": [
+                  {
+                    "title": "Turborepo"
+                  }
+                ],
+                "branches": [
+                  "Admin App",
+                  "Student App"
+                ],
+                "sharedResource": "Shared TypeScript Data Models"
               }
-            ]
-          }
+            },
+            {
+              "id": "outcomes",
+              "eyebrow": "05 / OUTCOMES",
+              "title": "Outcomes",
+              "outcomes": [
+                {
+                  "title": "Frontend foundation",
+                  "body": "Initialized the monorepo and shared data models for the two frontend applications."
+                },
+                {
+                  "title": "Core study experience",
+                  "body": "Implemented the primary student study interface with book/video navigation, script seeking, and page-aware content."
+                },
+                {
+                  "title": "Discussion functionality",
+                  "body": "Delivered the core discussion workflows with pagination, WebSocket updates, permissions, replies, attachments, and AI-related interactions."
+                }
+              ]
+            }
+          ]
         },
         "title": "E-Learning Platform",
         "subtitle": "Learning Management Platform",
@@ -702,7 +818,7 @@
           "REST APIs",
           "Real-time Data"
         ],
-        "thumbnail": "/assets/images/thumb-elearning.png"
+        "thumbnail": "/assets/projects/elearning-video-thumbnail.jpg"
       },
       {
         "id": "cleaning-services-dashboard",

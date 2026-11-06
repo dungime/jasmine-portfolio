@@ -164,150 +164,180 @@
       {
         "id": "nexstox-nxmarket",
         "caseStudy": {
-          "title": "NexStox & NXMarket",
-          "eyebrow": "DỰ ÁN THỰC TẾ · FINTECH",
-          "lead": "Một frontend dùng chung. Hai trải nghiệm fintech khác biệt.",
-          "description": "Tôi cải tiến giao diện fintech hiện có, phát triển các luồng Launchpad và Staking, đồng thời triển khai cấu hình theo nền tảng để hỗ trợ hai sản phẩm trên cùng một frontend codebase.",
-          "meta": [
-            {
-              "label": "Vai trò",
-              "value": "Senior Frontend Engineer"
-            },
-            {
-              "label": "Thời gian",
-              "value": "05/2025 – 05/2026"
-            },
-            {
-              "label": "Công nghệ",
-              "value": "React · TypeScript · Material UI · REST APIs"
-            }
-          ],
-          "team": {
-            "label": "Frontend team",
-            "value": "1–3 engineers; là frontend engineer duy nhất trong 3 tháng đầu"
-          },
-          "heroImage": {
-            "src": "/assets/projects/nxmarket-trading-view.jpg",
-            "width": 1920,
-            "height": 1530,
-            "caption": "NXMarket · Giao diện giao dịch"
-          },
-          "contributions": {
-            "eyebrow": "01 / ĐÓNG GÓP",
-            "title": "Đóng góp của tôi",
-            "items": [
+          "hero": {
+            "eyebrow": "DỰ ÁN THỰC TẾ · FINTECH",
+            "title": "NexStox & NXMarket",
+            "lead": "Một frontend dùng chung. Hai trải nghiệm fintech khác biệt.",
+            "description": "Tôi cải tiến giao diện fintech hiện có, phát triển các luồng Launchpad và Staking, đồng thời triển khai cấu hình theo nền tảng để hỗ trợ hai sản phẩm trên cùng một frontend codebase.",
+            "meta": [
               {
-                "title": "Multi-platform",
-                "body": "Đề xuất và triển khai cấu hình bằng environment variables để phân biệt theme, trang và tính năng của từng nền tảng."
+                "label": "Vai trò",
+                "value": "Senior Frontend Engineer"
               },
               {
-                "title": "Fintech workflows",
-                "body": "Phát triển Launchpad Purchase, Launchpad Detail và Staking, bao gồm validation và tích hợp API."
+                "label": "Thời gian",
+                "value": "05/2025 – 05/2026"
               },
               {
-                "title": "Feature modernization",
-                "body": "Cải tiến Trading, Wallet, Deposit, Withdrawal, KYC, User Profile và các tính năng bảo mật tài khoản."
-              },
-              {
-                "title": "Quality ownership",
-                "body": "Tham gia kiểm thử toàn bộ luồng từ cấu hình Admin đến thao tác người dùng và kiểm tra dữ liệu."
-              }
-            ]
-          },
-          "engineering": {
-            "eyebrow": "02 / ENGINEERING",
-            "title": "Engineering Highlights",
-            "items": [
-              {
-                "eyebrow": "01 / QUYẾT ĐỊNH KỸ THUẬT",
-                "title": "Một codebase cho hai nền tảng",
-                "facts": [
-                  {
-                    "label": "Bài toán",
-                    "body": "Nền tảng thứ hai cần giao diện, nội dung và một số tính năng riêng, trong khi phần lớn nghiệp vụ giống sản phẩm hiện có."
-                  },
-                  {
-                    "label": "Quyết định",
-                    "body": "Thay vì clone ứng dụng, tôi chọn tái sử dụng frontend và dùng environment variables để điều khiển theme, trang hiển thị và hành vi riêng của từng platform."
-                  },
-                  {
-                    "label": "Kết quả",
-                    "body": "Những tính năng dùng chung có thể được cập nhật tại một nơi, hạn chế việc phải duy trì cùng một thay đổi trong hai codebase độc lập."
-                  }
-                ]
-              },
-              {
-                "eyebrow": "02 / GIẢI QUYẾT VẤN ĐỀ",
-                "title": "Chuyển nghiệp vụ fintech thành luồng sử dụng rõ ràng",
-                "facts": [
-                  {
-                    "label": "Bài toán",
-                    "body": "Launchpad và Staking đòi hỏi hiểu các khái niệm tài chính và quy tắc giao dịch mới, không chỉ dựng giao diện từ design."
-                  },
-                  {
-                    "label": "Cách tiếp cận",
-                    "body": "Tôi trải nghiệm sản phẩm tương tự, trao đổi với team để làm rõ nghiệp vụ, đọc code hiện có và xác định những thành phần UI có thể tái sử dụng."
-                  },
-                  {
-                    "label": "Triển khai",
-                    "body": "Với Launchpad, tôi xử lý hiển thị số dư, giới hạn mua, validation số lượng, trạng thái bán và phản hồi giao dịch. Với Staking, tôi tạo reusable components và tích hợp các trạng thái, giá trị ước tính từ backend."
-                  }
-                ],
-                "note": "Tôi cũng xử lý lỗi tham số Trading API và cải tiến input mua/bán, slider, dữ liệu realtime."
+                "label": "Công nghệ",
+                "value": "React · TypeScript · Material UI · REST APIs"
               }
             ],
-            "diagram": {
-              "sharedTitle": "Frontend dùng chung",
-              "sharedDetail": "Components & logic dùng chung",
-              "configTitle": "Cấu hình theo môi trường",
-              "configDetail": "Theme · Trang · Hiển thị",
-              "platforms": [
-                "NexStox",
-                "NXMarket"
-              ],
-              "caption": "Sơ đồ khái niệm, không phải cấu trúc source code."
+            "heroImage": {
+              "src": "/assets/projects/nxmarket-trading-view.jpg",
+              "width": 1920,
+              "height": 1530,
+              "caption": "NXMarket · Giao diện giao dịch"
             },
-            "workflow": {
-              "eyebrow": "LUỒNG STAKING",
-              "image": {
-                "src": "/assets/projects/nxmarket-staking-confirmation.png",
-                "width": 1440,
-                "height": 1080,
-                "caption": "NXMarket · Xác nhận unstaking với số dư và trạng thái sau thao tác"
-              }
+            "layout": "split",
+            "team": {
+              "label": "Frontend team",
+              "value": "1–3 engineers; là frontend engineer duy nhất trong 3 tháng đầu"
             }
           },
-          "ownership": {
-            "eyebrow": "03 / TINH THẦN LÀM CHỦ",
-            "title": "Beyond Implementation",
-            "lead": "Kiểm thử toàn bộ luồng, không chỉ từng màn hình.",
-            "description": "Team không có QA chuyên trách nên các developer dành thời gian kiểm thử sản phẩm định kỳ. Tôi kiểm tra các luồng như cấu hình Staking pool trong Admin, thực hiện Stake trên ứng dụng người dùng và đối chiếu dữ liệu, trạng thái sau thao tác. Tôi cũng tham gia kiểm thử Deposit và Trading Buy/Sell.",
-            "steps": [
-              {
-                "title": "Cấu hình trong Admin",
-                "body": "Tạo hoặc cập nhật Staking pool"
-              },
-              {
-                "title": "Thao tác trên User App",
-                "body": "Thực hiện Stake trong pool tương ứng"
-              },
-              {
-                "title": "Kiểm tra kết quả",
-                "body": "Đối chiếu dữ liệu, trạng thái, hành vi"
-              }
-            ]
-          },
-          "results": {
-            "eyebrow": "04 / KẾT QUẢ",
-            "title": "Kết quả & Bài học",
-            "items": [
-              "Hỗ trợ hai nền tảng fintech trên một frontend implementation dùng chung.",
-              "Phát triển Launchpad, Staking và cải tiến nhiều giao diện tài chính, quản lý tài khoản.",
-              "Xử lý các lỗi tích hợp Trading và tham gia kiểm thử sản phẩm xuyên suốt nhiều tính năng."
-            ],
-            "takeawayTitle": "Bài học quan trọng",
-            "takeaway": "Frontend đáng tin cậy bắt đầu từ việc hiểu nghiệp vụ, chọn giải pháp dễ bảo trì và kiểm chứng trải nghiệm thực tế của người dùng."
-          }
+          "sections": [
+            {
+              "eyebrow": "01 / ĐÓNG GÓP",
+              "title": "Đóng góp của tôi",
+              "id": "contributions",
+              "cards": [
+                {
+                  "title": "Multi-platform",
+                  "body": "Đề xuất và triển khai cấu hình bằng environment variables để phân biệt theme, trang và tính năng của từng nền tảng.",
+                  "icon": "layout"
+                },
+                {
+                  "title": "Fintech workflows",
+                  "body": "Phát triển Launchpad Purchase, Launchpad Detail và Staking, bao gồm validation và tích hợp API.",
+                  "icon": "chart"
+                },
+                {
+                  "title": "Feature modernization",
+                  "body": "Cải tiến Trading, Wallet, Deposit, Withdrawal, KYC, User Profile và các tính năng bảo mật tài khoản.",
+                  "icon": "code"
+                },
+                {
+                  "title": "Quality ownership",
+                  "body": "Tham gia kiểm thử toàn bộ luồng từ cấu hình Admin đến thao tác người dùng và kiểm tra dữ liệu.",
+                  "icon": "check"
+                }
+              ]
+            },
+            {
+              "id": "engineering",
+              "eyebrow": "02 / ENGINEERING",
+              "title": "Engineering Highlights",
+              "features": [
+                {
+                  "eyebrow": "01 / QUYẾT ĐỊNH KỸ THUẬT",
+                  "title": "Một codebase cho hai nền tảng",
+                  "facts": [
+                    {
+                      "label": "Bài toán",
+                      "body": "Nền tảng thứ hai cần giao diện, nội dung và một số tính năng riêng, trong khi phần lớn nghiệp vụ giống sản phẩm hiện có."
+                    },
+                    {
+                      "label": "Quyết định",
+                      "body": "Thay vì clone ứng dụng, tôi chọn tái sử dụng frontend và dùng environment variables để điều khiển theme, trang hiển thị và hành vi riêng của từng platform."
+                    },
+                    {
+                      "label": "Kết quả",
+                      "body": "Những tính năng dùng chung có thể được cập nhật tại một nơi, hạn chế việc phải duy trì cùng một thay đổi trong hai codebase độc lập."
+                    }
+                  ],
+                  "reverse": false,
+                  "visual": {
+                    "diagram": {
+                      "nodes": [
+                        {
+                          "title": "Frontend dùng chung",
+                          "detail": "Components & logic dùng chung"
+                        },
+                        {
+                          "title": "Cấu hình theo môi trường",
+                          "detail": "Theme · Trang · Hiển thị"
+                        }
+                      ],
+                      "branches": [
+                        "NexStox",
+                        "NXMarket"
+                      ],
+                      "caption": "Sơ đồ khái niệm, không phải cấu trúc source code."
+                    }
+                  }
+                },
+                {
+                  "eyebrow": "02 / GIẢI QUYẾT VẤN ĐỀ",
+                  "title": "Chuyển nghiệp vụ fintech thành luồng sử dụng rõ ràng",
+                  "facts": [
+                    {
+                      "label": "Bài toán",
+                      "body": "Launchpad và Staking đòi hỏi hiểu các khái niệm tài chính và quy tắc giao dịch mới, không chỉ dựng giao diện từ design."
+                    },
+                    {
+                      "label": "Cách tiếp cận",
+                      "body": "Tôi trải nghiệm sản phẩm tương tự, trao đổi với team để làm rõ nghiệp vụ, đọc code hiện có và xác định những thành phần UI có thể tái sử dụng."
+                    },
+                    {
+                      "label": "Triển khai",
+                      "body": "Với Launchpad, tôi xử lý hiển thị số dư, giới hạn mua, validation số lượng, trạng thái bán và phản hồi giao dịch. Với Staking, tôi tạo reusable components và tích hợp các trạng thái, giá trị ước tính từ backend."
+                    }
+                  ],
+                  "note": "Tôi cũng xử lý lỗi tham số Trading API và cải tiến input mua/bán, slider, dữ liệu realtime.",
+                  "reverse": true,
+                  "visual": {
+                    "framed": true,
+                    "eyebrow": "LUỒNG STAKING",
+                    "image": {
+                      "src": "/assets/projects/nxmarket-staking-confirmation.png",
+                      "width": 1440,
+                      "height": 1080,
+                      "caption": "NXMarket · Xác nhận unstaking với số dư và trạng thái sau thao tác"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ownership",
+              "eyebrow": "03 / TINH THẦN LÀM CHỦ",
+              "title": "Beyond Implementation",
+              "lead": "Kiểm thử toàn bộ luồng, không chỉ từng màn hình.",
+              "description": "Team không có QA chuyên trách nên các developer dành thời gian kiểm thử sản phẩm định kỳ. Tôi kiểm tra các luồng như cấu hình Staking pool trong Admin, thực hiện Stake trên ứng dụng người dùng và đối chiếu dữ liệu, trạng thái sau thao tác. Tôi cũng tham gia kiểm thử Deposit và Trading Buy/Sell.",
+              "steps": [
+                {
+                  "title": "Cấu hình trong Admin",
+                  "body": "Tạo hoặc cập nhật Staking pool"
+                },
+                {
+                  "title": "Thao tác trên User App",
+                  "body": "Thực hiện Stake trong pool tương ứng"
+                },
+                {
+                  "title": "Kiểm tra kết quả",
+                  "body": "Đối chiếu dữ liệu, trạng thái, hành vi"
+                }
+              ]
+            },
+            {
+              "id": "outcomes",
+              "eyebrow": "04 / KẾT QUẢ",
+              "title": "Kết quả & Bài học",
+              "takeawayTitle": "Bài học quan trọng",
+              "takeaway": "Frontend đáng tin cậy bắt đầu từ việc hiểu nghiệp vụ, chọn giải pháp dễ bảo trì và kiểm chứng trải nghiệm thực tế của người dùng.",
+              "outcomes": [
+                {
+                  "body": "Hỗ trợ hai nền tảng fintech trên một frontend implementation dùng chung."
+                },
+                {
+                  "body": "Phát triển Launchpad, Staking và cải tiến nhiều giao diện tài chính, quản lý tài khoản."
+                },
+                {
+                  "body": "Xử lý các lỗi tích hợp Trading và tham gia kiểm thử sản phẩm xuyên suốt nhiều tính năng."
+                }
+              ]
+            }
+          ]
         },
         "title": "Nền tảng giao dịch NexStox & NXMarket",
         "subtitle": "Nền tảng giao dịch & staking fintech",
@@ -452,150 +482,236 @@
       },
       {
         "id": "e-learning-platform",
-        "learningCaseStudy": {
-          "eyebrow": "DỰ ÁN THỰC TẾ · E-LEARNING",
-          "title": "E-Learning Platform",
-          "lead": "Kết hợp học theo sách với bài học video tương tác.",
-          "description": "Tôi tham gia thiết lập nền tảng frontend và phát triển màn hình học chính, kết hợp điều hướng chương/trang, tương tác video–script và thảo luận realtime theo từng trang.",
-          "meta": [
-            {
-              "label": "Vai trò",
-              "value": "Frontend Engineer"
-            },
-            {
-              "label": "Đội ngũ",
-              "value": "3 frontend developers"
-            },
-            {
-              "label": "Công nghệ",
-              "value": "Turborepo · TypeScript"
-            }
-          ],
-          "conceptualCaption": "Sơ đồ khái niệm · Không phải ảnh giao diện sản phẩm",
-          "heroDiagram": {
-            "title": "Màn hình học",
-            "modes": [
-              "Chế độ đọc sách",
-              "Chế độ video"
-            ],
-            "discussion": "Thảo luận theo từng trang"
-          },
-          "contributions": {
-            "eyebrow": "01 / ĐÓNG GÓP",
-            "title": "Đóng góp của tôi",
-            "items": [
+        "caseStudy": {
+          "hero": {
+            "eyebrow": "E-LEARNING · DỰ ÁN FRONTEND",
+            "title": "E-Learning Platform (Cobook)",
+            "lead": "Màn hình học kết hợp video, điều hướng theo cấu trúc sách và thảo luận gắn với nội dung bài học.",
+            "description": "Tôi tham gia dự án từ giai đoạn đầu trong nhóm ba frontend developers. Sau khi cùng team thảo luận lựa chọn công nghệ, tôi thiết lập frontend monorepo và phụ trách màn hình học chính của học viên cùng phần lớn chức năng Page Talk.",
+            "meta": [
               {
-                "title": "Frontend Foundation",
-                "body": "Thiết lập dự án với Turborepo sau khi cùng team thảo luận, tổ chức Admin và Student trong một repository và dùng chung các TypeScript data models."
+                "label": "Vai trò",
+                "value": "Frontend Engineer"
               },
               {
-                "title": "Core Learning Experience",
-                "body": "Phát triển study screen với chế độ đọc/xem video, điều hướng chương/trang, video controls, click script để tìm vị trí video và lưu trang."
+                "label": "Đội ngũ",
+                "value": "3 Frontend Developers"
               },
               {
-                "title": "Page-Aware Discussions",
-                "body": "Triển khai bình luận realtime, hai cấp comment/reply, like, phân biệt instructor, thứ tự hiển thị tùy chỉnh và infinite scrolling."
-              },
-              {
-                "title": "Access & Notifications",
-                "body": "Xử lý các giới hạn tương tác frontend dựa trên enrollment, xem thử bài học có giới hạn và thông báo realtime."
+                "label": "Trọng tâm",
+                "value": "Khởi tạo Frontend · Trải nghiệm học · Thảo luận real-time"
               }
+            ],
+            "heroImage": {
+              "src": "/assets/projects/e-learning-video-controls.png",
+              "width": 1591,
+              "height": 956,
+              "caption": "Giao diện học Cobook với điều khiển video, điều hướng trang và Page Talk.",
+              "alt": "Giao diện học Cobook hiển thị video bài học, thanh điều khiển, dấu trang theo chương và bảng thảo luận Page Talk."
+            },
+            "layout": "full",
+            "techTags": [
+              "React",
+              "TypeScript",
+              "Turborepo",
+              "Jotai",
+              "SWR Infinite",
+              "WebSocket",
+              "ReactPlayer"
             ]
           },
-          "engineering": {
-            "eyebrow": "02 / ENGINEERING",
-            "title": "Engineering Highlights",
-            "items": [
-              {
-                "eyebrow": "01 / LEARNING EXPERIENCE",
-                "title": "Kết nối cấu trúc sách với video playback",
-                "facts": [
-                  {
-                    "label": "Bài toán",
-                    "body": "Nội dung học được tổ chức theo sách, chương và trang, nhưng học viên cũng có thể chuyển sang xem video. Mỗi trang gắn với một script segment nên điều hướng và playback cần hoạt động nhất quán."
-                  },
-                  {
-                    "label": "Cách tiếp cận",
-                    "body": "Tôi xây dựng study screen theo cấu trúc chương/trang và nội dung video tương ứng, liên kết lựa chọn script với thao tác seek video."
-                  },
-                  {
-                    "label": "Bàn giao",
-                    "body": "Học viên có thể chuyển bài/trang, điều khiển video, nhấn vào script để tới đoạn video tương ứng và lưu trang để xem lại."
-                  }
-                ]
-              },
-              {
-                "eyebrow": "02 / REAL-TIME INTERACTION",
-                "title": "Xây dựng thảo luận gắn với từng trang học",
-                "facts": [
-                  {
-                    "label": "Bài toán",
-                    "body": "Comment cần hiển thị đúng trang, cập nhật realtime, phân biệt instructor, tuân theo quyền tương tác và hỗ trợ danh sách lớn."
-                  },
-                  {
-                    "label": "Triển khai",
-                    "body": "Tôi triển khai hai cấp comment/reply, like, điều kiện UI theo vai trò, kiểu hiển thị instructor, thứ tự comment tùy chỉnh và infinite scrolling; đồng thời tích hợp cập nhật comment và notification realtime."
-                  },
-                  {
-                    "label": "Bàn giao",
-                    "body": "Học viên và giảng viên có thể thảo luận theo từng trang học với cập nhật realtime, trong giới hạn tương tác frontend tương ứng."
-                  }
-                ]
-              }
-            ],
-            "learningDiagram": {
-              "nodes": [
-                "Sách → Chương → Trang",
-                "Đoạn script",
-                "Vị trí video"
-              ],
-              "connectors": [
-                "↕",
-                "↓"
+          "sections": [
+            {
+              "eyebrow": "02 / ĐÓNG GÓP",
+              "title": "Đóng góp chính",
+              "id": "contributions",
+              "cards": [
+                {
+                  "title": "Frontend Foundation",
+                  "body": "Thiết lập Turborepo cho Admin và Student, chia sẻ TypeScript data models sau khi thống nhất hướng kỹ thuật với team.",
+                  "icon": "code"
+                },
+                {
+                  "title": "Core Study Interface",
+                  "body": "Xây dựng chế độ học theo sách/video, điều hướng chương và trang, điều khiển video, bookmark và đồng bộ hai chiều video–page.",
+                  "icon": "graduationCap"
+                },
+                {
+                  "title": "Context-Aware Discussion",
+                  "body": "Triển khai thảo luận theo trang hoặc toàn chương với comment, replies, bộ lọc, phân quyền, sắp xếp và tải dữ liệu theo từng phần.",
+                  "icon": "people"
+                },
+                {
+                  "title": "Real-Time & AI Workflows",
+                  "body": "Tích hợp cập nhật WebSocket, notifications, đính kèm file, yêu cầu AI trả lời và luồng AI Composer dành cho giáo viên.",
+                  "icon": "check"
+                }
               ]
             },
-            "discussionDiagram": {
-              "nodes": [
-                "Trang học hiện tại",
-                "Luồng thảo luận",
-                "Cập nhật realtime"
-              ],
-              "detail": "Ưu tiên instructor · Comment mới nhất · Replies"
-            }
-          },
-          "ownership": {
-            "eyebrow": "03 / BEYOND IMPLEMENTATION",
-            "title": "Thiết lập nền tảng frontend dùng chung",
-            "description": "Sau khi cùng team thống nhất các lựa chọn kỹ thuật, tôi cấu hình dự án bằng Turborepo, tổ chức Admin và Student trong một repository và dùng chung các định nghĩa TypeScript data models.",
-            "reflection": "Đây cũng là lần đầu tôi sử dụng AI hỗ trợ code cho một tính năng khó. Tôi dùng Cursor để tìm hiểu cách triển khai danh sách comment lớn và nhận ra tầm quan trọng của việc đọc hiểu, kiểm tra code do AI tạo ra.",
-            "diagram": {
-              "workspace": "Turborepo",
-              "apps": [
-                "Admin App",
-                "Student App"
-              ],
-              "models": "TypeScript data models dùng chung",
-              "example": "Ví dụ: Student"
-            }
-          },
-          "results": {
-            "eyebrow": "04 / KẾT QUẢ",
-            "title": "Kết quả",
-            "items": [
-              {
-                "title": "Frontend setup",
-                "body": "Thiết lập frontend monorepo ban đầu và shared data models cho Admin và Student."
-              },
-              {
-                "title": "Core learning interface",
-                "body": "Bàn giao study screen với điều hướng theo sách/video, script-to-video seeking và lưu trang."
-              },
-              {
-                "title": "Interactive discussions",
-                "body": "Bàn giao comments theo từng trang, cập nhật realtime, tương tác theo vai trò, infinite scrolling và thông báo."
+            {
+              "id": "engineering",
+              "eyebrow": "03 / ENGINEERING",
+              "title": "Điểm nhấn kỹ thuật",
+              "features": [
+                {
+                  "title": "Thảo luận real-time theo ngữ cảnh bài học",
+                  "eyebrow": "Dữ liệu bất đồng bộ · State & Cache · Business Rules",
+                  "facts": [
+                    {
+                      "label": "Bài toán",
+                      "body": "Hệ thống thảo luận phải hiển thị dữ liệu theo trang đang học hoặc toàn chương, đồng thời hỗ trợ cập nhật real-time, replies nhiều cấp, số lượng comment lớn và các quyền tương tác khác nhau.",
+                      "points": []
+                    },
+                    {
+                      "label": "Triển khai",
+                      "body": "",
+                      "points": [
+                        "Dùng Jotai quản lý active page/notification và SWR Infinite với cache key theo page để tải comments phân trang.",
+                        "Tích hợp WebSocket để cập nhật dữ liệu; comment mới chỉ hiển thị sau khi API xác nhận thành công.",
+                        "Triển khai comment hai cấp, tải replies theo nhu cầu, ưu tiên instructor và sắp xếp theo thời gian, bộ lọc, mention, attachment và giới hạn theo đăng ký khóa học.",
+                        "Tích hợp giao diện yêu cầu AI trả lời và AI Composer cho giáo viên."
+                      ]
+                    },
+                    {
+                      "label": "Kết quả",
+                      "body": "Hoàn thành các tương tác chính của Page Talk, hỗ trợ thảo luận theo trang/chương cùng các cập nhật từ API và WebSocket.",
+                      "points": []
+                    }
+                  ],
+                  "reverse": false,
+                  "visual": {
+                    "framed": true,
+                    "diagram": {
+                      "nodes": [
+                        {
+                          "title": "Trang hiện tại hoặc toàn chương"
+                        },
+                        {
+                          "title": "Jotai state"
+                        },
+                        {
+                          "title": "SWR Infinite key + phân trang"
+                        },
+                        {
+                          "title": "Giao diện comments"
+                        }
+                      ],
+                      "input": [
+                        "Thông báo WebSocket",
+                        "Cập nhật cache / revalidation"
+                      ],
+                      "caption": "Luồng khái niệm · Không mô tả toàn bộ xử lý"
+                    }
+                  },
+                  "images": [
+                    {
+                      "src": "/assets/projects/e-learning-pagetalk.png",
+                      "width": 880,
+                      "height": 795,
+                      "caption": "Thảo luận Page Talk gắn với trang bài học và mốc thời gian video.",
+                      "alt": "Bảng Page Talk hiển thị bình luận theo trang bài học 13 và 14, kèm mốc thời gian video tương ứng."
+                    },
+                    {
+                      "src": "/assets/projects/e-learning-pagetalk-composer.png",
+                      "width": 692,
+                      "height": 602,
+                      "caption": "Khung soạn bình luận Page Talk với tùy chọn ẩn danh, câu trả lời AI và yêu cầu giảng viên.",
+                      "alt": "Khung soạn bình luận Page Talk hiển thị các tùy chọn ẩn danh, câu trả lời AI và yêu cầu giảng viên phía trên luồng thảo luận."
+                    }
+                  ]
+                },
+                {
+                  "title": "Đồng bộ hai chiều giữa video và trang bài học",
+                  "eyebrow": "Xử lý sự kiện · Đồng bộ state",
+                  "facts": [
+                    {
+                      "label": "Bài toán",
+                      "body": "Nội dung học được chia theo sách, chương và trang; mỗi trang tương ứng một khoảng thời gian video. Việc điều hướng, phát video và hiển thị comments phải theo đúng active page.",
+                      "points": []
+                    },
+                    {
+                      "label": "Triển khai",
+                      "body": "",
+                      "points": [
+                        "Lấy timestamp từ ReactPlayer và tự viết logic xác định page tương ứng theo khoảng thời gian.",
+                        "Cập nhật active page bằng Jotai khi video chạy, kéo theo nội dung học và comments của trang đó.",
+                        "Khi chọn page hoặc script, điều khiển video tua đến timestamp tương ứng.",
+                        "Xác định trang ban đầu từ URL, tiến độ đã lưu hoặc trang đầu; triển khai điều hướng và bookmark trong bài học."
+                      ]
+                    },
+                    {
+                      "label": "Kết quả",
+                      "body": "Hoàn thành điều hướng hai chiều giữa video và trang học, cùng cơ chế tải thảo luận theo trang đang chọn.",
+                      "points": []
+                    }
+                  ],
+                  "reverse": true,
+                  "visual": {
+                    "framed": true,
+                    "diagram": {
+                      "nodes": [
+                        {
+                          "title": "Timestamp từ ReactPlayer"
+                        },
+                        {
+                          "title": "Logic ánh xạ khoảng thời gian → page"
+                        },
+                        {
+                          "title": "Active page trong Jotai"
+                        },
+                        {
+                          "title": "Comments theo page"
+                        }
+                      ],
+                      "input": [
+                        "Chọn page / script",
+                        "Tua video đến timestamp tương ứng"
+                      ],
+                      "caption": "Luồng khái niệm · Không mô tả toàn bộ xử lý"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ownership",
+              "eyebrow": "04 / PHẠM VI TRIỂN KHAI",
+              "title": "Khởi tạo Frontend & Phạm vi trách nhiệm kỹ thuật",
+              "description": "Sau khi thảo luận lựa chọn công nghệ với team, tôi thiết lập dự án frontend bằng Turborepo. Admin và Student được tổ chức trong một repository, sử dụng chung TypeScript data models để thống nhất định nghĩa dữ liệu.",
+              "reflection": "Khi làm Page Talk, tôi cũng sử dụng Cursor hỗ trợ phát triển và tìm hiểu cách xử lý danh sách bình luận dài, nhưng không có số liệu để khẳng định hiệu quả tối ưu từ virtualization.",
+              "diagram": {
+                "nodes": [
+                  {
+                    "title": "Turborepo"
+                  }
+                ],
+                "branches": [
+                  "Admin App",
+                  "Student App"
+                ],
+                "sharedResource": "TypeScript data models dùng chung"
               }
-            ]
-          }
+            },
+            {
+              "id": "outcomes",
+              "eyebrow": "05 / KẾT QUẢ",
+              "title": "Kết quả",
+              "outcomes": [
+                {
+                  "title": "Frontend foundation",
+                  "body": "Thiết lập monorepo và data models dùng chung cho hai ứng dụng frontend."
+                },
+                {
+                  "title": "Core study experience",
+                  "body": "Xây dựng màn hình học chính với chế độ sách/video, điều hướng script và nội dung theo page."
+                },
+                {
+                  "title": "Discussion functionality",
+                  "body": "Triển khai các luồng thảo luận với phân trang, WebSocket, phân quyền, replies, attachments và các tương tác AI."
+                }
+              ]
+            }
+          ]
         },
         "title": "Nền tảng E-Learning",
         "subtitle": "Nền tảng quản lý học tập",
@@ -682,7 +798,7 @@
           "REST APIs",
           "Real-time Data"
         ],
-        "thumbnail": "/assets/images/thumb-elearning.png"
+        "thumbnail": "/assets/projects/elearning-video-thumbnail.jpg"
       },
       {
         "id": "cleaning-services-dashboard",
