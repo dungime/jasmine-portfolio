@@ -5,6 +5,7 @@ import Link from 'next/link';
 import styles from './Hero.module.scss';
 import { useContent } from '@/content';
 import { withBasePath } from '@/lib/base-path';
+import { ScrollRing } from '@/components/graphics/ScrollRing';
 
 const BOLD_PATTERN = /\*\*(.+?)\*\*/g;
 
@@ -64,19 +65,11 @@ export function Hero() {
         <div className={styles.overlay} />
       </div>
 
-      {/* <Link href="#about" className={styles.scrollBadge} aria-label="Scroll to learn more">
-        <svg viewBox="0 0 100 100" className={styles.scrollRing}>
-          <defs>
-            <path id="scrollCirclePath" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" />
-          </defs>
-          <text className={styles.scrollText}>
-            <textPath href="#scrollCirclePath">
-              {hero.scrollLabel} • {hero.scrollLabel} • {hero.scrollLabel} • {hero.scrollLabel} •{" "}
-            </textPath>
-          </text>
-        </svg>
+      {/* Scroll badge remains disabled. */}
+      {false && <Link href="#about" className={styles.scrollBadge} aria-label="Scroll to learn more">
+        <ScrollRing label={hero.scrollLabel} className={styles.scrollRing} textClassName={styles.scrollText} />
         <span className={styles.scrollArrow}>↓</span>
-      </Link> */}
+      </Link>}
     </section>
   );
 }

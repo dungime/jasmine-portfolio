@@ -7,6 +7,7 @@ import styles from "./CareerRoute.module.scss";
 import { useContent } from "@/content";
 import { ArrowUpRightIcon, ChevronDownIcon, icons, techLogos, techIcons, type IconName } from "@/components/icons";
 import { Reveal } from "@/components/Reveal/Reveal";
+import { TimelineConnector } from "@/components/graphics/TimelineConnector";
 
 const NUMBER_PATTERN = /(?<![A-Za-z])(\d+(?:[–-]\d+)?\+?)(?![A-Za-z])/g;
 
@@ -160,14 +161,7 @@ export function CareerRouteTimeline() {
                   stretches to the row's height, so the stroke opts out of the
                   scaling to stay a consistent width. */}
               {index < careerRoute.stations.length - 1 && (
-                <svg
-                  className={styles.connector}
-                  viewBox="0 0 40 100"
-                  preserveAspectRatio="none"
-                  aria-hidden="true"
-                >
-                  <path d="M20 0 C 38 30, 2 70, 20 100" vectorEffect="non-scaling-stroke" />
-                </svg>
+                <TimelineConnector className={styles.connector} />
               )}
 
               <div className={styles.node}>
