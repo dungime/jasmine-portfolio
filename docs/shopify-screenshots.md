@@ -1,13 +1,17 @@
 # Shopify portfolio screenshot sources
 
-Captured on 2026-11-05 from the public storefronts using Chromium at 1440 × 1000,
+Captured from the public storefronts using Chromium at 1440 × 1000,
 with a device scale factor of 1. Saved directly as JPEG at quality 88.
 No generated storefronts, stock imagery, compositing, or DOM replacements were used.
 
-| Asset | Source | Capture |
-| --- | --- | --- |
-| `public/assets/projects/shopify-ladder-locker-home.jpg` | https://ladderlocker.com.au/ | Homepage viewport, HTTP 200 |
-| `public/assets/projects/shopify-ozkiz-global-home.jpg` | https://global.ozkiz.com/ | Homepage viewport, HTTP 200 |
+| Asset | Source | Capture | Date |
+| --- | --- | --- | --- |
+| `public/assets/projects/shopify-ladder-locker-home.jpg` | https://ladderlocker.com.au/ | Homepage viewport, HTTP 200 | 2026-11-05 |
+| `public/assets/projects/shopify-ozkiz-global-best.jpg` | https://global.ozkiz.com/collections/best | Best collection viewport, HTTP 200 | 2026-11-07 |
+
+The OZKIZ Best collection capture replaces the earlier homepage image at the
+owner's request. It shows the navigation, language controls, filters, and first
+row of products with prices. The screenshot is an unmodified browser capture.
 
 These show the current live websites, not archived versions from the contributor's
 engagement. The page explicitly notes that later changes may be visible. Captions

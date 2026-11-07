@@ -1149,11 +1149,11 @@
                 "openLabel": "Open full-size image in a new tab"
               },
               {
-                "src": "/assets/projects/shopify-ozkiz-global-home.jpg",
+                "src": "/assets/projects/shopify-ozkiz-global-best.jpg",
                 "width": 1440,
                 "height": 1000,
-                "caption": "OZKIZ Global — current live homepage",
-                "alt": "OZKIZ Global homepage showing the storefront navigation, language selector, and a collection banner.",
+                "caption": "OZKIZ Global — current Best collection",
+                "alt": "OZKIZ Global Best collection showing the storefront navigation, language selector, filters, and a product grid with prices.",
                 "openLabel": "Open full-size image in a new tab"
               }
             ],
@@ -1197,11 +1197,11 @@
                     "Developed frontend styles and interactions using SCSS and JavaScript."
                   ],
                   "image": {
-                    "src": "/assets/projects/shopify-ozkiz-global-home.jpg",
+                    "src": "/assets/projects/shopify-ozkiz-global-best.jpg",
                     "width": 1440,
                     "height": 1000,
-                    "caption": "OZKIZ Global — current live homepage",
-                    "alt": "OZKIZ Global homepage showing the storefront navigation, language selector, and a collection banner.",
+                    "caption": "OZKIZ Global — current Best collection",
+                    "alt": "OZKIZ Global Best collection showing the storefront navigation, language selector, filters, and a product grid with prices.",
                     "openLabel": "Open full-size image in a new tab"
                   },
                   "link": {

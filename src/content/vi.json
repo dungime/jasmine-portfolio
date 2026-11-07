@@ -1129,11 +1129,11 @@
                 "openLabel": "Mở ảnh kích thước đầy đủ trong tab mới"
               },
               {
-                "src": "/assets/projects/shopify-ozkiz-global-home.jpg",
+                "src": "/assets/projects/shopify-ozkiz-global-best.jpg",
                 "width": 1440,
                 "height": 1000,
-                "caption": "OZKIZ Global — trang chủ hiện tại",
-                "alt": "Trang chủ OZKIZ Global hiển thị menu cửa hàng, bộ chọn ngôn ngữ và banner bộ sưu tập.",
+                "caption": "OZKIZ Global — bộ sưu tập Best hiện tại",
+                "alt": "Trang bộ sưu tập Best của OZKIZ Global hiển thị menu cửa hàng, bộ chọn ngôn ngữ, bộ lọc và danh sách sản phẩm kèm giá.",
                 "openLabel": "Mở ảnh kích thước đầy đủ trong tab mới"
               }
             ],
@@ -1177,11 +1177,11 @@
                     "Phát triển giao diện và tương tác frontend bằng SCSS và JavaScript."
                   ],
                   "image": {
-                    "src": "/assets/projects/shopify-ozkiz-global-home.jpg",
+                    "src": "/assets/projects/shopify-ozkiz-global-best.jpg",
                     "width": 1440,
                     "height": 1000,
-                    "caption": "OZKIZ Global — trang chủ hiện tại",
-                    "alt": "Trang chủ OZKIZ Global hiển thị menu cửa hàng, bộ chọn ngôn ngữ và banner bộ sưu tập.",
+                    "caption": "OZKIZ Global — bộ sưu tập Best hiện tại",
+                    "alt": "Trang bộ sưu tập Best của OZKIZ Global hiển thị menu cửa hàng, bộ chọn ngôn ngữ, bộ lọc và danh sách sản phẩm kèm giá.",
                     "openLabel": "Mở ảnh kích thước đầy đủ trong tab mới"
                   },
                   "link": {
