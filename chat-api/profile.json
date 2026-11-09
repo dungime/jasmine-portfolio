@@ -9,8 +9,8 @@
   "greeting": "Hi, I’m Jasmine.",
   "role": "Frontend Engineer",
   "tagline": "Building better products with modern frontend engineering and AI-assited development.",
-  "description1": "With 9+ years of frontend engineering experience, I build scalable, maintainable web applications and take complex features from requirements to quality production.",
-  "description2": "I use AI-assisted development to explore solutions, solve problems, and improve engineering workflows.",
+  "description1": "I build and maintain complex web applications with React and TypeScript, from frontend architecture to production delivery.",
+  "description2": "With 9+ years of experience across fintech, e-learning, and enterprise platforms, I take ownership of challenging features, make pragmatic technical decisions, and build solutions that teams can maintain and extend.",
   "tags": [
    "React",
    "TypeScript",
@@ -46,9 +46,9 @@
     "detail": "Mentored 5 frontend freshers."
    },
    {
-    "value": "∞",
-    "label": "Passion for Building Products",
-    "detail": "Still curious. Still building."
+    "value": "2",
+    "label": "Fintech Platforms Owned",
+    "detail": "NexStox · NXMarket"
    }
   ]
  },
@@ -132,6 +132,174 @@
   "subheading": "A few things I've built and released recently.",
   "items": [
    {
+    "caseStudy": {
+     "hero": {
+      "eyebrow": "CASE STUDY · FINTECH",
+      "title": "NexStox & NXMarket",
+      "lead": "One shared frontend. Two fintech experiences.",
+      "description": "I modernized existing fintech interfaces, developed Launchpad and Staking workflows, and introduced platform-based configuration to support two products on a shared frontend codebase.",
+      "meta": [
+       {
+        "label": "Role",
+        "value": "Senior Frontend Engineer"
+       },
+       {
+        "label": "Timeline",
+        "value": "May 2025 – May 2026"
+       },
+       {
+        "label": "Stack",
+        "value": "React · TypeScript · Next.js · Redux Toolkit · Material UI · REST APIs · Real-time Data"
+       }
+      ],
+      "heroImage": {
+       "src": "/assets/projects/nxmarket-trading-view.jpg",
+       "width": 1920,
+       "height": 1530,
+       "caption": "NXMarket · Trading interface"
+      },
+      "layout": "split",
+      "team": {
+       "label": "Frontend team",
+       "value": "1–3 engineers; sole frontend engineer for the first 3 months"
+      }
+     },
+     "sections": [
+      {
+       "eyebrow": "01 / CONTRIBUTIONS",
+       "title": "What I Contributed",
+       "cards": [
+        {
+         "title": "Multi-platform",
+         "body": "Proposed and implemented environment-based configuration for platform-specific themes, pages, and features."
+        },
+        {
+         "title": "Financial workflows",
+         "body": "Built Launchpad Purchase, Launchpad Detail, and Staking interfaces with validation and API integration."
+        },
+        {
+         "title": "Feature modernization",
+         "body": "Improved Trading, Wallet, Deposit, Withdrawal, KYC, Profile, and account security experiences."
+        },
+        {
+         "title": "Quality ownership",
+         "body": "Helped test complete user journeys, from admin configuration through user actions and resulting data."
+        }
+       ]
+      },
+      {
+       "eyebrow": "02 / ENGINEERING",
+       "title": "Engineering Highlights",
+       "features": [
+        {
+         "eyebrow": "01 / TECHNICAL DECISION",
+         "title": "One codebase, two platforms",
+         "facts": [
+          {
+           "label": "Challenge",
+           "body": "The second platform needed its own branding, content, and selected features while sharing most of the existing product's behavior."
+          },
+          {
+           "label": "Decision",
+           "body": "I chose a shared frontend instead of duplicating the application, using environment variables for themes, page visibility, and platform-specific behavior."
+          },
+          {
+           "label": "Outcome",
+           "body": "Common features can evolve in one implementation, reducing the need to maintain equivalent changes in two independent codebases."
+          }
+         ],
+         "reverse": false,
+         "visual": {
+          "diagram": {
+           "nodes": [
+            {
+             "title": "Shared frontend",
+             "detail": "Common components & feature logic"
+            },
+            {
+             "title": "Environment-based config",
+             "detail": "Theme · Pages · Visibility"
+            }
+           ],
+           "branches": [
+            "NexStox",
+            "NXMarket"
+           ],
+           "caption": "Conceptual diagram, not a source-code map."
+          }
+         }
+        },
+        {
+         "eyebrow": "02 / PROBLEM SOLVING",
+         "title": "Turning fintech rules into usable flows",
+         "facts": [
+          {
+           "label": "Challenge",
+           "body": "Launchpad and Staking required me to understand unfamiliar financial concepts and transaction rules—not simply reproduce UI designs."
+          },
+          {
+           "label": "Approach",
+           "body": "I explored comparable products, clarified business rules with teammates, examined existing code, and identified reusable interface patterns before implementation."
+          },
+          {
+           "label": "Implementation",
+           "body": "For Launchpad, I handled balance display, purchase limits, quantity validation, sale availability, and transaction feedback. For Staking, I built reusable interfaces and integrated backend-driven states and estimates."
+          }
+         ],
+         "note": "I also investigated Trading API parameter mismatches and improved buy/sell inputs, sliders, and realtime data integration.",
+         "reverse": true,
+         "visual": {
+          "framed": true,
+          "eyebrow": "STAKING WORKFLOW",
+          "image": {
+           "src": "/assets/projects/nxmarket-staking-confirmation.png",
+           "width": 1440,
+           "height": 1080,
+           "caption": "NXMarket · Unstaking confirmation with balances and resulting position"
+          }
+         }
+        }
+       ]
+      },
+      {
+       "eyebrow": "03 / OWNERSHIP",
+       "title": "Beyond Implementation",
+       "lead": "Testing the full journey, not just the screen.",
+       "description": "With no dedicated QA tester on the team, we set aside time for regular product checks. I tested workflows such as configuring a Staking pool in Admin, staking through the user app, and verifying the displayed data and resulting states. I also checked deposit and token buy/sell flows.",
+       "steps": [
+        {
+         "title": "Configure in Admin",
+         "body": "Create or update a Staking pool"
+        },
+        {
+         "title": "Act in User App",
+         "body": "Stake in the corresponding pool"
+        },
+        {
+         "title": "Verify Result",
+         "body": "Check data, state, and behavior"
+        }
+       ]
+      },
+      {
+       "eyebrow": "04 / RESULTS",
+       "title": "Outcomes & Takeaways",
+       "takeawayTitle": "What I learned",
+       "takeaway": "Reliable frontend engineering starts with understanding the business rules, choosing maintainable solutions, and verifying what users actually experience.",
+       "outcomes": [
+        {
+         "body": "Supported two fintech products through a shared frontend implementation."
+        },
+        {
+         "body": "Delivered Launchpad and Staking workflows and modernized financial and account interfaces."
+        },
+        {
+         "body": "Resolved identified trading integration issues and contributed to cross-feature product verification."
+        }
+       ]
+      }
+     ]
+    },
     "title": "NexStox & NXMarket Trading Platforms",
     "subtitle": "Fintech Trading & Staking Platforms",
     "category": "Fintech",
@@ -229,12 +397,221 @@
     "tags": [
      "React",
      "TypeScript",
+     "Next.js",
+     "Redux Toolkit",
      "Material UI",
      "REST APIs",
      "Real-time Data"
     ]
    },
    {
+    "caseStudy": {
+     "hero": {
+      "eyebrow": "E-LEARNING · FRONTEND CASE STUDY",
+      "title": "E-Learning Platform (Cobook)",
+      "lead": "A study interface combining video playback, book-based navigation, and discussions tied to lesson content.",
+      "description": "I joined a three-person frontend team working on the project from the beginning. After discussing the stack with the team, I set up the frontend monorepo and took responsibility for the core student study interface and most of the Page Talk discussion functionality.",
+      "meta": [
+       {
+        "label": "Role",
+        "value": "Frontend Engineer"
+       },
+       {
+        "label": "Team",
+        "value": "3 Frontend Developers"
+       },
+       {
+        "label": "Focus",
+        "value": "Frontend Setup · Study Experience · Real-Time Discussions"
+       }
+      ],
+      "heroImage": {
+       "src": "/assets/projects/e-learning-video-controls.png",
+       "width": 1591,
+       "height": 956,
+       "caption": "Cobook study screen with video controls, page navigation, and Page Talk.",
+       "alt": "Cobook study interface showing a lesson video, playback controls, chapter bookmarks, and the Page Talk discussion panel."
+      },
+      "layout": "full",
+      "techTags": [
+       "React",
+       "TypeScript",
+       "Turborepo",
+       "Jotai",
+       "SWR Infinite",
+       "WebSocket",
+       "ReactPlayer"
+      ]
+     },
+     "sections": [
+      {
+       "eyebrow": "02 / CONTRIBUTIONS",
+       "title": "Key Contributions",
+       "cards": [
+        {
+         "title": "Frontend Foundation",
+         "body": "Set up the Turborepo monorepo for Admin and Student apps, including shared TypeScript data models after discussing technical choices with the team."
+        },
+        {
+         "title": "Core Study Interface",
+         "body": "Built book/video learning modes, chapter and page navigation, playback controls, bookmarks, and two-way video–page navigation."
+        },
+        {
+         "title": "Context-Aware Discussion",
+         "body": "Implemented page- and chapter-level discussions with comments, replies, filters, permissions, ordering, and incremental loading."
+        },
+        {
+         "title": "Real-Time & AI Workflows",
+         "body": "Integrated WebSocket updates, notifications, attachments, AI reply requests, and instructor AI Composer interactions."
+        }
+       ]
+      },
+      {
+       "eyebrow": "03 / ENGINEERING",
+       "title": "Engineering Highlights",
+       "features": [
+        {
+         "title": "Context-Aware Real-Time Discussion",
+         "eyebrow": "Async Data · State & Cache · Business Rules",
+         "facts": [
+          {
+           "label": "Challenge",
+           "body": "The discussion panel needed to follow the current lesson page or switch to a whole-chapter view, while handling live updates, nested replies, large comment lists, and different interaction permissions.",
+           "points": []
+          },
+          {
+           "label": "Implementation",
+           "body": "",
+           "points": [
+            "Used Jotai for active-page and notification state, and SWR Infinite with page-specific keys for paginated comment fetching and caching.",
+            "Integrated WebSocket notifications to update relevant comments or replies; updated locally submitted comments after successful API responses rather than optimistically.",
+            "Implemented two-level comments, reply loading on demand, custom instructor-first/time-based ordering, filters, mentions, attachments, and enrollment-based restrictions.",
+            "Built the frontend flows for requesting AI answers and for instructor AI Composer interactions."
+           ]
+          },
+          {
+           "label": "Outcome",
+           "body": "Delivered the core Page Talk interactions, supporting discussions tied to the current page or chapter with API-driven and real-time updates.",
+           "points": []
+          }
+         ],
+         "reverse": false,
+         "visual": {
+          "framed": true,
+          "diagram": {
+           "nodes": [
+            {
+             "title": "Active page or chapter mode"
+            },
+            {
+             "title": "Jotai state"
+            },
+            {
+             "title": "SWR Infinite key + pagination"
+            },
+            {
+             "title": "Comments UI"
+            }
+           ],
+           "input": [
+            "WebSocket notification",
+            "Cache update / revalidation"
+           ],
+           "caption": "Conceptual flow · Not exhaustive"
+          }
+         }
+        },
+        {
+         "title": "Bidirectional Video–Page Synchronization",
+         "eyebrow": "Event Handling · State Coordination",
+         "facts": [
+          {
+           "label": "Challenge",
+           "body": "Learning content is organized into books, chapters, and pages, each mapped to a video time range. Page navigation, playback, and page-specific discussions needed to respond to changes in the active lesson page.",
+           "points": []
+          },
+          {
+           "label": "Implementation",
+           "body": "",
+           "points": [
+            "Used ReactPlayer playback timestamps and custom time-range matching to identify the active page.",
+            "Updated the active page in Jotai as playback progressed, triggering the associated lesson content and comments.",
+            "Implemented reverse navigation: selecting a page or script segment seeks video playback to the corresponding timestamp.",
+            "Supported initial page selection from the URL, saved progress, or first available page; implemented chapter/page navigation and lesson-level bookmarks."
+           ]
+          },
+          {
+           "label": "Outcome",
+           "body": "Delivered two-way navigation between structured lesson pages and video playback, with discussions loaded for the selected page.",
+           "points": []
+          }
+         ],
+         "reverse": true,
+         "visual": {
+          "framed": true,
+          "diagram": {
+           "nodes": [
+            {
+             "title": "ReactPlayer timestamp"
+            },
+            {
+             "title": "Custom time-range-to-page mapping"
+            },
+            {
+             "title": "Jotai active page"
+            },
+            {
+             "title": "Page-specific comments"
+            }
+           ],
+           "input": [
+            "Select page / script",
+            "Seek player to corresponding timestamp"
+           ],
+           "caption": "Conceptual flow · Not exhaustive"
+          }
+         }
+        }
+       ]
+      },
+      {
+       "eyebrow": "04 / BEYOND IMPLEMENTATION",
+       "title": "Frontend Foundation & Technical Ownership",
+       "description": "After discussing technology choices with the team, I initialized and configured the frontend project using Turborepo. The Admin and Student applications live in one repository and share TypeScript data models, keeping their common entity definitions consistent.",
+       "reflection": "While implementing the discussion feature, I also used Cursor for AI-assisted coding and explored solutions for rendering long comment lists. I reviewed the feature through implementation and testing, but I do not claim measured performance gains from list virtualization.",
+       "diagram": {
+        "nodes": [
+         {
+          "title": "Turborepo"
+         }
+        ],
+        "branches": [
+         "Admin App",
+         "Student App"
+        ],
+        "sharedResource": "Shared TypeScript Data Models"
+       }
+      },
+      {
+       "eyebrow": "05 / OUTCOMES",
+       "title": "Outcomes",
+       "outcomes": [
+        {
+         "title": "Frontend foundation",
+         "body": "Initialized the monorepo and shared data models for the two frontend applications."
+        },
+        {
+         "title": "Core study experience",
+         "body": "Implemented the primary student study interface with book/video navigation, script seeking, and page-aware content."
+        },
+        {
+         "title": "Discussion functionality",
+         "body": "Delivered the core discussion workflows with pagination, WebSocket updates, permissions, replies, attachments, and AI-related interactions."
+        }
+       ]
+      }
+     ]
+    },
     "title": "E-Learning Platform",
     "subtitle": "Learning Management Platform",
     "category": "Education",
@@ -325,90 +702,437 @@
     "title": "Cleaning Services Dashboard",
     "subtitle": "Operations Management Platform",
     "category": "Operations",
-    "description": "Architected an operations dashboard from scratch, turning cleaning requests, maintenance, reports, and inventory into connected end-to-end workflows.",
+    "description": "A multi-module administration platform for managing cleaning services, maintenance operations, inventory, and related day-to-day workflows.",
     "overview": [
      {
       "label": "Role",
-      "value": "Frontend Engineer · set up the architecture from scratch"
+      "value": "Frontend Developer"
      },
      {
-      "label": "Company",
-      "value": "Lecle Vietnam · client project"
+      "label": "Team",
+      "value": "2 frontend developers"
      },
      {
-      "label": "Users",
-      "value": "Operations and admin staff"
+      "label": "Timeline",
+      "value": "Late 2023 · 2-month primary development phase"
      },
      {
-      "label": "Scope",
-      "value": "Requests, maintenance, reports, inventory, scheduling, and analytics"
+      "label": "Focus",
+      "value": "Admin workflows · Data-driven UI · MRO inventory"
      }
     ],
-    "context": "An admin platform that operations staff use to run a cleaning services business day to day — scheduling work, handling maintenance, tracking stock, and reporting. I owned the frontend from the first commit.",
+    "context": "I helped set up the frontend project and implemented multiple administrative modules, translating extensive UI designs into working pages for cleaning services, maintenance, MRO inventory, and related operations. The frontend relied primarily on Ant Design, with React state and Ant Design Form APIs used to manage interactive forms and data-driven views.",
     "challenges": [
      {
-      "title": "Dense data across many connected areas",
-      "body": "Requests, maintenance, reports, and inventory are related but each has its own data and workflow. Staff needed to move between them without losing context."
+      "title": "MRO Inventory Data Transformation",
+      "body": "The Stock Details screen needed to present inventory across several dimensions at once: building floor, space, inventory item, and date. Its dense table layout required more than a straightforward mapping of records into rows."
      },
      {
-      "title": "Time-based work that has to be seen at a glance",
-      "body": "Scheduled cleaning work only makes sense on a calendar, alongside the tables and charts that explain it."
-     },
-     {
-      "title": "Forms that carry real business rules",
-      "body": "Creating operational records meant long, multi-part forms where mistakes flow straight into daily operations."
+      "title": "Multi-Module Data-Driven Admin Interfaces",
+      "body": "The product covered many administrative workflows, each with different forms, data structures, and UI interactions, within a short delivery window."
      }
     ],
     "solutions": [
      {
-      "title": "Architecture set up from scratch",
-      "body": "I set up the entire frontend architecture — Vite, Turborepo, Ant Design, and Jotai — so each area could be built on shared foundations."
+      "title": "Frontend Project Setup",
+      "body": "Helped initialize the frontend application and establish the starting structure for a two-developer frontend team."
      },
      {
-      "title": "Complete CRUD for every area",
-      "body": "I developed end-to-end create, read, update, and delete workflows for cleaning requests, maintenance, reports, and inventory."
+      "title": "Cleaning & Maintenance Modules",
+      "body": "Developed administration pages and CRUD workflows supporting cleaning services, maintenance operations, and related management tasks."
      },
      {
-      "title": "The right view for each job",
-      "body": "I combined interactive calendars, tables, charts, drawers, and tree views, so staff could schedule, inspect, and drill into data without leaving the page they were on."
+      "title": "MRO Inventory Interfaces",
+      "body": "Built inventory-focused pages, including a detailed stock view that required adapting data for a complex, date-based table layout."
      },
      {
-      "title": "Forms built for complex operations",
-      "body": "I built complex creation forms for operational workflows and business data, structured so long inputs stay manageable."
+      "title": "Interactive Admin Screens",
+      "body": "Implemented forms, data tables, calendars, drawers, and hierarchical views using Ant Design, with tailored styling where needed."
      }
     ],
     "impact": {
-     "metrics": [
-      {
-       "value": "4",
-       "label": "operational areas in one dashboard: requests, maintenance, reports, inventory"
-      },
-      {
-       "value": "5",
-       "label": "interface patterns combined: calendars, tables, charts, drawers, tree views"
-      },
-      {
-       "value": "0 → 1",
-       "label": "frontend architecture owned from the first commit"
-      }
-     ],
-     "summary": "Operations staff manage scheduling, maintenance, stock, and reporting from a single dashboard instead of separate tools, with every workflow covered end to end."
+     "metrics": [],
+     "summary": "Contributed to the agreed two-month development milestone, followed by client testing, remaining work, and bug fixing."
     },
     "learnings": [
-     "Admin tools are judged on speed of work, not looks. Choosing the right view — calendar, table, or tree — mattered more than visual polish.",
-     "Shared foundations keep many CRUD areas consistent, so each new section felt familiar to the people using it."
+     "This project strengthened my experience translating extensive admin designs into working, data-heavy React interfaces under practical delivery constraints."
     ],
     "tags": [
      "React",
-     "TypeScript",
      "Ant Design",
-     "Jotai",
-     "Vite",
-     "Turborepo",
-     "REST APIs"
-    ]
+     "React State",
+     "Form.useForm"
+    ],
+    "caseStudy": {
+     "hero": {
+      "layout": "full",
+      "eyebrow": "FRONTEND PROJECT / OPERATIONS DASHBOARD",
+      "title": "Cleaning Services Dashboard",
+      "lead": "A multi-module administration platform for managing cleaning services, maintenance operations, inventory, and related day-to-day workflows.",
+      "description": "I helped set up the frontend project and implemented multiple administrative modules, translating extensive UI designs into working pages for cleaning services, maintenance, MRO inventory, and related operations. The frontend relied primarily on Ant Design, with React state and Ant Design Form APIs used to manage interactive forms and data-driven views.",
+      "meta": [
+       {
+        "label": "Role",
+        "value": "Frontend Developer"
+       },
+       {
+        "label": "Team",
+        "value": "2 frontend developers"
+       },
+       {
+        "label": "Timeline",
+        "value": "Late 2023 · 2-month primary development phase"
+       },
+       {
+        "label": "Focus",
+        "value": "Admin workflows · Data-driven UI · MRO inventory"
+       }
+      ],
+      "techTags": [
+       "React",
+       "Ant Design",
+       "React State",
+       "Form.useForm"
+      ],
+      "heroImage": {
+       "src": "/assets/projects/cleaning-service-admin-dashboard-main.png",
+       "width": 1920,
+       "height": 1499,
+       "caption": "Office cleaning — calendar and work status",
+       "alt": "Office-cleaning administration screen showing a monthly work calendar and task status entries.",
+       "openLabel": "Open full-size image in a new tab"
+      }
+     },
+     "sections": [
+      {
+       "eyebrow": "02 / CONTRIBUTIONS",
+       "title": "Key Contributions",
+       "cards": [
+        {
+         "title": "Frontend Project Setup",
+         "body": "Helped initialize the frontend application and establish the starting structure for a two-developer frontend team."
+        },
+        {
+         "title": "Cleaning & Maintenance Modules",
+         "body": "Developed administration pages and CRUD workflows supporting cleaning services, maintenance operations, and related management tasks."
+        },
+        {
+         "title": "MRO Inventory Interfaces",
+         "body": "Built inventory-focused pages, including a detailed stock view that required adapting data for a complex, date-based table layout."
+        },
+        {
+         "title": "Interactive Admin Screens",
+         "body": "Implemented forms, data tables, calendars, drawers, and hierarchical views using Ant Design, with tailored styling where needed."
+        }
+       ]
+      },
+      {
+       "eyebrow": "03 / ENGINEERING",
+       "title": "Engineering Highlights",
+       "features": [
+        {
+         "eyebrow": "01 / ENGINEERING HIGHLIGHT",
+         "title": "MRO Inventory Data Transformation",
+         "facts": [
+          {
+           "label": "Challenge",
+           "body": "The Stock Details screen needed to present inventory across several dimensions at once: building floor, space, inventory item, and date. Its dense table layout required more than a straightforward mapping of records into rows."
+          },
+          {
+           "label": "Implementation",
+           "body": "",
+           "points": [
+            "Adapted and transformed inventory data to match the table structure required by the UI design.",
+            "Implemented the stock details view with grouped headers, location-based rows, and date-oriented inventory values using Ant Design.",
+            "Incorporated the screen's date and stock-status controls into the interface."
+           ]
+          },
+          {
+           "label": "Result",
+           "body": "Delivered an inventory view that organizes stock information by location and date, making complex operational data easier to inspect in a single screen."
+          }
+         ],
+         "visual": {
+          "framed": true,
+          "image": {
+           "src": "/assets/projects/cleaning-service-admin-dashboard-stock-details.png",
+           "width": 1920,
+           "height": 1158,
+           "caption": "MRO Stock Details — inventory grouped by floor, space, item, and date",
+           "alt": "MRO Stock Details table with floor, space, and item grouping, date-grouped headers, colored stock-status indicators, and date and status controls.",
+           "openLabel": "Open full-size image in a new tab"
+          }
+         }
+        },
+        {
+         "eyebrow": "02 / ENGINEERING HIGHLIGHT",
+         "title": "Multi-Module Data-Driven Admin Interfaces",
+         "facts": [
+          {
+           "label": "Challenge",
+           "body": "The product covered many administrative workflows, each with different forms, data structures, and UI interactions, within a short delivery window."
+          },
+          {
+           "label": "Implementation",
+           "body": "",
+           "points": [
+            "Developed operational pages using Ant Design tables, calendars, drawers, forms, and tree views according to module requirements.",
+            "Used Form.useForm and React state to manage form values, interactions, and data changes.",
+            "Integrated APIs for standard create, read, update, and delete workflows.",
+            "Added limited reusable wrappers where custom Ant Design styling was needed, while using library components directly for most screens."
+           ]
+          },
+          {
+           "label": "Result",
+           "body": "Implemented practical administration interfaces across cleaning, maintenance, MRO inventory, and additional related modules."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "eyebrow": "04 / BEYOND IMPLEMENTATION",
+       "title": "Working Within a Tight Delivery Window",
+       "description": "The project involved a two-developer frontend team working from a broad set of administration designs. I contributed to the initial frontend setup and implemented many of the operational pages during a two-month primary development phase. At the agreed milestone, remaining reporting functionality and full client-led testing were handled as follow-up work, alongside bug fixes."
+      },
+      {
+       "eyebrow": "05 / OUTCOMES",
+       "title": "Outcomes",
+       "outcomes": [
+        {
+         "title": "Multiple operational modules implemented",
+         "body": "Delivered frontend pages for cleaning services, maintenance, MRO inventory, and other related administration workflows."
+        },
+        {
+         "title": "Complex stock view completed",
+         "body": "Transformed inventory data for a detailed location- and date-based stock table."
+        },
+        {
+         "title": "Primary delivery milestone reached",
+         "body": "Contributed to the agreed two-month development milestone, followed by client testing, remaining work, and bug fixing."
+        }
+       ],
+       "takeaway": "This project strengthened my experience translating extensive admin designs into working, data-heavy React interfaces under practical delivery constraints."
+      }
+     ]
+    }
    },
    {
+    "title": "Shopify Theme Development & Customization",
+    "subtitle": "Freelance Work · E-commerce",
+    "category": "Freelance Work · E-commerce",
+    "cardEyebrow": "Freelance Work · E-commerce",
+    "description": "Custom Shopify storefronts with Liquid templates, sections, Mailchimp integration, and multilingual support.",
+    "seoDescription": "Custom Shopify storefronts with Liquid templates, sections, Mailchimp integration, and multilingual support.",
+    "overview": [
+     {
+      "label": "Role",
+      "value": "Frontend Developer · Shopify Theme Development"
+     },
+     {
+      "label": "Work type",
+      "value": "Freelance / Client Projects"
+     },
+     {
+      "label": "Scope",
+      "value": "2 featured storefronts + additional maintenance work"
+     },
+     {
+      "label": "Stack",
+      "value": "Shopify · Liquid · JavaScript · SCSS · HTML/CSS"
+     }
+    ],
+    "context": "I worked on Shopify storefronts by adapting existing themes and developing custom templates and sections where default components could not match the design. My work includes Mailchimp newsletter integration for Ladder Locker and multilingual storefront support for OZKIZ Global.",
+    "challenges": [],
+    "solutions": [],
+    "impact": {
+     "metrics": [],
+     "summary": "Custom Shopify storefronts with Liquid templates, sections, Mailchimp integration, and multilingual support."
+    },
+    "learnings": [],
+    "tags": [
+     "Shopify",
+     "Liquid",
+     "JavaScript",
+     "SCSS"
+    ],
+    "caseStudy": {
+     "hero": {
+      "layout": "full",
+      "eyebrow": "FREELANCE WORK · E-COMMERCE",
+      "title": "Shopify Theme Development & Customization",
+      "lead": "Custom Shopify storefronts tailored to client designs through Liquid templates, Shopify sections, JavaScript interactions, and SCSS styling.",
+      "description": "I worked on Shopify storefronts by adapting existing themes and developing custom templates and sections where default components could not match the design. My work includes Mailchimp newsletter integration for Ladder Locker and multilingual storefront support for OZKIZ Global.",
+      "meta": [
+       {
+        "label": "Role",
+        "value": "Frontend Developer · Shopify Theme Development"
+       },
+       {
+        "label": "Work type",
+        "value": "Freelance / Client Projects"
+       },
+       {
+        "label": "Scope",
+        "value": "2 featured storefronts + additional maintenance work"
+       },
+       {
+        "label": "Stack",
+        "value": "Shopify · Liquid · JavaScript · SCSS · HTML/CSS"
+       }
+      ],
+      "heroImages": [
+       {
+        "src": "/assets/projects/shopify-ladder-locker-home.jpg",
+        "width": 1440,
+        "height": 1000,
+        "caption": "Ladder Locker — current live homepage",
+        "alt": "Ladder Locker homepage showing the store navigation, ladder tie-down product imagery, and main call to action.",
+        "openLabel": "Open full-size image in a new tab"
+       },
+       {
+        "src": "/assets/projects/shopify-ozkiz-global-best.jpg",
+        "width": 1440,
+        "height": 1000,
+        "caption": "OZKIZ Global — current Best collection",
+        "alt": "OZKIZ Global Best collection showing the storefront navigation, language selector, filters, and a product grid with prices.",
+        "openLabel": "Open full-size image in a new tab"
+       }
+      ],
+      "imageNote": "Screenshots show the current live storefronts and may include changes made after my involvement."
+     },
+     "sections": [
+      {
+       "eyebrow": "02 / FEATURED STOREFRONTS",
+       "title": "Featured Storefronts",
+       "showcases": [
+        {
+         "title": "Ladder Locker",
+         "subhead": "Custom Shopify Storefront · Mailchimp Integration",
+         "description": "Customized a Shopify storefront to match a client-specific design, creating and modifying Liquid templates and sections beyond the default theme. Integrated Mailchimp newsletter signup to connect storefront interactions with an external email marketing service.",
+         "points": [
+          "Created and customized Liquid templates and Shopify sections for design-specific storefront layouts.",
+          "Used JavaScript and SCSS to implement and style frontend interactions.",
+          "Integrated Mailchimp newsletter subscriptions through a form and API submission flow."
+         ],
+         "image": {
+          "src": "/assets/projects/shopify-ladder-locker-home.jpg",
+          "width": 1440,
+          "height": 1000,
+          "caption": "Ladder Locker — current live homepage",
+          "alt": "Ladder Locker homepage showing the store navigation, ladder tie-down product imagery, and main call to action.",
+          "openLabel": "Open full-size image in a new tab"
+         },
+         "link": {
+          "label": "Visit Ladder Locker"
+         }
+        },
+        {
+         "title": "OZKIZ Global",
+         "subhead": "Custom Shopify Storefront · Multilingual Support",
+         "description": "Customized a Shopify storefront using Liquid templates and sections to reproduce client-provided designs, with multilingual support for the international shopping experience.",
+         "points": [
+          "Built and customized Liquid templates and sections to support distinctive storefront layouts.",
+          "Implemented multilingual storefront support.",
+          "Developed frontend styles and interactions using SCSS and JavaScript."
+         ],
+         "image": {
+          "src": "/assets/projects/shopify-ozkiz-global-best.jpg",
+          "width": 1440,
+          "height": 1000,
+          "caption": "OZKIZ Global — current Best collection",
+          "alt": "OZKIZ Global Best collection showing the storefront navigation, language selector, filters, and a product grid with prices.",
+          "openLabel": "Open full-size image in a new tab"
+         },
+         "link": {
+          "label": "Visit OZKIZ Global"
+         }
+        }
+       ]
+      },
+      {
+       "eyebrow": "03 / TECHNICAL CONTRIBUTIONS",
+       "title": "Technical Contributions",
+       "cards": [
+        {
+         "title": "Liquid Templates & Custom Sections",
+         "body": "Created and modified Shopify Liquid templates and sections to reproduce layouts that standard theme components could not support."
+        },
+        {
+         "title": "Storefront Interactions",
+         "body": "Customized frontend behavior with JavaScript, including product-variant display logic when required by the storefront design."
+        },
+        {
+         "title": "Third-Party Integration",
+         "body": "Connected Ladder Locker’s newsletter signup flow with Mailchimp through a frontend form and API submission."
+        },
+        {
+         "title": "Multilingual & Styling Workflow",
+         "body": "Implemented multilingual storefront support for OZKIZ Global and authored SCSS compiled into production CSS."
+        }
+       ]
+      },
+      {
+       "eyebrow": "04 / DEVELOPMENT WORKFLOW",
+       "title": "From Existing Theme to Client-Specific Storefront",
+       "description": "My workflow starts with a Shopify theme as a foundation, then extends it through code to meet the client's visual and functional requirements.",
+       "steps": [
+        {
+         "title": "Start with a Shopify theme",
+         "body": "Pull the starting theme into a local development environment."
+        },
+        {
+         "title": "Build custom Liquid UI",
+         "body": "Modify templates and create sections for unique page layouts."
+        },
+        {
+         "title": "Add interactions and integrations",
+         "body": "Customize JavaScript and connect features such as newsletter subscriptions when required."
+        },
+        {
+         "title": "Style with SCSS",
+         "body": "Maintain styles in SCSS and compile production CSS."
+        },
+        {
+         "title": "Review the storefront",
+         "body": "Compare rendered pages with the supplied design and refine responsive presentation."
+        }
+       ]
+      },
+      {
+       "eyebrow": "05 / ADDITIONAL ENGAGEMENT & OUTCOMES",
+       "title": "Additional Engagement & Outcomes",
+       "engagements": [
+        {
+         "eyebrow": "Additional Shopify Maintenance",
+         "title": "ADO E-Bike Vietnam",
+         "body": "Completed minor bug fixes and maintenance on ADO E-Bike's earlier Shopify storefront. The business later moved to Haravan, so its current website is included for reference rather than presented as a live Shopify example.",
+         "link": {
+          "label": "Current ADO E-Bike website"
+         }
+        }
+       ],
+       "outcomesTitle": "Delivered Work",
+       "outcomes": [
+        {
+         "title": "Two customized storefronts",
+         "body": "Ladder Locker and OZKIZ Global."
+        },
+        {
+         "title": "Custom theme code",
+         "body": "Liquid templates/sections, JavaScript and SCSS-based styling."
+        },
+        {
+         "title": "Client-specific functionality",
+         "body": "Mailchimp newsletter integration (Ladder Locker) and multilingual storefront support (OZKIZ)."
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "hidden": true,
     "title": "Aimee by J — Headless Ecommerce Storefront",
     "subtitle": "Vietnamese Fashion Ecommerce · In Progress",
     "category": "Ecommerce",
@@ -496,101 +1220,240 @@
     ]
    },
    {
-    "title": "English with J — Active Listening Platform",
-    "subtitle": "English Learning Platform · In Progress",
-    "category": "Education",
-    "description": "An independent English-learning platform that turns every listening lesson into active practice — dictation, AI-generated IELTS/TOEIC quizzes, personalised mistake feedback, and karaoke-style shadowing — with QR bank payments for Vietnamese learners.",
-    "overview": [
-     {
-      "label": "Role",
-      "value": "Sole developer — product, design, and frontend"
-     },
-     {
-      "label": "Status",
-      "value": "In active development · Phase 1"
-     },
-     {
-      "label": "Type",
-      "value": "Independent project"
-     },
-     {
-      "label": "Scope",
-      "value": "Sign-up & login, QR bank payments, the listening practice flow, AI quizzes and feedback, saved progress, and a bilingual interface"
-     }
-    ],
-    "context": "Most English learners practise listening by replaying audio and hoping it sticks. English with J is a platform I am building to make listening active: each lesson guides the learner from understanding the gist, to writing down every sentence, to testing comprehension, to speaking along. Phase 1 focuses on that core listening experience, accounts and progress, and a payment flow built for Vietnamese learners.",
-    "challenges": [
-     {
-      "title": "Passive listening doesn't build skill",
-      "body": "Replaying a recording feels like practice, but without writing, checking, and speaking, learners rarely find out what they actually missed."
-     },
-     {
-      "title": "Feedback that is specific enough to act on",
-      "body": "A single score says little. Learners need to see which words they misheard, what each part means, and which mistakes they keep repeating."
-     },
-     {
-      "title": "A free tier that sells, and a paywall that holds",
-      "body": "New learners should be able to try real lessons before paying, while paid lessons stay locked to anyone who hasn't paid — no matter what the browser shows."
-     },
-     {
-      "title": "Payments that fit Vietnamese learners",
-      "body": "Many learners in Vietnam don't use international cards. They expect to pay by scanning a bank QR code in their banking app."
-     }
-    ],
-    "solutions": [
-     {
-      "title": "A seven-step listening flow",
-      "body": "Every lesson follows the same path: listen for the gist → write down the main ideas → dictate part by part → answer an AI-generated quiz → get a score → review common mistakes → shadow the script. Each step builds on the one before, so learners finish a lesson having listened, written, understood, and spoken."
-     },
-     {
-      "title": "Dictation with instant, part-by-part checking",
-      "body": "Learners type what they hear for each part of the recording. The platform checks each answer against the script, highlights what is right and wrong, and shows a Vietnamese translation alongside. They can save a note on any part, and switch on voice mode to fill the text box by speaking instead of typing."
-     },
-     {
-      "title": "AI quizzes and personalised mistake feedback",
-      "body": "After dictation, AI creates IELTS- and TOEIC-style questions based on that lesson to test real comprehension, then scores the answers. It then analyses the learner's mistakes to point out the patterns they fall into most often."
-     },
-     {
-      "title": "Karaoke-style shadowing to finish the lesson",
-      "body": "The final step is a video of the script that scrolls up line by line like karaoke, with a voice reading it aloud — so learners can watch, listen, and shadow the speaker to practise pronunciation and rhythm."
-     },
-     {
-      "title": "Free preview, QR payment, and backend-checked access",
-      "body": "Before paying, learners can open a few sample lessons. Paying by Vietnamese bank QR code unlocks the full library. The interface reflects the learner's plan, but access to every paid lesson is checked by the backend, so hiding a lock icon never unlocks content."
-     },
-     {
-      "title": "Saved progress and a bilingual interface",
-      "body": "Signed-in learners pick up where they left off, with their progress and notes saved to their account. The interface is available in English and Vietnamese, and the code is organised by feature so each part of the lesson flow can grow on its own."
-     }
-    ],
-    "impact": {
-     "metrics": [
-      {
-       "value": "7",
-       "label": "steps in every listening lesson, from first listen to shadowing"
-      },
-      {
-       "value": "2",
-       "label": "interface languages: English and Vietnamese"
-      },
-      {
-       "value": "Free → Paid",
-       "label": "a few open lessons, then the full library after QR payment"
-      }
-     ],
-     "summary": "The project is still in progress. Phase 1 defines a complete listening loop, from first listen to speaking along, with accounts, saved progress, and local payments. Its foundation is ready for lessons, quizzes, and payments to be added step by step."
-    },
-    "learnings": [
-     "Design the learning loop before the screens. Mapping all seven steps first made it clear what each screen must hand to the next.",
-     "The frontend shows access; the backend decides it. Keeping paid access checks on the server keeps the paywall reliable without making the interface complicated."
-    ],
+    "title": "English with J",
+    "subtitle": "Personal Project · In Progress",
+    "category": "English Learning",
+    "cardEyebrow": "Personal Project · English Learning",
+    "status": "In Progress",
+    "description": "An independent English learning product in progress, focused on guided listening, segment-based dictation and caption-based shadowing.",
+    "seoTitle": "English with J — English Listening Platform (In Progress) | Jasmine",
+    "seoDescription": "An independent English learning product in progress, focused on guided listening, segment-based dictation and caption-based shadowing.",
     "tags": [
      "Next.js",
      "React",
-     "TypeScript",
-     "Tailwind CSS",
-     "AI"
-    ]
+     "TypeScript"
+    ],
+    "caseStudy": {
+     "hero": {
+      "layout": "split",
+      "eyebrow": "PERSONAL PROJECT · ENGLISH LEARNING",
+      "status": "In Progress",
+      "title": "English with J",
+      "lead": "Building an active listening experience, one practice step at a time.",
+      "description": "English with J is an independent English-learning platform I'm developing to make listening practice more structured and actionable. Instead of repeatedly playing an audio lesson without knowing what went wrong, learners will be guided through focused listening, note-taking, segment-based dictation, and shadowing.",
+      "additionalDescription": "I'm shaping the product around a practical Phase 1 MVP, with room to expand into AI-supported comprehension and feedback in later phases.",
+      "meta": [
+       {
+        "label": "Role",
+        "value": "Solo Developer · Product & Frontend"
+       },
+       {
+        "label": "Project Type",
+        "value": "Independent Product"
+       },
+       {
+        "label": "Status",
+        "value": "In Progress · Phase 1 MVP"
+       },
+       {
+        "label": "Technology",
+        "value": "Next.js · React · TypeScript"
+       }
+      ],
+      "primaryLink": {
+       "label": "View Live Preview",
+       "note": "This is an in-development product preview; features may still be changing."
+      },
+      "diagram": {
+       "nodes": [
+        {
+         "title": "First listen + personal notes"
+        },
+        {
+         "title": "Segment-based dictation"
+        },
+        {
+         "title": "Caption-based shadowing"
+        },
+        {
+         "title": "Completion + saved progress"
+        }
+       ],
+       "caption": "Planned Phase 1 lesson flow · Conceptual diagram, not a product screenshot"
+      }
+     },
+     "sections": [
+      {
+       "eyebrow": "01 / KEY FOCUS AREAS",
+       "title": "What I'm Building",
+       "cards": [
+        {
+         "title": "Guided Listening Flow",
+         "body": "A lesson experience that moves beyond passive playback, guiding learners through their first listen, notes, focused practice, and a clear end-of-lesson review."
+        },
+        {
+         "title": "Segment-Based Dictation",
+         "body": "Short, replayable audio segments paired with learner input and the original script, designed to help learners notice missed or incorrect words."
+        },
+        {
+         "title": "Caption-Based Shadowing",
+         "body": "An audio player concept that highlights synchronized captions using timestamp data, allowing learners to follow the script and practice speaking along with the audio."
+        },
+        {
+         "title": "Learning Progress & Access",
+         "body": "A foundation for saving notes and lesson progress, presenting English/Vietnamese UI, and offering limited free previews before paid access."
+        }
+       ]
+      },
+      {
+       "eyebrow": "02 / PRODUCT & ENGINEERING",
+       "title": "Designing the Core Learning Experience",
+       "features": [
+        {
+         "eyebrow": "01",
+         "title": "Segment-Based Dictation & Script Comparison",
+         "facts": [
+          {
+           "label": "Challenge",
+           "body": "Listening to an entire recording can make it difficult to identify exactly which words a learner missed. A more useful practice experience needs a connection between small audio segments, learner input, and the original transcript."
+          },
+          {
+           "label": "Planned Approach",
+           "body": "The Phase 1 design divides lessons into timed segments. Learners listen to a short segment, type what they hear, and compare their answer with the reference script. The review is intended to distinguish correct, incorrect, and missing words while preserving notes for later practice."
+          },
+          {
+           "label": "Intended Experience",
+           "body": "A focused loop where learners can return to difficult moments and understand what needs another listen, rather than relying on a single overall score."
+          }
+         ],
+         "reverse": false,
+         "visual": {
+          "framed": true,
+          "diagram": {
+           "nodes": [
+            {
+             "title": "Listen to segment"
+            },
+            {
+             "title": "Type answer"
+            },
+            {
+             "title": "Compare with script"
+            },
+            {
+             "title": "Review / Notes"
+            }
+           ],
+           "caption": "Planned interaction · Not a product screenshot"
+          }
+         }
+        },
+        {
+         "eyebrow": "02",
+         "title": "Timestamp-Synchronized Caption Player",
+         "facts": [
+          {
+           "label": "Challenge",
+           "body": "Traditional transcripts remain static while audio moves forward. For shadowing, learners benefit from knowing which part of the script aligns with the current playback position."
+          },
+          {
+           "label": "Planned Approach",
+           "body": "The MVP concept combines an existing audio recording with timestamped caption data. A browser-based player will highlight the corresponding word or phrase as audio progresses, creating a karaoke-style reading experience without rendering a separate video file."
+          },
+          {
+           "label": "Intended Experience",
+           "body": "Learners can listen, follow the words in real time, and speak along with the same recording as part of a structured practice session."
+          }
+         ],
+         "reverse": true,
+         "visual": {
+          "framed": true,
+          "diagram": {
+           "nodes": [
+            {
+             "title": "Audio playback + Timed captions"
+            },
+            {
+             "title": "Active text highlight"
+            },
+            {
+             "title": "Shadowing"
+            }
+           ],
+           "caption": "Planned caption-player concept · Not a product screenshot"
+          }
+         }
+        }
+       ]
+      },
+      {
+       "eyebrow": "03 / PRODUCT OWNERSHIP",
+       "title": "Taking an Idea Toward a Focused MVP",
+       "description": "I'm developing English with J independently, from defining the learning problem and planning the lesson journey to making frontend and product decisions. One of the key priorities is keeping the first release focused: validate the listening and dictation experience before adding more expensive AI-powered workflows.",
+       "supportingItems": [
+        {
+         "title": "Product Thinking",
+         "body": "Turning a fragmented learning process into a guided practice journey."
+        },
+        {
+         "title": "UX Planning",
+         "body": "Keeping audio, transcription, review, and speaking exercises connected."
+        },
+        {
+         "title": "Phased Delivery",
+         "body": "Prioritizing a usable MVP and deferring higher-cost AI features until later."
+        }
+       ]
+      },
+      {
+       "eyebrow": "04 / CURRENT STATUS",
+       "title": "Phase 1 — In Progress",
+       "description": "English with J is currently in development. The goal of the first release is to establish the core listening workflow and validate the learning experience before expanding the product.",
+       "engagements": [
+        {
+         "eyebrow": "Phase 1 — Building the MVP",
+         "title": "Active focus — Phase 1 MVP",
+         "body": "Guided listening, notes, segment-based dictation, an audio-synchronized caption player, lesson progress, bilingual UI, and a freemium access model are part of the planned MVP scope. Individual feature completion remains subject to source-code verification."
+        },
+        {
+         "eyebrow": "Phase 2 AI · Phase 3 caption refinements",
+         "title": "Later phases — Planned",
+         "body": "AI-generated IELTS/TOEIC-style questions, personalized mistake analysis, and voice-input assistance are planned for a later phase. Caption synchronization may also be refined as the content library grows."
+        }
+       ],
+       "takeaway": "I'm continuing to iterate on the product and use what I learn from building it to refine both the learning experience and technical implementation.",
+       "primaryLink": {
+        "label": "View Live Preview"
+       }
+      }
+     ]
+    },
+    "overview": [
+     {
+      "label": "Role",
+      "value": "Solo Developer · Product & Frontend"
+     },
+     {
+      "label": "Project Type",
+      "value": "Independent Product"
+     },
+     {
+      "label": "Status",
+      "value": "In Progress · Phase 1 MVP"
+     },
+     {
+      "label": "Technology",
+      "value": "Next.js · React · TypeScript"
+     }
+    ],
+    "context": "English with J is an independent English-learning platform I'm developing to make listening practice more structured and actionable. Instead of repeatedly playing an audio lesson without knowing what went wrong, learners will be guided through focused listening, note-taking, segment-based dictation, and shadowing.",
+    "challenges": [],
+    "solutions": [],
+    "impact": {
+     "metrics": [],
+     "summary": "An independent English learning product in progress, focused on guided listening, segment-based dictation and caption-based shadowing."
+    },
+    "learnings": []
    }
   ]
  },
@@ -811,7 +1674,7 @@
    {
     "period": "2010 – 2013",
     "school": "Ho Chi Minh City University of Science",
-    "degree": "Information Technology"
+    "degree": "College Diploma in Information Technology"
    }
   ]
  },
@@ -829,8 +1692,8 @@
   ]
  },
  "contact": {
-  "heading": "Let’s Build Something Great",
-  "subheading": "I’m always open to discussing interesting products, challenging frontend problems, and opportunities to build better experiences together.",
+  "heading": "Let’s Connect",
+  "subheading": "Open to Senior Frontend Engineer opportunities in Ho Chi Minh City and remote teams.",
   "links": [
    {
     "label": "0398 060 569"
