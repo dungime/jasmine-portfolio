@@ -890,9 +890,12 @@
         ],
         "tags": [
           "React",
+          "TypeScript",
           "Ant Design",
-          "React State",
-          "Form.useForm"
+          "Jotai",
+          "Vite",
+          "SWR",
+          "REST APIs"
         ],
         "thumbnail": "/assets/projects/cleaning-service-admin-dashboard-main.png",
         "caseStudy": {
@@ -922,9 +925,12 @@
             ],
             "techTags": [
               "React",
+              "TypeScript",
               "Ant Design",
-              "React State",
-              "Form.useForm"
+              "Jotai",
+              "Vite",
+              "SWR",
+              "REST APIs"
             ],
             "heroImage": {
               "src": "/assets/projects/cleaning-service-admin-dashboard-main.png",

@@ -759,9 +759,12 @@
     ],
     "tags": [
      "React",
+     "TypeScript",
      "Ant Design",
-     "React State",
-     "Form.useForm"
+     "Jotai",
+     "Vite",
+     "SWR",
+     "REST APIs"
     ],
     "caseStudy": {
      "hero": {
@@ -790,9 +793,12 @@
       ],
       "techTags": [
        "React",
+       "TypeScript",
        "Ant Design",
-       "React State",
-       "Form.useForm"
+       "Jotai",
+       "Vite",
+       "SWR",
+       "REST APIs"
       ],
       "heroImage": {
        "src": "/assets/projects/cleaning-service-admin-dashboard-main.png",
