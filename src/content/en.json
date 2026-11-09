@@ -200,7 +200,7 @@
               },
               {
                 "label": "Stack",
-                "value": "React · TypeScript · Material UI · REST APIs"
+                "value": "React · TypeScript · Next.js · Redux Toolkit · Material UI · REST APIs · Real-time Data"
               }
             ],
             "heroImage": {
@@ -494,6 +494,8 @@
         "tags": [
           "React",
           "TypeScript",
+          "Next.js",
+          "Redux Toolkit",
           "Material UI",
           "REST APIs",
           "Real-time Data"
