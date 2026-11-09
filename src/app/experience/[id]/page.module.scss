@@ -1,5 +1,4 @@
 @use "../../../styles/variables" as *;
-@use "sass:color";
 
 .main {
   padding-top: 140px;
@@ -161,8 +160,8 @@
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  background: $color-black;
-  color: $color-lime;
+  background: $color-control-bg;
+  color: $color-control-accent;
   font-size: 9px;
   font-weight: 700;
   text-transform: uppercase;
@@ -171,10 +170,10 @@
 .companyLink {
   @include button-pill;
   display: inline-flex;
-  background: $color-black;
-  color: $color-white;
+  background: $color-control-bg;
+  color: $color-control-text;
 
   &:hover {
-    background: color.adjust($color-black, $lightness: 12%);
+    background: $color-control-hover;
   }
 }

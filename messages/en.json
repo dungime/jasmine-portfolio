@@ -5,6 +5,7 @@
   },
   "ui": {
     "languageSwitcherLabel": "Language",
+    "themeSwitcherLabel": "Color theme",
     "backToProjects": "← Back to projects",
     "backToExperience": "← Back to experience",
     "backToHome": "← Back to home",

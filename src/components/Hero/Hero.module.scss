@@ -1,5 +1,4 @@
 @use '../../styles/variables' as *;
-@use 'sass:color';
 
 .section {
   @include container;
@@ -83,7 +82,7 @@
   margin-bottom: 20px;
 }
 
-// Inline span so a wrapped heading gets the lime highlight on every line.
+// Inline span so a wrapped heading gets the highlight on every line.
 .headingHighlight {
   @include heading-highlight;
 }
@@ -155,12 +154,12 @@
 
 .primaryCta {
   @include button-pill;
-  background: $color-lime;
-  color: $color-black;
+  background: $color-primary;
+  color: $color-primary-text;
   border: 1px solid $color-border;
 
   &:hover {
-    background: $color-lime-dark;
+    background: $color-primary-hover;
   }
 }
 
@@ -213,7 +212,7 @@
 .visualEyebrow {
   font-size: 16px;
   font-weight: 600;
-  color: color.adjust($color-black, $lightness: 15%);
+  color: $color-ink-soft;
 }
 
 .photo {
@@ -227,10 +226,11 @@
   inset: 0;
   z-index: 1;
   pointer-events: none;
+  // Keep the portrait shading neutral and independent of the selected palette.
   background: linear-gradient(
     to top,
-    rgba($color-black, 0.5) 0%,
-    rgba($color-black, 0) 100%
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0) 100%
   );
 }
 

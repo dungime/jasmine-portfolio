@@ -1,0 +1,148 @@
+@use "sass:color";
+@use "sass:map";
+
+$themes: (
+  "original": (
+    "bg": #f4f4f4,
+    "bg-sage": #c9cfa0,
+    "lime": #ecf95a,
+    "lime-dark": color.adjust(#ecf95a, $lightness: -10%),
+    "black": #191314,
+    "white": #ffffff,
+    "gray": color.adjust(#191314, $lightness: 35%),
+    "gray-light": color.adjust(#191314, $lightness: 35%),
+    "card": #ffffff,
+    "primary": #ecf95a,
+    "primary-hover": color.adjust(#ecf95a, $lightness: -10%),
+    "primary-text": #191314,
+    "highlight": #ecf95a,
+  ),
+  "pastel": (
+    "bg": #fff9f0,
+    "bg-sage": #fae8b4,
+    "lime": #bbd8e7,
+    "lime-dark": color.adjust(#bbd8e7, $lightness: -10%),
+    "black": #4c2b08,
+    "white": #fff9f0,
+    "gray": color.mix(#4c2b08, #fff9f0, 85%),
+    "gray-light": color.mix(#4c2b08, #fff9f0, 80%),
+    "card": #fff9f0,
+    "primary": #bbd8e7,
+    "primary-hover": color.adjust(#bbd8e7, $lightness: -10%),
+    "primary-text": #4c2b08,
+    "highlight": #bbd8e7,
+  ),
+  "azael": (
+    "bg": #f7f7f2,
+    "bg-sage": color.mix(#f9e7af, #f7f7f2, 60%),
+    "lime": color.mix(#a7c5d5, #f7f7f2, 65%),
+    "lime-dark": color.mix(#a7c5d5, #f7f7f2, 75%),
+    "black": #555475,
+    "white": #ffffff,
+    "gray": color.mix(#555475, #073b78, 75%),
+    "gray-light": #555475,
+    "card": #ffffff,
+    "primary": #073b78,
+    "primary-hover": color.adjust(#073b78, $lightness: 8%),
+    "primary-text": #ffffff,
+    "highlight": #f9e7af,
+  ),
+  "berry": (
+    // Approximate the muted yellow-olive green in the supplied reference.
+    "bg": #bec397,
+    "bg-sage": #d9b0b9,
+    "lime": #d3d8b5,
+    "lime-dark": #bec397,
+    "black": #703246,
+    "white": #fffdf6,
+    "gray": #603b47,
+    "gray-light": #66414d,
+    "card": #dce0bf,
+    "primary": #93455a,
+    "primary-hover": #7d3549,
+    "primary-text": #fffdf6,
+    "highlight": #d3d8b5,
+  ),
+  "vscode": (
+    // Visual Studio Dark: sampled from the locally installed dark_vs.json.
+    "bg": #1e1e1e,
+    "bg-sage": #303031,
+    "lime": color.mix(#007acc, #1e1e1e, 25%),
+    "lime-dark": color.mix(#007acc, #1e1e1e, 35%),
+    "black": #d4d4d4,
+    "white": #1e1e1e,
+    "gray": #cccccc,
+    "gray-light": #bbbbbb,
+    "card": #252526,
+    "primary": #007acc,
+    "primary-hover": #006bb3,
+    "primary-text": #ffffff,
+    "highlight": color.mix(#007acc, #1e1e1e, 35%),
+  ),
+);
+
+@mixin palette($name) {
+  @if $name == "vscode" {
+    color-scheme: dark;
+  } @else {
+    color-scheme: light;
+  }
+
+  $palette: map.get($themes, $name);
+  $ink: map.get($palette, "black");
+  $border-ink: $ink;
+  $border-opacity: 0.14;
+  $shadow: $ink;
+  $control-bg: $ink;
+  $control-hover: color.adjust($ink, $lightness: 12%);
+  $control-text: map.get($palette, "white");
+  $control-accent: map.get($palette, "lime");
+  $accent: $ink;
+  $control-muted-opacity: 0.65;
+  $control-label-opacity: 0.75;
+
+  @if $name == "vscode" {
+    $border-ink: #007acc;
+    $border-opacity: 0.5;
+    $shadow: #000000;
+    $control-bg: #007acc;
+    $control-hover: #006bb3;
+    $control-text: #ffffff;
+    $control-accent: #ffffff;
+    $accent: #6cb1e4;
+    $control-muted-opacity: 1;
+    $control-label-opacity: 1;
+  }
+
+  $palette: map.merge($palette, (
+    "ink-hover": color.adjust($ink, $lightness: 12%),
+    "ink-soft": color.adjust($ink, $lightness: 15%),
+    "border": $border-ink,
+    "shadow": $shadow,
+    "control-bg": $control-bg,
+    "control-hover": $control-hover,
+    "control-text": $control-text,
+    "control-accent": $control-accent,
+    "accent": $accent,
+  ));
+
+  @each $role, $value in $palette {
+    --color-#{$role}-rgb: #{color.channel($value, "red", $space: rgb)}, #{color.channel($value, "green", $space: rgb)}, #{color.channel($value, "blue", $space: rgb)};
+  }
+
+  --border-opacity: #{$border-opacity};
+  --control-muted-opacity: #{$control-muted-opacity};
+  --control-label-opacity: #{$control-label-opacity};
+  --wave-line-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='12' viewBox='0 0 320 12'%3E%3Cpath d='M0 6C53 -1 107 -1 160 6S267 13 320 6' fill='none' stroke='rgba(#{color.channel($border-ink, "red", $space: rgb)},#{color.channel($border-ink, "green", $space: rgb)},#{color.channel($border-ink, "blue", $space: rgb)},#{$border-opacity})' stroke-width='1.5'/%3E%3C/svg%3E");
+}
+
+// The current palette is also the no-JavaScript and first-visit default.
+:root {
+  @include palette(azael);
+}
+
+@each $name, $palette in $themes {
+  :root[data-theme="#{$name}"] {
+    @include palette($name);
+  }
+}

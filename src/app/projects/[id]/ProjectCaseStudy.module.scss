@@ -197,7 +197,7 @@
 
 .branches, .branchConnectors { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .branchConnectors { font-size: 24px; padding-block: 8px; }
-.platform { padding: 14px 8px; border: 1px solid $color-border; border-radius: $radius-sm; background: rgba($color-lime, 0.2); font-size: 14px; font-weight: 600; }
+.platform { padding: 14px 8px; border: 1px solid $color-border; border-radius: $radius-sm; background: rgba(var(--color-lime-rgb), 0.2); font-size: 14px; font-weight: 600; }
 
 .facts {
   display: grid;
@@ -321,7 +321,7 @@
   border: 1px dashed $color-bg-sage;
   border-radius: $radius-sm;
   font-size: 13px;
-  background: rgba($color-lime, 0.12);
+  background: rgba(var(--color-lime-rgb), 0.12);
 }
 
 .implementation {
@@ -440,8 +440,8 @@
 
 .previewLink {
   @include button-pill;
-  background: $color-black;
-  color: $color-white;
+  background: $color-control-bg;
+  color: $color-control-text;
   text-align: center;
 
   &:focus-visible {

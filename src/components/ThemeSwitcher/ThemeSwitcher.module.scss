@@ -1,0 +1,72 @@
+@use "../../styles/variables" as *;
+
+.toolbar {
+  position: fixed;
+  right: 24px;
+  bottom: 80px;
+  z-index: 50;
+  display: flex;
+  justify-content: flex-end;
+  max-width: calc(100vw - 32px);
+
+  @media (max-width: 760px) {
+    right: 16px;
+    bottom: 66px;
+  }
+}
+
+.switcher {
+  display: flex;
+  gap: 6px;
+
+  @media (max-width: 760px) {
+    gap: 4px;
+  }
+}
+
+.option {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  flex-shrink: 0;
+  min-height: 44px;
+  padding: 0;
+  border: 1px solid $color-border;
+  border-radius: $radius-pill;
+  background: $color-card;
+  color: $color-gray;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $color-control-bg;
+    color: $color-black;
+  }
+
+  &[aria-pressed="true"] {
+    background: $color-control-bg;
+    border-color: $color-control-bg;
+    color: $color-control-text;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-black;
+    outline-offset: 3px;
+  }
+
+}
+
+.swatch {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(127, 127, 127, 0.3);
+}
+
+// Fixed samples let visitors recognize each palette regardless of active theme.
+.original { background: linear-gradient(135deg, #191314 0% 50%, #ecf95a 50%); }
+.pastel { background: linear-gradient(135deg, #bbd8e7 0% 50%, #fae8b4 50%); }
+.azael { background: linear-gradient(135deg, #555475 0% 50%, #f9e7af 50%); }
+.berry { background: linear-gradient(135deg, #93455a 0% 50%, #bec397 50%); }
+.vscode { background: linear-gradient(135deg, #1e1e1e 0% 50%, #007acc 50%); }

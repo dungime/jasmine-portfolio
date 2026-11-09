@@ -1,5 +1,4 @@
 @use "../../styles/variables" as *;
-@use "sass:color";
 
 .wrap {
   position: sticky;
@@ -18,7 +17,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px 10px 10px 20px;
-  background: rgba(246, 246, 241, 0.75);
+  background: rgba(var(--color-bg-rgb), 0.75);
   backdrop-filter: blur(12px);
   border: 1px solid $color-border;
   border-radius: $radius-pill;
@@ -39,8 +38,8 @@
   width: 28px;
   height: 28px;
   border-radius: 8px;
-  background: $color-black;
-  color: $color-lime;
+  background: $color-control-bg;
+  color: $color-control-accent;
   font-weight: 700;
   font-size: 15px;
 }
@@ -76,10 +75,10 @@
 
 .cta {
   @include button-pill;
-  background: $color-black;
-  color: $color-white;
+  background: $color-primary;
+  color: $color-primary-text;
 
   &:hover {
-    background: color.adjust($color-black, $lightness: 12%);
+    background: $color-primary-hover;
   }
 }

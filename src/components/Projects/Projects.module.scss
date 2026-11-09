@@ -69,7 +69,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.35), transparent 60%);
+    background: radial-gradient(circle at 30% 30%, rgba(var(--color-white-rgb), 0.35), transparent 60%);
     pointer-events: none;
   }
 }
@@ -101,6 +101,7 @@
 }
 
 .arrow {
+  color: $color-accent;
   width: 28px;
   height: 28px;
   border-radius: 50%;

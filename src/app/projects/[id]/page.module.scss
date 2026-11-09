@@ -34,7 +34,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.35), transparent 60%);
+    background: radial-gradient(circle at 30% 30%, rgba(var(--color-white-rgb), 0.35), transparent 60%);
   }
 }
 
@@ -242,8 +242,8 @@
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: $color-black;
-  color: $color-lime;
+  background: $color-control-bg;
+  color: $color-control-accent;
   font-size: 15px;
   font-weight: 700;
   display: flex;
@@ -267,8 +267,8 @@
   gap: 10px;
   padding: 24px;
   border-radius: $radius-md;
-  background: $color-black;
-  color: $color-white;
+  background: $color-control-bg;
+  color: $color-control-text;
 }
 
 .metricValue {
@@ -276,13 +276,13 @@
   font-size: clamp(28px, 3.4vw, 38px);
   font-weight: 700;
   line-height: 1.1;
-  color: $color-lime;
+  color: $color-control-accent;
 }
 
 .metricLabel {
   font-size: 15px;
   line-height: 1.5;
-  color: rgba($color-white, 0.75);
+  color: rgba(var(--color-control-text-rgb), var(--control-label-opacity));
 }
 
 .impactSummary {
@@ -375,8 +375,8 @@
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  background: $color-black;
-  color: $color-lime;
+  background: $color-control-bg;
+  color: $color-control-accent;
   font-size: 9px;
   font-weight: 700;
   text-transform: uppercase;
@@ -403,7 +403,7 @@
 .moreProjects {
   margin-top: clamp(72px, 9vw, 120px);
   padding-block: clamp(40px, 6vw, 72px);
-  background: rgba($color-bg-sage, 0.22);
+  background: rgba(var(--color-bg-sage-rgb), 0.22);
   border-block: 1px solid $color-border;
 }
 

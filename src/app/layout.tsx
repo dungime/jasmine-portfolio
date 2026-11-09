@@ -8,6 +8,8 @@ import { VoiceChat } from "@/components/VoiceChat/VoiceChat";
 import { defaultLocale } from "@/i18n/config";
 import { LOCALE_BOOT_SCRIPT, LocaleProvider } from "@/i18n/LocaleProvider";
 import { withBasePath } from "@/lib/base-path";
+import { THEME_BOOT_SCRIPT } from "@/lib/theme";
+import { ThemeSwitcher } from "@/components/ThemeSwitcher/ThemeSwitcher";
 import messages from "../../messages/en.json";
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
@@ -60,14 +62,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    // suppressHydrationWarning: LOCALE_BOOT_SCRIPT may change lang/class
-    // before React hydrates.
+    // Boot scripts may change lang/class/data-theme before React hydrates.
     <html
       lang={defaultLocale}
       className={`${beVietnamPro.variable} ${martianMono.variable} ${jetBrainsMono.variable}`}
       suppressHydrationWarning
     >
       <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_BOOT_SCRIPT }} />
         <script dangerouslySetInnerHTML={{ __html: LOCALE_BOOT_SCRIPT }} />
       </head>
       <body>
@@ -96,6 +98,7 @@ export default function RootLayout({
           <ScrollToHash />
           <BackToTop />
           <VoiceChat />
+          <ThemeSwitcher />
         </LocaleProvider>
       </body>
     </html>

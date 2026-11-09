@@ -27,7 +27,7 @@
   }
 
   &.active {
-    background: $color-black;
-    color: $color-white;
+    background: $color-control-bg;
+    color: $color-control-text;
   }
 }

@@ -21,7 +21,7 @@
   border: 1px solid $color-border;
   border-radius: $radius-md;
   background: $color-card;
-  box-shadow: 0 12px 24px rgba($color-black, 0.08);
+  box-shadow: 0 12px 24px rgba(var(--color-shadow-rgb), 0.08);
 }
 
 .wavyBorder {
@@ -32,7 +32,7 @@
   z-index: -1;
   overflow: visible;
   pointer-events: none;
-  filter: drop-shadow(0 12px 24px rgba($color-black, 0.08));
+  filter: drop-shadow(0 12px 24px rgba(var(--color-shadow-rgb), 0.08));
 
   path {
     fill: $color-card;
@@ -76,13 +76,13 @@
 
 .resumeCta {
   @include button-pill;
-  background: $color-lime;
-  color: $color-black;
-  border: 1px solid $color-black;
+  background: $color-primary;
+  color: $color-primary-text;
+  border: 1px solid $color-primary;
   margin-bottom: 24px;
 
   &:hover {
-    background: $color-lime-dark;
+    background: $color-primary-hover;
   }
 }
 
@@ -155,7 +155,7 @@
 .cardIcon {
   display: inline-flex;
   flex-shrink: 0;
-  color: $color-black;
+  color: $color-accent;
   transition: color 0.15s ease;
 
   svg {
@@ -164,7 +164,7 @@
   }
 
   .card:not(.static):hover & {
-    color: $color-black;
+    color: $color-accent;
   }
 }
 
@@ -179,7 +179,7 @@
   }
 
   .card:hover & {
-    color: $color-black;
+    color: $color-accent;
   }
 }
 

@@ -1,17 +1,27 @@
-// Palette from the brand style guide (#191314 / #ecf95a / #f4f4f4 / #ffffff)
-@use "sass:color";
+// Shared runtime tokens; concrete palettes are emitted once by _themes.scss.
 @use "sass:list";
 
-$color-bg: #f4f4f4;
-$color-bg-sage: #c9cfa0;
-$color-lime: #ecf95a;
-$color-lime-dark: color.adjust(#ecf95a, $lightness: -10%);
-$color-black: #191314;
-$color-white: #ffffff;
-$color-gray: color.adjust(#191314, $lightness: 35%);
-$color-gray-light: color.adjust(#191314, $lightness: 45%);
-$color-border: rgba(25, 19, 20, 0.1);
-$color-card: #ffffff;
+$color-bg: rgb(var(--color-bg-rgb));
+$color-bg-sage: rgb(var(--color-bg-sage-rgb));
+$color-lime: rgb(var(--color-lime-rgb));
+$color-lime-dark: rgb(var(--color-lime-dark-rgb));
+$color-black: rgb(var(--color-black-rgb));
+$color-white: rgb(var(--color-white-rgb));
+$color-gray: rgb(var(--color-gray-rgb));
+$color-gray-light: rgb(var(--color-gray-light-rgb));
+$color-card: rgb(var(--color-card-rgb));
+$color-primary: rgb(var(--color-primary-rgb));
+$color-primary-hover: rgb(var(--color-primary-hover-rgb));
+$color-primary-text: rgb(var(--color-primary-text-rgb));
+$color-highlight: rgb(var(--color-highlight-rgb));
+$color-ink-hover: rgb(var(--color-ink-hover-rgb));
+$color-ink-soft: rgb(var(--color-ink-soft-rgb));
+$color-border: rgba(var(--color-border-rgb), var(--border-opacity));
+$color-control-bg: rgb(var(--color-control-bg-rgb));
+$color-control-hover: rgb(var(--color-control-hover-rgb));
+$color-control-text: rgb(var(--color-control-text-rgb));
+$color-control-accent: rgb(var(--color-control-accent-rgb));
+$color-accent: rgb(var(--color-accent-rgb));
 
 $radius-pill: 999px;
 $radius-lg: 28px;
@@ -24,7 +34,7 @@ $space-section: clamp(64px, 9vw, 120px);
 $font-sans: var(--font-body), system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 $font-heading: var(--font-heading), "SFMono-Regular", Consolas, Menlo, monospace;
 
-$shadow-card: 0 1px 2px rgba(25, 19, 20, 0.04), 0 12px 24px -12px rgba(25, 19, 20, 0.12);
+$shadow-card: 0 1px 2px rgba(var(--color-shadow-rgb), 0.04), 0 12px 24px -12px rgba(var(--color-shadow-rgb), 0.12);
 
 @mixin container {
   width: 100%;
@@ -52,7 +62,7 @@ $shadow-card: 0 1px 2px rgba(25, 19, 20, 0.04), 0 12px 24px -12px rgba(25, 19, 2
 @mixin heading-highlight {
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
-  background-image: linear-gradient(transparent 70%, $color-lime 70%);
+  background-image: linear-gradient(transparent 70%, $color-highlight 70%);
   background-repeat: no-repeat;
 }
 
@@ -76,7 +86,7 @@ $shadow-card: 0 1px 2px rgba(25, 19, 20, 0.04), 0 12px 24px -12px rgba(25, 19, 2
 // Wavy lines and borders, matching the career timeline's curved connectors.
 
 // One wavelength of the divider line (320 x 12px), tiled horizontally.
-$wave-line-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='12' viewBox='0 0 320 12'%3E%3Cpath d='M0 6C53 -1 107 -1 160 6S267 13 320 6' fill='none' stroke='rgba(25,19,20,0.1)' stroke-width='1.5'/%3E%3C/svg%3E");
+$wave-line-image: var(--wave-line-image);
 
 // Wavy divider in place of a border-top / border-bottom: pass the sides,
 // e.g. `@include wavy-line(top, bottom)`. The wave takes the first/last 12px

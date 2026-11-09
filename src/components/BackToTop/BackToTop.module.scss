@@ -12,10 +12,10 @@
   justify-content: center;
   border: none;
   border-radius: 50%;
-  background: $color-black;
-  color: $color-lime;
+  background: $color-control-bg;
+  color: $color-control-accent;
   cursor: pointer;
-  box-shadow: 0 8px 20px rgba(25, 19, 20, 0.25);
+  box-shadow: 0 8px 20px rgba(var(--color-shadow-rgb), 0.25);
 
   opacity: 0;
   transform: translateY(8px);

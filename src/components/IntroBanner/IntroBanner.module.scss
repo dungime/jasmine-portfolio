@@ -19,7 +19,7 @@
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(var(--color-black-rgb), 0.45);
 }
 
 .content {
@@ -58,7 +58,7 @@
 
 .divider {
   height: 1px;
-  background: rgba($color-lime, 0.35);
+  background: rgba(var(--color-lime-rgb), 0.35);
 }
 
 .bio {
@@ -89,9 +89,9 @@
   @include button-pill;
   background: transparent;
   color: $color-lime;
-  border: 1px solid rgba($color-lime, 0.4);
+  border: 1px solid rgba(var(--color-lime-rgb), 0.4);
 
   &:hover {
-    background: rgba($color-lime, 0.12);
+    background: rgba(var(--color-lime-rgb), 0.12);
   }
 }
