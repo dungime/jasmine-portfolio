@@ -75,7 +75,13 @@ export function Contact({
               }
 
               return (
-                <Link key={link.label} href={link.href} className={styles.card}>
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className={styles.card}
+                  target={link.icon === "github" ? "_blank" : undefined}
+                  rel={link.icon === "github" ? "noopener noreferrer" : undefined}
+                >
                   {label}
                   <span className={styles.arrow}>
                     <ArrowUpRightIcon stroke="currentColor" />
