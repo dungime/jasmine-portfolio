@@ -37,7 +37,7 @@ const jetBrainsMono = JetBrains_Mono({
 // Metadata is baked into the static HTML, so it stays in the default locale;
 // the language switch only changes the page content.
 const { title, description } = messages.meta;
-const profileImage = withBasePath("/assets/images/profile-2.jpg");
+const profileImage = withBasePath("/assets/images/profile-3.jpg");
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://dungime.github.io"),
