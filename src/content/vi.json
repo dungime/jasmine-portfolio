@@ -1380,6 +1380,7 @@
       {
         "id": "english-with-j",
         "title": "English with J",
+        "thumbnail": "/assets/projects/english-with-j-thumbnail.svg",
         "subtitle": "Dự án cá nhân · Đang phát triển",
         "category": "Học tiếng Anh",
         "cardEyebrow": "Dự án cá nhân · Học tiếng Anh",
@@ -1421,7 +1422,7 @@
             ],
             "primaryLink": {
               "label": "Xem bản đang phát triển",
-              "href": "https://englishwithj.xyz/",
+              "href": "https://english-with-j-git-dev-j-team4.vercel.app/",
               "note": "Sản phẩm đang trong quá trình phát triển; các tính năng có thể thay đổi."
             },
             "diagram": {
@@ -1588,7 +1589,7 @@
               "takeaway": "Mình tiếp tục phát triển và điều chỉnh sản phẩm, đồng thời rút kinh nghiệm về trải nghiệm học tập và triển khai kỹ thuật trong quá trình xây dựng.",
               "primaryLink": {
                 "label": "Xem bản đang phát triển",
-                "href": "https://englishwithj.xyz/"
+                "href": "https://english-with-j-git-dev-j-team4.vercel.app/"
               }
             }
           ]

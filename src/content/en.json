@@ -1400,6 +1400,7 @@
       {
         "id": "english-with-j",
         "title": "English with J",
+        "thumbnail": "/assets/projects/english-with-j-thumbnail.svg",
         "subtitle": "Personal Project · In Progress",
         "category": "English Learning",
         "cardEyebrow": "Personal Project · English Learning",
@@ -1441,7 +1442,7 @@
             ],
             "primaryLink": {
               "label": "View Live Preview",
-              "href": "https://englishwithj.xyz/",
+              "href": "https://english-with-j-git-dev-j-team4.vercel.app/",
               "note": "This is an in-development product preview; features may still be changing."
             },
             "diagram": {
@@ -1608,7 +1609,7 @@
               "takeaway": "I'm continuing to iterate on the product and use what I learn from building it to refine both the learning experience and technical implementation.",
               "primaryLink": {
                 "label": "View Live Preview",
-                "href": "https://englishwithj.xyz/"
+                "href": "https://english-with-j-git-dev-j-team4.vercel.app/"
               }
             }
           ]
