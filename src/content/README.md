@@ -111,3 +111,15 @@ Sau khi sửa, kiểm tra cả EN/VI và chạy `npm run lint`,
 - `seoDescription` ở cấp dự án cung cấp meta description riêng cho trang dự án.
 
 Các trường mới đều tùy chọn; không cần sửa dự án đang dùng mẫu hiện tại.
+
+## Spec-Driven Development with Coding Agents
+
+Trang `/projects/spec-driven-development-with-coding-agents` đã có khung giao diện
+trong cả `en.json` và `vi.json`, với cùng ID `spec-driven-development-with-coding-agents`.
+Chỉnh `description`, `caseStudy.hero` và `caseStudy.sections` để bổ sung nội dung.
+Các mục bối cảnh, quy trình, ví dụ và bài học hiện dùng `placeholder` để hiển thị
+khối chờ nội dung. Xóa `placeholder` ở từng mục rồi thêm `description`, `cards`,
+`features`, `steps` hoặc các trường của mẫu chung ở trên.
+
+Khi hoàn tất bài viết, xóa hoặc cập nhật `status` ở cấp dự án và hero, đồng thời
+cập nhật `subtitle`, `seoDescription` và mục trạng thái trong `hero.meta`.

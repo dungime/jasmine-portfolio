@@ -182,6 +182,88 @@
     "subheading": "A few things I've built and released recently.",
     "items": [
       {
+        "id": "spec-driven-development-with-coding-agents",
+        "title": "Spec-Driven Development with Coding Agents",
+        "subtitle": "Case Study · Coming soon",
+        "category": "AI & Developer Workflow",
+        "cardEyebrow": "Engineering · Case Study",
+        "status": "Coming soon",
+        "description": "Content will be added soon.",
+        "seoTitle": "Spec-Driven Development with Coding Agents | Jasmine",
+        "seoDescription": "Spec-Driven Development with Coding Agents. Content will be added soon.",
+        "thumbnail": "/assets/projects/spec-driven-development-thumbnail.svg",
+        "tags": [
+          "Spec-Driven Development",
+          "Coding Agents"
+        ],
+        "context": "",
+        "overview": [],
+        "challenges": [],
+        "solutions": [],
+        "impact": {
+          "metrics": [],
+          "summary": ""
+        },
+        "learnings": [],
+        "caseStudy": {
+          "hero": {
+            "layout": "split",
+            "eyebrow": "ENGINEERING · CASE STUDY",
+            "title": "Spec-Driven Development with Coding Agents",
+            "lead": "Specification-led development with coding agents.",
+            "description": "Content will be added soon.",
+            "status": "Coming soon",
+            "meta": [
+              {
+                "label": "Topic",
+                "value": "AI & Developer Workflow"
+              },
+              {
+                "label": "Status",
+                "value": "Coming soon"
+              }
+            ],
+            "techTags": [
+              "Spec-Driven Development",
+              "Coding Agents"
+            ],
+            "heroImage": {
+              "src": "/assets/projects/spec-driven-development-thumbnail.svg",
+              "width": 1440,
+              "height": 900,
+              "caption": "Spec → Coding agent → Review",
+              "alt": "Illustration of a specification, a coding agent, and a review checklist."
+            }
+          },
+          "sections": [
+            {
+              "id": "context",
+              "eyebrow": "01 / CONTEXT",
+              "title": "Context & challenge",
+              "placeholder": "Content will be added soon."
+            },
+            {
+              "id": "workflow",
+              "eyebrow": "02 / WORKFLOW",
+              "title": "From specification to implementation",
+              "placeholder": "Content will be added soon."
+            },
+            {
+              "id": "examples",
+              "eyebrow": "03 / EXAMPLES",
+              "title": "Specifications & coding agents in practice",
+              "placeholder": "Content will be added soon."
+            },
+            {
+              "id": "learnings",
+              "eyebrow": "04 / REFLECTION",
+              "title": "Outcomes & lessons learned",
+              "placeholder": "Content will be added soon."
+            }
+          ]
+        }
+      },
+      {
         "id": "nexstox-nxmarket",
         "caseStudy": {
           "hero": {

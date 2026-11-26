@@ -162,6 +162,88 @@
     "subheading": "Một vài sản phẩm tôi đã xây dựng và phát hành gần đây.",
     "items": [
       {
+        "id": "spec-driven-development-with-coding-agents",
+        "title": "Spec-Driven Development with Coding Agents",
+        "subtitle": "Case Study · Sắp có nội dung",
+        "category": "AI & Developer Workflow",
+        "cardEyebrow": "Engineering · Case Study",
+        "status": "Sắp có nội dung",
+        "description": "Nội dung sẽ được bổ sung.",
+        "seoTitle": "Spec-Driven Development with Coding Agents | Jasmine",
+        "seoDescription": "Spec-Driven Development with Coding Agents. Nội dung sẽ được bổ sung.",
+        "thumbnail": "/assets/projects/spec-driven-development-thumbnail.svg",
+        "tags": [
+          "Spec-Driven Development",
+          "Coding Agents"
+        ],
+        "context": "",
+        "overview": [],
+        "challenges": [],
+        "solutions": [],
+        "impact": {
+          "metrics": [],
+          "summary": ""
+        },
+        "learnings": [],
+        "caseStudy": {
+          "hero": {
+            "layout": "split",
+            "eyebrow": "ENGINEERING · CASE STUDY",
+            "title": "Spec-Driven Development with Coding Agents",
+            "lead": "Phát triển phần mềm từ đặc tả với coding agents.",
+            "description": "Nội dung sẽ được bổ sung.",
+            "status": "Sắp có nội dung",
+            "meta": [
+              {
+                "label": "Chủ đề",
+                "value": "AI & Developer Workflow"
+              },
+              {
+                "label": "Trạng thái",
+                "value": "Sắp có nội dung"
+              }
+            ],
+            "techTags": [
+              "Spec-Driven Development",
+              "Coding Agents"
+            ],
+            "heroImage": {
+              "src": "/assets/projects/spec-driven-development-thumbnail.svg",
+              "width": 1440,
+              "height": 900,
+              "caption": "Spec → Coding agent → Review",
+              "alt": "Minh họa đặc tả, coding agent và bước review."
+            }
+          },
+          "sections": [
+            {
+              "id": "context",
+              "eyebrow": "01 / BỐI CẢNH",
+              "title": "Bối cảnh & bài toán",
+              "placeholder": "Nội dung sẽ được bổ sung."
+            },
+            {
+              "id": "workflow",
+              "eyebrow": "02 / QUY TRÌNH",
+              "title": "Từ spec đến triển khai",
+              "placeholder": "Nội dung sẽ được bổ sung."
+            },
+            {
+              "id": "examples",
+              "eyebrow": "03 / VÍ DỤ",
+              "title": "Spec & coding agents trong thực tế",
+              "placeholder": "Nội dung sẽ được bổ sung."
+            },
+            {
+              "id": "learnings",
+              "eyebrow": "04 / BÀI HỌC",
+              "title": "Kết quả & bài học",
+              "placeholder": "Nội dung sẽ được bổ sung."
+            }
+          ]
+        }
+      },
+      {
         "id": "nexstox-nxmarket",
         "caseStudy": {
           "hero": {

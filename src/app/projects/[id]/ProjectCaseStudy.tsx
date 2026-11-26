@@ -160,6 +160,12 @@ function CaseStudySection({ section }: { section: ProjectSection }) {
         <p className={styles.eyebrow}>{section.eyebrow}</p>
         <h2 id={headingId}>{section.title}</h2>
       </header>
+      {section.placeholder && <div className={styles.placeholder}>
+        <p>{section.placeholder}</p>
+        <div className={styles.placeholderLines} aria-hidden="true">
+          <span /><span /><span />
+        </div>
+      </div>}
       {section.showcases?.map((showcase, index) => (
         <div className={`${styles.case} ${styles.showcase} ${index % 2 ? styles.caseReverse : ""}`} key={showcase.title}>
           <div className={styles.workflowVisual}>

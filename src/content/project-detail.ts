@@ -35,6 +35,7 @@ export interface ProjectSection {
   id: string;
   eyebrow: string;
   title: string;
+  placeholder?: string;
   showcases?: {
     title: string;
     subhead: string;

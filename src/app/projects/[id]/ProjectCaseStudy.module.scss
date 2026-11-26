@@ -138,6 +138,32 @@
 
 .sectionHeader { margin-bottom: 28px; }
 
+.placeholder {
+  padding: clamp(24px, 4vw, 40px);
+  border: 1px dashed $color-border;
+  border-radius: $radius-md;
+  background: $color-card;
+  color: $color-gray;
+  font-size: 14px;
+}
+
+.placeholderLines {
+  display: grid;
+  gap: 12px;
+  max-width: 680px;
+  margin-top: 24px;
+
+  span {
+    height: 6px;
+    border-radius: $radius-pill;
+    background: $color-border;
+    opacity: 0.5;
+  }
+
+  span:nth-child(2) { width: 88%; }
+  span:last-child { width: 60%; }
+}
+
 .cardMarker {
   display: flex;
   align-items: center;
