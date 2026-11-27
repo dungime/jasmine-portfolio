@@ -152,6 +152,25 @@ function EngineeringFeature({ feature }: { feature: ProjectFeature }) {
   );
 }
 
+function VerticalSteps({ steps }: { steps: NonNullable<ProjectSection["steps"]> }) {
+  return (
+    <ol className={styles.verticalFlow} role="list">
+      {steps.map((step, index) => (
+        <li key={step.title}>
+          <div className={`${styles.verticalStep} ${step.framed ? styles.framedStep : ""}`}>
+            {step.icon && Object.hasOwn(icons, step.icon) && (
+              <span className={styles.verticalStepIcon} aria-hidden="true">{icons[step.icon as IconName]}</span>
+            )}
+            <h3>{index + 1}. {step.title}</h3>
+            <p>{step.body}</p>
+          </div>
+          {index < steps.length - 1 && <span className={styles.verticalArrow} aria-hidden="true">↓</span>}
+        </li>
+      ))}
+    </ol>
+  );
+}
+
 function CaseStudySection({ section }: { section: ProjectSection }) {
   const headingId = `${section.id}-title`;
   return (
@@ -205,7 +224,7 @@ function CaseStudySection({ section }: { section: ProjectSection }) {
         </div>)}
       </dl>}
       {section.diagram && <Diagram content={section.diagram} standalone />}
-      {section.steps && <ol
+      {section.steps && (section.stepsLayout === "vertical" ? <VerticalSteps steps={section.steps} /> : <ol
         className={`${styles.flow} ${section.steps.length > 3 ? styles.flowExtended : ""}`}
         style={{ "--step-count": section.steps.length } as CSSProperties}
       >
@@ -217,7 +236,20 @@ function CaseStudySection({ section }: { section: ProjectSection }) {
             {index < steps.length - 1 && <span className={styles.flowArrow} aria-hidden="true">→</span>}
           </li>
         ))}
-      </ol>}
+      </ol>)}
+      {section.comparison && <div className={styles.comparison}>
+        <table aria-labelledby={headingId} aria-describedby={section.comparison.note ? `${section.id}-note` : undefined}>
+          <thead>
+            <tr>{section.comparison.columns.map((column) => <th key={column} scope="col">{column}</th>)}</tr>
+          </thead>
+          <tbody>
+            {section.comparison.rows.map((row, rowIndex) => (
+              <tr key={rowIndex}>{row.map((cell, columnIndex) => <td key={columnIndex}>{cell}</td>)}</tr>
+            ))}
+          </tbody>
+        </table>
+        {section.comparison.note && <p id={`${section.id}-note`} className={styles.comparisonNote}>{section.comparison.note}</p>}
+      </div>}
       {section.reflection && <p className={styles.ownershipDescription}>{section.reflection}</p>}
       {section.engagements?.map((engagement) => (
         <div className={styles.engagement} key={engagement.title}>

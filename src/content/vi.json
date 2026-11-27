@@ -225,8 +225,32 @@
             {
               "id": "workflow",
               "eyebrow": "02 / QUY TRÌNH",
-              "title": "Từ spec đến triển khai",
-              "placeholder": "Nội dung sẽ được bổ sung."
+              "title": "Quy trình hoạt động",
+              "stepsLayout": "vertical",
+              "steps": [
+                {
+                  "title": "Human Intent",
+                  "body": "Con người xác định ý tưởng và mục tiêu",
+                  "icon": "lightbulb"
+                },
+                {
+                  "title": "Specification",
+                  "body": "Viết yêu cầu, business rules, constraints, acceptance criteria",
+                  "icon": "fileText",
+                  "framed": true
+                },
+                {
+                  "title": "Agentic Coding",
+                  "body": "AI Agent lập kế hoạch, viết code, chạy test và sửa lỗi",
+                  "icon": "bot"
+                },
+                {
+                  "title": "Verification",
+                  "body": "Đối chiếu kết quả với specification, kiểm thử và review",
+                  "icon": "checks",
+                  "framed": true
+                }
+              ]
             },
             {
               "id": "examples",
@@ -235,8 +259,42 @@
               "placeholder": "Nội dung sẽ được bổ sung."
             },
             {
+              "id": "sdd-vs-vibe-coding",
+              "eyebrow": "04 / SO SÁNH",
+              "title": "SDD khác gì với Vibe Coding?",
+              "comparison": {
+                "columns": [
+                  "Vibe Coding",
+                  "Spec-Driven + Agentic Coding"
+                ],
+                "rows": [
+                  [
+                    "Bắt đầu bằng prompt, có thể khá mơ hồ",
+                    "Bắt đầu bằng specification rõ ràng"
+                  ],
+                  [
+                    "AI có thể phải tự đưa ra nhiều giả định",
+                    "AI hoạt động theo yêu cầu và ràng buộc đã xác định"
+                  ],
+                  [
+                    "Thường điều chỉnh bằng các prompt tiếp theo",
+                    "Quản lý thay đổi thông qua spec và kế hoạch"
+                  ],
+                  [
+                    "Dễ mất thông tin khi hội thoại kéo dài",
+                    "Spec được lưu để tái sử dụng giữa các phiên"
+                  ],
+                  [
+                    "Có thể khó xác định khi nào hoàn thành",
+                    "Có acceptance criteria để kiểm chứng"
+                  ]
+                ],
+                "note": "Đây là so sánh hai cách tiếp cận điển hình, không có nghĩa rằng mọi dự án vibe coding đều kém chất lượng."
+              }
+            },
+            {
               "id": "learnings",
-              "eyebrow": "04 / BÀI HỌC",
+              "eyebrow": "05 / BÀI HỌC",
               "title": "Kết quả & bài học",
               "placeholder": "Nội dung sẽ được bổ sung."
             }

@@ -117,7 +117,12 @@ Các trường mới đều tùy chọn; không cần sửa dự án đang dùng
 Trang `/projects/spec-driven-development-with-coding-agents` đã có khung giao diện
 trong cả `en.json` và `vi.json`, với cùng ID `spec-driven-development-with-coding-agents`.
 Chỉnh `description`, `caseStudy.hero` và `caseStudy.sections` để bổ sung nội dung.
-Các mục bối cảnh, quy trình, ví dụ và bài học hiện dùng `placeholder` để hiển thị
+Mục quy trình đã có nội dung bốn bước. Dùng `stepsLayout: "vertical"` để hiển thị
+sơ đồ dọc; mỗi bước hỗ trợ `icon` và `framed: true` để thêm viền như bước
+Specification và Verification.
+Mục so sánh SDD và Vibe Coding dùng `comparison`, gồm `columns` (tiêu đề cột),
+`rows` (các hàng với số ô khớp số cột) và `note` (ghi chú dưới bảng).
+Các mục bối cảnh, ví dụ và bài học hiện dùng `placeholder` để hiển thị
 khối chờ nội dung. Xóa `placeholder` ở từng mục rồi thêm `description`, `cards`,
 `features`, `steps` hoặc các trường của mẫu chung ở trên.
 

@@ -245,8 +245,32 @@
             {
               "id": "workflow",
               "eyebrow": "02 / WORKFLOW",
-              "title": "From specification to implementation",
-              "placeholder": "Content will be added soon."
+              "title": "How it works",
+              "stepsLayout": "vertical",
+              "steps": [
+                {
+                  "title": "Human Intent",
+                  "body": "Humans define the idea and goals",
+                  "icon": "lightbulb"
+                },
+                {
+                  "title": "Specification",
+                  "body": "Write requirements, business rules, constraints, and acceptance criteria",
+                  "icon": "fileText",
+                  "framed": true
+                },
+                {
+                  "title": "Agentic Coding",
+                  "body": "The AI agent plans, writes code, runs tests, and fixes bugs",
+                  "icon": "bot"
+                },
+                {
+                  "title": "Verification",
+                  "body": "Check results against the specification, test, and review",
+                  "icon": "checks",
+                  "framed": true
+                }
+              ]
             },
             {
               "id": "examples",
@@ -255,8 +279,42 @@
               "placeholder": "Content will be added soon."
             },
             {
+              "id": "sdd-vs-vibe-coding",
+              "eyebrow": "04 / COMPARISON",
+              "title": "How does SDD differ from Vibe Coding?",
+              "comparison": {
+                "columns": [
+                  "Vibe Coding",
+                  "Spec-Driven + Agentic Coding"
+                ],
+                "rows": [
+                  [
+                    "Starts with a prompt that may be vague",
+                    "Starts with a clear specification"
+                  ],
+                  [
+                    "AI may need to make many assumptions",
+                    "AI follows defined requirements and constraints"
+                  ],
+                  [
+                    "Usually refined through follow-up prompts",
+                    "Changes are managed through the spec and plan"
+                  ],
+                  [
+                    "Information can be lost as conversations grow longer",
+                    "The spec is saved for reuse across sessions"
+                  ],
+                  [
+                    "It can be hard to determine when the work is complete",
+                    "Acceptance criteria provide a basis for verification"
+                  ]
+                ],
+                "note": "This compares two typical approaches; it does not mean that every vibe coding project is low quality."
+              }
+            },
+            {
               "id": "learnings",
-              "eyebrow": "04 / REFLECTION",
+              "eyebrow": "05 / REFLECTION",
               "title": "Outcomes & lessons learned",
               "placeholder": "Content will be added soon."
             }

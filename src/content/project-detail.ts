@@ -55,7 +55,13 @@ export interface ProjectSection {
   lead?: string;
   description?: string;
   diagram?: ProjectDiagram;
-  steps?: { title: string; body: string }[];
+  stepsLayout?: string;
+  steps?: { title: string; body: string; icon?: string; framed?: boolean }[];
+  comparison?: {
+    columns: string[];
+    rows: string[][];
+    note?: string;
+  };
   reflection?: string;
   outcomes?: { title?: string; body: string }[];
   outcomesTitle?: string;

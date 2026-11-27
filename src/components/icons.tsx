@@ -188,6 +188,17 @@ export const icons = {
       <path d="M5 13l4 4L19 7" />
     </svg>
   ),
+  checks: (
+    <svg {...common}>
+      <path d="m2 12 5 5L18 6m-5 11 2 2 7-7" />
+    </svg>
+  ),
+  bot: (
+    <svg {...common}>
+      <rect x="5" y="8" width="14" height="12" rx="4" />
+      <path d="M12 8V4M3 12v4m18-4v4M9 13h.01M15 13h.01" />
+    </svg>
+  ),
   shield: (
     <svg {...common}>
       <path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5l-8-3Z" />
